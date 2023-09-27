@@ -1,0 +1,191 @@
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\MySql.Data.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\Google.Protobuf.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\ZstdNet.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\System.Memory.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\K4os.Hash.xxHash.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaLogica\bin\Debug\MySql.Data.xml
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\System.Memory.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\System.Memory.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\System.Memory.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\MySql.Data.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\Google.Protobuf.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\ZstdNet.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\System.Memory.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\K4os.Hash.xxHash.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\bin\Debug\MySql.Data.xml
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\System.Memory.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+D:\Podología Tello\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+D:\Podología Tello\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+D:\Podología Tello\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+D:\Podología Tello\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+D:\Podología Tello\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+D:\Podología Tello\podTello\prueba\CapaLogica\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\System.Memory.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\2003y\Downloads\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\MySql.Data.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\Google.Protobuf.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\ZstdNet.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\System.Memory.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\K4os.Hash.xxHash.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\bin\Debug\MySql.Data.xml
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+D:\Basurero de Proyectos\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\MySql.Data.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\Google.Protobuf.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\ZstdNet.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\System.Memory.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\bin\Debug\MySql.Data.xml
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\MySql.Data.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\Google.Protobuf.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\ZstdNet.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\System.Memory.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\System.Buffers.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\bin\Debug\MySql.Data.xml
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaLogica\obj\Debug\CapaLogica.pdb

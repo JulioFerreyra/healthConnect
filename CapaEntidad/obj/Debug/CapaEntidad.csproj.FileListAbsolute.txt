@@ -1,0 +1,30 @@
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\jaft2\Documents\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\2003y\Documents\School\Semestre 4\PROGRAMACIÓN ii\Visual Studio\prueba (2)\prueba\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\jaft2\OneDrive - Instituto Tecnológico Superior de Ciudad de Hidalgo\Documentos\Documentos Escuela\Semestre 4\Programación II\Programas\podTello2\podTello2\prueba\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug\CapaEntidad.pdb
