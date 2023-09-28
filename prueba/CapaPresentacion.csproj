@@ -356,6 +356,7 @@
     <None Include="Resources\cerrar %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\HealthConecctName.png" />
     <None Include="Resources\auditoria.png" />
     <None Include="Resources\detalles.png" />
     <Content Include="Resources\editar.png" />

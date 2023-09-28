@@ -28,8 +28,14 @@ namespace prueba
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            BackColor = Color.FromArgb(31, 31, 31);
-            panel1.BackColor = Color.FromArgb(165,0,0,0);
+            
+            
+            
+            
+            
+            
+       //     BackColor = Color.FromArgb(31, 31, 31);
+         //   panel1.BackColor = Color.FromArgb(165,0,0,0);
         }
 
 
@@ -100,6 +106,11 @@ namespace prueba
             ElementosGlobales.EstadoCita = string.Empty;
             ElementosGlobales.FechasReporte.Clear();
             ElementosGlobales.TipoReporte = 0;
+        }
+
+        private void txbPasswordLogin__TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

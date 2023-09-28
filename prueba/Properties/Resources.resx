@@ -139,6 +139,9 @@
   <data name="add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="detalles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\detalles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EDITDGV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EDITDGV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,7 +181,7 @@
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="detalles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\detalles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HealthConecctName" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HealthConecctName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
