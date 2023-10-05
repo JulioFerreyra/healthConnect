@@ -28,3 +28,9 @@ C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug
 C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\2003y\Downloads\podtello v23may23\podTello\prueba\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.pdb

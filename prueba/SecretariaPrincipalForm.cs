@@ -39,13 +39,6 @@ namespace prueba
         /// <param name="e"></param>
         public void SecretariaPrincipalForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
-            // Obtiene la resolución de pantalla actual
-            Rectangle resolution = Screen.PrimaryScreen.Bounds;
-
-            // Establece el ancho y alto del formulario al tamaño de la pantalla
-            this.Width = resolution.Width;
-            this.Height = resolution.Height;
 
             RellenarDataGridPodologos();
             AgregarBotonesGrid();
