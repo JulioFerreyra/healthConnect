@@ -21,7 +21,7 @@ namespace CapaPresentacion
 
         private void SeleccionReporteForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
+           
             SetOffLimitTipoCita();
             SetOffLimitFechas();
             if (ElementosGlobales.UsuarioCondicion == false)
