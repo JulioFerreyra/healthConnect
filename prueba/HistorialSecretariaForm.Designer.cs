@@ -56,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.label2.Location = new System.Drawing.Point(416, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 37);
@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -75,7 +75,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.button2.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -103,8 +103,8 @@
             // 
             // txbCorreoLogin
             // 
-            this.txbCorreoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.txbCorreoLogin.BorderColor = System.Drawing.Color.DimGray;
+            this.txbCorreoLogin.BackColor = System.Drawing.Color.White;
+            this.txbCorreoLogin.BorderColor = System.Drawing.Color.White;
             this.txbCorreoLogin.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbCorreoLogin.BorderRadius = 10;
             this.txbCorreoLogin.BorderSize = 2;
@@ -128,6 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(984, 629);
             this.Controls.Add(this.button1);
