@@ -31,14 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReporte = new CustomControls.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new CustomControls.RJControls.RJButton();
             this.btnPrincipal = new CustomControls.RJControls.RJButton();
             this.btnPaciente = new CustomControls.RJControls.RJButton();
             this.Panelformularios = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,8 +54,8 @@
             // 
             // btnReporte
             // 
-            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
-            this.btnReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(156)))), ((int)(((byte)(84)))));
+            this.btnReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(156)))), ((int)(((byte)(84)))));
             this.btnReporte.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.btnReporte.BorderRadius = 15;
             this.btnReporte.BorderSize = 5;
@@ -81,22 +78,11 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(311, 223);
             this.panel3.TabIndex = 8;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.PatitaLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 185);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCerrar
             // 
@@ -124,8 +110,8 @@
             // 
             // btnPrincipal
             // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
-            this.btnPrincipal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(156)))), ((int)(((byte)(84)))));
+            this.btnPrincipal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(156)))), ((int)(((byte)(84)))));
             this.btnPrincipal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.btnPrincipal.BorderRadius = 15;
             this.btnPrincipal.BorderSize = 5;
@@ -148,8 +134,8 @@
             // 
             // btnPaciente
             // 
-            this.btnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
-            this.btnPaciente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(156)))), ((int)(((byte)(84)))));
+            this.btnPaciente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(156)))), ((int)(((byte)(84)))));
             this.btnPaciente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.btnPaciente.BorderRadius = 15;
             this.btnPaciente.BorderSize = 5;
@@ -192,8 +178,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +191,6 @@
         private System.Windows.Forms.Panel panel3;
         private CustomControls.RJControls.RJButton btnCerrar;
         private System.Windows.Forms.Panel Panelformularios;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private CustomControls.RJControls.RJButton btnReporte;
     }
 }
