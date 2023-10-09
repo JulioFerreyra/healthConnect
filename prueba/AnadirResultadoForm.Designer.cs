@@ -65,7 +65,7 @@
             // 
             // txtDetalles
             // 
-            this.txtDetalles.BackColor = System.Drawing.Color.White;
+            this.txtDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtDetalles.BorderColor = System.Drawing.Color.Black;
             this.txtDetalles.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.txtDetalles.BorderRadius = 0;
@@ -89,7 +89,7 @@
             // 
             // txtRes
             // 
-            this.txtRes.BackColor = System.Drawing.Color.White;
+            this.txtRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtRes.BorderColor = System.Drawing.Color.Black;
             this.txtRes.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.txtRes.BorderRadius = 0;
@@ -137,7 +137,7 @@
             // 
             // txtTel
             // 
-            this.txtTel.BackColor = System.Drawing.Color.White;
+            this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtTel.BorderColor = System.Drawing.Color.Black;
             this.txtTel.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.txtTel.BorderRadius = 0;
@@ -161,7 +161,7 @@
             // 
             // txtApellMat
             // 
-            this.txtApellMat.BackColor = System.Drawing.Color.White;
+            this.txtApellMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtApellMat.BorderColor = System.Drawing.Color.Black;
             this.txtApellMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.txtApellMat.BorderRadius = 0;
@@ -185,7 +185,7 @@
             // 
             // txtApellPat
             // 
-            this.txtApellPat.BackColor = System.Drawing.Color.White;
+            this.txtApellPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtApellPat.BorderColor = System.Drawing.Color.Black;
             this.txtApellPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.txtApellPat.BorderRadius = 0;
@@ -209,7 +209,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtNombre.BorderColor = System.Drawing.Color.Black;
             this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.txtNombre.BorderRadius = 0;
