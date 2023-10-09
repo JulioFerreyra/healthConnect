@@ -194,9 +194,6 @@ C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaLogica.pdb
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaDatos.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaEntidad.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\System.Memory.dll
-C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\System.Buffers.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaDatos.pdb
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaEntidad.pdb
@@ -226,3 +223,11 @@ C:\Users\2003y\Downloads\RHC\healthConnect\CapaLogica\obj\Debug\CapaLogica.cspro
 C:\Users\2003y\Downloads\RHC\healthConnect\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\2003y\Downloads\RHC\healthConnect\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\2003y\Downloads\RHC\healthConnect\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\MySql.Data.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\Google.Protobuf.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\ZstdNet.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaLogica\bin\Debug\MySql.Data.xml
