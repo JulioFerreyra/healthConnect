@@ -27,7 +27,6 @@ namespace prueba
         /// <param name="e"></param>
         private void SeleccionarPacienteForm_Load(object sender, EventArgs e)
         {
-            BackColor = Color.FromArgb(31, 31, 31);
             RellenarGrid(string.Empty);
             AgregarBotonesGrid();
             

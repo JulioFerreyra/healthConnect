@@ -20,7 +20,7 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void EditarPacienteForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
+            
             RellenarCampos();
 
         }

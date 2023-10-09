@@ -26,7 +26,7 @@ namespace prueba
         /// <param name="e"></param>
         private void HistorialSecretariaForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
+           
             Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal);
             RellenarDataGrid(paciente);
             AgregarBotonGrid();
