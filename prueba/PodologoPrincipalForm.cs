@@ -32,7 +32,6 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void PodologoPrincipalForm_Load(object sender, EventArgs e)
         {
-            BackColor = Color.FromArgb(31, 31, 31);
             RellenarDataGrid();
             AgregarBotonesDataGrid();
             AsignarNombrePodologo();

@@ -45,10 +45,12 @@
             this.dgHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgHistorial.Location = new System.Drawing.Point(46, 202);
+            this.dgHistorial.Location = new System.Drawing.Point(61, 249);
+            this.dgHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgHistorial.Name = "dgHistorial";
             this.dgHistorial.ReadOnly = true;
-            this.dgHistorial.Size = new System.Drawing.Size(879, 397);
+            this.dgHistorial.RowHeadersWidth = 51;
+            this.dgHistorial.Size = new System.Drawing.Size(1172, 489);
             this.dgHistorial.TabIndex = 9;
             this.dgHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgHistorial_CellClick);
             // 
@@ -57,9 +59,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label2.Location = new System.Drawing.Point(416, 49);
+            this.label2.Location = new System.Drawing.Point(555, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 37);
+            this.label2.Size = new System.Drawing.Size(174, 46);
             this.label2.TabIndex = 23;
             this.label2.Text = "Historial";
             // 
@@ -69,8 +72,9 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 37);
+            this.panel1.Size = new System.Drawing.Size(1312, 46);
             this.panel1.TabIndex = 57;
             // 
             // button2
@@ -82,9 +86,10 @@
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(936, -3);
+            this.button2.Location = new System.Drawing.Point(1248, -4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 40);
+            this.button2.Size = new System.Drawing.Size(64, 49);
             this.button2.TabIndex = 57;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -95,48 +100,50 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(706, 115);
+            this.button1.Location = new System.Drawing.Point(941, 142);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.Size = new System.Drawing.Size(64, 55);
             this.button1.TabIndex = 59;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // txbCorreoLogin
             // 
-            this.txbCorreoLogin.BackColor = System.Drawing.Color.White;
-            this.txbCorreoLogin.BorderColor = System.Drawing.Color.White;
+            this.txbCorreoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txbCorreoLogin.BorderColor = System.Drawing.Color.Silver;
             this.txbCorreoLogin.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbCorreoLogin.BorderRadius = 10;
             this.txbCorreoLogin.BorderSize = 2;
             this.txbCorreoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCorreoLogin.ForeColor = System.Drawing.Color.White;
-            this.txbCorreoLogin.Location = new System.Drawing.Point(257, 115);
-            this.txbCorreoLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.txbCorreoLogin.Location = new System.Drawing.Point(343, 142);
+            this.txbCorreoLogin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txbCorreoLogin.MaxLength = 10;
             this.txbCorreoLogin.Multiline = false;
             this.txbCorreoLogin.Name = "txbCorreoLogin";
-            this.txbCorreoLogin.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txbCorreoLogin.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txbCorreoLogin.PasswordChar = false;
             this.txbCorreoLogin.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txbCorreoLogin.PlaceholderText = "Buscar";
-            this.txbCorreoLogin.Size = new System.Drawing.Size(444, 46);
+            this.txbCorreoLogin.Size = new System.Drawing.Size(592, 58);
             this.txbCorreoLogin.TabIndex = 58;
             this.txbCorreoLogin.Texts = "";
             this.txbCorreoLogin.UnderlineStyle = false;
             // 
             // HistorialSecretariaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(984, 629);
+            this.ClientSize = new System.Drawing.Size(1312, 774);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txbCorreoLogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgHistorial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HistorialSecretariaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistorialSecretariaForm";

@@ -21,7 +21,7 @@ namespace CustomControls.RJControls
 
         //-> Other Values
         private bool droppedDown = false;
-        private Image calendarIcon = CapaPresentacion.Properties.Resources.calendarWhite;
+        private Image calendarIcon = CapaPresentacion.Properties.Resources.calendarDark;
         private RectangleF iconButtonArea;
         private const int calendarIconWidth = 34;
         private const int arrowIconWidth = 17;

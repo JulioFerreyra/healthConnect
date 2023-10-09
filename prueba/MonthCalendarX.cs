@@ -18,7 +18,7 @@ namespace prueba
         {
             InitializeComponent();
         }
-        //j
+        //
         private Color borderColor = Color.MediumSeaGreen;
         private int borderSize = 2;
         private bool underlineStyle = false;

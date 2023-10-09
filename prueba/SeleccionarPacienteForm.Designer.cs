@@ -51,11 +51,12 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgPacientes.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgPacientes.Location = new System.Drawing.Point(64, 184);
+            this.dgPacientes.Location = new System.Drawing.Point(85, 226);
+            this.dgPacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgPacientes.Name = "dgPacientes";
             this.dgPacientes.ReadOnly = true;
             this.dgPacientes.RowHeadersWidth = 51;
-            this.dgPacientes.Size = new System.Drawing.Size(1133, 601);
+            this.dgPacientes.Size = new System.Drawing.Size(1511, 740);
             this.dgPacientes.TabIndex = 0;
             this.dgPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPacientes_CellClick);
             // 
@@ -66,33 +67,34 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(857, 116);
+            this.button1.Location = new System.Drawing.Point(1143, 143);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.Size = new System.Drawing.Size(64, 55);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.BackColor = System.Drawing.Color.White;
-            this.txtBuscar.BorderColor = System.Drawing.Color.Transparent;
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
             this.txtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtBuscar.BorderRadius = 10;
             this.txtBuscar.BorderSize = 2;
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(408, 116);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(544, 143);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtBuscar.MaxLength = 10;
             this.txtBuscar.Multiline = false;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBuscar.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtBuscar.PasswordChar = false;
             this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtBuscar.PlaceholderText = "Buscar";
-            this.txtBuscar.Size = new System.Drawing.Size(444, 46);
+            this.txtBuscar.Size = new System.Drawing.Size(592, 58);
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.Texts = "";
             this.txtBuscar.UnderlineStyle = false;
@@ -102,24 +104,26 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label7.Location = new System.Drawing.Point(548, 40);
+            this.label7.Location = new System.Drawing.Point(731, 49);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 37);
+            this.label7.Size = new System.Drawing.Size(205, 46);
             this.label7.TabIndex = 40;
             this.label7.Text = "Pacientes";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // SeleccionarPacienteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1259, 861);
+            this.ClientSize = new System.Drawing.Size(1679, 1060);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SeleccionarPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeleccionarPacienteForm";
