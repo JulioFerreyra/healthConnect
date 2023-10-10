@@ -30,6 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtDetalles = new prueba.TextBoxD();
             this.txtRes = new prueba.TextBoxD();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
@@ -37,7 +38,6 @@
             this.txtApellMat = new prueba.TextBoxD();
             this.txtApellPat = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -63,6 +63,22 @@
             this.panel1.TabIndex = 55;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1031, -5);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 49);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // txtDetalles
             // 
             this.txtDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -72,15 +88,15 @@
             this.txtDetalles.BorderSize = 2;
             this.txtDetalles.Enabled = false;
             this.txtDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDetalles.ForeColor = System.Drawing.Color.Black;
+            this.txtDetalles.ForeColor = System.Drawing.Color.DimGray;
             this.txtDetalles.Location = new System.Drawing.Point(503, 176);
-            this.txtDetalles.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDetalles.Margin = new System.Windows.Forms.Padding(5);
             this.txtDetalles.MaxLength = 100;
             this.txtDetalles.Multiline = true;
             this.txtDetalles.Name = "txtDetalles";
             this.txtDetalles.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtDetalles.PasswordChar = false;
-            this.txtDetalles.PlaceholderColor = System.Drawing.Color.White;
+            this.txtDetalles.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtDetalles.PlaceholderText = "Detalles";
             this.txtDetalles.Size = new System.Drawing.Size(528, 144);
             this.txtDetalles.TabIndex = 20;
@@ -95,15 +111,15 @@
             this.txtRes.BorderRadius = 0;
             this.txtRes.BorderSize = 2;
             this.txtRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRes.ForeColor = System.Drawing.Color.Black;
+            this.txtRes.ForeColor = System.Drawing.Color.DimGray;
             this.txtRes.Location = new System.Drawing.Point(503, 380);
-            this.txtRes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtRes.Margin = new System.Windows.Forms.Padding(5);
             this.txtRes.MaxLength = 200;
             this.txtRes.Multiline = true;
             this.txtRes.Name = "txtRes";
             this.txtRes.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtRes.PasswordChar = false;
-            this.txtRes.PlaceholderColor = System.Drawing.Color.White;
+            this.txtRes.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtRes.PlaceholderText = "Resultado";
             this.txtRes.Size = new System.Drawing.Size(528, 144);
             this.txtRes.TabIndex = 18;
@@ -126,7 +142,7 @@
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(397, 642);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(213, 62);
             this.rjButton1.TabIndex = 17;
@@ -144,15 +160,15 @@
             this.txtTel.BorderSize = 2;
             this.txtTel.Enabled = false;
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.ForeColor = System.Drawing.Color.Black;
+            this.txtTel.ForeColor = System.Drawing.Color.DimGray;
             this.txtTel.Location = new System.Drawing.Point(68, 485);
-            this.txtTel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(5);
             this.txtTel.MaxLength = 100;
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
             this.txtTel.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtTel.PasswordChar = false;
-            this.txtTel.PlaceholderColor = System.Drawing.Color.White;
+            this.txtTel.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtTel.PlaceholderText = "Teléfono";
             this.txtTel.Size = new System.Drawing.Size(333, 39);
             this.txtTel.TabIndex = 16;
@@ -168,15 +184,15 @@
             this.txtApellMat.BorderSize = 2;
             this.txtApellMat.Enabled = false;
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellMat.ForeColor = System.Drawing.Color.Black;
+            this.txtApellMat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellMat.Location = new System.Drawing.Point(68, 380);
-            this.txtApellMat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellMat.MaxLength = 100;
             this.txtApellMat.Multiline = true;
             this.txtApellMat.Name = "txtApellMat";
             this.txtApellMat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtApellMat.PasswordChar = false;
-            this.txtApellMat.PlaceholderColor = System.Drawing.Color.White;
+            this.txtApellMat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtApellMat.PlaceholderText = "Apellido materno";
             this.txtApellMat.Size = new System.Drawing.Size(333, 39);
             this.txtApellMat.TabIndex = 15;
@@ -192,15 +208,15 @@
             this.txtApellPat.BorderSize = 2;
             this.txtApellPat.Enabled = false;
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellPat.ForeColor = System.Drawing.Color.Black;
+            this.txtApellPat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellPat.Location = new System.Drawing.Point(68, 281);
-            this.txtApellPat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellPat.MaxLength = 100;
             this.txtApellPat.Multiline = true;
             this.txtApellPat.Name = "txtApellPat";
             this.txtApellPat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtApellPat.PasswordChar = false;
-            this.txtApellPat.PlaceholderColor = System.Drawing.Color.White;
+            this.txtApellPat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtApellPat.PlaceholderText = "Apellido paterno";
             this.txtApellPat.Size = new System.Drawing.Size(333, 39);
             this.txtApellPat.TabIndex = 14;
@@ -216,36 +232,20 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.Black;
+            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombre.Location = new System.Drawing.Point(68, 177);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtNombre.PasswordChar = false;
-            this.txtNombre.PlaceholderColor = System.Drawing.Color.White;
+            this.txtNombre.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtNombre.PlaceholderText = "Nombre";
             this.txtNombre.Size = new System.Drawing.Size(333, 39);
             this.txtNombre.TabIndex = 13;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
-            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1031, -5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 49);
-            this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // AnadirResultadoForm
             // 

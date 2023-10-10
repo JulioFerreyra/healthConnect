@@ -49,7 +49,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(48, 214);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(96, 26);
             this.label2.TabIndex = 7;
             this.label2.Text = "Usuario";
             // 
@@ -62,7 +62,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(47, 319);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.Size = new System.Drawing.Size(124, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Contraseña";
             // 
@@ -144,7 +144,7 @@
             this.txbPasswordLogin.PasswordChar = true;
             this.txbPasswordLogin.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txbPasswordLogin.PlaceholderText = "Contraseña";
-            this.txbPasswordLogin.Size = new System.Drawing.Size(302, 41);
+            this.txbPasswordLogin.Size = new System.Drawing.Size(302, 47);
             this.txbPasswordLogin.TabIndex = 4;
             this.txbPasswordLogin.Texts = "";
             this.txbPasswordLogin.UnderlineStyle = false;
@@ -169,7 +169,7 @@
             this.txtCorreoLogin.PasswordChar = false;
             this.txtCorreoLogin.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCorreoLogin.PlaceholderText = "Usuario";
-            this.txtCorreoLogin.Size = new System.Drawing.Size(302, 41);
+            this.txtCorreoLogin.Size = new System.Drawing.Size(302, 47);
             this.txtCorreoLogin.TabIndex = 3;
             this.txtCorreoLogin.Texts = "";
             this.txtCorreoLogin.UnderlineStyle = false;
