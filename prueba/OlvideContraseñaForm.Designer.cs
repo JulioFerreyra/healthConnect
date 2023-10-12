@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class OlvideContraseña
+    partial class OlvideContraseñaForm
     {
         /// <summary>
         /// Required designer variable.

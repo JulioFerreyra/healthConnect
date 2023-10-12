@@ -1399,3 +1399,4 @@ C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.Logs
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.NuevoUsuarioForm.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.OlvideContraseña.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.UsuariosForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.OlvideContraseñaForm.resources

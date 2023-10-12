@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class OlvideContraseña : Form
+    public partial class OlvideContraseñaForm : Form
     {
-        public OlvideContraseña()
+        public OlvideContraseñaForm()
         {
             InitializeComponent();
         }
