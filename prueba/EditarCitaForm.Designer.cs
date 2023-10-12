@@ -224,13 +224,10 @@
             this.tbxTelefono.Enabled = false;
             this.tbxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.tbxTelefono.ForeColor = System.Drawing.Color.DimGray;
-<<<<<<< Updated upstream
             this.tbxTelefono.Location = new System.Drawing.Point(87, 303);
             this.tbxTelefono.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.tbxTelefono.Location = new System.Drawing.Point(65, 246);
             this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.tbxTelefono.MaxLength = 10;
             this.tbxTelefono.Multiline = false;
             this.tbxTelefono.Name = "tbxTelefono";
@@ -253,13 +250,10 @@
             this.tbxSintomas.BorderSize = 2;
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
-<<<<<<< Updated upstream
             this.tbxSintomas.Location = new System.Drawing.Point(461, 303);
             this.tbxSintomas.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.tbxSintomas.Location = new System.Drawing.Point(346, 246);
             this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.tbxSintomas.MaxLength = 10;
             this.tbxSintomas.Multiline = false;
             this.tbxSintomas.Name = "tbxSintomas";
@@ -283,13 +277,10 @@
             this.tbxApellMat.Enabled = false;
             this.tbxApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.tbxApellMat.ForeColor = System.Drawing.Color.DimGray;
-<<<<<<< Updated upstream
             this.tbxApellMat.Location = new System.Drawing.Point(837, 150);
             this.tbxApellMat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.tbxApellMat.Location = new System.Drawing.Point(628, 122);
             this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.tbxApellMat.MaxLength = 10;
             this.tbxApellMat.Multiline = false;
             this.tbxApellMat.Name = "tbxApellMat";
@@ -313,13 +304,10 @@
             this.tbxApellPat.Enabled = false;
             this.tbxApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.tbxApellPat.ForeColor = System.Drawing.Color.DimGray;
-<<<<<<< Updated upstream
             this.tbxApellPat.Location = new System.Drawing.Point(461, 150);
             this.tbxApellPat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.tbxApellPat.Location = new System.Drawing.Point(346, 122);
             this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.tbxApellPat.MaxLength = 10;
             this.tbxApellPat.Multiline = false;
             this.tbxApellPat.Name = "tbxApellPat";
@@ -343,13 +331,10 @@
             this.tbxNombre.Enabled = false;
             this.tbxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.tbxNombre.ForeColor = System.Drawing.Color.DimGray;
-<<<<<<< Updated upstream
             this.tbxNombre.Location = new System.Drawing.Point(87, 150);
             this.tbxNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.tbxNombre.Location = new System.Drawing.Point(65, 122);
             this.tbxNombre.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.tbxNombre.MaxLength = 10;
             this.tbxNombre.Multiline = false;
             this.tbxNombre.Name = "tbxNombre";

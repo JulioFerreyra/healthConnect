@@ -40,7 +40,6 @@
             // 
             // label1
             // 
-<<<<<<< Updated upstream
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -50,7 +49,6 @@
             this.label1.Size = new System.Drawing.Size(400, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = "Agregar nuevo paciente";
-=======
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtNombre.BorderColor = System.Drawing.Color.White;
             this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -72,11 +70,9 @@
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = true;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
->>>>>>> Stashed changes
             // 
             // panel1
             // 
-<<<<<<< Updated upstream
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -84,7 +80,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(608, 46);
             this.panel1.TabIndex = 59;
-=======
             this.txtApellPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtApellPat.BorderColor = System.Drawing.Color.White;
             this.txtApellPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -106,11 +101,9 @@
             this.txtApellPat.Texts = "";
             this.txtApellPat.UnderlineStyle = true;
             this.txtApellPat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellPat_KeyPress);
->>>>>>> Stashed changes
             // 
             // button1
             // 
-<<<<<<< Updated upstream
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -124,7 +117,6 @@
             this.button1.Size = new System.Drawing.Size(64, 49);
             this.button1.TabIndex = 60;
             this.button1.UseVisualStyleBackColor = false;
-=======
             this.txtApellMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtApellMat.BorderColor = System.Drawing.Color.White;
             this.txtApellMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -170,7 +162,6 @@
             this.txtTelefono.Texts = "";
             this.txtTelefono.UnderlineStyle = true;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
->>>>>>> Stashed changes
             // 
             // rjButton1
             // 
@@ -199,7 +190,6 @@
             // 
             // txtTelefono
             // 
-<<<<<<< Updated upstream
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.txtTelefono.BorderColor = System.Drawing.Color.White;
             this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -221,7 +211,6 @@
             this.txtTelefono.Texts = "";
             this.txtTelefono.UnderlineStyle = true;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-=======
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -230,7 +219,6 @@
             this.label1.Size = new System.Drawing.Size(323, 31);
             this.label1.TabIndex = 8;
             this.label1.Text = "Agregar nuevo paciente";
->>>>>>> Stashed changes
             // 
             // txtApellMat
             // 

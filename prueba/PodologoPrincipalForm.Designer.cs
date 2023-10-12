@@ -65,12 +65,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< Updated upstream
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1617, 1055);
-=======
             this.ClientSize = new System.Drawing.Size(1213, 961);
->>>>>>> Stashed changes
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.calendarioCitas);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);

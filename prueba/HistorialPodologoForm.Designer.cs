@@ -100,11 +100,8 @@
             // txbCorreoLogin
             // 
             this.txbCorreoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-<<<<<<< Updated upstream
             this.txbCorreoLogin.BorderColor = System.Drawing.Color.Silver;
-=======
             this.txbCorreoLogin.BorderColor = System.Drawing.Color.DimGray;
->>>>>>> Stashed changes
             this.txbCorreoLogin.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbCorreoLogin.BorderRadius = 10;
             this.txbCorreoLogin.BorderSize = 2;
@@ -124,7 +121,6 @@
             this.txbCorreoLogin.Texts = "";
             this.txbCorreoLogin.UnderlineStyle = false;
             // 
-<<<<<<< Updated upstream
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -175,8 +171,6 @@
             this.button2.TabIndex = 57;
             this.button2.UseVisualStyleBackColor = false;
             // 
-=======
->>>>>>> Stashed changes
             // HistorialPodologoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

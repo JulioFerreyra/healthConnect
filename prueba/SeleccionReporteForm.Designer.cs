@@ -200,11 +200,8 @@
             this.label2.Location = new System.Drawing.Point(217, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-<<<<<<< Updated upstream
             this.label2.Size = new System.Drawing.Size(202, 29);
-=======
             this.label2.Size = new System.Drawing.Size(194, 24);
->>>>>>> Stashed changes
             this.label2.TabIndex = 19;
             this.label2.Text = "Seleccionar reporte";
             // 

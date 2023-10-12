@@ -1394,3 +1394,8 @@ C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.csp
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.NuevoUsuarioForm.resources
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.EditarUsuariosForm.resources
 >>>>>>> Stashed changes
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.EditarUsuariosForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.LogsForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.NuevoUsuarioForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.OlvideContraseña.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.UsuariosForm.resources

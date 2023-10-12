@@ -108,27 +108,21 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-<<<<<<< Updated upstream
             this.txtNombre.Location = new System.Drawing.Point(101, 161);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.txtNombre.Location = new System.Drawing.Point(128, 131);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtNombre.PasswordChar = false;
-<<<<<<< Updated upstream
             this.txtNombre.PlaceholderColor = System.Drawing.Color.Violet;
             this.txtNombre.PlaceholderText = "";
             this.txtNombre.Size = new System.Drawing.Size(333, 39);
-=======
             this.txtNombre.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtNombre.PlaceholderText = "NOMBRE";
             this.txtNombre.Size = new System.Drawing.Size(250, 32);
->>>>>>> Stashed changes
             this.txtNombre.TabIndex = 15;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = false;
@@ -143,27 +137,21 @@
             this.txtApellPat.BorderSize = 2;
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-<<<<<<< Updated upstream
             this.txtApellPat.Location = new System.Drawing.Point(101, 247);
             this.txtApellPat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.txtApellPat.Location = new System.Drawing.Point(128, 201);
             this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.txtApellPat.MaxLength = 10;
             this.txtApellPat.Multiline = false;
             this.txtApellPat.Name = "txtApellPat";
             this.txtApellPat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtApellPat.PasswordChar = false;
-<<<<<<< Updated upstream
             this.txtApellPat.PlaceholderColor = System.Drawing.Color.Violet;
             this.txtApellPat.PlaceholderText = "";
             this.txtApellPat.Size = new System.Drawing.Size(333, 39);
-=======
             this.txtApellPat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtApellPat.PlaceholderText = "APELLIDO PATERNO";
             this.txtApellPat.Size = new System.Drawing.Size(250, 32);
->>>>>>> Stashed changes
             this.txtApellPat.TabIndex = 16;
             this.txtApellPat.Texts = "";
             this.txtApellPat.UnderlineStyle = false;
@@ -178,27 +166,21 @@
             this.txtApellMat.BorderSize = 2;
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-<<<<<<< Updated upstream
             this.txtApellMat.Location = new System.Drawing.Point(101, 334);
             this.txtApellMat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.txtApellMat.Location = new System.Drawing.Point(128, 271);
             this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.txtApellMat.MaxLength = 10;
             this.txtApellMat.Multiline = false;
             this.txtApellMat.Name = "txtApellMat";
             this.txtApellMat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtApellMat.PasswordChar = false;
-<<<<<<< Updated upstream
             this.txtApellMat.PlaceholderColor = System.Drawing.Color.Violet;
             this.txtApellMat.PlaceholderText = "";
             this.txtApellMat.Size = new System.Drawing.Size(333, 39);
-=======
             this.txtApellMat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtApellMat.PlaceholderText = "APELLIDO MATERNO";
             this.txtApellMat.Size = new System.Drawing.Size(250, 32);
->>>>>>> Stashed changes
             this.txtApellMat.TabIndex = 17;
             this.txtApellMat.Texts = "";
             this.txtApellMat.UnderlineStyle = false;
@@ -213,27 +195,21 @@
             this.txtTelefono.BorderSize = 2;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-<<<<<<< Updated upstream
             this.txtTelefono.Location = new System.Drawing.Point(101, 420);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.txtTelefono.Location = new System.Drawing.Point(128, 341);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> Stashed changes
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Multiline = false;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtTelefono.PasswordChar = false;
-<<<<<<< Updated upstream
             this.txtTelefono.PlaceholderColor = System.Drawing.Color.Violet;
             this.txtTelefono.PlaceholderText = "";
             this.txtTelefono.Size = new System.Drawing.Size(333, 39);
-=======
             this.txtTelefono.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtTelefono.PlaceholderText = "TELEFONO";
             this.txtTelefono.Size = new System.Drawing.Size(250, 32);
->>>>>>> Stashed changes
             this.txtTelefono.TabIndex = 18;
             this.txtTelefono.Texts = "";
             this.txtTelefono.UnderlineStyle = false;

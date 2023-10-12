@@ -135,11 +135,8 @@ namespace CapaPresentacion
             ElementosGlobales.PodologoGlobal = ElementosGlobales.idUsuarioGlobal;
             foreach (DataRow registro in logicaPodologo.GetNombrePodologo(ElementosGlobales.PodologoGlobal).Rows)
             {
-<<<<<<< Updated upstream
                 //lblPodologo.Text +=" " + registro[0].ToString(); no lo borro pq luego me pegas
-=======
               //  lblPodologo.Text +=" " + registro[0].ToString();
->>>>>>> Stashed changes
             }
         }
 
