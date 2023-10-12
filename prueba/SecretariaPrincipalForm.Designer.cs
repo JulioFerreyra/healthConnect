@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgXochitl = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.CalendarioCitas = new System.Windows.Forms.MonthCalendar();
+            this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgXochitl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgXochitl.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgXochitl.Location = new System.Drawing.Point(82, 243);
+            this.dgXochitl.Location = new System.Drawing.Point(29, 232);
             this.dgXochitl.MultiSelect = false;
             this.dgXochitl.Name = "dgXochitl";
             this.dgXochitl.ReadOnly = true;
@@ -81,27 +81,38 @@
             this.dgXochitl.TabIndex = 10;
             this.dgXochitl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgXochitl_CellClick);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label2.Location = new System.Drawing.Point(75, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 37);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "CITAS PROXIMAS";
-            // 
             // CalendarioCitas
             // 
             this.CalendarioCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CalendarioCitas.Location = new System.Drawing.Point(916, 18);
+            this.CalendarioCitas.Location = new System.Drawing.Point(863, 18);
             this.CalendarioCitas.MaxSelectionCount = 1;
             this.CalendarioCitas.Name = "CalendarioCitas";
             this.CalendarioCitas.TabIndex = 1;
             this.CalendarioCitas.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarioCitas_DateChanged);
+            // 
+            // cmbxPodologo
+            // 
+            this.cmbxPodologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.cmbxPodologo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.cmbxPodologo.BorderSize = 1;
+            this.cmbxPodologo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbxPodologo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxPodologo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxPodologo.ForeColor = System.Drawing.Color.White;
+            this.cmbxPodologo.IconColor = System.Drawing.Color.Black;
+            this.cmbxPodologo.Items.AddRange(new object[] {
+            "Ambos",
+            "Ignacio Tello González",
+            "Xochitil Tello Gónzalez"});
+            this.cmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbxPodologo.ListTextColor = System.Drawing.Color.Black;
+            this.cmbxPodologo.Location = new System.Drawing.Point(40, 160);
+            this.cmbxPodologo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbxPodologo.Name = "cmbxPodologo";
+            this.cmbxPodologo.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbxPodologo.Size = new System.Drawing.Size(218, 44);
+            this.cmbxPodologo.TabIndex = 11;
+            this.cmbxPodologo.Texts = "Podólogo";
             // 
             // SecretariaPrincipalForm
             // 
@@ -109,8 +120,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1167, 848);
+            this.Controls.Add(this.cmbxPodologo);
             this.Controls.Add(this.CalendarioCitas);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgXochitl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SecretariaPrincipalForm";
@@ -120,13 +131,12 @@
             this.Load += new System.EventHandler(this.SecretariaPrincipalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgXochitl)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dgXochitl;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MonthCalendar CalendarioCitas;
+        private CustomControls.RJControls.pComboBox cmbxPodologo;
     }
 }

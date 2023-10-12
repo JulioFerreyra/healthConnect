@@ -106,6 +106,12 @@
     <Compile Include="EditarPacienteForm.Designer.cs">
       <DependentUpon>EditarPacienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUsuariosForm.Designer.cs">
+      <DependentUpon>EditarUsuariosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPanelPodologo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     <Compile Include="HistorialSecretariaForm.Designer.cs">
       <DependentUpon>HistorialSecretariaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogsForm.Designer.cs">
+      <DependentUpon>LogsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MonthCalendarX.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +165,18 @@
     </Compile>
     <Compile Include="NuevoPacienteForm.Designer.cs">
       <DependentUpon>NuevoPacienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuarioForm.Designer.cs">
+      <DependentUpon>NuevoUsuarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OlvideContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OlvideContraseña.Designer.cs">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="PacientesForm.cs">
       <SubType>Form</SubType>
@@ -207,6 +231,12 @@
     <Compile Include="TextBoxD.Designer.cs">
       <DependentUpon>TextBoxD.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosForm.Designer.cs">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AnadirResultadoForm.resx">
       <DependentUpon>AnadirResultadoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarPacienteForm.resx">
       <DependentUpon>EditarPacienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarUsuariosForm.resx">
+      <DependentUpon>EditarUsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPanelPodologo.resx">
       <DependentUpon>FormPanelPodologo.cs</DependentUpon>
@@ -234,6 +267,9 @@
     <EmbeddedResource Include="HistorialSecretariaForm.resx">
       <DependentUpon>HistorialSecretariaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogsForm.resx">
+      <DependentUpon>LogsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MonthCalendarX.resx">
       <DependentUpon>MonthCalendarX.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +278,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoPacienteForm.resx">
       <DependentUpon>NuevoPacienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuarioForm.resx">
+      <DependentUpon>NuevoUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OlvideContraseña.resx">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PacientesForm.resx">
       <DependentUpon>PacientesForm.cs</DependentUpon>
@@ -277,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TextBoxD.resx">
       <DependentUpon>TextBoxD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosForm.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

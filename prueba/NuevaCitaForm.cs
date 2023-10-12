@@ -25,7 +25,6 @@ namespace prueba
         private void NuevaCitaForm_Load(object sender, EventArgs e)
         {
            
-            this.BackColor = Color.FromArgb(31, 31, 31);
             RellenarGrid();
             RellenarComboBox();
             RestablecerComboBoxHora();

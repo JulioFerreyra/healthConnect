@@ -21,7 +21,6 @@ namespace prueba
 
         private void NuevoPacienteForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
