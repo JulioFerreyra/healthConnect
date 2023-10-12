@@ -82,15 +82,25 @@
             // txtDetalles
             // 
             this.txtDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+<<<<<<< Updated upstream
             this.txtDetalles.BorderColor = System.Drawing.Color.Black;
             this.txtDetalles.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+=======
+            this.txtDetalles.BorderColor = System.Drawing.Color.Silver;
+            this.txtDetalles.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+>>>>>>> Stashed changes
             this.txtDetalles.BorderRadius = 0;
             this.txtDetalles.BorderSize = 2;
             this.txtDetalles.Enabled = false;
             this.txtDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetalles.ForeColor = System.Drawing.Color.DimGray;
+<<<<<<< Updated upstream
             this.txtDetalles.Location = new System.Drawing.Point(503, 176);
             this.txtDetalles.Margin = new System.Windows.Forms.Padding(5);
+=======
+            this.txtDetalles.Location = new System.Drawing.Point(377, 143);
+            this.txtDetalles.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Stashed changes
             this.txtDetalles.MaxLength = 100;
             this.txtDetalles.Multiline = true;
             this.txtDetalles.Name = "txtDetalles";
@@ -106,14 +116,24 @@
             // txtRes
             // 
             this.txtRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+<<<<<<< Updated upstream
             this.txtRes.BorderColor = System.Drawing.Color.Black;
             this.txtRes.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+=======
+            this.txtRes.BorderColor = System.Drawing.Color.Silver;
+            this.txtRes.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+>>>>>>> Stashed changes
             this.txtRes.BorderRadius = 0;
             this.txtRes.BorderSize = 2;
             this.txtRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRes.ForeColor = System.Drawing.Color.DimGray;
+<<<<<<< Updated upstream
             this.txtRes.Location = new System.Drawing.Point(503, 380);
             this.txtRes.Margin = new System.Windows.Forms.Padding(5);
+=======
+            this.txtRes.Location = new System.Drawing.Point(377, 309);
+            this.txtRes.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Stashed changes
             this.txtRes.MaxLength = 200;
             this.txtRes.Multiline = true;
             this.txtRes.Name = "txtRes";
@@ -141,8 +161,12 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.rjButton1.Location = new System.Drawing.Point(397, 642);
             this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.rjButton1.Location = new System.Drawing.Point(321, 512);
+>>>>>>> Stashed changes
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(213, 62);
             this.rjButton1.TabIndex = 17;
@@ -154,15 +178,25 @@
             // txtTel
             // 
             this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+<<<<<<< Updated upstream
             this.txtTel.BorderColor = System.Drawing.Color.Black;
             this.txtTel.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+=======
+            this.txtTel.BorderColor = System.Drawing.Color.White;
+            this.txtTel.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+>>>>>>> Stashed changes
             this.txtTel.BorderRadius = 0;
             this.txtTel.BorderSize = 2;
             this.txtTel.Enabled = false;
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.DimGray;
+<<<<<<< Updated upstream
             this.txtTel.Location = new System.Drawing.Point(68, 485);
             this.txtTel.Margin = new System.Windows.Forms.Padding(5);
+=======
+            this.txtTel.Location = new System.Drawing.Point(51, 394);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Stashed changes
             this.txtTel.MaxLength = 100;
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
@@ -178,15 +212,25 @@
             // txtApellMat
             // 
             this.txtApellMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+<<<<<<< Updated upstream
             this.txtApellMat.BorderColor = System.Drawing.Color.Black;
             this.txtApellMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+=======
+            this.txtApellMat.BorderColor = System.Drawing.Color.White;
+            this.txtApellMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+>>>>>>> Stashed changes
             this.txtApellMat.BorderRadius = 0;
             this.txtApellMat.BorderSize = 2;
             this.txtApellMat.Enabled = false;
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.Color.DimGray;
+<<<<<<< Updated upstream
             this.txtApellMat.Location = new System.Drawing.Point(68, 380);
             this.txtApellMat.Margin = new System.Windows.Forms.Padding(5);
+=======
+            this.txtApellMat.Location = new System.Drawing.Point(51, 309);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Stashed changes
             this.txtApellMat.MaxLength = 100;
             this.txtApellMat.Multiline = true;
             this.txtApellMat.Name = "txtApellMat";
@@ -202,15 +246,25 @@
             // txtApellPat
             // 
             this.txtApellPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+<<<<<<< Updated upstream
             this.txtApellPat.BorderColor = System.Drawing.Color.Black;
             this.txtApellPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+=======
+            this.txtApellPat.BorderColor = System.Drawing.Color.White;
+            this.txtApellPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+>>>>>>> Stashed changes
             this.txtApellPat.BorderRadius = 0;
             this.txtApellPat.BorderSize = 2;
             this.txtApellPat.Enabled = false;
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.Color.DimGray;
+<<<<<<< Updated upstream
             this.txtApellPat.Location = new System.Drawing.Point(68, 281);
             this.txtApellPat.Margin = new System.Windows.Forms.Padding(5);
+=======
+            this.txtApellPat.Location = new System.Drawing.Point(51, 228);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Stashed changes
             this.txtApellPat.MaxLength = 100;
             this.txtApellPat.Multiline = true;
             this.txtApellPat.Name = "txtApellPat";
@@ -226,15 +280,25 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+<<<<<<< Updated upstream
             this.txtNombre.BorderColor = System.Drawing.Color.Black;
             this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+=======
+            this.txtNombre.BorderColor = System.Drawing.Color.White;
+            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+>>>>>>> Stashed changes
             this.txtNombre.BorderRadius = 0;
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
+<<<<<<< Updated upstream
             this.txtNombre.Location = new System.Drawing.Point(68, 177);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
+=======
+            this.txtNombre.Location = new System.Drawing.Point(51, 144);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> Stashed changes
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";

@@ -40,6 +40,7 @@
             // 
             // label1
             // 
+<<<<<<< Updated upstream
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -49,9 +50,33 @@
             this.label1.Size = new System.Drawing.Size(400, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = "Agregar nuevo paciente";
+=======
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtNombre.BorderColor = System.Drawing.Color.White;
+            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNombre.BorderRadius = 0;
+            this.txtNombre.BorderSize = 2;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.Black;
+            this.txtNombre.Location = new System.Drawing.Point(97, 89);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.MaxLength = 10;
+            this.txtNombre.Multiline = false;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.PasswordChar = false;
+            this.txtNombre.PlaceholderColor = System.Drawing.Color.White;
+            this.txtNombre.PlaceholderText = "Nombre";
+            this.txtNombre.Size = new System.Drawing.Size(250, 35);
+            this.txtNombre.TabIndex = 3;
+            this.txtNombre.Texts = "";
+            this.txtNombre.UnderlineStyle = true;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+>>>>>>> Stashed changes
             // 
             // panel1
             // 
+<<<<<<< Updated upstream
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -59,9 +84,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(608, 46);
             this.panel1.TabIndex = 59;
+=======
+            this.txtApellPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtApellPat.BorderColor = System.Drawing.Color.White;
+            this.txtApellPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtApellPat.BorderRadius = 0;
+            this.txtApellPat.BorderSize = 2;
+            this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellPat.ForeColor = System.Drawing.Color.Black;
+            this.txtApellPat.Location = new System.Drawing.Point(97, 153);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellPat.MaxLength = 10;
+            this.txtApellPat.Multiline = false;
+            this.txtApellPat.Name = "txtApellPat";
+            this.txtApellPat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellPat.PasswordChar = false;
+            this.txtApellPat.PlaceholderColor = System.Drawing.Color.White;
+            this.txtApellPat.PlaceholderText = "Apellido paterno";
+            this.txtApellPat.Size = new System.Drawing.Size(250, 35);
+            this.txtApellPat.TabIndex = 4;
+            this.txtApellPat.Texts = "";
+            this.txtApellPat.UnderlineStyle = true;
+            this.txtApellPat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellPat_KeyPress);
+>>>>>>> Stashed changes
             // 
             // button1
             // 
+<<<<<<< Updated upstream
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -75,12 +124,59 @@
             this.button1.Size = new System.Drawing.Size(64, 49);
             this.button1.TabIndex = 60;
             this.button1.UseVisualStyleBackColor = false;
+=======
+            this.txtApellMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtApellMat.BorderColor = System.Drawing.Color.White;
+            this.txtApellMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtApellMat.BorderRadius = 0;
+            this.txtApellMat.BorderSize = 2;
+            this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellMat.ForeColor = System.Drawing.Color.Black;
+            this.txtApellMat.Location = new System.Drawing.Point(97, 217);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellMat.MaxLength = 10;
+            this.txtApellMat.Multiline = false;
+            this.txtApellMat.Name = "txtApellMat";
+            this.txtApellMat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellMat.PasswordChar = false;
+            this.txtApellMat.PlaceholderColor = System.Drawing.Color.White;
+            this.txtApellMat.PlaceholderText = "Apellido materno";
+            this.txtApellMat.Size = new System.Drawing.Size(250, 35);
+            this.txtApellMat.TabIndex = 5;
+            this.txtApellMat.Texts = "";
+            this.txtApellMat.UnderlineStyle = true;
+            this.txtApellMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellMat_KeyPress);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtTelefono.BorderColor = System.Drawing.Color.White;
+            this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTelefono.BorderRadius = 0;
+            this.txtTelefono.BorderSize = 2;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.Black;
+            this.txtTelefono.Location = new System.Drawing.Point(97, 281);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefono.MaxLength = 10;
+            this.txtTelefono.Multiline = false;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTelefono.PasswordChar = false;
+            this.txtTelefono.PlaceholderColor = System.Drawing.Color.White;
+            this.txtTelefono.PlaceholderText = "Teléfono";
+            this.txtTelefono.Size = new System.Drawing.Size(250, 35);
+            this.txtTelefono.TabIndex = 6;
+            this.txtTelefono.Texts = "";
+            this.txtTelefono.UnderlineStyle = true;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+>>>>>>> Stashed changes
             // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
             this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.rjButton1.BorderRadius = 15;
             this.rjButton1.BorderSize = 5;
             this.rjButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
@@ -103,6 +199,7 @@
             // 
             // txtTelefono
             // 
+<<<<<<< Updated upstream
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.txtTelefono.BorderColor = System.Drawing.Color.White;
             this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -124,6 +221,16 @@
             this.txtTelefono.Texts = "";
             this.txtTelefono.UnderlineStyle = true;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+=======
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(63, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(323, 31);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Agregar nuevo paciente";
+>>>>>>> Stashed changes
             // 
             // txtApellMat
             // 
