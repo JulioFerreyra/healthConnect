@@ -47,7 +47,7 @@ namespace prueba
         private void rjButton1_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario(txtCorreoLogin.Texts, txbPasswordLogin.Texts);
-            IniciarSesion(usuario);
+            IniciarSesionUsuario(usuario);
 
             
                    
@@ -57,12 +57,26 @@ namespace prueba
             Close();
         }
 
-        private void IniciarSesion(Usuario usuario)
+        private void IniciarSesionUsuario(Usuario usuario)
         {
             LogicaUsuario logicaUsuario = new LogicaUsuario();
             usuario.SetIdUsuario(logicaUsuario.GetExistenciaUsuario(usuario));
 
-            if (logicaUsuario.IniciarSesion(usuario))
+            if (logicaUsuario.ValidarExistenciaUsuario(usuario))
+            {
+                IniciarSesionAdmin(usuario);
+                return;
+            }
+            
+
+
+        }
+
+        private void IniciarSesionAdmin(Usuario usuario)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+
+            if (logicaUsuario.GetisAdmin(usuario))
             {
                 Hide();
                 FormPanelPodologo principalForm = new FormPanelPodologo();
@@ -74,7 +88,7 @@ namespace prueba
             FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
             principalSecretaria.ShowDialog();
             Show();
-            
+
 
 
         }

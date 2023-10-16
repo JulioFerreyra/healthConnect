@@ -29,20 +29,17 @@ namespace CapaLogica
         }
 
          public int GetExistenciaUsuario(Usuario usuario)
-        {
+         {
 
             if (!ValidarCamposVacios(usuario))
             {
             
-            return 0;
+                return 0;
            
             }
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
-            
-                return usuarioDAO.GetExistenciaUsuario(usuario);
-
-            
-        }
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            return usuarioDAO.GetExistenciaUsuario(usuario);
+         }
 
     public bool ValidarExistenciaUsuario(Usuario usuario)
     {
@@ -51,27 +48,11 @@ namespace CapaLogica
 
       
     public bool GetisAdmin(Usuario usuario)
-        {
+    {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            if (!ValidarExistenciaUsuario(usuario)) 
-            { 
-            return false;
-            }
-           
-                return usuarioDAO.GetisAdmin(usuario); 
-        }
+            return usuarioDAO.GetisAdmin(usuario);
+    }
 
-        public bool IniciarSesion(Usuario usuario)
-        {
-            if (GetisAdmin(usuario) && ValidarExistenciaUsuario(usuario))
-            {
-                return true;
-            }
-            return false;
-            {
-
-            }
-        }
 
         
 
