@@ -28,26 +28,52 @@ namespace CapaLogica
             return true;
         }
 
-        private object GetExistenciaUsuario(Usuario usuario)
+         public int GetExistenciaUsuario(Usuario usuario)
         {
 
             if (!ValidarCamposVacios(usuario))
             {
             
-            return null;
+            return 0;
            
             }
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-            MessageBox.Show(usuarioDAO.GetExistenciaUsuario(usuario).ToString());
+            
                 return usuarioDAO.GetExistenciaUsuario(usuario);
 
             
         }
 
     public bool ValidarExistenciaUsuario(Usuario usuario)
+    {
+        return GetExistenciaUsuario(usuario)!=0;
+    }
+
+      
+    public bool GetisAdmin(Usuario usuario)
         {
-            return GetExistenciaUsuario(usuario)==null;
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            if (!ValidarExistenciaUsuario(usuario)) 
+            { 
+            return false;
+            }
+           
+                return usuarioDAO.GetisAdmin(usuario); 
         }
+
+        public bool IniciarSesion(Usuario usuario)
+        {
+            if (GetisAdmin(usuario) && ValidarExistenciaUsuario(usuario))
+            {
+                return true;
+            }
+            return false;
+            {
+
+            }
+        }
+
+        
 
         //private void GetDatosUsuario(Usuario usuario)
         //{

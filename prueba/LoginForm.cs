@@ -46,16 +46,37 @@ namespace prueba
         /// <param name="e"></param>
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario(txtCorreoLogin.Texts,txbPasswordLogin.Texts);
-            // InicarSesion(usuario);
+            Usuario usuario = new Usuario(txtCorreoLogin.Texts, txbPasswordLogin.Texts);
+            IniciarSesion(usuario);
+
             
-            LogicaUsuario logicaUsuario = new LogicaUsuario();
-            MessageBox.Show(logicaUsuario.ValidarExistenciaUsuario(usuario).ToString());
                    
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void IniciarSesion(Usuario usuario)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            usuario.SetIdUsuario(logicaUsuario.GetExistenciaUsuario(usuario));
+
+            if (logicaUsuario.IniciarSesion(usuario))
+            {
+                Hide();
+                FormPanelPodologo principalForm = new FormPanelPodologo();
+                principalForm.ShowDialog();
+                Show();
+                return;
+            }
+            Hide();
+            FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
+            principalSecretaria.ShowDialog();
+            Show();
+            
+
+
         }
 
         /// <summary>
@@ -66,7 +87,7 @@ namespace prueba
         //{
         //    LogicaUsuario logicaUsuario = new LogicaUsuario();
         //   ElementosGlobales.idUsuarioGlobal= logicaUsuario.InciarSesion(usuario);
-           
+
         //    switch (ElementosGlobales.idUsuarioGlobal)
         //    {
         //        case 1:
@@ -92,7 +113,7 @@ namespace prueba
         //        default:
         //            break;
 
-                    
+
         //    }
         //    RestablecerValores();
 

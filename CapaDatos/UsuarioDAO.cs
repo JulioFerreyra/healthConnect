@@ -30,6 +30,11 @@ namespace CapaDatos
             }
         }
        
+        /// <summary>
+        /// SElECT
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         public Dictionary<int, string> GetUsuarios(Usuario usuario) 
         {
             Dictionary<int,string> DatosUsuario= new Dictionary<int,string>();
@@ -58,29 +63,58 @@ namespace CapaDatos
             return DatosUsuario;
         }
 
-        public object GetExistenciaUsuario(Usuario usuario)
+        public int GetExistenciaUsuario(Usuario usuario)
         {
-            string consultaSelect = "select id_usuario from usuario where usuario = \""+usuario.GetUsuario()+" \" and contraseña = \" "+usuario.GetContraseña()+"\"";
-            MessageBox.Show(consultaSelect);
-            object resultado;
+            string consultaSelect = "select id_usuario from usuario where usuario = \""+usuario.GetUsuario()+"\" and contraseña = \""+usuario.GetContraseña()+"\"";
+            
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
             try 
             {
+                object resultado;
                 conexion_a_mysql.Open();    
                 MySqlCommand comando = new MySqlCommand(consultaSelect, conexion_a_mysql);
                 resultado = comando.ExecuteScalar();
-                return resultado;
+                int id = Convert.ToInt32(resultado);
+                return id;
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return null;
+                return 0;
             }
             finally
             {
                 conexion_a_mysql.Close();
             }
         }
+
+        public bool GetisAdmin(Usuario usuario)
+        {
+            string consultaSelect = "select isAdmin from usuario where id_usuario =" + usuario.getIdUsuario();
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaSelect,conexion_a_MySQL);
+                object resultado = comando.ExecuteScalar();
+                bool isAdmin = Convert.ToBoolean(resultado);
+                return isAdmin;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                return false;
+                
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+
         public string CadenaConexion()
         {
         

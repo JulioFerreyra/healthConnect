@@ -28,12 +28,18 @@ namespace CapaEntidad
             this.contraseña = contraseña;
         }
 
+
+        public int SetIdUsuario(int idUsuario)
+        {
+            return this.idUsuario = idUsuario;
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         /// 
-
+        
         public string GetContraseña()
         {
             return contraseña;
