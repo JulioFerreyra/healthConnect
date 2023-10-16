@@ -8,9 +8,9 @@ namespace CapaDatos
 {
     public class UsuarioDAO
     {
-        private const string USSER = "PodologiaTello";
-        private const string PASSWORD = "podologiatello2023";
-        private const string BASE_DATOS = "podtello";
+        private const string USSER = "root";
+        private const string PASSWORD = "jafete210403";
+        private const string BASE_DATOS = "healthconnect";
         private const string HOST = "localhost";
 
        public void ProbarConexion()
@@ -58,6 +58,29 @@ namespace CapaDatos
             return DatosUsuario;
         }
 
+        public object GetExistenciaUsuario(Usuario usuario)
+        {
+            string consultaSelect = "select id_usuario from usuario where usuario = \""+usuario.GetUsuario()+" \" and contraseña = \" "+usuario.GetContraseña()+"\"";
+            MessageBox.Show(consultaSelect);
+            object resultado;
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            try 
+            {
+                conexion_a_mysql.Open();    
+                MySqlCommand comando = new MySqlCommand(consultaSelect, conexion_a_mysql);
+                resultado = comando.ExecuteScalar();
+                return resultado;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+        }
         public string CadenaConexion()
         {
         

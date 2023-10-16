@@ -47,8 +47,11 @@ namespace prueba
         private void rjButton1_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario(txtCorreoLogin.Texts,txbPasswordLogin.Texts);
-            InicarSesion(usuario);
-         
+            // InicarSesion(usuario);
+            
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            MessageBox.Show(logicaUsuario.ValidarExistenciaUsuario(usuario).ToString());
+                   
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,42 +62,42 @@ namespace prueba
         /// Métodos
         /// </summary>
         /// <param name="usuario"></param>
-        private void InicarSesion(Usuario usuario)
-        {
-            LogicaUsuario logicaUsuario = new LogicaUsuario();
-           ElementosGlobales.idUsuarioGlobal= logicaUsuario.InciarSesion(usuario);
+        //private void InicarSesion(Usuario usuario)
+        //{
+        //    LogicaUsuario logicaUsuario = new LogicaUsuario();
+        //   ElementosGlobales.idUsuarioGlobal= logicaUsuario.InciarSesion(usuario);
            
-            switch (ElementosGlobales.idUsuarioGlobal)
-            {
-                case 1:
-                    Hide();
-                    FormPanelPodologo principalForm = new FormPanelPodologo();
-                    principalForm.ShowDialog();
-                    Show();
-                   ;
-                    break;
-                case 2:
-                    Hide(); 
-                    FormPanelPodologo principalpodologo = new FormPanelPodologo();
-                    principalpodologo.ShowDialog();
-                    Show();
-                    break;
-                case 3:
-                    Hide();
-                    FormPanelSecretaria principal = new FormPanelSecretaria();
-                    principal.ShowDialog();
-                    Show();
-                    break;
+        //    switch (ElementosGlobales.idUsuarioGlobal)
+        //    {
+        //        case 1:
+        //            Hide();
+        //            FormPanelPodologo principalForm = new FormPanelPodologo();
+        //            principalForm.ShowDialog();
+        //            Show();
+        //           ;
+        //            break;
+        //        case 2:
+        //            Hide(); 
+        //            FormPanelPodologo principalpodologo = new FormPanelPodologo();
+        //            principalpodologo.ShowDialog();
+        //            Show();
+        //            break;
+        //        case 3:
+        //            Hide();
+        //            FormPanelSecretaria principal = new FormPanelSecretaria();
+        //            principal.ShowDialog();
+        //            Show();
+        //            break;
 
-                default:
-                    break;
+        //        default:
+        //            break;
 
                     
-            }
-            RestablecerValores();
+        //    }
+        //    RestablecerValores();
 
 
-        }
+        //}
         private void RestablecerValores()
         {
             txtCorreoLogin.Texts = string.Empty;
