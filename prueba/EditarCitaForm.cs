@@ -58,7 +58,7 @@ namespace CapaPresentacion
         }
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Cita cita = new Cita(ElementosGlobales.idCitaGlobal, ElementosGlobales.idPacienteGlobal, dtFecha.Value, cmbxHora.Texts, ElementosGlobales.PodologoGlobal, 1, tbxTelefono.Texts, tbxSintomas.Texts, cmbxTipoCita.Texts, cmbxEstadoCita.Texts.ToLower());
+            Cita cita = new Cita(ElementosGlobales.idCitaGlobal, ElementosGlobales.idPacienteGlobal, dtFecha.Value, cmbxHora.Texts, ElementosGlobales.PodologoGlobal, tbxSintomas.Texts, cmbxTipoCita.Texts, cmbxEstadoCita.Texts.ToLower());
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             
             if (logicaSecretaria.EditarCita(cita))
@@ -118,8 +118,8 @@ namespace CapaPresentacion
                 tbxSintomas.Texts = renglon[6].ToString();
                 cmbxTipoCita.Texts = renglon[7].ToString();
                 cmbxEstadoCita.Texts= renglon[8].ToString();
-                CmbxPodologo.Texts = renglon[10].ToString();
-                ElementosGlobales.idPacienteGlobal = (int)renglon[11];
+                CmbxPodologo.Texts = renglon[9].ToString();
+                ElementosGlobales.idPacienteGlobal = (int)renglon[10];
                
 
             }

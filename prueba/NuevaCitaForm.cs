@@ -55,7 +55,7 @@ namespace prueba
         }
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, ElementosGlobales.PodologoGlobal, 1, tbxTelefono.Texts, tbxSintomas.Texts, cmbxTipoCita.Texts);
+            Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, ElementosGlobales.PodologoGlobal, tbxSintomas.Texts, cmbxTipoCita.Texts);
             LimpiarCampos(cita);
             //RestablecerComboBoxHora();
             RellenarGrid();

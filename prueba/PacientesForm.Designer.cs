@@ -65,7 +65,6 @@
             this.dgPacientes.RowHeadersWidth = 51;
             this.dgPacientes.Size = new System.Drawing.Size(951, 467);
             this.dgPacientes.TabIndex = 11;
-         
             this.dgPacientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPacientes_CellDoubleClick);
             // 
             // label2
@@ -89,7 +88,7 @@
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.White;
             this.txtBuscar.Location = new System.Drawing.Point(293, 97);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.MaxLength = 10;
             this.txtBuscar.Multiline = false;
             this.txtBuscar.Name = "txtBuscar";

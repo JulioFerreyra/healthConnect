@@ -55,7 +55,7 @@ namespace CapaPresentacion
             }
             
             
-            this.Close();
+            Close();
         }     
 
 
@@ -72,9 +72,14 @@ namespace CapaPresentacion
 
         private void BtnRegresarPrincipalSecretaria_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-       
+        private void dgPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }

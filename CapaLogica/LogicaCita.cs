@@ -22,11 +22,6 @@ namespace CapaLogica
                 MessageBox.Show("Seleccione un podólogo para continuar");
                 return false;
             }
-            if (string.IsNullOrEmpty(cita.GetTelefonoContacto()) || cita.GetTelefonoContacto().Length!=10)
-            {
-                MessageBox.Show("El campo Teléfono no es valido");
-                return false;
-            }
             if (cita.GetTipoCita() == "Tipo de cita")
             {
                 MessageBox.Show("El \"Tipo de cita\" seleccionado no es valido");
@@ -48,11 +43,7 @@ namespace CapaLogica
         }
         public bool ValidarCamposCitaActualizar(Cita cita)
         {
-            if (string.IsNullOrEmpty(cita.GetTelefonoContacto()) || cita.GetTelefonoContacto().Length != 10)
-            {
-                MessageBox.Show("El campo Teléfono no es valido");
-                return false;
-            }
+           
             if (cita.GetTipoCita() == "Tipo de cita")
             {
                 MessageBox.Show("El \"Tipo de cita\" seleccionado no es valido");
