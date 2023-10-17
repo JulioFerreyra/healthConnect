@@ -33,13 +33,13 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal,txtNombre.Texts,txtApellPat.Texts,txtApellMat.Texts,txtTelefono.Texts);
-            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-            if (logicaSecretaria.EditarPaciente(paciente))
-            {
-                Close();
-            }
-           
+            //Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal, txtNombre.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts);
+            //LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            //if (logicaSecretaria.EditarPaciente(paciente))
+            //{
+            //    Close();
+            //}
+
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {

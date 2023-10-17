@@ -90,7 +90,7 @@ namespace CapaDatos
 
         public bool GetisAdmin(Usuario usuario)
         {
-            string consultaSelect = "select isAdmin from usuario where id_usuario =" + usuario.getIdUsuario();
+            string consultaSelect = "select isAdmin from usuario where id_usuario =" + usuario.GetIdUsuario();
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
 
             try

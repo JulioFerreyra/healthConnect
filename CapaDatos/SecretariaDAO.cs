@@ -27,10 +27,10 @@ namespace CapaDatos
 
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",c.tel_contacto as \"Telefono\" from citas as c ");
-            stringBuilder.Append("join paciente as pc on c.id_paciente=pc.id_paciente ");
-            stringBuilder.Append("join podologo as pod on pod.id_podologo = c.id_podologo ");
-            stringBuilder.Append("join sucursal as s on s.id_sucursal = c.id_sucursal ");
-            stringBuilder.Append("where pod.id_podologo ="+idPodologo+" and c.fecha_cita =\"" + ConvertirFechaCadena(fechaCita) + "\" and c.estado_cita = \"pendiente\";");
+            stringBuilder.Append("join pacientes as pc on c.id_paciente=pc.id_paciente ");
+            stringBuilder.Append("join profesionistas as pod on pod.id_profesionista = c.id_profesinista ");
+            //stringBuilder.Append("join sucursal as s on s.id_sucursal = c.id_sucursal ");
+            stringBuilder.Append("where pod.id_profesionista =" + idPodologo+" and c.fecha_cita =\"" + ConvertirFechaCadena(fechaCita) + "\" and c.estado_cita = \"pendiente\";");
 
             string ConsultaSelect = stringBuilder.ToString();
 
@@ -55,7 +55,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaSelectLike = "select id_paciente as \"ID\", nombre as Nombre, apell_pat as \"Apellido Paterno\", apell_mat as \"Apellido Materno\", telefono as Telefono from paciente where nombre like \"%" + Nombre + "%\";";
+            string SentenciaSelectLike = "select id_paciente as \"ID\", nombre as Nombre, apell_pat as \"Apellido Paterno\", apell_mat as \"Apellido Materno\", telefono as Telefono from pacientes where nombre like \"%" + Nombre + "%\";";
             DataTable tablaPacientes = new DataTable();
             try
             {
@@ -234,7 +234,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaInsert = "insert into paciente(nombre,apell_pat,apell_mat,telefono) values(\""+paciente.GetNombre()+"\",\""+paciente.GetApellidoPaterno()+"\",\""+paciente.GetApellidoMaterno()+"\",\""+paciente.GetTelefono()+"\");";
+            string SentenciaInsert = "insert into pacientes(nombre,apell_pat,apell_mat,telefono, direccion, fecha_nac ,sexo) values(\""+paciente.GetNombre()+"\",\""+paciente.GetApellidoPaterno()+"\",\""+paciente.GetApellidoMaterno()+"\",\""+paciente.GetTelefono()+"\", \""+paciente.GetDireccion()+"\", \""+ConvertirFechaCadena(paciente.GetFechaNacimiento())+"\",\""+paciente.GetSexo()+"\");";
             try
             {
                 conexion_a_mysql.Open();

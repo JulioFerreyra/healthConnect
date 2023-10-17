@@ -57,41 +57,7 @@ namespace prueba
             Close();
         }
 
-        private void IniciarSesionUsuario(Usuario usuario)
-        {
-            LogicaUsuario logicaUsuario = new LogicaUsuario();
-            usuario.SetIdUsuario(logicaUsuario.GetExistenciaUsuario(usuario));
 
-            if (logicaUsuario.ValidarExistenciaUsuario(usuario))
-            {
-                IniciarSesionAdmin(usuario);
-                return;
-            }
-            
-
-
-        }
-
-        private void IniciarSesionAdmin(Usuario usuario)
-        {
-            LogicaUsuario logicaUsuario = new LogicaUsuario();
-
-            if (logicaUsuario.GetisAdmin(usuario))
-            {
-                Hide();
-                FormPanelPodologo principalForm = new FormPanelPodologo();
-                principalForm.ShowDialog();
-                Show();
-                return;
-            }
-            Hide();
-            FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
-            principalSecretaria.ShowDialog();
-            Show();
-
-
-
-        }
 
         /// <summary>
         /// Métodos
@@ -133,6 +99,43 @@ namespace prueba
 
 
         //}
+        private void IniciarSesionUsuario(Usuario usuario)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            usuario.SetIdUsuario(logicaUsuario.GetExistenciaUsuario(usuario));
+
+            if (logicaUsuario.ValidarExistenciaUsuario(usuario))
+            {
+                IniciarSesionAdmin(usuario);
+                return;
+            }
+            MessageBox.Show("Credenciales incorrectas","Usuario no valido");
+
+
+        }
+
+        private void IniciarSesionAdmin(Usuario usuario)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+
+            if (logicaUsuario.GetisAdmin(usuario))
+            {
+                Hide();
+                FormPanelPodologo principalForm = new FormPanelPodologo();
+                principalForm.ShowDialog();
+                RestablecerValores();
+                Show();
+                return;
+            }
+            Hide();
+            FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
+            principalSecretaria.ShowDialog();
+            RestablecerValores();
+            Show();
+
+
+
+        }
         private void RestablecerValores()
         {
             txtCorreoLogin.Texts = string.Empty;

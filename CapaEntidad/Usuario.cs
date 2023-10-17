@@ -29,9 +29,9 @@ namespace CapaEntidad
         }
 
 
-        public int SetIdUsuario(int idUsuario)
+        public void SetIdUsuario(int idUsuario)
         {
-            return this.idUsuario = idUsuario;
+            this.idUsuario = idUsuario;
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace CapaEntidad
         public string GetUsuario() {
             return usuario;
         }
-        public int getIdUsuario()
+        public int GetIdUsuario()
         {
             return idUsuario;
         }
