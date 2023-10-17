@@ -26,9 +26,9 @@ namespace CapaDatos
             DataTable ConsultasPodologo = new DataTable();
 
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",c.tel_contacto as \"Telefono\" from citas as c ");
+            stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",pc.telefono as \"Telefono\" from citas as c ");
             stringBuilder.Append("join pacientes as pc on c.id_paciente=pc.id_paciente ");
-            stringBuilder.Append("join profesionistas as pod on pod.id_profesionista = c.id_profesinista ");
+            stringBuilder.Append("join profesionistas as pod on pod.id_profesionista = c.id_profesionista ");
             //stringBuilder.Append("join sucursal as s on s.id_sucursal = c.id_sucursal ");
             stringBuilder.Append("where pod.id_profesionista =" + idPodologo+" and c.fecha_cita =\"" + ConvertirFechaCadena(fechaCita) + "\" and c.estado_cita = \"pendiente\";");
 
@@ -41,9 +41,9 @@ namespace CapaDatos
                 dataAdapter.Fill(ConsultasPodologo);
                 return ConsultasPodologo;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-               
+                //MessageBox.Show(ex.Message);
                 return ConsultasPodologo;
             }
             finally
@@ -83,7 +83,7 @@ namespace CapaDatos
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
             DataTable DatosPaciente = new DataTable();
-            string SentenciaSelectWhere = "select nombre as \"Nombre\", apell_pat as \"Apellido Paterno\",apell_mat as \"Apellido Materno\",telefono as \"Teléfono\" from paciente where id_paciente =" + idPaciente + ";";
+            string SentenciaSelectWhere = "select nombre as \"Nombre\", apell_pat as \"Apellido Paterno\",apell_mat as \"Apellido Materno\",telefono as \"Teléfono\", direccion as Direccion,fecha_nac as \"Fecha de Nacimiento\",sexo as Sexo from pacientes where id_paciente =" + idPaciente + ";";
             try
             {
                 conexion_a_mysql.Open();
@@ -382,7 +382,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaUpdate = "update paciente set nombre = \""+paciente.GetNombre()+"\", apell_pat =\""+paciente.GetApellidoPaterno()+"\", apell_mat =\""+paciente.GetApellidoMaterno()+"\", telefono = \""+paciente.GetTelefono()+"\" where id_paciente ="+paciente.GetIdPaciente()+";";
+            string SentenciaUpdate = "update pacientes set nombre = \""+paciente.GetNombre()+"\", apell_pat =\""+paciente.GetApellidoPaterno()+"\", apell_mat =\""+paciente.GetApellidoMaterno()+"\", telefono = \""+paciente.GetTelefono()+"\",direccion = \""+paciente.GetDireccion()+"\", fecha_nac = \""+ConvertirFechaCadena(paciente.GetFechaNacimiento())+"\", sexo = \""+paciente.GetSexo()+"\" where id_paciente ="+paciente.GetIdPaciente()+";";
             try
             {
                 conexion_a_mysql.Open();

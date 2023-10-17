@@ -124,16 +124,20 @@ namespace prueba
             VerHistoralBtnGrid.HeaderText = "Ver Historial";
             VerHistoralBtnGrid.Name = "HistorialCol";
             VerHistoralBtnGrid.Width = 30;
-            if (ElementosGlobales.idUsuarioGlobal ==3)
-            {
+           
                 dgPacientes.Columns.Add(EditarBtnGrid);
                 dgPacientes.Columns.Add(EliminarBtnGrid);
-                
-            }
+               
+            
             dgPacientes.Columns.Add(VerHistoralBtnGrid);
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
