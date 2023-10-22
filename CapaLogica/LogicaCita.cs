@@ -38,6 +38,11 @@ namespace CapaLogica
                 MessageBox.Show("El campo \"Sintomas\" contiene un valor no valido");
                 return false;
             }
+            if (cita.GetFechaCita().DayOfYear < DateTime.Today.DayOfYear)
+            {
+                MessageBox.Show("La fecha seleccionado no es valida");
+                return false;
+            }
           
             return true;
         }
@@ -63,6 +68,11 @@ namespace CapaLogica
             if (cita.GetEstadoCita()== "Estado de la cita")
             {
                 MessageBox.Show("El campo \"Estado de la Cita\" contiene un valor no valido");
+                return false;
+            }
+            if (DateTime.Today.DayOfYear > cita.GetFechaCita().DayOfYear )
+            {
+                MessageBox.Show("La fecha seleccionado no es valida");
                 return false;
             }
             return true;

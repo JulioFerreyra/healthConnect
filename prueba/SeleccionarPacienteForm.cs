@@ -76,12 +76,19 @@ namespace prueba
                     logicaSecretaria.EliminarPaciente(paciente);
                     RellenarGrid(string.Empty);
                 }
-                if(dgPacientes.Columns[e.ColumnIndex].Name == "HistorialCol")
+                if(dgPacientes.Columns[e.ColumnIndex].Name == "HistorialCitasCol")
                 {
                     int FilaSeleccionada = dgPacientes.Rows.IndexOf(dgPacientes.Rows[e.RowIndex]);
                     ElementosGlobales.idPacienteGlobal = (int)dgPacientes.Rows[FilaSeleccionada].Cells["ID"].Value;
                     HistorialSecretariaForm historialSecretariaForm = new HistorialSecretariaForm();
                     historialSecretariaForm.ShowDialog();
+
+                }
+                if (dgPacientes.Columns[e.ColumnIndex].Name == "HistorialClinCol")
+                {
+                    int FilaSeleccionada = dgPacientes.Rows.IndexOf(dgPacientes.Rows[e.RowIndex]);
+                    ElementosGlobales.idPacienteGlobal = (int)dgPacientes.Rows[FilaSeleccionada].Cells["ID"].Value;
+                    MessageBox.Show(ElementosGlobales.idPacienteGlobal.ToString() + "=> paciente seleccionado", "Aquí ira la interfaz");
 
                 }
             }
@@ -121,15 +128,20 @@ namespace prueba
 
 
             DataGridViewButtonColumn VerHistoralBtnGrid = new DataGridViewButtonColumn();
-            VerHistoralBtnGrid.HeaderText = "Ver Historial";
-            VerHistoralBtnGrid.Name = "HistorialCol";
+            VerHistoralBtnGrid.HeaderText = "Ver Historial Citas";
+            VerHistoralBtnGrid.Name = "HistorialCitasCol";
             VerHistoralBtnGrid.Width = 30;
-           
-                dgPacientes.Columns.Add(EditarBtnGrid);
-                dgPacientes.Columns.Add(EliminarBtnGrid);
-               
-            
+
+
+            DataGridViewButtonColumn VerHistoralClinicioBtnGrid = new DataGridViewButtonColumn();
+            VerHistoralClinicioBtnGrid.HeaderText = "Ver Historial Clinico";
+            VerHistoralClinicioBtnGrid.Name = "HistorialClinCol";
+            VerHistoralClinicioBtnGrid.Width = 30;
+
+            dgPacientes.Columns.Add(EditarBtnGrid);
+            dgPacientes.Columns.Add(EliminarBtnGrid);
             dgPacientes.Columns.Add(VerHistoralBtnGrid);
+            dgPacientes.Columns.Add(VerHistoralClinicioBtnGrid);
         }
 
         private void label7_Click(object sender, EventArgs e)

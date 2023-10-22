@@ -56,10 +56,10 @@ namespace CapaLogica
         public DataTable VerHistoralPaciente(Paciente paciente)
         {
             SecretariaDAO secretariaDAO=new SecretariaDAO();
-            return secretariaDAO.VerHistorialPaciente(paciente);
+            return secretariaDAO.VerHistorialCitasPaciente(paciente);
         }
 
-        public DataTable GetIdPodologos()
+        public DataTable GetPodologos()
         {
             SecretariaDAO secretaria=new SecretariaDAO();
             return secretaria.GetPodologos();

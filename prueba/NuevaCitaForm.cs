@@ -135,7 +135,7 @@ namespace prueba
         private void RellenarComboBoxPodologos()
         {
             LogicaSecretaria secretaria = new LogicaSecretaria();
-            foreach (DataRow registro in secretaria.GetIdPodologos().Rows)
+            foreach (DataRow registro in secretaria.GetPodologos().Rows)
             {
                 cmbxPodologo.Items.Add(registro[1].ToString());
             }

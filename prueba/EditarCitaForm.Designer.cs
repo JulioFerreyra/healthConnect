@@ -415,9 +415,6 @@
             this.CmbxPodologo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.CmbxPodologo.ForeColor = System.Drawing.Color.White;
             this.CmbxPodologo.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.CmbxPodologo.Items.AddRange(new object[] {
-            "Xochitl Tello González",
-            "Ignacio Tello Gónzález"});
             this.CmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.CmbxPodologo.ListTextColor = System.Drawing.Color.Black;
             this.CmbxPodologo.Location = new System.Drawing.Point(426, 384);

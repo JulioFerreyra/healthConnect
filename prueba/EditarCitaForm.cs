@@ -15,6 +15,7 @@ namespace CapaPresentacion
 {
     public partial class EditarCitaForm : Form
     {
+        private int podologo;
         public EditarCitaForm()
         {
             InitializeComponent();
@@ -28,14 +29,15 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void EditarCitaForm_Load(object sender, EventArgs e)
         {
+            RellenarComboBoxPodologo();
             RellenarCampos();
             RellenarBoxHoras();
             DeshabilitarHoras();
-            if (ElementosGlobales.idUsuarioGlobal != 3)
-            {
-                CmbxPodologo.Enabled = false;
-                cmbxEstadoCita.Enabled = false;
-            }
+            //if (ElementosGlobales.idUsuarioGlobal != 3)
+            //{
+            //    CmbxPodologo.Enabled = false;
+            //    cmbxEstadoCita.Enabled = false;
+            //}
         }
 
         /// <summary>
@@ -48,8 +50,9 @@ namespace CapaPresentacion
             //PacientesForm BuscarPaciente = new PacientesForm();
             //BuscarPaciente.ShowDialog();
             NuevoPacienteForm form = new NuevoPacienteForm();
+            
             form.ShowDialog();
-            Show();
+
             RellenarCamposPaciente();
 
         }
@@ -90,17 +93,18 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void CmbxPodologo_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbxPodologo.SelectedIndex == 0)
-            {
-                ElementosGlobales.PodologoGlobal = 2;
-            }
-            if (CmbxPodologo.SelectedIndex == 1)
-            {
-                ElementosGlobales.PodologoGlobal = 1;
-            }
+            //if (CmbxPodologo.SelectedIndex == 0)
+            //{
+            //    ElementosGlobales.PodologoGlobal = 2;
+            //}
+            //if (CmbxPodologo.SelectedIndex == 1)
+            //{
+            //    ElementosGlobales.PodologoGlobal = 1;
+            //}
             RellenarBoxHoras();
             DeshabilitarHoras();
             RestablecerComboBoxHora();
+            ElementosGlobales.PodologoGlobal = ElementosGlobales.idPodologos[CmbxPodologo.SelectedIndex];
         }
 
         /// <summary>
@@ -120,10 +124,22 @@ namespace CapaPresentacion
                 tbxSintomas.Texts = renglon[6].ToString();
                 cmbxTipoCita.Texts = renglon[7].ToString();
                 cmbxEstadoCita.Texts= renglon[8].ToString();
-                CmbxPodologo.Texts = renglon[9].ToString();
+                
+                CmbxPodologo.SelectedIndex = CmbxPodologo.Items.IndexOf(renglon[9].ToString());
+                ElementosGlobales.PodologoGlobal = ElementosGlobales.idPodologos[CmbxPodologo.SelectedIndex];
                 ElementosGlobales.idPacienteGlobal = (int)renglon[10];
                
 
+            }
+        }
+
+        private void RellenarComboBoxPodologo()
+        {
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+           
+            foreach (DataRow registro in logicaSecretaria.GetPodologos().Rows)
+            {
+                CmbxPodologo.Items.Add(registro[1].ToString());
             }
         }
         private void RellenarCamposPaciente()

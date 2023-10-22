@@ -162,7 +162,7 @@ namespace CapaDatos
             DataTable DatosHoras = new DataTable();
             UsuarioDAO usuarioDAO=new UsuarioDAO();
             MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaSelect = "select hora from citas where fecha_cita = \""+ConvertirFechaCadena(fechaCita)+"\" and id_profesionista = "+idPodologo+" order by hora;";
+            string SentenciaSelect = "select hora from citas where fecha_cita = \""+ConvertirFechaCadena(fechaCita)+"\" and id_profesionista = "+idPodologo+" and estado_cita = \"pendiente\" order by hora;";
             try
             {
                 conexion_a_MySQL.Open();
@@ -210,7 +210,7 @@ namespace CapaDatos
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             DataTable DetallesCita = new DataTable();
             MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaSelect = "select p.nombre, p.apell_pat, p.apell_mat, p.telefono, c.detalle_cita, c.historial_cli, pod.nombre_comp, c.tipo_cita,c.hora, c.fecha_cita from citas c  join paciente p on p.id_paciente = c.id_paciente  join podologo pod on pod.id_podologo = c.id_podologo  where c.id_cita ="+cita.GetIdCita()+";";
+            string SentenciaSelect = "select p.nombre, p.apell_pat, p.apell_mat, p.telefono, c.motivo_cita, c.diagnostico, pod.nombre_comp, c.tipo_cita,c.hora, c.fecha_cita from citas c  join pacientes p on p.id_paciente = c.id_paciente  join profesionistas pod on pod.id_profesionista = c.id_profesionista  where c.id_cita =" + cita.GetIdCita()+";";
             try
             {
                 conexion_a_mysql.Open();
@@ -229,12 +229,12 @@ namespace CapaDatos
             }
 
         }
-        public DataTable VerHistorialPaciente(Paciente paciente)
+        public DataTable VerHistorialCitasPaciente(Paciente paciente)
         {
             DataTable HistorialPaciente = new DataTable();
             UsuarioDAO usuarioDAO=new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaSelectWhere = "select c.id_cita as ID, concat(pac.nombre, \" \", pac.apell_pat, \" \", pac.apell_mat) as Paciente, c.fecha_cita as Fecha, pod.nombre_comp as Podólogo, suc.nombre as Sucursal, c.tipo_cita as \"Tipo de Cita\", c.estado_cita as Estado from citas c join paciente pac on c.id_paciente = pac.id_paciente join podologo pod on pod.id_podologo=c.id_podologo join sucursal suc on suc.id_sucursal = c.id_sucursal where c.id_paciente ="+paciente.GetIdPaciente()+" and estado_cita = \"finalizada\";";
+            string SentenciaSelectWhere = "select c.id_cita as ID, concat(pac.nombre, \" \", pac.apell_pat, \" \", pac.apell_mat) as Paciente, c.fecha_cita as Fecha, pod.nombre_comp as Podólogo, c.tipo_cita as \"Tipo de Cita\", c.estado_cita as Estado from citas c join pacientes pac on c.id_paciente = pac.id_paciente join profesionistas pod on pod.id_profesionista=c.id_profesionista where c.id_paciente =" + paciente.GetIdPaciente()+" and estado_cita = \"finalizada\";";
             try
             {
                 conexion_a_mysql.Open();
@@ -437,7 +437,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaUpdate = "update citas set historial_cli = \""+cita.GetHistoriaClinica()+"\", estado_cita = \"finalizada\" where id_cita ="+cita.GetIdCita()+";";
+            string SentenciaUpdate = "update citas set diagnostico = \""+cita.GetHistoriaClinica()+"\", estado_cita = \"finalizada\" where id_cita ="+cita.GetIdCita()+";";
             try
             {
                 conexion_a_mysql.Open();

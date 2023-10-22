@@ -85,7 +85,14 @@ namespace prueba
                     detallesCitaForm.ShowDialog();
                     RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
                 }
-                
+                if (dgXochitl.Columns[e.ColumnIndex].Name == "DetallesCol")
+                {
+                    int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
+                    ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
+                    DetallesCitaForm detallesCitaForm = new DetallesCitaForm();
+                    detallesCitaForm.ShowDialog();
+                    RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+                }
             }
             catch (Exception)
             {
@@ -186,7 +193,7 @@ namespace prueba
         private void RellenarListaPodologos()
         {
             LogicaSecretaria secretaria = new LogicaSecretaria();
-            foreach (DataRow registro in secretaria.GetIdPodologos().Rows)
+            foreach (DataRow registro in secretaria.GetPodologos().Rows)
             {
                 ElementosGlobales.idPodologos.Add(int.Parse(registro[0].ToString()));
             }
@@ -195,7 +202,7 @@ namespace prueba
         {
             
             LogicaSecretaria secretaria = new LogicaSecretaria();
-            foreach (DataRow registro in secretaria.GetIdPodologos().Rows)
+            foreach (DataRow registro in secretaria.GetPodologos().Rows)
             {
                 cmbxPodologo.Items.Add(registro[1].ToString());
             }
