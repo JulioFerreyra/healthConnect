@@ -28,12 +28,9 @@ namespace prueba
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            
-            
-            
-            
-            
+            txtCorreoLogin.Texts = "FerrJu";
+            txbPasswordLogin.Texts = "Apd12345";
+  
        //     BackColor = Color.FromArgb(31, 31, 31);
          //   panel1.BackColor = Color.FromArgb(165,0,0,0);
         }
@@ -57,6 +54,13 @@ namespace prueba
             Close();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OlvideContraseñaForm recuperarContraaseña = new OlvideContraseñaForm();
+            Hide();
+            recuperarContraaseña.ShowDialog();
+            Show();
+        }
 
 
         /// <summary>
@@ -153,5 +157,6 @@ namespace prueba
         {
 
         }
+
     }
 }

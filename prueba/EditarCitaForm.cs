@@ -28,7 +28,6 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void EditarCitaForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
             RellenarCampos();
             RellenarBoxHoras();
             DeshabilitarHoras();
@@ -46,8 +45,11 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            PacientesForm BuscarPaciente = new PacientesForm();
-            BuscarPaciente.ShowDialog();
+            //PacientesForm BuscarPaciente = new PacientesForm();
+            //BuscarPaciente.ShowDialog();
+            NuevoPacienteForm form = new NuevoPacienteForm();
+            form.ShowDialog();
+            Show();
             RellenarCamposPaciente();
 
         }

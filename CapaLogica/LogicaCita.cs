@@ -17,7 +17,7 @@ namespace CapaLogica
                 MessageBox.Show("Seleccione un paciente para continuar");
                 return false;
             }
-            if (cita.GetIdPodologo() == 0)
+            if (cita.GetIdPodologo() < 1)
             {
                 MessageBox.Show("Seleccione un podólogo para continuar");
                 return false;

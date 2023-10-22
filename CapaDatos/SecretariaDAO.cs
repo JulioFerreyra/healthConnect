@@ -78,6 +78,32 @@ namespace CapaDatos
             }
 
         }
+
+        public DataTable GetPodologos()
+        {
+            UsuarioDAO usuario = new UsuarioDAO();
+            DataTable dt = new DataTable();
+            string sentenciaSelect = "select id_profesionista, nombre_comp from profesionistas";
+            MySqlConnection conexion_a_mysql = new MySqlConnection(usuario.CadenaConexion());
+            try {
+                conexion_a_mysql.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaSelect,conexion_a_mysql);
+                adaptador.Fill(dt);
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return dt;
+            }
+            finally 
+            {
+                conexion_a_mysql.Close();
+            }
+
+
+        }
         public DataTable GetPaciente(int idPaciente)
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();

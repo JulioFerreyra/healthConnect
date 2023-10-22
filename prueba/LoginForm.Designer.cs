@@ -185,6 +185,7 @@
             this.linkLabel1.TabIndex = 59;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Olvide mi contraseña";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // LoginForm
             // 

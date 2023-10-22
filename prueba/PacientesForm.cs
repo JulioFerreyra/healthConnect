@@ -20,7 +20,6 @@ namespace CapaPresentacion
 
         private void PacientesForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
             RellenarGrid(string.Empty);
             
 
