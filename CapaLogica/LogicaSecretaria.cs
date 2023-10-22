@@ -56,9 +56,14 @@ namespace CapaLogica
         public DataTable VerHistoralPaciente(Paciente paciente)
         {
             SecretariaDAO secretariaDAO=new SecretariaDAO();
-            return secretariaDAO.VerHistorialPaciente(paciente);
+            return secretariaDAO.VerHistorialCitasPaciente(paciente);
         }
 
+        public DataTable GetPodologos()
+        {
+            SecretariaDAO secretaria=new SecretariaDAO();
+            return secretaria.GetPodologos();
+        }
         /// <summary>
         /// Delete
         /// </summary>
@@ -74,6 +79,7 @@ namespace CapaLogica
             return;
            
         }
+        
         public void EliminarPaciente(Paciente paciente)
         {
             DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar los registros del Paciente?\n El hacerlo eliminará consigo las citas registradas a su nombre permanentemente", "Confirmación necesario", MessageBoxButtons.YesNo);

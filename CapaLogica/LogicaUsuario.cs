@@ -28,44 +28,72 @@ namespace CapaLogica
             return true;
         }
 
-        private void GetDatosUsuario(Usuario usuario)
-        {
-            if (ValidarCamposVacios(usuario))
-            {
-                UsuarioDAO usuarioDAO=new UsuarioDAO();
-                ElementosGlobales.DiccionarioUsuarios = usuarioDAO.GetUsuarios(usuario);
-            }
+         public int GetExistenciaUsuario(Usuario usuario)
+         {
 
-        }
-
-        private bool ValidarContraseña(Usuario usuario)
-        {
-            try
+            if (!ValidarCamposVacios(usuario))
             {
-                GetDatosUsuario(usuario);
-                if (ElementosGlobales.DiccionarioUsuarios.Values.ElementAt(0) == usuario.GetContraseña())
-                {
-                    return true;                  
-                }
+            
+                return 0;
+           
             }
-            catch (Exception)
-            {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            return usuarioDAO.GetExistenciaUsuario(usuario);
+         }
 
-                
-            }
-            MessageBox.Show("Usuario o Contraseña Invalidos");
-            return false;
-        }
+    public bool ValidarExistenciaUsuario(Usuario usuario)
+    {
+        return GetExistenciaUsuario(usuario)!=0;
+    }
 
-        public int InciarSesion(Usuario usuario)
-        {
-            if (ValidarContraseña(usuario))
-            {
-               
-               return ElementosGlobales.DiccionarioUsuarios.Keys.ElementAt(0);
-            }
-            return 0;
-        }
+      
+    public bool GetisAdmin(Usuario usuario)
+    {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            return usuarioDAO.GetisAdmin(usuario);
+    }
+
+
+        
+
+        //private void GetDatosUsuario(Usuario usuario)
+        //{
+        //    if (ValidarCamposVacios(usuario))
+        //    {
+        //        UsuarioDAO usuarioDAO=new UsuarioDAO();
+        //        ElementosGlobales.DiccionarioUsuarios = usuarioDAO.GetUsuarios(usuario);
+        //    }
+
+        //}
+
+        //private bool ValidarContraseña(Usuario usuario)
+        //{
+        //    try
+        //    {
+        //        GetDatosUsuario(usuario);
+        //        if (ElementosGlobales.DiccionarioUsuarios.Values.ElementAt(0) == usuario.GetContraseña())
+        //        {
+        //            return true;                  
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+
+
+        //    }
+        //    MessageBox.Show("Usuario o Contraseña Invalidos");
+        //    return false;
+        //}
+
+        //public int InciarSesion(Usuario usuario)
+        //{
+        //    if (ValidarContraseña(usuario))
+        //    {
+
+        //       return ElementosGlobales.DiccionarioUsuarios.Keys.ElementAt(0);
+        //    }
+        //    return 0;
+        //}
 
 
     }

@@ -28,12 +28,9 @@ namespace prueba
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            
-            
-            
-            
-            
+            txtCorreoLogin.Texts = "FerrJu";
+            txbPasswordLogin.Texts = "Apd12345";
+  
        //     BackColor = Color.FromArgb(31, 31, 31);
          //   panel1.BackColor = Color.FromArgb(165,0,0,0);
         }
@@ -46,52 +43,100 @@ namespace prueba
         /// <param name="e"></param>
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario(txtCorreoLogin.Texts,txbPasswordLogin.Texts);
-            InicarSesion(usuario);
-         
+            Usuario usuario = new Usuario(txtCorreoLogin.Texts, txbPasswordLogin.Texts);
+            IniciarSesionUsuario(usuario);
+
+            
+                   
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OlvideContraseñaForm recuperarContraaseña = new OlvideContraseñaForm();
+            Hide();
+            recuperarContraaseña.ShowDialog();
+            Show();
+        }
+
+
         /// <summary>
         /// Métodos
         /// </summary>
         /// <param name="usuario"></param>
-        private void InicarSesion(Usuario usuario)
+        //private void InicarSesion(Usuario usuario)
+        //{
+        //    LogicaUsuario logicaUsuario = new LogicaUsuario();
+        //   ElementosGlobales.idUsuarioGlobal= logicaUsuario.InciarSesion(usuario);
+
+        //    switch (ElementosGlobales.idUsuarioGlobal)
+        //    {
+        //        case 1:
+        //            Hide();
+        //            FormPanelPodologo principalForm = new FormPanelPodologo();
+        //            principalForm.ShowDialog();
+        //            Show();
+        //           ;
+        //            break;
+        //        case 2:
+        //            Hide(); 
+        //            FormPanelPodologo principalpodologo = new FormPanelPodologo();
+        //            principalpodologo.ShowDialog();
+        //            Show();
+        //            break;
+        //        case 3:
+        //            Hide();
+        //            FormPanelSecretaria principal = new FormPanelSecretaria();
+        //            principal.ShowDialog();
+        //            Show();
+        //            break;
+
+        //        default:
+        //            break;
+
+
+        //    }
+        //    RestablecerValores();
+
+
+        //}
+        private void IniciarSesionUsuario(Usuario usuario)
         {
             LogicaUsuario logicaUsuario = new LogicaUsuario();
-           ElementosGlobales.idUsuarioGlobal= logicaUsuario.InciarSesion(usuario);
-           
-            switch (ElementosGlobales.idUsuarioGlobal)
+            usuario.SetIdUsuario(logicaUsuario.GetExistenciaUsuario(usuario));
+
+            if (logicaUsuario.ValidarExistenciaUsuario(usuario))
             {
-                case 1:
-                    Hide();
-                    FormPanelPodologo principalForm = new FormPanelPodologo();
-                    principalForm.ShowDialog();
-                    Show();
-                   ;
-                    break;
-                case 2:
-                    Hide(); 
-                    FormPanelPodologo principalpodologo = new FormPanelPodologo();
-                    principalpodologo.ShowDialog();
-                    Show();
-                    break;
-                case 3:
-                    Hide();
-                    FormPanelSecretaria principal = new FormPanelSecretaria();
-                    principal.ShowDialog();
-                    Show();
-                    break;
-
-                default:
-                    break;
-
-                    
+                IniciarSesionAdmin(usuario);
+                return;
             }
+            MessageBox.Show("Credenciales incorrectas","Usuario no valido");
+
+
+        }
+
+        private void IniciarSesionAdmin(Usuario usuario)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+
+            if (logicaUsuario.GetisAdmin(usuario))
+            {
+                Hide();
+                FormPanelPodologo principalForm = new FormPanelPodologo();
+                principalForm.ShowDialog();
+                RestablecerValores();
+                Show();
+                return;
+            }
+            Hide();
+            FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
+            principalSecretaria.ShowDialog();
             RestablecerValores();
+            Show();
+
 
 
         }
@@ -112,5 +157,6 @@ namespace prueba
         {
 
         }
+
     }
 }

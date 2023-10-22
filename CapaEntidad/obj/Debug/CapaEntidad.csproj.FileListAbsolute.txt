@@ -34,3 +34,9 @@ C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.csp
 C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\2003y\Downloads\RHC\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\jaft2\source\repos\healthConnect\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\jaft2\source\repos\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\jaft2\source\repos\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\jaft2\source\repos\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\jaft2\source\repos\healthConnect\CapaEntidad\obj\Debug\CapaEntidad.pdb

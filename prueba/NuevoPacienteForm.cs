@@ -25,8 +25,10 @@ namespace prueba
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
+
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-            Paciente NuevoPaciente = new Paciente(txtNombre.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts);
+           
+            Paciente NuevoPaciente = new Paciente(txtNombre.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts, "dirección", dtpFechaNac.Value, cmbxSexo.Texts[0].ToString());
             if (logicaSecretaria.CrearNuevoPaciente(NuevoPaciente))
             {
                 txtNombre.Texts = string.Empty;

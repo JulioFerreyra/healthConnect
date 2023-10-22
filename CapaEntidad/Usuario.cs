@@ -28,12 +28,18 @@ namespace CapaEntidad
             this.contraseña = contraseña;
         }
 
+
+        public void SetIdUsuario(int idUsuario)
+        {
+            this.idUsuario = idUsuario;
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         /// 
-
+        
         public string GetContraseña()
         {
             return contraseña;
@@ -42,7 +48,7 @@ namespace CapaEntidad
         public string GetUsuario() {
             return usuario;
         }
-        public int getIdUsuario()
+        public int GetIdUsuario()
         {
             return idUsuario;
         }

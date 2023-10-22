@@ -33,13 +33,14 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal,txtNombre.Texts,txtApellPat.Texts,txtApellMat.Texts,txtTelefono.Texts);
+            Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal, textBoxD1.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts,txtDireccion.Texts, dtpFechaNac.Value, cmbxSexo.Texts[0].ToString());
+            MessageBox.Show(textBox1.Text);
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             if (logicaSecretaria.EditarPaciente(paciente))
             {
                 Close();
             }
-           
+
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -55,10 +56,21 @@ namespace CapaPresentacion
          LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             foreach (DataRow registro in logicaSecretaria.GetPaciente(ElementosGlobales.idPacienteGlobal).Rows)
             {
-                txtNombre.Texts = registro[0].ToString();
+                textBoxD1.Texts = registro[0].ToString();
                 txtApellPat.Texts = registro[1].ToString();
                 txtApellMat.Texts = registro[2].ToString();
                 txtTelefono.Texts = registro[3].ToString();
+                txtDireccion.Texts = registro[4].ToString();
+                dtpFechaNac.Value = DateTime.Parse(registro[5].ToString());
+                if (registro[6].ToString() == "F")
+                {
+                    cmbxSexo.SelectedIndex = 1;
+                }
+                if (registro[6].ToString() == "M")
+                {
+                    cmbxSexo.SelectedIndex = 0;
+                }
+
             }
         }
 

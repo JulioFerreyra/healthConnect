@@ -17,14 +17,9 @@ namespace CapaLogica
                 MessageBox.Show("Seleccione un paciente para continuar");
                 return false;
             }
-            if (cita.GetIdPodologo() == 0)
+            if (cita.GetIdPodologo() < 1)
             {
                 MessageBox.Show("Seleccione un podólogo para continuar");
-                return false;
-            }
-            if (string.IsNullOrEmpty(cita.GetTelefonoContacto()) || cita.GetTelefonoContacto().Length!=10)
-            {
-                MessageBox.Show("El campo Teléfono no es valido");
                 return false;
             }
             if (cita.GetTipoCita() == "Tipo de cita")
@@ -43,16 +38,17 @@ namespace CapaLogica
                 MessageBox.Show("El campo \"Sintomas\" contiene un valor no valido");
                 return false;
             }
+            if (cita.GetFechaCita().DayOfYear < DateTime.Today.DayOfYear)
+            {
+                MessageBox.Show("La fecha seleccionado no es valida");
+                return false;
+            }
           
             return true;
         }
         public bool ValidarCamposCitaActualizar(Cita cita)
         {
-            if (string.IsNullOrEmpty(cita.GetTelefonoContacto()) || cita.GetTelefonoContacto().Length != 10)
-            {
-                MessageBox.Show("El campo Teléfono no es valido");
-                return false;
-            }
+           
             if (cita.GetTipoCita() == "Tipo de cita")
             {
                 MessageBox.Show("El \"Tipo de cita\" seleccionado no es valido");
@@ -72,6 +68,11 @@ namespace CapaLogica
             if (cita.GetEstadoCita()== "Estado de la cita")
             {
                 MessageBox.Show("El campo \"Estado de la Cita\" contiene un valor no valido");
+                return false;
+            }
+            if (DateTime.Today.DayOfYear > cita.GetFechaCita().DayOfYear )
+            {
+                MessageBox.Show("La fecha seleccionado no es valida");
                 return false;
             }
             return true;

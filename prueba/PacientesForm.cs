@@ -20,7 +20,6 @@ namespace CapaPresentacion
 
         private void PacientesForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
             RellenarGrid(string.Empty);
             
 
@@ -55,7 +54,7 @@ namespace CapaPresentacion
             }
             
             
-            this.Close();
+            Close();
         }     
 
 
@@ -72,7 +71,14 @@ namespace CapaPresentacion
 
         private void BtnRegresarPrincipalSecretaria_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
+
+        private void dgPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }

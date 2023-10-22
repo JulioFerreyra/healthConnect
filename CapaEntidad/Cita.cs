@@ -14,8 +14,6 @@ namespace CapaEntidad
         private DateTime FechaCita;
         private string HoraCita;
         private int idPodologo;
-        private int idSucursal;
-        private string TelefonoContacto;
         private string DetallesCita;
         private string TipoCita;
         private string EstadoCita;
@@ -23,29 +21,29 @@ namespace CapaEntidad
        
         
         //editar
-        public Cita(int idCita, int idPaciente, DateTime fechaCita, string horaCita, int idPodologo, int idSucursal, string telefonoContacto, string detallesCita, string historiaClinica, string tipoCita, string estadoCita)
+        public Cita(int idCita, int idPaciente, DateTime fechaCita, string horaCita, int idPodologo, string detallesCita, string historiaClinica, string tipoCita, string estadoCita)
         {
             this.idCita = idCita;
             this.idPaciente = idPaciente;
             this.FechaCita = fechaCita;
             this.HoraCita = horaCita;
             this.idPodologo = idPodologo;
-            this.idSucursal = idSucursal;
-            this.TelefonoContacto = telefonoContacto;
+           
+            
             this.DetallesCita = detallesCita;
             this.HistoriaClinica = historiaClinica;
             this.TipoCita = tipoCita;
             this.EstadoCita = estadoCita;
         }
-        public Cita(int idCita, int idPaciente, DateTime fechaCita, string horaCita, int idPodologo, int idSucursal, string telefonoContacto, string detallesCita, string tipoCita, string estadoCita)
+        public Cita(int idCita, int idPaciente, DateTime fechaCita, string horaCita, int idPodologo, string detallesCita, string tipoCita, string estadoCita)
         {
             this.idCita = idCita;
             this.idPaciente = idPaciente;
             FechaCita = fechaCita;
             HoraCita = horaCita;
             this.idPodologo = idPodologo;
-            this.idSucursal = idSucursal;
-            TelefonoContacto = telefonoContacto;
+       
+            
             DetallesCita = detallesCita;
             TipoCita = tipoCita;
             EstadoCita = estadoCita;
@@ -66,14 +64,14 @@ namespace CapaEntidad
         }
 
         //crear
-        public Cita(int idPaciente, DateTime fechaCita, string horaCita, int idPodologo, int idSucursal, string telefonoContacto, string detallesCita, string tipoCita)
+        public Cita(int idPaciente, DateTime fechaCita, string horaCita, int idPodologo, string detallesCita, string tipoCita)
         {
             this.idPaciente = idPaciente;
             FechaCita = fechaCita;
             HoraCita = horaCita;
             this.idPodologo = idPodologo;
-            this.idSucursal = idSucursal;
-            TelefonoContacto = telefonoContacto;
+           
+          
             DetallesCita = detallesCita;
             TipoCita = tipoCita;
         }
@@ -98,14 +96,8 @@ namespace CapaEntidad
         public int GetIdPodologo() { 
             return idPodologo; 
         }
-        public int GetIdSucursal()
-        {
-            return idSucursal;
-        }
-        public string GetTelefonoContacto()
-        {
-            return TelefonoContacto;
-        }
+    
+       
         public string GetDetallesCita()
         {
             return DetallesCita;

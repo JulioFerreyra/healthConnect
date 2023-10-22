@@ -39,9 +39,11 @@ namespace prueba
         /// <param name="e"></param>
         public void SecretariaPrincipalForm_Load(object sender, EventArgs e)
         {
-
-            RellenarDataGridPodologos();
+            RellenarListaPodologos();
+            RellenarComboBoxPodologos();
+            RellenarDataGridPodologos(0);
             AgregarBotonesGrid();
+            cmbxPodologo.SelectedIndex = 0;
 
 
 
@@ -63,7 +65,7 @@ namespace prueba
                     int idCita = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
                     Cita cita = new Cita(idCita);
                     ObjLogicaSecretaria.EliminarCita(cita);
-                    RellenarGridXochitil();
+                    RellenarGridXochitil(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
                 }
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "EditarCol")
                 {
@@ -72,7 +74,7 @@ namespace prueba
                     ElementosGlobales.PodologoGlobal = 2;
                     EditarCitaForm editarcita = new EditarCitaForm();
                     editarcita.ShowDialog();
-                    RellenarDataGridPodologos();
+                    RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
 
                 }
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "FinalizarCol")
@@ -81,9 +83,16 @@ namespace prueba
                     ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
                     AnadirResultadoForm detallesCitaForm = new AnadirResultadoForm();
                     detallesCitaForm.ShowDialog();
-                    RellenarDataGridPodologos();
+                    RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
                 }
-                
+                if (dgXochitl.Columns[e.ColumnIndex].Name == "DetallesCol")
+                {
+                    int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
+                    ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
+                    DetallesCitaForm detallesCitaForm = new DetallesCitaForm();
+                    detallesCitaForm.ShowDialog();
+                    RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+                }
             }
             catch (Exception)
             {
@@ -91,6 +100,12 @@ namespace prueba
             }
         }
 
+        private void cmbxPodologo_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+
+
+        }
 
 
         /// <summary>
@@ -98,7 +113,7 @@ namespace prueba
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-       
+
 
 
         ///
@@ -108,7 +123,8 @@ namespace prueba
         /// 
         private void CalendarioCitas_DateChanged(object sender, DateRangeEventArgs e)
         {
-            RellenarDataGridPodologos();
+            
+            RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
         }
 
        
@@ -154,64 +170,45 @@ namespace prueba
 
         }
 
-        private void AgregarBotonesDataGridIgnacio()
-        {
-            DataGridViewImageColumn EditarBtnGrid = new DataGridViewImageColumn();
-            EditarBtnGrid.HeaderText = "Editar";
-            EditarBtnGrid.Width = 45;
-            EditarBtnGrid.Name = "EditarCol";
-            EditarBtnGrid.ImageLayout = DataGridViewImageCellLayout.Normal;
-            EditarBtnGrid.Image = CapaPresentacion.Properties.Resources.editar;
-
-            DataGridViewImageColumn EliminarBtnGrid = new DataGridViewImageColumn();
-            EliminarBtnGrid.HeaderText = "Eliminar";
-            EliminarBtnGrid.Name = "EliminarCol";
-            EliminarBtnGrid.Width = 45;
-            EliminarBtnGrid.ImageLayout = DataGridViewImageCellLayout.Normal;
-            EliminarBtnGrid.Image = CapaPresentacion.Properties.Resources.eliminar;
-
-            DataGridViewImageColumn FinalizarBtnGrid = new DataGridViewImageColumn();
-            FinalizarBtnGrid.HeaderText = "Finalizar cita";
-            FinalizarBtnGrid.Name = "FinalizarCol";
-            FinalizarBtnGrid.Width = 45;
-            FinalizarBtnGrid.ImageLayout = DataGridViewImageCellLayout.Normal;
-            FinalizarBtnGrid.Image = CapaPresentacion.Properties.Resources.finalizar;
-
-            DataGridViewImageColumn DetallesBtnGrid = new DataGridViewImageColumn();
-            DetallesBtnGrid.HeaderText = "Ver Detalles";
-            DetallesBtnGrid.Name = "DetallesCol";
-            DetallesBtnGrid.Width = 45;
-            DetallesBtnGrid.ImageLayout = DataGridViewImageCellLayout.Normal;
-            DetallesBtnGrid.Image = CapaPresentacion.Properties.Resources.detalles;
-
-          
-
-        }
+        
 
         private void AgregarBotonesGrid()
         {
-            AgregarBotonesDataGridIgnacio();
             AgregarBotonesDataGridXochitl();
         }
 
-        private void RellenarGridXochitil()
+        private void RellenarGridXochitil(int idPodologo)
         {
-            dgXochitl.DataSource = ObjLogicaSecretaria.VerConsultasPodologo(CalendarioCitas.SelectionStart,2);
+            dgXochitl.DataSource = ObjLogicaSecretaria.VerConsultasPodologo(CalendarioCitas.SelectionStart,idPodologo);
         }
 
-        private void RellenarGridIgnacio()
+      
+
+        private void RellenarDataGridPodologos(int idPodologo)
         {
-            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            RellenarGridXochitil(idPodologo);
            
         }
 
-        private void RellenarDataGridPodologos()
+        private void RellenarListaPodologos()
         {
-            RellenarGridXochitil();
-            RellenarGridIgnacio();
+            LogicaSecretaria secretaria = new LogicaSecretaria();
+            foreach (DataRow registro in secretaria.GetPodologos().Rows)
+            {
+                ElementosGlobales.idPodologos.Add(int.Parse(registro[0].ToString()));
+            }
+        }
+        private void RellenarComboBoxPodologos()
+        {
+            
+            LogicaSecretaria secretaria = new LogicaSecretaria();
+            foreach (DataRow registro in secretaria.GetPodologos().Rows)
+            {
+                cmbxPodologo.Items.Add(registro[1].ToString());
+            }
         }
 
- 
+       
     }
 
 

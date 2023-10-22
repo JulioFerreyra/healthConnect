@@ -116,7 +116,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(109, 443);
+            this.rjButton1.Location = new System.Drawing.Point(116, 443);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(143, 45);
             this.rjButton1.TabIndex = 6;
@@ -181,10 +181,11 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
             this.linkLabel1.Location = new System.Drawing.Point(126, 408);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(106, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(133, 16);
             this.linkLabel1.TabIndex = 59;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Olvide mi contraseña";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // LoginForm
             // 

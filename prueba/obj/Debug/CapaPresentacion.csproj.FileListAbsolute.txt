@@ -1400,3 +1400,6 @@ C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.Nuev
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.OlvideContraseña.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.UsuariosForm.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.OlvideContraseñaForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\bin\Debug\System.Memory.dll
+C:\Users\jaft2\source\repos\healthConnect\prueba\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\jaft2\source\repos\healthConnect\prueba\bin\Debug\System.Numerics.Vectors.dll

@@ -24,9 +24,9 @@ namespace prueba
         private bool letram = false;
         private void NuevaCitaForm_Load(object sender, EventArgs e)
         {
-           
+            RellenarComboBoxPodologos();
             RellenarGrid();
-            RellenarComboBox();
+            RellenarComboBoxHora();
             RestablecerComboBoxHora();
             cmbxHora.Enabled = false;
 
@@ -55,7 +55,7 @@ namespace prueba
         }
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, ElementosGlobales.PodologoGlobal, 1, tbxTelefono.Texts, tbxSintomas.Texts, cmbxTipoCita.Texts);
+            Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, cmbxPodologo.SelectedIndex==-1 ? 0: ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex], tbxSintomas.Texts, cmbxTipoCita.Texts);
             LimpiarCampos(cita);
             //RestablecerComboBoxHora();
             RellenarGrid();
@@ -76,7 +76,7 @@ namespace prueba
         private void dtFechaCita_ValueChanged(object sender, EventArgs e)
         {
             RellenarGrid();
-            RellenarComboBox();
+            RellenarComboBoxHora();
             DeshabilitarHora();
             RestablecerComboBoxHora();
         }
@@ -88,18 +88,9 @@ namespace prueba
         /// 
         private void cmbxPodologo_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbxPodologo.SelectedIndex == 0)
-            {
-                ElementosGlobales.PodologoGlobal = 2;
-                RellenarGrid();
-
-            }
-            if (cmbxPodologo.SelectedIndex == 1)
-            {
-                ElementosGlobales.PodologoGlobal = 1;
-                RellenarGrid();
-            }
-            RellenarComboBox();
+           
+            RellenarGrid();
+            RellenarComboBoxHora();
             DeshabilitarHora();
             RestablecerComboBoxHora();
             cmbxHora.Enabled = true;
@@ -113,7 +104,12 @@ namespace prueba
         private void RellenarGrid()
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-            dgPodologos.DataSource= logicaSecretaria.VerConsultasPodologo(dtFechaCita.Value,ElementosGlobales.PodologoGlobal);
+            if (cmbxPodologo.SelectedIndex < 0 )
+            {
+                dgPodologos.DataSource = logicaSecretaria.VerConsultasPodologo(dtFechaCita.Value,0);
+                return;
+            }
+            dgPodologos.DataSource= logicaSecretaria.VerConsultasPodologo(dtFechaCita.Value, ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
         }
         private void RellenarCampos()
         {
@@ -126,7 +122,7 @@ namespace prueba
                 tbxTelefono.Texts = Filas[3].ToString();
             }
         }
-        private void RellenarComboBox()
+        private void RellenarComboBoxHora()
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             cmbxHora.Items.Clear();
@@ -135,10 +131,19 @@ namespace prueba
                 cmbxHora.Items.Add(hora[0]);
             }
         }
+
+        private void RellenarComboBoxPodologos()
+        {
+            LogicaSecretaria secretaria = new LogicaSecretaria();
+            foreach (DataRow registro in secretaria.GetPodologos().Rows)
+            {
+                cmbxPodologo.Items.Add(registro[1].ToString());
+            }
+        }
         private void DeshabilitarHora()
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-            foreach (DataRow hora in logicaSecretaria.GetHorasPodologo(dtFechaCita.Value,ElementosGlobales.PodologoGlobal).Rows)
+            foreach (DataRow hora in logicaSecretaria.GetHorasPodologo(dtFechaCita.Value, cmbxPodologo.SelectedIndex == -1 ? 0 : ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]).Rows)
             {
                 int index = cmbxHora.Items.IndexOf(hora[0].ToString());
                 cmbxHora.Items.RemoveAt(index);
