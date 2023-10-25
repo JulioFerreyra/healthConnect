@@ -33,13 +33,14 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal, textBoxD1.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts,txtDireccion.Texts, dtpFechaNac.Value, cmbxSexo.Texts[0].ToString());
-            MessageBox.Show(textBox1.Text);
+            //aqui borre el textboxd1
+            //Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal, textBoxD1.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts,txtDireccion.Texts, dtpFechaNac.Value, cmbxSexo.Texts[0].ToString());
+            //MessageBox.Show(textBox1.Text);
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-            if (logicaSecretaria.EditarPaciente(paciente))
-            {
-                Close();
-            }
+            //if (logicaSecretaria.EditarPaciente(paciente))
+            //{
+            //    Close();
+            //}
 
         }
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -56,11 +57,11 @@ namespace CapaPresentacion
          LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             foreach (DataRow registro in logicaSecretaria.GetPaciente(ElementosGlobales.idPacienteGlobal).Rows)
             {
-                textBoxD1.Texts = registro[0].ToString();
-                txtApellPat.Texts = registro[1].ToString();
-                txtApellMat.Texts = registro[2].ToString();
-                txtTelefono.Texts = registro[3].ToString();
-                txtDireccion.Texts = registro[4].ToString();
+               //lo borre textBoxD1.Texts = registro[0].ToString();
+                txtApellPat.Text = registro[1].ToString();
+                txtApellMat.Text = registro[2].ToString();
+                txtTelefono.Text = registro[3].ToString();
+                txtDireccion1.Texts = registro[4].ToString();
                 dtpFechaNac.Value = DateTime.Parse(registro[5].ToString());
                 if (registro[6].ToString() == "F")
                 {
@@ -72,6 +73,11 @@ namespace CapaPresentacion
                 }
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,7 +101,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void txtApellPat_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtApellPat_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (char.IsLetter(e.KeyChar))
             {
@@ -116,7 +122,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void txtApellMat_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtApellMat_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (char.IsLetter(e.KeyChar))
             {
@@ -152,9 +158,30 @@ namespace CapaPresentacion
                     e.Handled = true;
                 }
             }
-            else if (txtTelefono.Texts.Length >= 10)
+            else if (txtTelefono.Text.Length >= 10)
             {
                 // Evitar que se ingrese más de 10 caracteres
+                e.Handled = true;
+            }
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+
+                e.KeyChar = char.ToUpper(e.KeyChar);
+            }
+            else if (char.IsWhiteSpace(e.KeyChar))
+            {
+
+            }
+            else if (e.KeyChar == '\b')
+            {
+
+            }
+            else
+            {
                 e.Handled = true;
             }
         }
