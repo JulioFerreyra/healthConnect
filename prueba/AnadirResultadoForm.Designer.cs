@@ -89,6 +89,7 @@
             this.txtDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetalles.ForeColor = System.Drawing.Color.DimGray;
             this.txtDetalles.Location = new System.Drawing.Point(310, 117);
+            this.txtDetalles.Margin = new System.Windows.Forms.Padding(4);
             this.txtDetalles.MaxLength = 100;
             this.txtDetalles.Multiline = true;
             this.txtDetalles.Name = "txtDetalles";
@@ -111,6 +112,7 @@
             this.txtRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRes.ForeColor = System.Drawing.Color.DimGray;
             this.txtRes.Location = new System.Drawing.Point(310, 251);
+            this.txtRes.Margin = new System.Windows.Forms.Padding(4);
             this.txtRes.MaxLength = 200;
             this.txtRes.Multiline = true;
             this.txtRes.Name = "txtRes";
@@ -125,8 +127,8 @@
             // 
             // rjButton1
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
             this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.rjButton1.BorderRadius = 15;
             this.rjButton1.BorderSize = 5;
@@ -137,13 +139,13 @@
             this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(293, 412);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(160, 50);
             this.rjButton1.TabIndex = 17;
             this.rjButton1.Text = "Agregar";
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
+            this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
@@ -158,6 +160,7 @@
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.DimGray;
             this.txtTel.Location = new System.Drawing.Point(38, 320);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.MaxLength = 100;
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
@@ -181,6 +184,7 @@
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellMat.Location = new System.Drawing.Point(38, 251);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellMat.MaxLength = 100;
             this.txtApellMat.Multiline = true;
             this.txtApellMat.Name = "txtApellMat";
@@ -204,6 +208,7 @@
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellPat.Location = new System.Drawing.Point(38, 185);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellPat.MaxLength = 100;
             this.txtApellPat.Multiline = true;
             this.txtApellPat.Name = "txtApellPat";
@@ -227,6 +232,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombre.Location = new System.Drawing.Point(38, 117);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
