@@ -58,7 +58,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(122, 453);
+            this.btnAceptar.Location = new System.Drawing.Point(218, 325);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(160, 50);
             this.btnAceptar.TabIndex = 12;
@@ -72,7 +72,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label2.Location = new System.Drawing.Point(80, 49);
+            this.label2.Location = new System.Drawing.Point(211, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(245, 37);
             this.label2.TabIndex = 13;
@@ -92,7 +92,7 @@
             "Femenino"});
             this.cmbxSexo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxSexo.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbxSexo.Location = new System.Drawing.Point(102, 406);
+            this.cmbxSexo.Location = new System.Drawing.Point(12, 235);
             this.cmbxSexo.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbxSexo.Name = "cmbxSexo";
             this.cmbxSexo.Padding = new System.Windows.Forms.Padding(1);
@@ -105,10 +105,10 @@
             this.dtpFechaNac.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dtpFechaNac.BorderSize = 0;
             this.dtpFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpFechaNac.Location = new System.Drawing.Point(108, 352);
+            this.dtpFechaNac.Location = new System.Drawing.Point(240, 230);
             this.dtpFechaNac.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(188, 35);
+            this.dtpFechaNac.Size = new System.Drawing.Size(200, 35);
             this.dtpFechaNac.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
             this.dtpFechaNac.TabIndex = 63;
             this.dtpFechaNac.TextColor = System.Drawing.Color.White;
@@ -121,7 +121,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 37);
+            this.panel1.Size = new System.Drawing.Size(675, 37);
             this.panel1.TabIndex = 65;
             // 
             // btnCancelar
@@ -133,7 +133,7 @@
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(369, -3);
+            this.btnCancelar.Location = new System.Drawing.Point(627, -3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(48, 40);
             this.btnCancelar.TabIndex = 40;
@@ -160,7 +160,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtNombre.Location = new System.Drawing.Point(108, 98);
+            this.txtNombre.Location = new System.Drawing.Point(12, 111);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(188, 23);
             this.txtNombre.TabIndex = 66;
@@ -172,7 +172,7 @@
             this.txtApellPat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtApellPat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtApellPat.Location = new System.Drawing.Point(108, 150);
+            this.txtApellPat.Location = new System.Drawing.Point(252, 111);
             this.txtApellPat.Name = "txtApellPat";
             this.txtApellPat.Size = new System.Drawing.Size(188, 23);
             this.txtApellPat.TabIndex = 67;
@@ -184,7 +184,7 @@
             this.txtApellMat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtApellMat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtApellMat.Location = new System.Drawing.Point(108, 198);
+            this.txtApellMat.Location = new System.Drawing.Point(475, 111);
             this.txtApellMat.Name = "txtApellMat";
             this.txtApellMat.Size = new System.Drawing.Size(188, 23);
             this.txtApellMat.TabIndex = 68;
@@ -196,7 +196,7 @@
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtTelefono.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtTelefono.Location = new System.Drawing.Point(108, 254);
+            this.txtTelefono.Location = new System.Drawing.Point(12, 169);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(188, 23);
             this.txtTelefono.TabIndex = 69;
@@ -208,7 +208,7 @@
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtDireccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDireccion.Location = new System.Drawing.Point(108, 310);
+            this.txtDireccion.Location = new System.Drawing.Point(252, 169);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(188, 23);
             this.txtDireccion.TabIndex = 70;
@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(417, 528);
+            this.ClientSize = new System.Drawing.Size(675, 403);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtApellMat);

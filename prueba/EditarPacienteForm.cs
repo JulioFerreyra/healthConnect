@@ -61,7 +61,7 @@ namespace CapaPresentacion
                 txtApellPat.Text = registro[1].ToString();
                 txtApellMat.Text = registro[2].ToString();
                 txtTelefono.Text = registro[3].ToString();
-                txtDireccion1.Texts = registro[4].ToString();
+                txtDireccion.Text = registro[4].ToString();
                 dtpFechaNac.Value = DateTime.Parse(registro[5].ToString());
                 if (registro[6].ToString() == "F")
                 {

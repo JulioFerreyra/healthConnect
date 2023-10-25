@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class EditarUsuariosForm : Form
+    public partial class HistorialClinicoForm : Form
     {
-        public EditarUsuariosForm()
+        public HistorialClinicoForm()
         {
             InitializeComponent();
-        }
-
-        private void txtNombre__TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

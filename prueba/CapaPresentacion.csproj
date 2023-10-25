@@ -124,6 +124,12 @@
     <Compile Include="FormPanelSecretaria.Designer.cs">
       <DependentUpon>FormPanelSecretaria.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialClinicoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialClinicoForm.Designer.cs">
+      <DependentUpon>HistorialClinicoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HistorialPodologoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPanelSecretaria.resx">
       <DependentUpon>FormPanelSecretaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialClinicoForm.resx">
+      <DependentUpon>HistorialClinicoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialPodologoForm.resx">
       <DependentUpon>HistorialPodologoForm.cs</DependentUpon>

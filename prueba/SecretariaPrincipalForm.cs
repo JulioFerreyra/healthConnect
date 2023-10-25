@@ -43,6 +43,11 @@ namespace prueba
             RellenarComboBoxPodologos();
             RellenarDataGridPodologos(0);
             AgregarBotonesGrid();
+            if (cmbxPodologo.Items.Count == 0)
+            {
+                cmbxPodologo.SelectedIndex = -1;
+                return;
+            }
             cmbxPodologo.SelectedIndex = 0;
 
 

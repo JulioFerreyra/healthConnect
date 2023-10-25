@@ -235,7 +235,7 @@ namespace prueba
                 textBox1.Text = "";
                 textBox1.ForeColor = this.ForeColor;
                 if (isPasswordChar)
-                    textBox1.UseSystemPasswordChar = true;
+                    textBox1.UseSystemPasswordChar = false;
             }
         }
 
