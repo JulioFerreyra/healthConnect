@@ -1406,3 +1406,4 @@ C:\Users\jaft2\source\repos\healthConnect\prueba\bin\Debug\System.Numerics.Vecto
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.LogsForm.resources
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.OlvideContraseñaForm.resources
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.UsuariosForm.resources
+C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.HistorialClinicoForm.resources
