@@ -123,8 +123,6 @@ namespace CapaPresentacion
             
         }
 
-       
-
         private void CambiarEstadoCamposNoPat(bool estadoCampo)
         {
             cmbAlc.Enabled = estadoCampo;
