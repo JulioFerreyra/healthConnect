@@ -21,6 +21,7 @@ namespace CapaPresentacion
         private void HistorialClinicoForm_Load(object sender, EventArgs e)
         {
             RellenarCamposPacientes();
+            RellenarAntecedentesNoPat();
             cmbTipoPat.SelectedIndex = 0;
             CambiarEstadoCamposNoPat(false);
             CambiarEstadoCamposPat(false);
@@ -123,6 +124,32 @@ namespace CapaPresentacion
             
         }
 
+        private void RellenarAntecedentesNoPat()
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            foreach (DataRow fila in logicaPodologo.GetAntecendetesNoPatologicosPaciente(ElementosGlobales.idPacienteGlobal).Rows)
+            {
+                cmbParto.SelectedIndex = bool.Parse(fila[0].ToString()) == true ? 0 : 1;
+                cmbHiperlax.SelectedIndex = bool.Parse(fila[1].ToString()) == true ? 0 : 1; 
+                cmbTabaco.SelectedIndex = bool.Parse(fila[2].ToString()) == true ? 0 : 1;
+                cmbFrecTab.Texts = string.IsNullOrEmpty(fila[3].ToString()) ? "Frecuencia" : fila[3].ToString();
+                cmbAlc.SelectedIndex = bool.Parse(fila[4].ToString()) == true ? 0 : 1;
+                cmbFrecAlc.Texts = string.IsNullOrEmpty(fila[5].ToString()) ? "Frecuencia" : fila[5].ToString();
+                cmbActFis.SelectedIndex = bool.Parse(fila[6].ToString()) == true ? 0 : 1;
+                cmbFrecActFis.Texts = string.IsNullOrEmpty(fila[7].ToString()) ? "Frecuencia" : fila[7].ToString();
+                cmbDrogas.SelectedIndex = bool.Parse(fila[8].ToString()) == true ? 0 : 1;
+                cmbDiabetes.Texts = fila[9].ToString();
+                cmbTension.Texts = fila[10].ToString(); 
+                cmbTiroides.Texts = fila[11].ToString();
+                cmbHepatitis.Texts = fila[12].ToString();
+                cmbCardiopatias.Texts = fila[13].ToString();
+                txtInterv.Text = string.IsNullOrEmpty(fila[14].ToString()) ? "" : fila[14].ToString();
+                cmbNeoplasia.Texts = fila[15].ToString();
+                txtMed.Text = fila[16].ToString();
+
+            }
+        }
+
         private void CambiarEstadoCamposNoPat(bool estadoCampo)
         {
             cmbAlc.Enabled = estadoCampo;
@@ -132,9 +159,9 @@ namespace CapaPresentacion
             cmbParto.Enabled = estadoCampo;
             cmbTabaco.Enabled = estadoCampo;
             btnGuNoPat.Visible = estadoCampo;
-           cmbFrecAlc.Visible = false;
-            cmbFrecTab.Visible = false;
-            cmbFrecActFis.Visible = false;
+            cmbFrecAlc.Visible = cmbAlc.SelectedIndex ==0 ?true:false;
+            cmbFrecTab.Visible = cmbTabaco.SelectedIndex == 0 ? true: false;
+            cmbFrecActFis.Visible = cmbActFis.SelectedIndex == 0 ? true : false;
             BtnEdNoPat.Visible = !estadoCampo;
         }
 
