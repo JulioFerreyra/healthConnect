@@ -88,7 +88,8 @@ namespace prueba
                 {
                     int FilaSeleccionada = dgPacientes.Rows.IndexOf(dgPacientes.Rows[e.RowIndex]);
                     ElementosGlobales.idPacienteGlobal = (int)dgPacientes.Rows[FilaSeleccionada].Cells["ID"].Value;
-                    MessageBox.Show(ElementosGlobales.idPacienteGlobal.ToString() + "=> paciente seleccionado", "Aquí ira la interfaz");
+                    HistorialClinicoForm historialClinicoForm = new HistorialClinicoForm();
+                    historialClinicoForm.ShowDialog();
 
                 }
             }

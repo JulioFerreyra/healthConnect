@@ -42,5 +42,11 @@ namespace CapaLogica
             }
             return;
         }
+
+       public DataTable GetDatosPaciente(int idpaciente)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.GetDatosPaciente(idpaciente);
+        }
     }
 }
