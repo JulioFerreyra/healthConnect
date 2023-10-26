@@ -23,9 +23,17 @@ namespace CapaPresentacion
             RellenarCamposPacientes();
             cmbTipoPat.SelectedIndex = 0;
             CambiarEstadoCamposNoPat(false);
-           
-        }
+            CambiarEstadoCamposPat(false);
 
+
+        }
+        
+
+        /// <summary>
+        /// botones
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEdNoPat_Click(object sender, EventArgs e)
         {
             CambiarEstadoCamposNoPat(true);
@@ -35,21 +43,50 @@ namespace CapaPresentacion
             CambiarEstadoCamposNoPat(false);
         }
 
-
-
-        private void RellenarCamposPacientes()
+        private void BtnEdPat_Click(object sender, EventArgs e)
         {
-            
-            LogicaPodologo logicaPodologo = new LogicaPodologo();
-            foreach (DataRow dr in logicaPodologo.GetDatosPaciente(ElementosGlobales.idPacienteGlobal).Rows)
+            CambiarEstadoCamposPat(true);
+        }
+
+        private void BtnGuPat_Click(object sender, EventArgs e)
+        {
+            CambiarEstadoCamposPat(false);
+        }
+
+        /// <summary>
+        /// Combo Box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmbTabaco_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTabaco.SelectedIndex == 0)
             {
-                txtNombre.Texts = dr[0].ToString();
-                txtApePat.Texts = dr[1].ToString();
-                txtApeMat.Texts = dr[2].ToString();
-                txtTelf.Texts = dr[3].ToString();
-                txtEdad.Texts = dr[4].ToString();
-                txtSexo.Texts = dr[5].ToString() == "F" ? "Femeninio" : "Masculino";
+                cmbFrecTab.Visible = true;
+                return;
             }
+            cmbFrecTab.Visible = !true;
+        }
+
+        private void cmbAlc_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbAlc.SelectedIndex == 0)
+            {
+                cmbFrecAlc.Visible = true;
+                return;
+            }
+            cmbFrecAlc.Visible = !true;
+        }
+
+        private void cmbActFis_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cmbActFis.SelectedIndex == 0)
+            {
+                cmbFrecActFis.Visible = true;
+                return;
+            }
+            cmbFrecActFis.Visible = false;
         }
 
         private void cmbTipoPat_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -58,11 +95,35 @@ namespace CapaPresentacion
             {
                 pnlNoPat.Visible = false;
                 pnlPat.Visible = true;
+
                 return;
+
             }
+            //CambiarEstadoCamposNoPat(false);
             pnlNoPat.Visible = !false;
             pnlPat.Visible = !true;
         }
+
+        /// <summary>
+        /// Métodos
+        /// </summary>
+        private void RellenarCamposPacientes()
+        {
+            
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            foreach (DataRow fila in logicaPodologo.GetDatosPaciente(ElementosGlobales.idPacienteGlobal).Rows)
+            {
+                txtNombre.Texts = fila[0].ToString();
+                txtApePat.Texts = fila[1].ToString();
+                txtApeMat.Texts = fila[2].ToString();
+                txtTelf.Texts = fila[3].ToString();
+                txtEdad.Texts = fila[4].ToString();
+                txtSexo.Texts = fila[5].ToString() == "F" ? "Femenino" : "Masculino";
+            }
+            
+        }
+
+       
 
         private void CambiarEstadoCamposNoPat(bool estadoCampo)
         {
@@ -79,6 +140,20 @@ namespace CapaPresentacion
             BtnEdNoPat.Visible = !estadoCampo;
         }
 
-       
+        private void CambiarEstadoCamposPat(bool estadoCampo)
+        {
+            cmbCardiopatias.Enabled = estadoCampo;
+            cmbDiabetes.Enabled = estadoCampo;
+            cmbHepatitis.Enabled = estadoCampo;
+            cmbTension.Enabled = estadoCampo;
+            cmbTiroides.Enabled = estadoCampo;
+            cmbNeoplasia.Enabled = estadoCampo;
+            txtInterv.Enabled = estadoCampo;
+            txtMed.Enabled = estadoCampo;
+            BtnGuPat.Visible = estadoCampo;
+            BtnEdPat.Visible = !estadoCampo;
+        }
+
+        
     }
 }
