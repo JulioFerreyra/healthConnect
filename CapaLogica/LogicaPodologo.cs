@@ -22,12 +22,12 @@ namespace CapaLogica
         {
             PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.VerCitasPodologo(FechaCita, idPodologo);
-            
-                
+
+
         }
         public DataTable GetNombrePodologo(int idPodologo)
         {
-            PodologoDAO podologoDAO=new PodologoDAO();
+            PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.GetNombrePodologo(idPodologo);
         }
 
@@ -42,5 +42,31 @@ namespace CapaLogica
             }
             return;
         }
+
+        public DataTable GetDatosPaciente(int idPaciente)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.GetDatosPaciente(idPaciente);
+        }
+
+        public DataTable GetAntecendetesNoPatologicosPaciente(int idPaciente)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.GetAntecendetesNoPatologicosPaciente(idPaciente);
+        }
+
+        public void ActualizarDatosNoPatologicosPaciente(AntecedentesNoPatologicos antecedentes)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+             podologoDAO.ActualizarDatosNoPatologicosPaciente(antecedentes);
+        }
+        public void ActualizarAntecedentesPatologicosPaciente(AntecedentesPatologicos antecedentes)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            podologoDAO.ActualizarAntecedentesPatologicosPaciente(antecedentes);
+        }
+
     }
 }
+
+

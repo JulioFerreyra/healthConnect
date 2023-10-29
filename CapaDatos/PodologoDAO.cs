@@ -49,6 +49,31 @@ namespace CapaDatos
             }
 
         }
+        public DataTable GetDatosPaciente(int idPaciente)
+        {
+            DataTable datos = new DataTable();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            string SentenciaSelect = "select nombre as Nombre, apell_pat as 'Apellido Paterno', apell_mat as 'Apellido Materno', telefono as Telefono,   year(now()) - year(fecha_nac) as Edad, sexo as Sexo from pacientes where id_paciente = " + idPaciente+";";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(datos);
+                
+                return datos;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show (ex.Message);
+                return datos;
+            }
+            finally
+            {
+                conexion_a_MySQL .Close();
+            }
+        }
 
         public DataTable GetNombrePodologo(int idPodologo)
         {
@@ -73,6 +98,32 @@ namespace CapaDatos
             {
                 conexion_a_MySQL.Close();
                 
+            }
+        }
+
+        public DataTable GetAntecendetesNoPatologicosPaciente(int idPaciente)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            string SentenciaSelect = "Select no.parto, no.hiperlaxitud, no.tabaco, no.frec_tab, no.alcohol, no.frec_alc, no.act_fisica, no.frec_actF,no.drogas, pat.diabetes, pat.presion_arterial, pat.tiroides, pat.hepatitis, pat.cardiopatias,pat.intervenciones,pat.neoplasia, pat.medicacion from ant_nopat no join ant_pat pat on no.id_paciente = pat.id_paciente where no.id_paciente="+idPaciente;
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
             }
         }
 
@@ -102,6 +153,54 @@ namespace CapaDatos
                 conexion_a_SQL.Close();
             }
         }
+
+       
+        public void ActualizarDatosNoPatologicosPaciente(AntecedentesNoPatologicos antecedentes)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            MySqlConnection conexion_a_SQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            string sentenciaUpdate = "UPDATE ant_nopat SET parto = "+antecedentes.GetParto()+", hiperlaxitud = "+antecedentes.GetHiperlaxitud()+", tabaco = "+antecedentes.GetTabaco()+", frec_tab = "+antecedentes.GetFrecuenciaTabaco()+", alcohol = "+antecedentes.GetAlcohol()+", frec_alc = "+antecedentes.GetFrecueciaAlcohol()+", act_fisica = "+antecedentes.GetActividadFisica()+", frec_actF= "+antecedentes.GetFrecuenciaActividad()+", drogas = "+antecedentes.GetDrogas()+" WHERE id_paciente =" + antecedentes.GetIdPaciente();
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaUpdate, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Antecedentes actualizados correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        }
+
+        public void ActualizarAntecedentesPatologicosPaciente(AntecedentesPatologicos antecedentes)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            string sentenciaUpdate = "UPDATE ant_pat SET diabetes = \""+antecedentes.GetDiabetes()+"\", presion_arterial = \""+antecedentes.GetPresionArterial()+"\", tiroides = \""+antecedentes.GetTiroides()+"\", hepatitis = \""+antecedentes.GetHepatitis()+"\",cardiopatias = "+antecedentes.GetCardiopatias()+",intervenciones = \""+antecedentes.GetIntervenciones()+"\",neoplasia = "+antecedentes.GetNeoplasia()+",medicacion =\""+antecedentes.GetMedicacion()+"\" WHERE id_paciente = "+ antecedentes.GetIdPaciente();
+            MySqlConnection conexion_a_SQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaUpdate, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Antecedentes actualizados correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        }
+
 
         /// <summary>
         /// Métodos

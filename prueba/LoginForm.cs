@@ -111,8 +111,10 @@ namespace prueba
             if (logicaUsuario.ValidarExistenciaUsuario(usuario))
             {
                 IniciarSesionAdmin(usuario);
+                
                 return;
             }
+            
             MessageBox.Show("Credenciales incorrectas","Usuario no valido");
 
 
@@ -124,15 +126,18 @@ namespace prueba
 
             if (logicaUsuario.GetisAdmin(usuario))
             {
+                ElementosGlobales.isAdmin = true;
                 Hide();
                 FormPanelPodologo principalForm = new FormPanelPodologo();
                 principalForm.ShowDialog();
+                
                 RestablecerValores();
                 Show();
                 return;
             }
             Hide();
             FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
+            ElementosGlobales.isAdmin = false;
             principalSecretaria.ShowDialog();
             RestablecerValores();
             Show();

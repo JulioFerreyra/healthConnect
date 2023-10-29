@@ -1407,3 +1407,4 @@ C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.Log
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.OlvideContraseñaForm.resources
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.UsuariosForm.resources
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.HistorialClinicoForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.HistorialClinicoForm.resources
