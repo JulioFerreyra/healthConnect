@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    internal class AntecedentesNoPatologicos
+    public class AntecedentesNoPatologicos
     {
 
         private int idAntNoPat;
@@ -17,13 +17,13 @@ namespace CapaEntidad
         private bool alcohol;
         private bool drogas;
         private bool actividadFisica;
-        private string frecuenciaAlcohol;
-        private string frecuenciaActividad;
-        private string frecuenciaTabaco;
+        private int frecuenciaAlcohol;
+        private int frecuenciaActividad;
+        private int frecuenciaTabaco;
 
-        public AntecedentesNoPatologicos(int idAntNoPat, int idPaciente, bool parto, bool hiperlaxitud, bool tabaco, bool alcohol, bool drogas, bool actividadFisica, string frecuenciaAlcohol, string frecuenciaActividad, string frecuenciaTabaco)
+        public AntecedentesNoPatologicos(int idPaciente, bool parto, bool hiperlaxitud, bool tabaco, bool alcohol, bool drogas, bool actividadFisica, int frecuenciaAlcohol, int frecuenciaActividad, int frecuenciaTabaco)
         {
-            this.idAntNoPat = idAntNoPat;
+           
             this.idPaciente = idPaciente;
             this.parto = parto;
             this.hiperlaxitud = hiperlaxitud;
@@ -44,8 +44,8 @@ namespace CapaEntidad
         public bool GetAlcohol() { return alcohol; }
         public bool GetActividadFisica() {  return actividadFisica; }
         public bool GetTabaco() {  return tabaco; }
-        public string GetFrecueciaAlcohol() { return frecuenciaAlcohol; }
-        public string GetFrecuenciaActividad() {return frecuenciaActividad; }
-        public string GetFrecuenciaTabaco() { return frecuenciaTabaco; }
+        public int GetFrecueciaAlcohol() { return frecuenciaAlcohol; }
+        public int GetFrecuenciaActividad() {return frecuenciaActividad; }
+        public int GetFrecuenciaTabaco() { return frecuenciaTabaco; }
     }
 }

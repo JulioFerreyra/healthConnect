@@ -1,4 +1,5 @@
-﻿using CapaLogica;
+﻿using CapaEntidad;
+using CapaLogica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace CapaPresentacion
         private void HistorialClinicoForm_Load(object sender, EventArgs e)
         {
             RellenarCamposPacientes();
-            RellenarAntecedentesNoPat();
+            RellenarAntecedentesPaciente();
             cmbTipoPat.SelectedIndex = 0;
             CambiarEstadoCamposNoPat(false);
             CambiarEstadoCamposPat(false);
@@ -41,6 +42,10 @@ namespace CapaPresentacion
         }
         private void btnGuNoPat_Click(object sender, EventArgs e)
         {
+            // int fH, fa, fT;
+            AntecedentesNoPatologicos antecedentes = new AntecedentesNoPatologicos(ElementosGlobales.idPacienteGlobal, cmbParto.SelectedIndex == 0, cmbHiperlax.SelectedIndex == 0, cmbTabaco.SelectedIndex == 0, cmbAlc.SelectedIndex == 0, cmbDrogas.SelectedIndex ==0, cmbActFis.SelectedIndex == 0, int.Parse(numFrecAlc.Value.ToString()), int.Parse(numFrecAct.Value.ToString()), int.Parse(numFrecTab.Value.ToString()));
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            logicaPodologo.ActualizarDatosNoPatologicosPaciente(antecedentes);
             CambiarEstadoCamposNoPat(false);
         }
 
@@ -63,20 +68,22 @@ namespace CapaPresentacion
         {
             if (cmbTabaco.SelectedIndex == 0)
             {
-                cmbFrecTab.Visible = true;
+                numFrecTab.Visible = true;
                 return;
             }
-            cmbFrecTab.Visible = !true;
+            numFrecTab.Visible = !true;
+            numFrecTab.Value = 0;
         }
 
         private void cmbAlc_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbAlc.SelectedIndex == 0)
             {
-                cmbFrecAlc.Visible = true;
+                numFrecAlc.Visible = true;
                 return;
             }
-            cmbFrecAlc.Visible = !true;
+            numFrecAlc.Visible = !true;
+            numFrecAlc.Value = 0;
         }
 
         private void cmbActFis_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -84,10 +91,11 @@ namespace CapaPresentacion
 
             if (cmbActFis.SelectedIndex == 0)
             {
-                cmbFrecActFis.Visible = true;
+                numFrecAct.Visible = true;
                 return;
             }
-            cmbFrecActFis.Visible = false;
+            numFrecAct.Visible = false;
+            numFrecAct.Value = 0;
         }
 
         private void cmbTipoPat_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -124,7 +132,7 @@ namespace CapaPresentacion
             
         }
 
-        private void RellenarAntecedentesNoPat()
+        private void RellenarAntecedentesPaciente()
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             foreach (DataRow fila in logicaPodologo.GetAntecendetesNoPatologicosPaciente(ElementosGlobales.idPacienteGlobal).Rows)
@@ -132,11 +140,14 @@ namespace CapaPresentacion
                 cmbParto.SelectedIndex = bool.Parse(fila[0].ToString()) == true ? 0 : 1;
                 cmbHiperlax.SelectedIndex = bool.Parse(fila[1].ToString()) == true ? 0 : 1; 
                 cmbTabaco.SelectedIndex = bool.Parse(fila[2].ToString()) == true ? 0 : 1;
-                cmbFrecTab.Texts = string.IsNullOrEmpty(fila[3].ToString()) ? "Frecuencia" : fila[3].ToString();
+                //cmbFrecTab.Texts = string.IsNullOrEmpty(fila[3].ToString()) ? "Frecuencia" : fila[3].ToString();
+                numFrecTab.Value = int.Parse(fila[3].ToString());
                 cmbAlc.SelectedIndex = bool.Parse(fila[4].ToString()) == true ? 0 : 1;
-                cmbFrecAlc.Texts = string.IsNullOrEmpty(fila[5].ToString()) ? "Frecuencia" : fila[5].ToString();
+                numFrecAlc.Value = int.Parse(fila[5].ToString());
+                //cmbFrecAlc.Texts = string.IsNullOrEmpty(fila[5].ToString()) ? "Frecuencia" : fila[5].ToString();
                 cmbActFis.SelectedIndex = bool.Parse(fila[6].ToString()) == true ? 0 : 1;
-                cmbFrecActFis.Texts = string.IsNullOrEmpty(fila[7].ToString()) ? "Frecuencia" : fila[7].ToString();
+                numFrecAct.Value = int.Parse(fila[7].ToString());
+                //cmbFrecActFis.Texts = string.IsNullOrEmpty(fila[7].ToString()) ? "Frecuencia" : fila[7].ToString();
                 cmbDrogas.SelectedIndex = bool.Parse(fila[8].ToString()) == true ? 0 : 1;
                 cmbDiabetes.Texts = fila[9].ToString();
                 cmbTension.Texts = fila[10].ToString(); 
@@ -159,10 +170,11 @@ namespace CapaPresentacion
             cmbParto.Enabled = estadoCampo;
             cmbTabaco.Enabled = estadoCampo;
             btnGuNoPat.Visible = estadoCampo;
-            cmbFrecAlc.Visible = cmbAlc.SelectedIndex ==0 ?true:false;
-            cmbFrecTab.Visible = cmbTabaco.SelectedIndex == 0 ? true: false;
-            cmbFrecActFis.Visible = cmbActFis.SelectedIndex == 0 ? true : false;
             BtnEdNoPat.Visible = !estadoCampo;
+            numFrecAlc.Enabled = estadoCampo;
+            numFrecTab.Enabled = estadoCampo;
+            numFrecAct.Enabled = estadoCampo;
+           
         }
 
         private void CambiarEstadoCamposPat(bool estadoCampo)

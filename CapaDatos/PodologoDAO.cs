@@ -154,6 +154,31 @@ namespace CapaDatos
             }
         }
 
+       
+        public void ActualizarDatosNoPatologicosPaciente(AntecedentesNoPatologicos antecedentes)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            MySqlConnection conexion_a_SQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            string sentenciaUpdate = "UPDATE ant_nopat SET parto = "+antecedentes.GetParto()+", hiperlaxitud = "+antecedentes.GetHiperlaxitud()+", tabaco = "+antecedentes.GetTabaco()+", frec_tab = "+antecedentes.GetFrecuenciaTabaco()+", alcohol = "+antecedentes.GetAlcohol()+", frec_alc = "+antecedentes.GetFrecueciaAlcohol()+", act_fisica = "+antecedentes.GetActividadFisica()+", frec_actF= "+antecedentes.GetFrecuenciaActividad()+", drogas = "+antecedentes.GetDrogas()+" WHERE id_paciente =" + antecedentes.GetIdPaciente();
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaUpdate, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Antecedentes actualizados correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        }
+
+
         /// <summary>
         /// Métodos
         /// </summary>

@@ -55,6 +55,12 @@ namespace CapaLogica
             return podologoDAO.GetAntecendetesNoPatologicosPaciente(idPaciente);
         }
 
+        public void ActualizarDatosNoPatologicosPaciente(AntecedentesNoPatologicos antecedentes)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+             podologoDAO.ActualizarDatosNoPatologicosPaciente(antecedentes);
+        }
+
     }
 }
 
