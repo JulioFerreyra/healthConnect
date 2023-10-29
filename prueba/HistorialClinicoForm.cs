@@ -56,6 +56,9 @@ namespace CapaPresentacion
 
         private void BtnGuPat_Click(object sender, EventArgs e)
         {
+            AntecedentesPatologicos antecedentes = new AntecedentesPatologicos(ElementosGlobales.idPacienteGlobal, cmbDiabetes.Texts, cmbTension.Texts, cmbTiroides.Texts, cmbHepatitis.Texts, cmbCardiopatias.SelectedIndex ==0, txtInterv.Text, cmbNeoplasia.SelectedIndex == 0, txtMed.Text);
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            logicaPodologo.ActualizarAntecedentesPatologicosPaciente(antecedentes);
             CambiarEstadoCamposPat(false);
         }
 

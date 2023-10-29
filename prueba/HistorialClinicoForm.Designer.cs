@@ -906,8 +906,8 @@
             this.Controls.Add(this.lblApePat);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlPat);
             this.Controls.Add(this.pnlNoPat);
+            this.Controls.Add(this.pnlPat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistorialClinicoForm";
             this.Text = "HistorialClinicoForm";

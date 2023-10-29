@@ -35,7 +35,7 @@ namespace CapaEntidad
         public string GetDiabetes() {  return diabetes; }
         public string GetPresionArterial() { return presionArterial; }
         public string GetTiroides() {  return tiroides; }
-        public bool GetCardioPatias() { return cardiopatias; }
+        public bool GetCardiopatias() { return cardiopatias; }
         public string GetHepatitis() { return hepatitis; }
         public string GetIntervenciones() {  return intervenciones; }
         public string GetMedicacion() {  return medicacion; }

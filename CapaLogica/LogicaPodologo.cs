@@ -60,6 +60,11 @@ namespace CapaLogica
             PodologoDAO podologoDAO = new PodologoDAO();
              podologoDAO.ActualizarDatosNoPatologicosPaciente(antecedentes);
         }
+        public void ActualizarAntecedentesPatologicosPaciente(AntecedentesPatologicos antecedentes)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            podologoDAO.ActualizarAntecedentesPatologicosPaciente(antecedentes);
+        }
 
     }
 }
