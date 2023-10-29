@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AntecedentesNoPatologicos.cs" />
+    <Compile Include="AntecedentesPatologicos.cs" />
     <Compile Include="Cita.cs" />
     <Compile Include="Paciente.cs" />
     <Compile Include="Usuario.cs" />
