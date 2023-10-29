@@ -109,8 +109,8 @@ namespace CapaPresentacion
 
             }
             //CambiarEstadoCamposNoPat(false);
-            pnlNoPat.Visible = !false;
-            pnlPat.Visible = !true;
+            pnlNoPat.Visible = true;
+            pnlPat.Visible = false;
         }
 
         /// <summary>
@@ -137,25 +137,24 @@ namespace CapaPresentacion
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             foreach (DataRow fila in logicaPodologo.GetAntecendetesNoPatologicosPaciente(ElementosGlobales.idPacienteGlobal).Rows)
             {
-                cmbParto.SelectedIndex = bool.Parse(fila[0].ToString()) == true ? 0 : 1;
-                cmbHiperlax.SelectedIndex = bool.Parse(fila[1].ToString()) == true ? 0 : 1; 
-                cmbTabaco.SelectedIndex = bool.Parse(fila[2].ToString()) == true ? 0 : 1;
-                //cmbFrecTab.Texts = string.IsNullOrEmpty(fila[3].ToString()) ? "Frecuencia" : fila[3].ToString();
+                cmbParto.SelectedIndex = bool.Parse(fila[0].ToString()) ? 0 : 1;
+                cmbHiperlax.SelectedIndex = bool.Parse(fila[1].ToString()) ? 0 : 1; 
+                cmbTabaco.SelectedIndex = bool.Parse(fila[2].ToString()) ? 0 : 1;
                 numFrecTab.Value = int.Parse(fila[3].ToString());
-                cmbAlc.SelectedIndex = bool.Parse(fila[4].ToString()) == true ? 0 : 1;
+                cmbAlc.SelectedIndex = bool.Parse(fila[4].ToString()) ? 0 : 1;
                 numFrecAlc.Value = int.Parse(fila[5].ToString());
-                //cmbFrecAlc.Texts = string.IsNullOrEmpty(fila[5].ToString()) ? "Frecuencia" : fila[5].ToString();
-                cmbActFis.SelectedIndex = bool.Parse(fila[6].ToString()) == true ? 0 : 1;
+                cmbActFis.SelectedIndex = bool.Parse(fila[6].ToString()) ? 0 : 1;
                 numFrecAct.Value = int.Parse(fila[7].ToString());
-                //cmbFrecActFis.Texts = string.IsNullOrEmpty(fila[7].ToString()) ? "Frecuencia" : fila[7].ToString();
-                cmbDrogas.SelectedIndex = bool.Parse(fila[8].ToString()) == true ? 0 : 1;
-                cmbDiabetes.Texts = fila[9].ToString();
-                cmbTension.Texts = fila[10].ToString(); 
-                cmbTiroides.Texts = fila[11].ToString();
-                cmbHepatitis.Texts = fila[12].ToString();
-                cmbCardiopatias.Texts = fila[13].ToString();
+                cmbDrogas.SelectedIndex = bool.Parse(fila[8].ToString()) ? 0 : 1;
+                //Antecedentes patológicos
+                MessageBox.Show(fila[9].ToString());
+                cmbDiabetes.SelectedIndex = cmbDiabetes.Items.IndexOf(fila[9].ToString()); 
+                cmbTension.SelectedIndex= cmbTension.Items.IndexOf(fila[10].ToString()); 
+                cmbTiroides.SelectedIndex = cmbTiroides.Items.IndexOf(fila[11].ToString());
+                cmbHepatitis.SelectedIndex = cmbHepatitis.Items.IndexOf(fila[12].ToString());
+                cmbCardiopatias.SelectedIndex= bool.Parse(fila[13].ToString()) ? 0 : 1;
                 txtInterv.Text = string.IsNullOrEmpty(fila[14].ToString()) ? "" : fila[14].ToString();
-                cmbNeoplasia.Texts = fila[15].ToString();
+                cmbNeoplasia.SelectedIndex = bool.Parse(fila[15].ToString()) ? 0 : 1 ;
                 txtMed.Text = fila[16].ToString();
 
             }

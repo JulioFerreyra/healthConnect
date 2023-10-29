@@ -33,33 +33,14 @@
             this.pnlPat = new System.Windows.Forms.Panel();
             this.lblPatologicos = new System.Windows.Forms.Label();
             this.txtInterv = new System.Windows.Forms.TextBox();
-            this.BtnGuPat = new CustomControls.RJControls.RJButton();
             this.lblQMed = new System.Windows.Forms.Label();
             this.lblTipIn = new System.Windows.Forms.Label();
             this.txtMed = new System.Windows.Forms.TextBox();
-            this.BtnEdPat = new CustomControls.RJControls.RJButton();
-            this.cmbCardiopatias = new CustomControls.RJControls.pComboBox();
-            this.cmbHepatitis = new CustomControls.RJControls.pComboBox();
-            this.cmbTiroides = new CustomControls.RJControls.pComboBox();
-            this.cmbNeoplasia = new CustomControls.RJControls.pComboBox();
-            this.cmbTension = new CustomControls.RJControls.pComboBox();
-            this.cmbDiabetes = new CustomControls.RJControls.pComboBox();
             this.pnlNoPat = new System.Windows.Forms.Panel();
             this.numFrecAct = new System.Windows.Forms.NumericUpDown();
             this.numFrecAlc = new System.Windows.Forms.NumericUpDown();
             this.numFrecTab = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGuNoPat = new CustomControls.RJControls.RJButton();
-            this.cmbDrogas = new CustomControls.RJControls.pComboBox();
-            this.cmbFrecActFis = new CustomControls.RJControls.pComboBox();
-            this.cmbActFis = new CustomControls.RJControls.pComboBox();
-            this.BtnEdNoPat = new CustomControls.RJControls.RJButton();
-            this.cmbFrecAlc = new CustomControls.RJControls.pComboBox();
-            this.cmbAlc = new CustomControls.RJControls.pComboBox();
-            this.cmbFrecTab = new CustomControls.RJControls.pComboBox();
-            this.cmbHiperlax = new CustomControls.RJControls.pComboBox();
-            this.cmbTabaco = new CustomControls.RJControls.pComboBox();
-            this.cmbParto = new CustomControls.RJControls.pComboBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApePat = new System.Windows.Forms.Label();
             this.lblApeMat = new System.Windows.Forms.Label();
@@ -73,6 +54,25 @@
             this.txtApePat = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
             this.cmbTipoPat = new CustomControls.RJControls.pComboBox();
+            this.btnGuNoPat = new CustomControls.RJControls.RJButton();
+            this.cmbDrogas = new CustomControls.RJControls.pComboBox();
+            this.cmbFrecActFis = new CustomControls.RJControls.pComboBox();
+            this.cmbActFis = new CustomControls.RJControls.pComboBox();
+            this.BtnEdNoPat = new CustomControls.RJControls.RJButton();
+            this.cmbFrecAlc = new CustomControls.RJControls.pComboBox();
+            this.cmbAlc = new CustomControls.RJControls.pComboBox();
+            this.cmbFrecTab = new CustomControls.RJControls.pComboBox();
+            this.cmbHiperlax = new CustomControls.RJControls.pComboBox();
+            this.cmbTabaco = new CustomControls.RJControls.pComboBox();
+            this.cmbParto = new CustomControls.RJControls.pComboBox();
+            this.BtnGuPat = new CustomControls.RJControls.RJButton();
+            this.BtnEdPat = new CustomControls.RJControls.RJButton();
+            this.cmbCardiopatias = new CustomControls.RJControls.pComboBox();
+            this.cmbHepatitis = new CustomControls.RJControls.pComboBox();
+            this.cmbTiroides = new CustomControls.RJControls.pComboBox();
+            this.cmbNeoplasia = new CustomControls.RJControls.pComboBox();
+            this.cmbTension = new CustomControls.RJControls.pComboBox();
+            this.cmbDiabetes = new CustomControls.RJControls.pComboBox();
             this.panel1.SuspendLayout();
             this.pnlPat.SuspendLayout();
             this.pnlNoPat.SuspendLayout();
@@ -144,25 +144,6 @@
             this.txtInterv.Size = new System.Drawing.Size(346, 22);
             this.txtInterv.TabIndex = 87;
             // 
-            // BtnGuPat
-            // 
-            this.BtnGuPat.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnGuPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnGuPat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BtnGuPat.BorderRadius = 17;
-            this.BtnGuPat.BorderSize = 0;
-            this.BtnGuPat.FlatAppearance.BorderSize = 0;
-            this.BtnGuPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuPat.ForeColor = System.Drawing.Color.White;
-            this.BtnGuPat.Location = new System.Drawing.Point(489, 438);
-            this.BtnGuPat.Name = "BtnGuPat";
-            this.BtnGuPat.Size = new System.Drawing.Size(150, 40);
-            this.BtnGuPat.TabIndex = 85;
-            this.BtnGuPat.Text = "GUARDAR";
-            this.BtnGuPat.TextColor = System.Drawing.Color.White;
-            this.BtnGuPat.UseVisualStyleBackColor = false;
-            this.BtnGuPat.Click += new System.EventHandler(this.BtnGuPat_Click);
-            // 
             // lblQMed
             // 
             this.lblQMed.AutoSize = true;
@@ -190,139 +171,6 @@
             this.txtMed.Name = "txtMed";
             this.txtMed.Size = new System.Drawing.Size(346, 22);
             this.txtMed.TabIndex = 82;
-            // 
-            // BtnEdPat
-            // 
-            this.BtnEdPat.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnEdPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnEdPat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BtnEdPat.BorderRadius = 17;
-            this.BtnEdPat.BorderSize = 0;
-            this.BtnEdPat.FlatAppearance.BorderSize = 0;
-            this.BtnEdPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEdPat.ForeColor = System.Drawing.Color.White;
-            this.BtnEdPat.Location = new System.Drawing.Point(492, 485);
-            this.BtnEdPat.Name = "BtnEdPat";
-            this.BtnEdPat.Size = new System.Drawing.Size(150, 40);
-            this.BtnEdPat.TabIndex = 7;
-            this.BtnEdPat.Text = "EDITAR";
-            this.BtnEdPat.TextColor = System.Drawing.Color.White;
-            this.BtnEdPat.UseVisualStyleBackColor = false;
-            this.BtnEdPat.Click += new System.EventHandler(this.BtnEdPat_Click);
-            // 
-            // cmbCardiopatias
-            // 
-            this.cmbCardiopatias.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbCardiopatias.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbCardiopatias.BorderSize = 1;
-            this.cmbCardiopatias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbCardiopatias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbCardiopatias.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbCardiopatias.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbCardiopatias.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbCardiopatias.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbCardiopatias.Location = new System.Drawing.Point(316, 263);
-            this.cmbCardiopatias.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbCardiopatias.Name = "cmbCardiopatias";
-            this.cmbCardiopatias.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbCardiopatias.Size = new System.Drawing.Size(241, 33);
-            this.cmbCardiopatias.TabIndex = 5;
-            this.cmbCardiopatias.Texts = "CARDIOPATIAS";
-            // 
-            // cmbHepatitis
-            // 
-            this.cmbHepatitis.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbHepatitis.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbHepatitis.BorderSize = 1;
-            this.cmbHepatitis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbHepatitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbHepatitis.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbHepatitis.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbHepatitis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbHepatitis.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbHepatitis.Location = new System.Drawing.Point(26, 263);
-            this.cmbHepatitis.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbHepatitis.Name = "cmbHepatitis";
-            this.cmbHepatitis.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbHepatitis.Size = new System.Drawing.Size(241, 33);
-            this.cmbHepatitis.TabIndex = 4;
-            this.cmbHepatitis.Texts = "HEPATITITS";
-            // 
-            // cmbTiroides
-            // 
-            this.cmbTiroides.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbTiroides.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTiroides.BorderSize = 1;
-            this.cmbTiroides.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbTiroides.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbTiroides.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbTiroides.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTiroides.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbTiroides.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTiroides.Location = new System.Drawing.Point(316, 158);
-            this.cmbTiroides.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbTiroides.Name = "cmbTiroides";
-            this.cmbTiroides.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbTiroides.Size = new System.Drawing.Size(241, 33);
-            this.cmbTiroides.TabIndex = 3;
-            this.cmbTiroides.Texts = "TIROIDES";
-            // 
-            // cmbNeoplasia
-            // 
-            this.cmbNeoplasia.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbNeoplasia.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbNeoplasia.BorderSize = 1;
-            this.cmbNeoplasia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbNeoplasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbNeoplasia.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbNeoplasia.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbNeoplasia.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbNeoplasia.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbNeoplasia.Location = new System.Drawing.Point(316, 71);
-            this.cmbNeoplasia.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbNeoplasia.Name = "cmbNeoplasia";
-            this.cmbNeoplasia.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbNeoplasia.Size = new System.Drawing.Size(241, 33);
-            this.cmbNeoplasia.TabIndex = 2;
-            this.cmbNeoplasia.Texts = "NEOPLASIA";
-            // 
-            // cmbTension
-            // 
-            this.cmbTension.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbTension.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTension.BorderSize = 1;
-            this.cmbTension.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbTension.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbTension.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbTension.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTension.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbTension.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTension.Location = new System.Drawing.Point(26, 158);
-            this.cmbTension.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbTension.Name = "cmbTension";
-            this.cmbTension.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbTension.Size = new System.Drawing.Size(241, 33);
-            this.cmbTension.TabIndex = 1;
-            this.cmbTension.Texts = "TENSIÓN";
-            // 
-            // cmbDiabetes
-            // 
-            this.cmbDiabetes.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbDiabetes.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbDiabetes.BorderSize = 1;
-            this.cmbDiabetes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbDiabetes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbDiabetes.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbDiabetes.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbDiabetes.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbDiabetes.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbDiabetes.Location = new System.Drawing.Point(27, 71);
-            this.cmbDiabetes.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbDiabetes.Name = "cmbDiabetes";
-            this.cmbDiabetes.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbDiabetes.Size = new System.Drawing.Size(241, 33);
-            this.cmbDiabetes.TabIndex = 0;
-            this.cmbDiabetes.Texts = "DIABETES";
             // 
             // pnlNoPat
             // 
@@ -387,239 +235,6 @@
             this.label1.Size = new System.Drawing.Size(193, 24);
             this.label1.TabIndex = 92;
             this.label1.Text = "NO PATOLOGICOS";
-            // 
-            // btnGuNoPat
-            // 
-            this.btnGuNoPat.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnGuNoPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnGuNoPat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuNoPat.BorderRadius = 17;
-            this.btnGuNoPat.BorderSize = 0;
-            this.btnGuNoPat.FlatAppearance.BorderSize = 0;
-            this.btnGuNoPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuNoPat.ForeColor = System.Drawing.Color.White;
-            this.btnGuNoPat.Location = new System.Drawing.Point(487, 412);
-            this.btnGuNoPat.Name = "btnGuNoPat";
-            this.btnGuNoPat.Size = new System.Drawing.Size(150, 40);
-            this.btnGuNoPat.TabIndex = 11;
-            this.btnGuNoPat.Text = "GUARDAR";
-            this.btnGuNoPat.TextColor = System.Drawing.Color.White;
-            this.btnGuNoPat.UseVisualStyleBackColor = false;
-            this.btnGuNoPat.Click += new System.EventHandler(this.btnGuNoPat_Click);
-            // 
-            // cmbDrogas
-            // 
-            this.cmbDrogas.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbDrogas.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbDrogas.BorderSize = 1;
-            this.cmbDrogas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbDrogas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbDrogas.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbDrogas.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbDrogas.Items.AddRange(new object[] {
-            "SÍ",
-            "NO"});
-            this.cmbDrogas.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbDrogas.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbDrogas.Location = new System.Drawing.Point(49, 356);
-            this.cmbDrogas.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbDrogas.Name = "cmbDrogas";
-            this.cmbDrogas.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbDrogas.Size = new System.Drawing.Size(241, 33);
-            this.cmbDrogas.TabIndex = 10;
-            this.cmbDrogas.Texts = "DROGAS";
-            // 
-            // cmbFrecActFis
-            // 
-            this.cmbFrecActFis.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbFrecActFis.BorderColor = System.Drawing.Color.Navy;
-            this.cmbFrecActFis.BorderSize = 1;
-            this.cmbFrecActFis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbFrecActFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbFrecActFis.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbFrecActFis.IconColor = System.Drawing.Color.Navy;
-            this.cmbFrecActFis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbFrecActFis.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbFrecActFis.Location = new System.Drawing.Point(365, 284);
-            this.cmbFrecActFis.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbFrecActFis.Name = "cmbFrecActFis";
-            this.cmbFrecActFis.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbFrecActFis.Size = new System.Drawing.Size(241, 33);
-            this.cmbFrecActFis.TabIndex = 9;
-            this.cmbFrecActFis.Texts = "FRECUENCIA";
-            this.cmbFrecActFis.Visible = false;
-            // 
-            // cmbActFis
-            // 
-            this.cmbActFis.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbActFis.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbActFis.BorderSize = 1;
-            this.cmbActFis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbActFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbActFis.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbActFis.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbActFis.Items.AddRange(new object[] {
-            "SÍ",
-            "NO"});
-            this.cmbActFis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbActFis.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbActFis.Location = new System.Drawing.Point(49, 284);
-            this.cmbActFis.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbActFis.Name = "cmbActFis";
-            this.cmbActFis.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbActFis.Size = new System.Drawing.Size(241, 33);
-            this.cmbActFis.TabIndex = 8;
-            this.cmbActFis.Texts = "ACTIVIDAD FISICA";
-            this.cmbActFis.OnSelectedIndexChanged += new System.EventHandler(this.cmbActFis_OnSelectedIndexChanged);
-            // 
-            // BtnEdNoPat
-            // 
-            this.BtnEdNoPat.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnEdNoPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnEdNoPat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BtnEdNoPat.BorderRadius = 17;
-            this.BtnEdNoPat.BorderSize = 0;
-            this.BtnEdNoPat.FlatAppearance.BorderSize = 0;
-            this.BtnEdNoPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEdNoPat.ForeColor = System.Drawing.Color.White;
-            this.BtnEdNoPat.Location = new System.Drawing.Point(487, 462);
-            this.BtnEdNoPat.Name = "BtnEdNoPat";
-            this.BtnEdNoPat.Size = new System.Drawing.Size(150, 40);
-            this.BtnEdNoPat.TabIndex = 7;
-            this.BtnEdNoPat.Text = "EDITAR";
-            this.BtnEdNoPat.TextColor = System.Drawing.Color.White;
-            this.BtnEdNoPat.UseVisualStyleBackColor = false;
-            this.BtnEdNoPat.Click += new System.EventHandler(this.BtnEdNoPat_Click);
-            // 
-            // cmbFrecAlc
-            // 
-            this.cmbFrecAlc.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbFrecAlc.BorderColor = System.Drawing.Color.Navy;
-            this.cmbFrecAlc.BorderSize = 1;
-            this.cmbFrecAlc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbFrecAlc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbFrecAlc.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbFrecAlc.IconColor = System.Drawing.Color.Navy;
-            this.cmbFrecAlc.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbFrecAlc.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbFrecAlc.Location = new System.Drawing.Point(365, 212);
-            this.cmbFrecAlc.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbFrecAlc.Name = "cmbFrecAlc";
-            this.cmbFrecAlc.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbFrecAlc.Size = new System.Drawing.Size(241, 33);
-            this.cmbFrecAlc.TabIndex = 5;
-            this.cmbFrecAlc.Texts = "FRECUENCIA";
-            this.cmbFrecAlc.Visible = false;
-            // 
-            // cmbAlc
-            // 
-            this.cmbAlc.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbAlc.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbAlc.BorderSize = 1;
-            this.cmbAlc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbAlc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbAlc.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbAlc.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbAlc.Items.AddRange(new object[] {
-            "SÍ",
-            "NO"});
-            this.cmbAlc.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbAlc.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbAlc.Location = new System.Drawing.Point(49, 212);
-            this.cmbAlc.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbAlc.Name = "cmbAlc";
-            this.cmbAlc.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbAlc.Size = new System.Drawing.Size(241, 33);
-            this.cmbAlc.TabIndex = 4;
-            this.cmbAlc.Texts = "ALCOHOL";
-            this.cmbAlc.OnSelectedIndexChanged += new System.EventHandler(this.cmbAlc_OnSelectedIndexChanged);
-            // 
-            // cmbFrecTab
-            // 
-            this.cmbFrecTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbFrecTab.BorderColor = System.Drawing.Color.Navy;
-            this.cmbFrecTab.BorderSize = 1;
-            this.cmbFrecTab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbFrecTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbFrecTab.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbFrecTab.IconColor = System.Drawing.Color.Navy;
-            this.cmbFrecTab.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbFrecTab.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbFrecTab.Location = new System.Drawing.Point(365, 140);
-            this.cmbFrecTab.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbFrecTab.Name = "cmbFrecTab";
-            this.cmbFrecTab.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbFrecTab.Size = new System.Drawing.Size(241, 33);
-            this.cmbFrecTab.TabIndex = 3;
-            this.cmbFrecTab.Texts = "FRECUENCIA";
-            this.cmbFrecTab.Visible = false;
-            // 
-            // cmbHiperlax
-            // 
-            this.cmbHiperlax.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbHiperlax.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbHiperlax.BorderSize = 1;
-            this.cmbHiperlax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbHiperlax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbHiperlax.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbHiperlax.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbHiperlax.Items.AddRange(new object[] {
-            "SÍ",
-            "NO"});
-            this.cmbHiperlax.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbHiperlax.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbHiperlax.Location = new System.Drawing.Point(365, 68);
-            this.cmbHiperlax.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbHiperlax.Name = "cmbHiperlax";
-            this.cmbHiperlax.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbHiperlax.Size = new System.Drawing.Size(241, 33);
-            this.cmbHiperlax.TabIndex = 2;
-            this.cmbHiperlax.Texts = "HIPERLAXITUD";
-            // 
-            // cmbTabaco
-            // 
-            this.cmbTabaco.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbTabaco.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTabaco.BorderSize = 1;
-            this.cmbTabaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbTabaco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbTabaco.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbTabaco.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTabaco.Items.AddRange(new object[] {
-            "SÍ",
-            "NO"});
-            this.cmbTabaco.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbTabaco.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTabaco.Location = new System.Drawing.Point(49, 140);
-            this.cmbTabaco.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbTabaco.Name = "cmbTabaco";
-            this.cmbTabaco.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbTabaco.Size = new System.Drawing.Size(241, 33);
-            this.cmbTabaco.TabIndex = 1;
-            this.cmbTabaco.Texts = "TABACO";
-            this.cmbTabaco.OnSelectedIndexChanged += new System.EventHandler(this.cmbTabaco_OnSelectedIndexChanged);
-            // 
-            // cmbParto
-            // 
-            this.cmbParto.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbParto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbParto.BorderSize = 1;
-            this.cmbParto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbParto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.cmbParto.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbParto.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbParto.Items.AddRange(new object[] {
-            "SÍ",
-            "NO"});
-            this.cmbParto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbParto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbParto.Location = new System.Drawing.Point(49, 68);
-            this.cmbParto.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbParto.Name = "cmbParto";
-            this.cmbParto.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbParto.Size = new System.Drawing.Size(241, 33);
-            this.cmbParto.TabIndex = 0;
-            this.cmbParto.Texts = "PARTO";
             // 
             // lblNombre
             // 
@@ -859,6 +474,418 @@
             this.cmbTipoPat.Texts = "NO PATOLOGICOS";
             this.cmbTipoPat.OnSelectedIndexChanged += new System.EventHandler(this.cmbTipoPat_OnSelectedIndexChanged);
             // 
+            // btnGuNoPat
+            // 
+            this.btnGuNoPat.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuNoPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuNoPat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuNoPat.BorderRadius = 17;
+            this.btnGuNoPat.BorderSize = 0;
+            this.btnGuNoPat.FlatAppearance.BorderSize = 0;
+            this.btnGuNoPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuNoPat.ForeColor = System.Drawing.Color.White;
+            this.btnGuNoPat.Location = new System.Drawing.Point(487, 412);
+            this.btnGuNoPat.Name = "btnGuNoPat";
+            this.btnGuNoPat.Size = new System.Drawing.Size(150, 40);
+            this.btnGuNoPat.TabIndex = 11;
+            this.btnGuNoPat.Text = "GUARDAR";
+            this.btnGuNoPat.TextColor = System.Drawing.Color.White;
+            this.btnGuNoPat.UseVisualStyleBackColor = false;
+            this.btnGuNoPat.Click += new System.EventHandler(this.btnGuNoPat_Click);
+            // 
+            // cmbDrogas
+            // 
+            this.cmbDrogas.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbDrogas.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbDrogas.BorderSize = 1;
+            this.cmbDrogas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbDrogas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbDrogas.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbDrogas.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbDrogas.Items.AddRange(new object[] {
+            "SÍ",
+            "NO"});
+            this.cmbDrogas.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbDrogas.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbDrogas.Location = new System.Drawing.Point(49, 356);
+            this.cmbDrogas.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbDrogas.Name = "cmbDrogas";
+            this.cmbDrogas.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbDrogas.Size = new System.Drawing.Size(241, 33);
+            this.cmbDrogas.TabIndex = 10;
+            this.cmbDrogas.Texts = "DROGAS";
+            // 
+            // cmbFrecActFis
+            // 
+            this.cmbFrecActFis.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbFrecActFis.BorderColor = System.Drawing.Color.Navy;
+            this.cmbFrecActFis.BorderSize = 1;
+            this.cmbFrecActFis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbFrecActFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbFrecActFis.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbFrecActFis.IconColor = System.Drawing.Color.Navy;
+            this.cmbFrecActFis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbFrecActFis.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbFrecActFis.Location = new System.Drawing.Point(365, 284);
+            this.cmbFrecActFis.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbFrecActFis.Name = "cmbFrecActFis";
+            this.cmbFrecActFis.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbFrecActFis.Size = new System.Drawing.Size(241, 33);
+            this.cmbFrecActFis.TabIndex = 9;
+            this.cmbFrecActFis.Texts = "FRECUENCIA";
+            this.cmbFrecActFis.Visible = false;
+            // 
+            // cmbActFis
+            // 
+            this.cmbActFis.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbActFis.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbActFis.BorderSize = 1;
+            this.cmbActFis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbActFis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbActFis.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbActFis.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbActFis.Items.AddRange(new object[] {
+            "SÍ",
+            "NO"});
+            this.cmbActFis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbActFis.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbActFis.Location = new System.Drawing.Point(49, 284);
+            this.cmbActFis.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbActFis.Name = "cmbActFis";
+            this.cmbActFis.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbActFis.Size = new System.Drawing.Size(241, 33);
+            this.cmbActFis.TabIndex = 8;
+            this.cmbActFis.Texts = "ACTIVIDAD FISICA";
+            this.cmbActFis.OnSelectedIndexChanged += new System.EventHandler(this.cmbActFis_OnSelectedIndexChanged);
+            // 
+            // BtnEdNoPat
+            // 
+            this.BtnEdNoPat.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnEdNoPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnEdNoPat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnEdNoPat.BorderRadius = 17;
+            this.BtnEdNoPat.BorderSize = 0;
+            this.BtnEdNoPat.FlatAppearance.BorderSize = 0;
+            this.BtnEdNoPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEdNoPat.ForeColor = System.Drawing.Color.White;
+            this.BtnEdNoPat.Location = new System.Drawing.Point(487, 462);
+            this.BtnEdNoPat.Name = "BtnEdNoPat";
+            this.BtnEdNoPat.Size = new System.Drawing.Size(150, 40);
+            this.BtnEdNoPat.TabIndex = 7;
+            this.BtnEdNoPat.Text = "EDITAR";
+            this.BtnEdNoPat.TextColor = System.Drawing.Color.White;
+            this.BtnEdNoPat.UseVisualStyleBackColor = false;
+            this.BtnEdNoPat.Click += new System.EventHandler(this.BtnEdNoPat_Click);
+            // 
+            // cmbFrecAlc
+            // 
+            this.cmbFrecAlc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbFrecAlc.BorderColor = System.Drawing.Color.Navy;
+            this.cmbFrecAlc.BorderSize = 1;
+            this.cmbFrecAlc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbFrecAlc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbFrecAlc.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbFrecAlc.IconColor = System.Drawing.Color.Navy;
+            this.cmbFrecAlc.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbFrecAlc.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbFrecAlc.Location = new System.Drawing.Point(365, 212);
+            this.cmbFrecAlc.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbFrecAlc.Name = "cmbFrecAlc";
+            this.cmbFrecAlc.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbFrecAlc.Size = new System.Drawing.Size(241, 33);
+            this.cmbFrecAlc.TabIndex = 5;
+            this.cmbFrecAlc.Texts = "FRECUENCIA";
+            this.cmbFrecAlc.Visible = false;
+            // 
+            // cmbAlc
+            // 
+            this.cmbAlc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbAlc.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbAlc.BorderSize = 1;
+            this.cmbAlc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbAlc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbAlc.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbAlc.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbAlc.Items.AddRange(new object[] {
+            "SÍ",
+            "NO"});
+            this.cmbAlc.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbAlc.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbAlc.Location = new System.Drawing.Point(49, 212);
+            this.cmbAlc.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbAlc.Name = "cmbAlc";
+            this.cmbAlc.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbAlc.Size = new System.Drawing.Size(241, 33);
+            this.cmbAlc.TabIndex = 4;
+            this.cmbAlc.Texts = "ALCOHOL";
+            this.cmbAlc.OnSelectedIndexChanged += new System.EventHandler(this.cmbAlc_OnSelectedIndexChanged);
+            // 
+            // cmbFrecTab
+            // 
+            this.cmbFrecTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbFrecTab.BorderColor = System.Drawing.Color.Navy;
+            this.cmbFrecTab.BorderSize = 1;
+            this.cmbFrecTab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbFrecTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbFrecTab.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbFrecTab.IconColor = System.Drawing.Color.Navy;
+            this.cmbFrecTab.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbFrecTab.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbFrecTab.Location = new System.Drawing.Point(365, 140);
+            this.cmbFrecTab.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbFrecTab.Name = "cmbFrecTab";
+            this.cmbFrecTab.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbFrecTab.Size = new System.Drawing.Size(241, 33);
+            this.cmbFrecTab.TabIndex = 3;
+            this.cmbFrecTab.Texts = "FRECUENCIA";
+            this.cmbFrecTab.Visible = false;
+            // 
+            // cmbHiperlax
+            // 
+            this.cmbHiperlax.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbHiperlax.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbHiperlax.BorderSize = 1;
+            this.cmbHiperlax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbHiperlax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbHiperlax.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbHiperlax.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbHiperlax.Items.AddRange(new object[] {
+            "SÍ",
+            "NO"});
+            this.cmbHiperlax.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbHiperlax.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbHiperlax.Location = new System.Drawing.Point(365, 68);
+            this.cmbHiperlax.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbHiperlax.Name = "cmbHiperlax";
+            this.cmbHiperlax.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbHiperlax.Size = new System.Drawing.Size(241, 33);
+            this.cmbHiperlax.TabIndex = 2;
+            this.cmbHiperlax.Texts = "HIPERLAXITUD";
+            // 
+            // cmbTabaco
+            // 
+            this.cmbTabaco.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbTabaco.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTabaco.BorderSize = 1;
+            this.cmbTabaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbTabaco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbTabaco.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbTabaco.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTabaco.Items.AddRange(new object[] {
+            "SÍ",
+            "NO"});
+            this.cmbTabaco.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbTabaco.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbTabaco.Location = new System.Drawing.Point(49, 140);
+            this.cmbTabaco.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbTabaco.Name = "cmbTabaco";
+            this.cmbTabaco.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbTabaco.Size = new System.Drawing.Size(241, 33);
+            this.cmbTabaco.TabIndex = 1;
+            this.cmbTabaco.Texts = "TABACO";
+            this.cmbTabaco.OnSelectedIndexChanged += new System.EventHandler(this.cmbTabaco_OnSelectedIndexChanged);
+            // 
+            // cmbParto
+            // 
+            this.cmbParto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbParto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbParto.BorderSize = 1;
+            this.cmbParto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbParto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbParto.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbParto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbParto.Items.AddRange(new object[] {
+            "SÍ",
+            "NO"});
+            this.cmbParto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbParto.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbParto.Location = new System.Drawing.Point(49, 68);
+            this.cmbParto.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbParto.Name = "cmbParto";
+            this.cmbParto.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbParto.Size = new System.Drawing.Size(241, 33);
+            this.cmbParto.TabIndex = 0;
+            this.cmbParto.Texts = "PARTO";
+            // 
+            // BtnGuPat
+            // 
+            this.BtnGuPat.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnGuPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnGuPat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnGuPat.BorderRadius = 17;
+            this.BtnGuPat.BorderSize = 0;
+            this.BtnGuPat.FlatAppearance.BorderSize = 0;
+            this.BtnGuPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuPat.ForeColor = System.Drawing.Color.White;
+            this.BtnGuPat.Location = new System.Drawing.Point(489, 438);
+            this.BtnGuPat.Name = "BtnGuPat";
+            this.BtnGuPat.Size = new System.Drawing.Size(150, 40);
+            this.BtnGuPat.TabIndex = 85;
+            this.BtnGuPat.Text = "GUARDAR";
+            this.BtnGuPat.TextColor = System.Drawing.Color.White;
+            this.BtnGuPat.UseVisualStyleBackColor = false;
+            this.BtnGuPat.Click += new System.EventHandler(this.BtnGuPat_Click);
+            // 
+            // BtnEdPat
+            // 
+            this.BtnEdPat.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnEdPat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnEdPat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnEdPat.BorderRadius = 17;
+            this.BtnEdPat.BorderSize = 0;
+            this.BtnEdPat.FlatAppearance.BorderSize = 0;
+            this.BtnEdPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEdPat.ForeColor = System.Drawing.Color.White;
+            this.BtnEdPat.Location = new System.Drawing.Point(492, 485);
+            this.BtnEdPat.Name = "BtnEdPat";
+            this.BtnEdPat.Size = new System.Drawing.Size(150, 40);
+            this.BtnEdPat.TabIndex = 7;
+            this.BtnEdPat.Text = "EDITAR";
+            this.BtnEdPat.TextColor = System.Drawing.Color.White;
+            this.BtnEdPat.UseVisualStyleBackColor = false;
+            this.BtnEdPat.Click += new System.EventHandler(this.BtnEdPat_Click);
+            // 
+            // cmbCardiopatias
+            // 
+            this.cmbCardiopatias.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbCardiopatias.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbCardiopatias.BorderSize = 1;
+            this.cmbCardiopatias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbCardiopatias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbCardiopatias.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbCardiopatias.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbCardiopatias.Items.AddRange(new object[] {
+            "Sí",
+            "No"});
+            this.cmbCardiopatias.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbCardiopatias.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCardiopatias.Location = new System.Drawing.Point(316, 263);
+            this.cmbCardiopatias.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbCardiopatias.Name = "cmbCardiopatias";
+            this.cmbCardiopatias.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbCardiopatias.Size = new System.Drawing.Size(241, 33);
+            this.cmbCardiopatias.TabIndex = 5;
+            this.cmbCardiopatias.Texts = "CARDIOPATIAS";
+            // 
+            // cmbHepatitis
+            // 
+            this.cmbHepatitis.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbHepatitis.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbHepatitis.BorderSize = 1;
+            this.cmbHepatitis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbHepatitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbHepatitis.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbHepatitis.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbHepatitis.Items.AddRange(new object[] {
+            "Ninguna",
+            "Tipo A",
+            "Tipo B",
+            "Tipo C",
+            "Tipo D",
+            "Tipo E"});
+            this.cmbHepatitis.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbHepatitis.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbHepatitis.Location = new System.Drawing.Point(26, 263);
+            this.cmbHepatitis.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbHepatitis.Name = "cmbHepatitis";
+            this.cmbHepatitis.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbHepatitis.Size = new System.Drawing.Size(241, 33);
+            this.cmbHepatitis.TabIndex = 4;
+            this.cmbHepatitis.Texts = "HEPATITITS";
+            // 
+            // cmbTiroides
+            // 
+            this.cmbTiroides.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbTiroides.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTiroides.BorderSize = 1;
+            this.cmbTiroides.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbTiroides.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbTiroides.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbTiroides.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTiroides.Items.AddRange(new object[] {
+            "Hipotiroidismo",
+            "Ninguna",
+            "Hipertiroidismo"});
+            this.cmbTiroides.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbTiroides.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbTiroides.Location = new System.Drawing.Point(316, 158);
+            this.cmbTiroides.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbTiroides.Name = "cmbTiroides";
+            this.cmbTiroides.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbTiroides.Size = new System.Drawing.Size(241, 33);
+            this.cmbTiroides.TabIndex = 3;
+            this.cmbTiroides.Texts = "TIROIDES";
+            // 
+            // cmbNeoplasia
+            // 
+            this.cmbNeoplasia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbNeoplasia.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbNeoplasia.BorderSize = 1;
+            this.cmbNeoplasia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbNeoplasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbNeoplasia.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbNeoplasia.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbNeoplasia.Items.AddRange(new object[] {
+            "Sí",
+            "No"});
+            this.cmbNeoplasia.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbNeoplasia.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbNeoplasia.Location = new System.Drawing.Point(316, 71);
+            this.cmbNeoplasia.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbNeoplasia.Name = "cmbNeoplasia";
+            this.cmbNeoplasia.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbNeoplasia.Size = new System.Drawing.Size(241, 33);
+            this.cmbNeoplasia.TabIndex = 2;
+            this.cmbNeoplasia.Texts = "NEOPLASIA";
+            // 
+            // cmbTension
+            // 
+            this.cmbTension.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbTension.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTension.BorderSize = 1;
+            this.cmbTension.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbTension.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbTension.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbTension.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTension.Items.AddRange(new object[] {
+            "Hipotensión",
+            "Normal",
+            "Hipertensión"});
+            this.cmbTension.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbTension.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbTension.Location = new System.Drawing.Point(26, 158);
+            this.cmbTension.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbTension.Name = "cmbTension";
+            this.cmbTension.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbTension.Size = new System.Drawing.Size(241, 33);
+            this.cmbTension.TabIndex = 1;
+            this.cmbTension.Texts = "TENSIÓN";
+            // 
+            // cmbDiabetes
+            // 
+            this.cmbDiabetes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbDiabetes.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbDiabetes.BorderSize = 1;
+            this.cmbDiabetes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbDiabetes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cmbDiabetes.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbDiabetes.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbDiabetes.Items.AddRange(new object[] {
+            "Ninguna",
+            "Tipo 1",
+            "Tipo 2",
+            "Gestacional",
+            "LADA"});
+            this.cmbDiabetes.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbDiabetes.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbDiabetes.Location = new System.Drawing.Point(27, 71);
+            this.cmbDiabetes.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbDiabetes.Name = "cmbDiabetes";
+            this.cmbDiabetes.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbDiabetes.Size = new System.Drawing.Size(241, 33);
+            this.cmbDiabetes.TabIndex = 0;
+            this.cmbDiabetes.Texts = "DIABETES";
+            // 
             // HistorialClinicoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -879,8 +906,8 @@
             this.Controls.Add(this.lblApePat);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlNoPat);
             this.Controls.Add(this.pnlPat);
+            this.Controls.Add(this.pnlNoPat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistorialClinicoForm";
             this.Text = "HistorialClinicoForm";
