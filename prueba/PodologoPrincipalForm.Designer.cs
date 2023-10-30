@@ -36,8 +36,7 @@
             // calendarioCitas
             // 
             this.calendarioCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calendarioCitas.Location = new System.Drawing.Point(1196, 22);
-            this.calendarioCitas.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.calendarioCitas.Location = new System.Drawing.Point(863, 18);
             this.calendarioCitas.MaxSelectionCount = 1;
             this.calendarioCitas.Name = "calendarioCitas";
             this.calendarioCitas.TabIndex = 1;
@@ -52,25 +51,23 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(92, 292);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 262);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1435, 831);
+            this.dataGridView1.Size = new System.Drawing.Size(1082, 532);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // PodologoPrincipalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1617, 1055);
-            this.ClientSize = new System.Drawing.Size(1213, 961);
+            this.ClientSize = new System.Drawing.Size(1151, 809);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.calendarioCitas);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PodologoPrincipalForm";
             this.Text = "PodologoPrincipalForm";
             this.Load += new System.EventHandler(this.PodologoPrincipalForm_Load);

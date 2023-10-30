@@ -213,7 +213,10 @@ namespace prueba
             }
         }
 
-       
+        private void dgXochitl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 
