@@ -45,7 +45,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnNuevaCita);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.rjButton3);
             this.panel1.Controls.Add(this.rjButton2);
             this.panel1.Controls.Add(this.rjButton4);
@@ -108,9 +107,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(311, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(311, 223);
+            this.panel3.Size = new System.Drawing.Size(844, 53);
             this.panel3.TabIndex = 8;
             // 
             // rjButton3
@@ -215,9 +214,9 @@
             this.Panelformularios.BackColor = System.Drawing.Color.White;
             this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panelformularios.Location = new System.Drawing.Point(311, 0);
+            this.Panelformularios.Location = new System.Drawing.Point(311, 53);
             this.Panelformularios.Name = "Panelformularios";
-            this.Panelformularios.Size = new System.Drawing.Size(844, 817);
+            this.Panelformularios.Size = new System.Drawing.Size(844, 764);
             this.Panelformularios.TabIndex = 1;
             // 
             // FormPanelSecretaria
@@ -226,6 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 817);
             this.Controls.Add(this.Panelformularios);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormPanelSecretaria";
