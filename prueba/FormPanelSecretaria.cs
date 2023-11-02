@@ -84,7 +84,7 @@ namespace CapaPresentacion
 
         }
       
-        public void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        public static void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
             formulario = Panelformularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
@@ -222,6 +222,16 @@ namespace CapaPresentacion
             SeleccionReporteForm seleccionReporteForm = new SeleccionReporteForm();
             ElementosGlobales.UsuarioCondicion = true;
             seleccionReporteForm.ShowDialog();
+        }
+
+        private void Panelformularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -75,13 +75,15 @@ namespace prueba
                 }
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "EditarCol")
                 {
-                    test test  = new test();
-                    test.ShowDialog();
-                    //int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
-                    //ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
+
+                    int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
+                    ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
                     //ElementosGlobales.PodologoGlobal = 2;
                     //EditarCitaForm editarcita = new EditarCitaForm();
                     //editarcita.ShowDialog();
+
+                    FormPanelSecretaria.AbrirFormulario<EditarCitaForm>();
+                    Close();
                     //RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
 
                 }

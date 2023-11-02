@@ -47,11 +47,11 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            //PacientesForm BuscarPaciente = new PacientesForm();
-            //BuscarPaciente.ShowDialog();
-            NuevoPacienteForm form = new NuevoPacienteForm();
+            PacientesForm BuscarPaciente = new PacientesForm();
+            BuscarPaciente.ShowDialog();
             
-            form.ShowDialog();
+            
+         
 
             RellenarCamposPaciente();
 
@@ -68,6 +68,7 @@ namespace CapaPresentacion
             
             if (logicaSecretaria.EditarCita(cita))
             {
+                FormPanelSecretaria.AbrirFormulario<SecretariaPrincipalForm>();
                 Close();
             }
            

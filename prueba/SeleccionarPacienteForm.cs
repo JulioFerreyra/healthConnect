@@ -47,7 +47,11 @@ namespace prueba
             Close();
 
         }
-
+        private void btnNuevoPaciente_Click(object sender, EventArgs e)
+        {
+            NuevoPacienteForm nuevoPacienteForm = new NuevoPacienteForm();
+            nuevoPacienteForm.Show();
+        }
 
         /// <summary>
         /// DataGrid
@@ -104,7 +108,7 @@ namespace prueba
         /// Métodos
         /// </summary>
         /// <param name="NombrePaciente"></param>
-        private void RellenarGrid(string NombrePaciente)
+        public static void RellenarGrid(string NombrePaciente)
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             dgPacientes.DataSource = logicaSecretaria.VerPacientes(NombrePaciente);
@@ -154,5 +158,7 @@ namespace prueba
         {
 
         }
+
+      
     }
 }

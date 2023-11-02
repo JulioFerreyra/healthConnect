@@ -31,12 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReporte = new CustomControls.RJControls.RJButton();
             this.btnNuevaCita = new CustomControls.RJControls.RJButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton4 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.Panelformularios = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            //this.Panelformularios = new System.Windows.Forms.Panel();
+            Panelformularios = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 817);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnReporte
             // 
@@ -102,15 +104,6 @@
             this.btnNuevaCita.TextColor = System.Drawing.Color.White;
             this.btnNuevaCita.UseVisualStyleBackColor = false;
             this.btnNuevaCita.Click += new System.EventHandler(this.rjButton5_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(311, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(844, 53);
-            this.panel3.TabIndex = 8;
             // 
             // rjButton3
             // 
@@ -208,23 +201,44 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(311, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(844, 53);
+            this.panel3.TabIndex = 8;
+            // 
             // Panelformularios
             // 
-            this.Panelformularios.AutoSize = true;
-            this.Panelformularios.BackColor = System.Drawing.Color.White;
-            this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panelformularios.Location = new System.Drawing.Point(311, 53);
-            this.Panelformularios.Name = "Panelformularios";
-            this.Panelformularios.Size = new System.Drawing.Size(844, 764);
-            this.Panelformularios.TabIndex = 1;
+            //this.Panelformularios.AutoSize = true;
+            //this.Panelformularios.BackColor = System.Drawing.Color.White;
+            //this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.Panelformularios.Location = new System.Drawing.Point(311, 53);
+            //this.Panelformularios.Name = "Panelformularios";
+            //this.Panelformularios.Size = new System.Drawing.Size(844, 764);
+            //this.Panelformularios.TabIndex = 1;
+            //this.Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
+
+            Panelformularios.AutoSize = true;
+            Panelformularios.BackColor = System.Drawing.Color.White;
+            Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            Panelformularios.Location = new System.Drawing.Point(311, 53);
+            Panelformularios.Name = "Panelformularios";
+            Panelformularios.Size = new System.Drawing.Size(844, 764);
+            Panelformularios.TabIndex = 1;
+            Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
             // 
             // FormPanelSecretaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 817);
-            this.Controls.Add(this.Panelformularios);
+            this.Controls.Add(Panelformularios);
+            // this.Controls.Add(this.Panelformularios);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -246,7 +260,8 @@
         private CustomControls.RJControls.RJButton rjButton2;
         private System.Windows.Forms.Panel panel3;
         private CustomControls.RJControls.RJButton rjButton3;
-        private System.Windows.Forms.Panel Panelformularios;
+        //private System.Windows.Forms.Panel Panelformularios;
+        public static System.Windows.Forms.Panel Panelformularios;
         private CustomControls.RJControls.RJButton btnNuevaCita;
         private CustomControls.RJControls.RJButton btnReporte;
     }

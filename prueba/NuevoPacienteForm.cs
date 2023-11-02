@@ -35,6 +35,10 @@ namespace prueba
                 txtApellMat.Texts = string.Empty;
                 txtApellPat.Texts = string.Empty;
                 txtTelefono.Texts = string.Empty;
+                dtpFechaNac.Value = DateTime.Now;
+                cmbxSexo.SelectedIndex = -1;
+                cmbxSexo.Texts = "Sexo";
+                SeleccionarPacienteForm.RellenarGrid("");
             }
             return;
            
@@ -121,6 +125,11 @@ namespace prueba
             {
                 e.Handled = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
