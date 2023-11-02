@@ -49,7 +49,7 @@
             this.label1.Location = new System.Drawing.Point(68, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 31);
-            this.label1.TabIndex = 8;
+            this.label1.TabIndex = 100;
             this.label1.Text = "Agregar nuevo paciente";
             // 
             // panel1
@@ -75,7 +75,7 @@
             this.button1.Size = new System.Drawing.Size(48, 40);
             this.button1.TabIndex = 60;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // cmbxSexo
             // 
@@ -96,7 +96,7 @@
             this.cmbxSexo.Name = "cmbxSexo";
             this.cmbxSexo.Padding = new System.Windows.Forms.Padding(1);
             this.cmbxSexo.Size = new System.Drawing.Size(250, 30);
-            this.cmbxSexo.TabIndex = 62;
+            this.cmbxSexo.TabIndex = 9;
             this.cmbxSexo.Texts = "Sexo";
             // 
             // dtpFechaNac
@@ -109,7 +109,7 @@
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(247, 35);
             this.dtpFechaNac.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dtpFechaNac.TabIndex = 61;
+            this.dtpFechaNac.TabIndex = 8;
             this.dtpFechaNac.TextColor = System.Drawing.Color.White;
             // 
             // rjButton1
@@ -130,7 +130,7 @@
             this.rjButton1.Location = new System.Drawing.Point(140, 522);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(160, 50);
-            this.rjButton1.TabIndex = 7;
+            this.rjButton1.TabIndex = 10;
             this.rjButton1.Text = "Guardar";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
@@ -155,10 +155,9 @@
             this.txtDireccion.PlaceholderColor = System.Drawing.Color.White;
             this.txtDireccion.PlaceholderText = "Dirección";
             this.txtDireccion.Size = new System.Drawing.Size(250, 35);
-            this.txtDireccion.TabIndex = 6;
+            this.txtDireccion.TabIndex = 7;
             this.txtDireccion.Texts = "";
             this.txtDireccion.UnderlineStyle = true;
-            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtTelefono
             // 
