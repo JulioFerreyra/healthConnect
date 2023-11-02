@@ -29,7 +29,7 @@ namespace prueba
         {
             RellenarGrid(string.Empty);
             AgregarBotonesGrid();
-            
+            dgPacientes.Columns["ID"].Visible = false;
             
         }
 
@@ -108,7 +108,7 @@ namespace prueba
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             dgPacientes.DataSource = logicaSecretaria.VerPacientes(NombrePaciente);
-
+            
         }    
 
         private void AgregarBotonesGrid()

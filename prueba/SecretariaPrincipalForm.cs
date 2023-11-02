@@ -43,6 +43,7 @@ namespace prueba
             RellenarComboBoxPodologos();
             RellenarDataGridPodologos(0);
             AgregarBotonesGrid();
+            
             if (cmbxPodologo.Items.Count == 0)
             {
                 cmbxPodologo.SelectedIndex = -1;
@@ -74,16 +75,19 @@ namespace prueba
                 }
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "EditarCol")
                 {
-                    int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
-                    ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
-                    ElementosGlobales.PodologoGlobal = 2;
-                    EditarCitaForm editarcita = new EditarCitaForm();
-                    editarcita.ShowDialog();
-                    RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+                    test test  = new test();
+                    test.ShowDialog();
+                    //int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
+                    //ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
+                    //ElementosGlobales.PodologoGlobal = 2;
+                    //EditarCitaForm editarcita = new EditarCitaForm();
+                    //editarcita.ShowDialog();
+                    //RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
 
                 }
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "FinalizarCol")
                 {
+                   
                     int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
                     ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
                     AnadirResultadoForm detallesCitaForm = new AnadirResultadoForm();
@@ -192,7 +196,7 @@ namespace prueba
         private void RellenarDataGridPodologos(int idPodologo)
         {
             RellenarGridXochitil(idPodologo);
-           
+            dgXochitl.Columns["ID"].Visible = false;
         }
 
         private void RellenarListaPodologos()

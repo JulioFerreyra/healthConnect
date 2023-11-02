@@ -231,6 +231,12 @@
     <Compile Include="SeleccionReporteForm.Designer.cs">
       <DependentUpon>SeleccionReporteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="TextBoxD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SeleccionReporteForm.resx">
       <DependentUpon>SeleccionReporteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TextBoxD.resx">
       <DependentUpon>TextBoxD.cs</DependentUpon>

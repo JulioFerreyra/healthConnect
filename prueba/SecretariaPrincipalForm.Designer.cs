@@ -85,7 +85,7 @@
             // CalendarioCitas
             // 
             this.CalendarioCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CalendarioCitas.Location = new System.Drawing.Point(863, 18);
+            this.CalendarioCitas.Location = new System.Drawing.Point(874, 40);
             this.CalendarioCitas.MaxSelectionCount = 1;
             this.CalendarioCitas.Name = "CalendarioCitas";
             this.CalendarioCitas.TabIndex = 1;
@@ -103,7 +103,7 @@
             this.cmbxPodologo.IconColor = System.Drawing.Color.Black;
             this.cmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxPodologo.ListTextColor = System.Drawing.Color.Black;
-            this.cmbxPodologo.Location = new System.Drawing.Point(40, 160);
+            this.cmbxPodologo.Location = new System.Drawing.Point(40, 158);
             this.cmbxPodologo.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbxPodologo.Name = "cmbxPodologo";
             this.cmbxPodologo.Padding = new System.Windows.Forms.Padding(1);
