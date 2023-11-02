@@ -18,6 +18,18 @@ namespace CapaLogica
         /// </summary>
         /// <param name="fechaCita"></param>
         /// <returns></returns>
+        /// 
+        public void SetUser(string usuario)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            secretariaDAO.setUser(usuario);
+        }
+
+        public void SetPassword(string password)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            secretariaDAO.setPassword(password);
+        }
         public DataTable VerConsultasPodologo(DateTime fechaCita, int idPodologo)
         {
             SecretariaDAO SecretariaDAO = new SecretariaDAO();

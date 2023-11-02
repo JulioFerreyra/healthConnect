@@ -8,6 +8,8 @@ namespace CapaLogica
 {
     public class ElementosGlobales
     {
+      
+        
         public static bool isAdmin;
         public static List<int> idPodologos = new List<int>();
         public static int PodologoGlobal = 0;

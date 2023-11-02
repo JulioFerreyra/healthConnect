@@ -12,7 +12,24 @@ namespace CapaDatos
 {
     public class SecretariaDAO
     {
-     
+        private  string USSER = DatosGlobales.mysqlUser;
+        private  string PASSWORD = DatosGlobales.mysqlPassword;
+        private const string BASE_DATOS = "healthconnect";
+        private const string HOST = "localhost";
+
+        public void setUser(string usuario)
+        {
+            DatosGlobales.mysqlUser = usuario;
+        }
+        public void setPassword(string password)
+        {
+            DatosGlobales.mysqlPassword = password;
+        }
+        private string ConexionSecretarias()
+        {
+            return "user = " + USSER + "; password = "+PASSWORD+"; database= "+BASE_DATOS + "; server = " + HOST +";";
+        }
+
         /// <summary>
         /// Select
         /// </summary>
@@ -22,7 +39,7 @@ namespace CapaDatos
         {
 
             UsuarioDAO ObjUsarioDAO = new UsuarioDAO();
-            MySqlConnection conexion_a_mysql = new MySqlConnection(ObjUsarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_mysql = new MySqlConnection (ConexionSecretarias());
             DataTable ConsultasPodologo = new DataTable();
 
             StringBuilder stringBuilder = new StringBuilder();

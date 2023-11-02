@@ -135,6 +135,9 @@ namespace prueba
                 Show();
                 return;
             }
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            logicaSecretaria.SetUser(usuario.GetUsuario());
+            logicaSecretaria.SetPassword(usuario.GetContraseña());
             Hide();
             FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
             ElementosGlobales.isAdmin = false;
