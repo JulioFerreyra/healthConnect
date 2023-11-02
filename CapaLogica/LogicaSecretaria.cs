@@ -180,6 +180,17 @@ namespace CapaLogica
             return secretariaDAO.ReporteFechasPodologo(fechaInicio,fechaFinal, idPodologo, EstadoCita);
         }
 
+        public void SetUsser(string user)
+        {
+            SecretariaDAO secretaria = new SecretariaDAO();
+            secretaria.SetUsser(user);
+        }
+        public void SetPassword(string password)
+        {
+            SecretariaDAO secretaria = new SecretariaDAO();
+            secretaria.SetPassword(password);
+        }
+
 
     }
 }

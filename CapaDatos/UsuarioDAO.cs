@@ -5,11 +5,11 @@ using CapaEntidad;
 using System.Windows.Forms;
 
 namespace CapaDatos
-{
+{ 
     public class UsuarioDAO
     {
-        private const string USSER = "root";
-        private const string PASSWORD = "jafete210403";
+        private const string USSER = "Admin";
+        private const string PASSWORD = "Admin";
         private const string BASE_DATOS = "healthconnect";
         private const string HOST = "localhost";
 

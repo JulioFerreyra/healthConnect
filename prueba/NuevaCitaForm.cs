@@ -55,11 +55,11 @@ namespace prueba
         }
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, cmbxPodologo.SelectedIndex==-1 ? 0: ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex], tbxSintomas.Texts, cmbxTipoCita.Texts);
+            Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, cmbxPodologo.SelectedIndex == -1 ? 0 : ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex], tbxSintomas.Texts, cmbxTipoCita.Texts);
             LimpiarCampos(cita);
             //RestablecerComboBoxHora();
             RellenarGrid();
-           
+
 
         }
         private void BtnRegresarPrincipalSecretaria_Click(object sender, EventArgs e)
@@ -153,7 +153,7 @@ namespace prueba
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
 
-            if (logicaSecretaria.CrearNuevaCita(cita)==true)
+            if (logicaSecretaria.CrearNuevaCita(cita))
             {
                 ElementosGlobales.idPacienteGlobal = 0;
                 tbxApellMat.Texts = string.Empty;

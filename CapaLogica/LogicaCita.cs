@@ -33,7 +33,7 @@ namespace CapaLogica
 
                 return false;
             }
-            if (DateTime.Parse(cita.GetHoraCita()) < DateTime.Parse(DateTime.Today.ToString("HH:mm")) && cita.GetFechaCita().DayOfYear <= DateTime.Today.DayOfYear)
+            if (DateTime.Parse(cita.GetHoraCita()).TimeOfDay < DateTime.Parse(DateTime.Now.ToString("HH:mm")).TimeOfDay && cita.GetFechaCita().DayOfYear <= DateTime.Today.DayOfYear)
             {
                 MessageBox.Show("la Hora seleccionada no es valida");
 
