@@ -30,9 +30,9 @@ namespace CapaPresentacion
         private void EditarCitaForm_Load(object sender, EventArgs e)
         {
             RellenarComboBoxPodologo();
-            RellenarCampos();
             RellenarBoxHoras();
-            DeshabilitarHoras();
+            RellenarCampos();
+           
             //if (ElementosGlobales.idUsuarioGlobal != 3)
             //{
             //    CmbxPodologo.Enabled = false;
@@ -47,11 +47,11 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            //PacientesForm BuscarPaciente = new PacientesForm();
-            //BuscarPaciente.ShowDialog();
-            NuevoPacienteForm form = new NuevoPacienteForm();
+            PacientesForm BuscarPaciente = new PacientesForm();
+            BuscarPaciente.ShowDialog();
             
-            form.ShowDialog();
+            
+         
 
             RellenarCamposPaciente();
 
@@ -68,6 +68,7 @@ namespace CapaPresentacion
             
             if (logicaSecretaria.EditarCita(cita))
             {
+                FormPanelSecretaria.AbrirFormulario<SecretariaPrincipalForm>();
                 Close();
             }
            
@@ -120,7 +121,6 @@ namespace CapaPresentacion
                 tbxApellMat.Texts = renglon[2].ToString();
                 tbxTelefono.Texts = renglon[3].ToString();
                 dtFecha.Value = DateTime.Parse(renglon[4].ToString());
-                cmbxHora.Texts = renglon[5].ToString();
                 tbxSintomas.Texts = renglon[6].ToString();
                 cmbxTipoCita.Texts = renglon[7].ToString();
                 cmbxEstadoCita.Texts= renglon[8].ToString();
@@ -128,6 +128,7 @@ namespace CapaPresentacion
                 CmbxPodologo.SelectedIndex = CmbxPodologo.Items.IndexOf(renglon[9].ToString());
                 ElementosGlobales.PodologoGlobal = ElementosGlobales.idPodologos[CmbxPodologo.SelectedIndex];
                 ElementosGlobales.idPacienteGlobal = (int)renglon[10];
+               cmbxHora.SelectedIndex = cmbxHora.Items.IndexOf(renglon[5].ToString());
                
 
             }

@@ -5,11 +5,11 @@ using CapaEntidad;
 using System.Windows.Forms;
 
 namespace CapaDatos
-{
+{ 
     public class UsuarioDAO
     {
-        private const string USSER = "root";
-        private const string PASSWORD = "jafete210403";
+        private const string USSER = "Admin";
+        private const string PASSWORD = "Admin";
         private const string BASE_DATOS = "healthconnect";
         private const string HOST = "localhost";
 
@@ -88,6 +88,31 @@ namespace CapaDatos
             }
         }
 
+        public int GetUsuario(Usuario usuario)
+        {
+            string consultaSelect = "select id_usuario from usuario where usuario = \"" + usuario.GetUsuario()+"\"";
+
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            try
+            {
+                object resultado;
+                conexion_a_mysql.Open();
+                MySqlCommand comando = new MySqlCommand(consultaSelect, conexion_a_mysql);
+                resultado = comando.ExecuteScalar();
+                int id = Convert.ToInt32(resultado);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+        }
+
         public bool GetisAdmin(Usuario usuario)
         {
             string consultaSelect = "select isAdmin from usuario where id_usuario =" + usuario.GetIdUsuario();
@@ -107,6 +132,31 @@ namespace CapaDatos
 
                 MessageBox.Show(ex.Message);
                 return false;
+                
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+
+        /// <summary>
+        /// Update
+        /// </summary>
+        public void ActualizarContraseñaCita(Usuario usuario)
+        {
+            string consultaUpdate = "update usuario set contraseña = \""+ usuario.GetContraseña()+"\" where usuario = \""+usuario.GetUsuario()+"\"";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaUpdate,conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Contraseña actualizada correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show (ex.Message);
                 
             }
             finally

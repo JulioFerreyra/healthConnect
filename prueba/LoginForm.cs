@@ -135,6 +135,7 @@ namespace prueba
                 Show();
                 return;
             }
+            EstablecerDatosUsuario(usuario);
             Hide();
             FormPanelSecretaria principalSecretaria = new FormPanelSecretaria();
             ElementosGlobales.isAdmin = false;
@@ -158,6 +159,12 @@ namespace prueba
             ElementosGlobales.TipoReporte = 0;
         }
 
+        private void EstablecerDatosUsuario(Usuario usuario)
+        {
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            logicaSecretaria.SetPassword(usuario.GetContraseña());
+            logicaSecretaria.SetUsser(usuario.GetUsuario());
+        }
         private void txbPasswordLogin__TextChanged(object sender, EventArgs e)
         {
 

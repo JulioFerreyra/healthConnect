@@ -21,7 +21,7 @@ namespace CapaPresentacion
         private void PacientesForm_Load(object sender, EventArgs e)
         {
             RellenarGrid(string.Empty);
-            
+            dgPacientes.Columns["ID"].Visible = false;
 
         }
 

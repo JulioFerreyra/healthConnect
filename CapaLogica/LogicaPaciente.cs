@@ -42,7 +42,7 @@ namespace CapaLogica
                 MessageBox.Show("Sexo seleccionado no valido\n Por favor verifique el campo SEXO e intentar nuevamente", "Sexo no valido");
                 return false;
             }
-            if (paciente.GetFechaNacimiento() > DateTime.Now)
+            if (paciente.GetFechaNacimiento().DayOfYear >= DateTime.Now.DayOfYear)
             {
                 MessageBox.Show("Fecha de Nacimiento no valida\n Por favor verifique el campo FECHA DE NACIMIENTO e intentar nuevamente", "Fecha no valido");
                 return false;

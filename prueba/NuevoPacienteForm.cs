@@ -28,13 +28,17 @@ namespace prueba
 
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
            
-            Paciente NuevoPaciente = new Paciente(txtNombre.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts, "dirección", dtpFechaNac.Value, cmbxSexo.Texts[0].ToString());
+            Paciente NuevoPaciente = new Paciente(txtNombre.Texts, txtApellPat.Texts, txtApellMat.Texts, txtTelefono.Texts,txtDireccion.Texts, dtpFechaNac.Value, cmbxSexo.Texts[0].ToString());
             if (logicaSecretaria.CrearNuevoPaciente(NuevoPaciente))
             {
                 txtNombre.Texts = string.Empty;
                 txtApellMat.Texts = string.Empty;
                 txtApellPat.Texts = string.Empty;
                 txtTelefono.Texts = string.Empty;
+                dtpFechaNac.Value = DateTime.Now;
+                cmbxSexo.SelectedIndex = -1;
+                cmbxSexo.Texts = "Sexo";
+                SeleccionarPacienteForm.RellenarGrid("");
             }
             return;
            
@@ -121,6 +125,16 @@ namespace prueba
             {
                 e.Handled = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
