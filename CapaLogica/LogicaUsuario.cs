@@ -82,37 +82,62 @@ namespace CapaLogica
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             return usuarioDAO.GetUsuario(usuario) != 0;
-
+          
+            
         }
 
-        private bool ValidarCoincidenciaUsuario(Usuario usuario, string confirmacionContraseña)
-        {
-            if (ValidarCamposActualizarUsuario(usuario, confirmacionContraseña)) return GetUsuario(usuario);
-            return false;
-        }
+        
 
         public bool ValidarContraseñaConfirmada(Usuario usuario, string confirmacionContraseña)
         {
-            if (ValidarCoincidenciaUsuario(usuario, confirmacionContraseña))
-            {
-                return usuario.GetContraseña() == confirmacionContraseña;
 
-            }
-            return false;
+            return usuario.GetContraseña() == confirmacionContraseña;
+          
+
         }
 
-        public bool ActualizarContraseña(Usuario usuario, string confirmacionContraseña)
+        public bool ValidarActualizarContraseña(Usuario usuario, string ConfirmacionContraseña)
         {
-            if (ValidarContraseñaConfirmada(usuario, confirmacionContraseña))
+            if (!ValidarCamposActualizarUsuario(usuario, ConfirmacionContraseña))
             {
+                return false;
+            }
+            if (!ValidarContraseñaConfirmada(usuario,ConfirmacionContraseña))
+            {
+                MessageBox.Show("La contraseña no coincide");
+                return false;
+            }
+            if (!GetUsuario(usuario))
+            {
+                MessageBox.Show("El usuario que desea actualizar no existe");
+                return false;
+            }
+            return true;
+        }
+        public void ActualizarContraseña(Usuario usuario)
+        {
+           
                 UsuarioDAO usuarioDAO = new UsuarioDAO();
                 usuarioDAO.ActualizarContraseñaCita(usuario);
-                return true;
-            }
-            return false;
         }
 
+        public bool ValidarContraseñaAdmin(string contraseña)
+        {
+            UsuarioDAO usuarioDAO=new UsuarioDAO();
+            return usuarioDAO.ValidarExistenciaContraseñaAdmin(contraseña) != 0;
 
+        }
+
+        public bool ValidarCampoAdminVacio(string ContraseñaAdmin)
+        {
+            if (string.IsNullOrEmpty(ContraseñaAdmin))
+            {
+                MessageBox.Show("Ingrese una contraseña de administrador para continuar");
+                return false;
+
+            }
+            return true;
+        }
 
 
 
