@@ -138,6 +138,34 @@ namespace CapaDatos
             {
                 conexion_a_MySQL.Close();
             }
+
+            
+        }
+        public int ValidarExistenciaContraseñaAdmin(string contraseña)
+        {
+            string consultaSelect = "select count(*) from usuario where contraseña = \""+contraseña+"\" and isAdmin = True;";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaSelect, conexion_a_MySQL);
+                object resultado = comando.ExecuteScalar();
+                int existencia = Convert.ToInt32(resultado);
+                return existencia;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                return 0;
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
         }
 
         /// <summary>
@@ -171,5 +199,7 @@ namespace CapaDatos
         string cadenaConexion = "Server="+HOST+";Database="+BASE_DATOS+";user="+USSER+";password="+PASSWORD+";";
             return cadenaConexion;
         }
+
+       
     }
 }

@@ -88,7 +88,7 @@
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtContraseña.PasswordChar = false;
+            this.txtContraseña.PasswordChar = true;
             this.txtContraseña.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtContraseña.PlaceholderText = "Contraseña";
             this.txtContraseña.Size = new System.Drawing.Size(250, 35);
@@ -159,7 +159,7 @@
             this.txtConfirmarContraseña.Multiline = false;
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
             this.txtConfirmarContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtConfirmarContraseña.PasswordChar = false;
+            this.txtConfirmarContraseña.PasswordChar = true;
             this.txtConfirmarContraseña.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtConfirmarContraseña.PlaceholderText = "Confirmar contraseña";
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(250, 35);

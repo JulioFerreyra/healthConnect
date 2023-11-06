@@ -21,14 +21,34 @@ namespace CapaPresentacion
 
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario(txtUsuario.Texts,txtContraseña.Texts);
+            Usuario usuario = new Usuario(txtUsuario.Texts, txtContraseña.Texts);
             LogicaUsuario logicaUsuario = new LogicaUsuario();
-            if (logicaUsuario.ActualizarContraseña(usuario,txtConfirmarContraseña.Texts))
+            if (logicaUsuario.ValidarActualizarContraseña(usuario, txtConfirmarContraseña.Texts))
             {
+               ComprobarContraseñaForm contraseñaForm = new ComprobarContraseñaForm();
+                contraseñaForm.ShowDialog();
+                ActualizarContraseña(usuario);
+                
+            }
+           
+           
+            
+            
+        }
+
+        private void ActualizarContraseña(Usuario usuario)
+        {
+            if (ElementosGlobales.isAdmin)
+            {
+                LogicaUsuario logicaUsuario = new LogicaUsuario();
+                logicaUsuario.ActualizarContraseña(usuario);
+
                 txtConfirmarContraseña.Texts = string.Empty;
                 txtContraseña.Texts = string.Empty;
                 txtUsuario.Texts = string.Empty;
+                return;
             }
+            MessageBox.Show("Contraseña de administrador invalida");
         }
     }
 }
