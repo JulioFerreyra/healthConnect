@@ -55,7 +55,8 @@ namespace prueba
         public event EventHandler _TextChanged;
 
         [Category("TextBoxD Advance")]
-        public Color BorderColor {
+        public Color BorderColor
+        {
             get
             {
                 return borderColor;
@@ -68,7 +69,8 @@ namespace prueba
 
         }
         [Category("TextBoxD Advance")]
-        public int BorderSize {
+        public int BorderSize
+        {
             get
             {
                 return borderSize;
@@ -80,11 +82,14 @@ namespace prueba
             }
         }
         [Category("TextBoxD Advance")]
-        public bool UnderlineStyle {
-            get {
+        public bool UnderlineStyle
+        {
+            get
+            {
                 return underlineStyle;
             }
-            set {
+            set
+            {
                 underlineStyle = value;
                 this.Invalidate();
             }
@@ -100,7 +105,7 @@ namespace prueba
             {
                 isPasswordChar = value;
                 textBox1.UseSystemPasswordChar = value;
-               // this.Invalidate();
+                // this.Invalidate();
             }
         }
         [Category("TextBoxD Advance")]
@@ -129,9 +134,10 @@ namespace prueba
             }
         }
         [Category("TextBoxD Advance")]
-        public override Color ForeColor 
+        public override Color ForeColor
         {
-            get{
+            get
+            {
                 return base.ForeColor;
             }
             set
@@ -151,7 +157,7 @@ namespace prueba
             {
                 base.Font = value;
                 textBox1.Font = value;
-                if(this.DesignMode)
+                if (this.DesignMode)
                     UpdateControlHeight();
             }
         }
@@ -172,14 +178,15 @@ namespace prueba
         [Category("TextBoxD Advance")]
         public Color BorderFocusColor { get => borderFocusColor; set => borderFocusColor = value; }
         [Category("TextBoxD Advance")]
-        public int BorderRadius 
-        { 
+        public int BorderRadius
+        {
             get
             {
                 return borderRadius;
-            } set
+            }
+            set
             {
-                if (value>= 0)
+                if (value >= 0)
                 {
                     borderRadius = value;
                     this.Invalidate();
@@ -187,18 +194,21 @@ namespace prueba
             }
         }
         [Category("TextBoxD Advance")]
-        public Color PlaceholderColor { get
+        public Color PlaceholderColor
+        {
+            get
             {
                 return placeholderColor;
             }
             set
             {
                 placeholderColor = value;
-                if(isPasswordChar)
-                    textBox1.ForeColor= value;
-            } }
+                if (isPasswordChar)
+                    textBox1.ForeColor = value;
+            }
+        }
         [Category("TextBoxD Advance")]
-        public string PlaceholderText 
+        public string PlaceholderText
         {
             get
             {
@@ -218,14 +228,15 @@ namespace prueba
 
         private void SetPlaceholder()
         {
-            if(string.IsNullOrWhiteSpace(textBox1.Text) && placeholderText!= "")
+            if (string.IsNullOrWhiteSpace(textBox1.Text) && placeholderText != "" && textBox1.Text != Texts)
             {
-                isPlaceholder= true;
-                textBox1.Text= placeholderText;
+                isPlaceholder = true;
+                textBox1.Text = placeholderText;
                 textBox1.ForeColor = placeholderColor;
-                if(isPasswordChar)
-                    textBox1.UseSystemPasswordChar= false;
+                if (isPasswordChar)
+                    textBox1.UseSystemPasswordChar = false;
             }
+
         }
         private void RemovePlaceHolder()
         {
@@ -235,7 +246,7 @@ namespace prueba
                 textBox1.Text = "";
                 textBox1.ForeColor = this.ForeColor;
                 if (isPasswordChar)
-                    textBox1.UseSystemPasswordChar = false;
+                    textBox1.UseSystemPasswordChar = true;
             }
         }
 
@@ -244,19 +255,20 @@ namespace prueba
             base.OnPaint(e);
             Graphics graph = e.Graphics;
             //quiere decir que es un cuadro de texto con esquinas redondeadas
-            if (borderRadius > 1) {
+            if (borderRadius > 1)
+            {
                 var rectBorderSmooth = this.ClientRectangle;
                 var rectBorder = Rectangle.Inflate(rectBorderSmooth, -BorderSize, -borderSize);
-                int smoothSize = borderSize>0? borderSize:1;
+                int smoothSize = borderSize > 0 ? borderSize : 1;
                 using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
-                using(GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius-borderSize))
+                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
                 using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
-                using(Pen penBorder = new Pen(borderColor, borderSize))
+                using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     // dibujo del control con bordes redondeados suaves
                     this.Region = new Region(pathBorderSmooth);
                     if (borderRadius > 15) SetTextBoxRoundedRegion();
-                    graph.SmoothingMode= SmoothingMode.AntiAlias;
+                    graph.SmoothingMode = SmoothingMode.AntiAlias;
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
                     if (!isFocussed)
                     {
@@ -310,16 +322,16 @@ namespace prueba
                     }
                 }
             }//es un cuadro de texto cuadrado o tradicional
-            // DRAW BORDER
-           
+             // DRAW BORDER
+
         }
 
         private void SetTextBoxRoundedRegion()
         {
             GraphicsPath pathTxt;
-            if(Multiline)
+            if (Multiline)
             {
-                pathTxt = GetFigurePath(textBox1.ClientRectangle, borderRadius-borderSize);
+                pathTxt = GetFigurePath(textBox1.ClientRectangle, borderRadius - borderSize);
                 textBox1.Region = new Region(pathTxt);
             }
             else
@@ -337,10 +349,10 @@ namespace prueba
 
             path.StartFigure();
             path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90);
-            path.AddArc(rect.Right- curveSize, rect.Y, curveSize, curveSize, 270,90);
-            path.AddArc(rect.Right - curveSize, rect.Bottom- curveSize, curveSize,curveSize, 0, 90);
+            path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90);
+            path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90);
             path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90);
-            path.CloseFigure(); 
+            path.CloseFigure();
             return path;
         }
         protected override void OnResize(EventArgs e)
@@ -358,18 +370,18 @@ namespace prueba
         {
             if (textBox1.Multiline == false)
             {
-                int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height+ 1;
+                int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height + 1;
                 textBox1.Multiline = true;
-                textBox1.MinimumSize= new System.Drawing.Size(0, txtHeight);
+                textBox1.MinimumSize = new System.Drawing.Size(0, txtHeight);
                 textBox1.Multiline = false;
-                this.Height= textBox1.Height + this.Padding.Top + this.Padding.Bottom;
+                this.Height = textBox1.Height + this.Padding.Top + this.Padding.Bottom;
             }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (_TextChanged!= null)
+            if (_TextChanged != null)
                 _TextChanged.Invoke(sender, e);
-            
+
         }
         private void textBox1_Click(object sender, EventArgs e)
         {
@@ -385,11 +397,11 @@ namespace prueba
         }
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.OnKeyPress(e); 
+            this.OnKeyPress(e);
         }
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            isFocussed= true;
+            isFocussed = true;
             this.Invalidate();
             RemovePlaceHolder();
 

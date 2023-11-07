@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.txbPasswordLogin = new prueba.TextBoxD();
             this.txtCorreoLogin = new prueba.TextBoxD();
@@ -49,7 +49,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(47, 235);
+            this.label2.Location = new System.Drawing.Point(47, 245);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 7;
@@ -62,7 +62,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 327);
+            this.label3.Location = new System.Drawing.Point(47, 337);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 8;
@@ -75,31 +75,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 37);
+            this.panel1.Size = new System.Drawing.Size(401, 37);
             this.panel1.TabIndex = 57;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel1.Location = new System.Drawing.Point(146, 467);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(106, 13);
-            this.linkLabel1.TabIndex = 59;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Olvide mi contraseña";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
-            this.pctLogo.Location = new System.Drawing.Point(31, 3);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(337, 229);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctLogo.TabIndex = 58;
-            this.pctLogo.TabStop = false;
             // 
             // button1
             // 
@@ -117,6 +94,30 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
+            this.linkLabel1.Location = new System.Drawing.Point(146, 467);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(106, 13);
+            this.linkLabel1.TabIndex = 59;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Olvide mi contraseña";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pctLogo.ErrorImage = null;
+            this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
+            this.pctLogo.Location = new System.Drawing.Point(34, 43);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(331, 185);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctLogo.TabIndex = 58;
+            this.pctLogo.TabStop = false;
+            // 
             // rjButton1
             // 
             this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -131,7 +132,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(128, 410);
+            this.rjButton1.Location = new System.Drawing.Point(128, 420);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(143, 45);
             this.rjButton1.TabIndex = 6;
@@ -151,7 +152,7 @@
             this.txbPasswordLogin.BorderSize = 2;
             this.txbPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPasswordLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.txbPasswordLogin.Location = new System.Drawing.Point(44, 351);
+            this.txbPasswordLogin.Location = new System.Drawing.Point(44, 361);
             this.txbPasswordLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txbPasswordLogin.MaxLength = 10;
             this.txbPasswordLogin.Multiline = false;
@@ -170,13 +171,13 @@
             // 
             this.txtCorreoLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtCorreoLogin.BorderColor = System.Drawing.Color.Transparent;
-            this.txtCorreoLogin.BorderFocusColor = System.Drawing.Color.Transparent;
+            this.txtCorreoLogin.BorderColor = System.Drawing.Color.Silver;
+            this.txtCorreoLogin.BorderFocusColor = System.Drawing.Color.Silver;
             this.txtCorreoLogin.BorderRadius = 10;
             this.txtCorreoLogin.BorderSize = 2;
             this.txtCorreoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCorreoLogin.Location = new System.Drawing.Point(44, 259);
+            this.txtCorreoLogin.Location = new System.Drawing.Point(44, 269);
             this.txtCorreoLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoLogin.MaxLength = 10;
             this.txtCorreoLogin.Multiline = false;
@@ -194,7 +195,7 @@
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(400, 500);
+            this.ClientSize = new System.Drawing.Size(401, 520);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.rjButton1);

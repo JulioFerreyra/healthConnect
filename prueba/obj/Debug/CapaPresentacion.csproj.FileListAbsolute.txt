@@ -1410,3 +1410,4 @@ C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.His
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.HistorialClinicoForm.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.test.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.ComprobarContraseñaForm.resources
+C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.ComprobarContraseñaForm.resources
