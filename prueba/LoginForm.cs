@@ -30,9 +30,6 @@ namespace prueba
         {
             txtCorreoLogin.Texts = "FerrJu";
             txbPasswordLogin.Texts = "Apd12345";
-  
-       //     BackColor = Color.FromArgb(31, 31, 31);
-         //   panel1.BackColor = Color.FromArgb(165,0,0,0);
         }
 
 
