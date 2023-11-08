@@ -428,6 +428,11 @@
     <None Include="Resources\HealthConecctName.png" />
     <None Include="Resources\auditoria.png" />
     <None Include="Resources\detalles.png" />
+    <None Include="Resources\cerrar-sesion.png" />
+    <None Include="Resources\cerrar-sesion1.png" />
+    <None Include="Resources\cerrar-sesion2.png" />
+    <None Include="Resources\cerrar-sesion3.png" />
+    <None Include="Resources\cerrar-sesion %282%29.png" />
     <Content Include="Resources\editar.png" />
     <None Include="Resources\finalizar.png" />
     <None Include="Resources\eliminar1.png" />
