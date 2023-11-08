@@ -164,7 +164,6 @@ C:\Users\jaft2\Downloads\podtelloVF\podTello\prueba\CapaDatos\obj\Debug\CapaDato
 C:\Users\jaft2\Source\Repos\healthConnect\CapaDatos\bin\Debug\CapaDatos.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaDatos\bin\Debug\CapaDatos.pdb
 C:\Users\jaft2\Source\Repos\healthConnect\CapaDatos\bin\Debug\CapaEntidad.dll
-C:\Users\jaft2\Source\Repos\healthConnect\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaDatos\bin\Debug\System.Memory.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaDatos\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaDatos\bin\Debug\System.Numerics.Vectors.dll

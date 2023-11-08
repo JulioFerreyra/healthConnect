@@ -193,7 +193,6 @@ C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaLogica.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaLogica.pdb
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaDatos.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaEntidad.dll
-C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\System.Buffers.dll
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaDatos.pdb
 C:\Users\jaft2\Source\Repos\healthConnect\CapaLogica\bin\Debug\CapaEntidad.pdb
