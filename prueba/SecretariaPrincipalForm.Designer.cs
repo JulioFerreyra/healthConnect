@@ -64,7 +64,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgXochitl.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgXochitl.Location = new System.Drawing.Point(40, 262);
+            this.dgXochitl.Location = new System.Drawing.Point(53, 322);
+            this.dgXochitl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgXochitl.MultiSelect = false;
             this.dgXochitl.Name = "dgXochitl";
             this.dgXochitl.ReadOnly = true;
@@ -77,7 +78,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgXochitl.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgXochitl.RowHeadersWidth = 51;
-            this.dgXochitl.Size = new System.Drawing.Size(1082, 532);
+            this.dgXochitl.Size = new System.Drawing.Size(1443, 655);
             this.dgXochitl.TabIndex = 10;
             this.dgXochitl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgXochitl_CellClick);
             this.dgXochitl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgXochitl_CellContentClick);
@@ -85,7 +86,8 @@
             // CalendarioCitas
             // 
             this.CalendarioCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CalendarioCitas.Location = new System.Drawing.Point(874, 40);
+            this.CalendarioCitas.Location = new System.Drawing.Point(1165, 49);
+            this.CalendarioCitas.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.CalendarioCitas.MaxSelectionCount = 1;
             this.CalendarioCitas.Name = "CalendarioCitas";
             this.CalendarioCitas.TabIndex = 1;
@@ -93,35 +95,37 @@
             // 
             // cmbxPodologo
             // 
-            this.cmbxPodologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
-            this.cmbxPodologo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.cmbxPodologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbxPodologo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbxPodologo.BorderSize = 1;
             this.cmbxPodologo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbxPodologo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxPodologo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxPodologo.ForeColor = System.Drawing.Color.White;
-            this.cmbxPodologo.IconColor = System.Drawing.Color.Black;
+            this.cmbxPodologo.IconColor = System.Drawing.Color.Blue;
             this.cmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxPodologo.ListTextColor = System.Drawing.Color.Black;
-            this.cmbxPodologo.Location = new System.Drawing.Point(40, 158);
-            this.cmbxPodologo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbxPodologo.Location = new System.Drawing.Point(53, 194);
+            this.cmbxPodologo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxPodologo.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxPodologo.Name = "cmbxPodologo";
             this.cmbxPodologo.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbxPodologo.Size = new System.Drawing.Size(218, 44);
+            this.cmbxPodologo.Size = new System.Drawing.Size(291, 54);
             this.cmbxPodologo.TabIndex = 11;
             this.cmbxPodologo.Texts = "Podólogo";
             this.cmbxPodologo.OnSelectedIndexChanged += new System.EventHandler(this.cmbxPodologo_OnSelectedIndexChanged);
             // 
             // SecretariaPrincipalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1167, 848);
+            this.ClientSize = new System.Drawing.Size(1556, 1044);
             this.Controls.Add(this.cmbxPodologo);
             this.Controls.Add(this.CalendarioCitas);
             this.Controls.Add(this.dgXochitl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SecretariaPrincipalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SecretariaPrincipalForm";
