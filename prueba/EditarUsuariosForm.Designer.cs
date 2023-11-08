@@ -41,18 +41,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Poppins Medium", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(84, 52);
+            this.label1.Location = new System.Drawing.Point(110, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 31);
+            this.label1.Size = new System.Drawing.Size(276, 56);
             this.label1.TabIndex = 72;
             this.label1.Text = "Editar usuario";
             // 
             // rjButton1
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.rjButton1.BorderRadius = 15;
             this.rjButton1.BorderSize = 5;
@@ -62,11 +63,12 @@
             this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(90, 295);
+            this.rjButton1.Location = new System.Drawing.Point(136, 356);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(160, 50);
+            this.rjButton1.Size = new System.Drawing.Size(213, 62);
             this.rjButton1.TabIndex = 71;
             this.rjButton1.Text = "Guardar";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -81,16 +83,16 @@
             this.txtApellMat.BorderSize = 2;
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.Color.Black;
-            this.txtApellMat.Location = new System.Drawing.Point(59, 237);
-            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellMat.Location = new System.Drawing.Point(79, 292);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtApellMat.MaxLength = 10;
             this.txtApellMat.Multiline = false;
             this.txtApellMat.Name = "txtApellMat";
-            this.txtApellMat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellMat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtApellMat.PasswordChar = false;
             this.txtApellMat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtApellMat.PlaceholderText = "Confirmar contraseña";
-            this.txtApellMat.Size = new System.Drawing.Size(250, 35);
+            this.txtApellMat.Size = new System.Drawing.Size(333, 44);
             this.txtApellMat.TabIndex = 70;
             this.txtApellMat.Texts = "";
             this.txtApellMat.UnderlineStyle = true;
@@ -104,16 +106,16 @@
             this.txtApellPat.BorderSize = 2;
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.Color.Black;
-            this.txtApellPat.Location = new System.Drawing.Point(59, 167);
-            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellPat.Location = new System.Drawing.Point(79, 206);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtApellPat.MaxLength = 10;
             this.txtApellPat.Multiline = false;
             this.txtApellPat.Name = "txtApellPat";
-            this.txtApellPat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellPat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtApellPat.PasswordChar = false;
             this.txtApellPat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtApellPat.PlaceholderText = "Nueva contraseña";
-            this.txtApellPat.Size = new System.Drawing.Size(250, 35);
+            this.txtApellPat.Size = new System.Drawing.Size(333, 44);
             this.txtApellPat.TabIndex = 69;
             this.txtApellPat.Texts = "";
             this.txtApellPat.UnderlineStyle = true;
@@ -127,16 +129,16 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(59, 106);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(79, 130);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtNombre.PasswordChar = false;
             this.txtNombre.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtNombre.PlaceholderText = "Usuario";
-            this.txtNombre.Size = new System.Drawing.Size(250, 35);
+            this.txtNombre.Size = new System.Drawing.Size(333, 44);
             this.txtNombre.TabIndex = 68;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = true;
@@ -144,35 +146,38 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 37);
+            this.panel1.Size = new System.Drawing.Size(505, 46);
             this.panel1.TabIndex = 73;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.btnCancelar.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(331, -3);
+            this.btnCancelar.Location = new System.Drawing.Point(441, -4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(48, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(64, 49);
             this.btnCancelar.TabIndex = 68;
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // EditarUsuariosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(379, 377);
+            this.ClientSize = new System.Drawing.Size(505, 464);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.txtApellMat);
@@ -180,6 +185,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditarUsuariosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarUsuariosForm";
