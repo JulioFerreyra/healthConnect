@@ -423,7 +423,6 @@
     <None Include="Resources\cerrar %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nuevo-usuario.png" />
     <None Include="Resources\lupa.png" />
     <None Include="Resources\WhatsApp Image 2023-10-24 at 9.19.07 PM.jpeg" />
     <None Include="Resources\HealthConecctName.png" />
