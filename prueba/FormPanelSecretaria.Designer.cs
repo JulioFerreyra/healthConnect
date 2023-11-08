@@ -230,7 +230,7 @@
             Panelformularios.Name = "Panelformularios";
             Panelformularios.Size = new System.Drawing.Size(844, 764);
             Panelformularios.TabIndex = 1;
-            Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
+           // Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
             // 
             // FormPanelSecretaria
             // 

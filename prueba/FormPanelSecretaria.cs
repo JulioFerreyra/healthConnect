@@ -107,7 +107,6 @@ namespace CapaPresentacion
                 formulario.BringToFront();
 
             }
-            
         }
 
 
