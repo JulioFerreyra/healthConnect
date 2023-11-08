@@ -51,7 +51,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(47, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(96, 26);
             this.label2.TabIndex = 7;
             this.label2.Text = "Usuario";
             // 
@@ -64,7 +64,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(47, 337);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.Size = new System.Drawing.Size(124, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Contraseña";
             // 
@@ -98,9 +98,9 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel1.Location = new System.Drawing.Point(146, 467);
+            this.linkLabel1.Location = new System.Drawing.Point(138, 484);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(106, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(133, 16);
             this.linkLabel1.TabIndex = 59;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Olvide mi contraseña";
@@ -109,8 +109,8 @@
             // rjButton1
             // 
             this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
             this.rjButton1.BorderRadius = 16;
             this.rjButton1.BorderSize = 0;
@@ -118,15 +118,15 @@
             this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(128, 420);
+            this.rjButton1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(128, 425);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(143, 45);
             this.rjButton1.TabIndex = 6;
             this.rjButton1.Text = "Iniciar sesión";
             this.rjButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
+            this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
@@ -149,7 +149,7 @@
             this.txbPasswordLogin.PasswordChar = true;
             this.txbPasswordLogin.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txbPasswordLogin.PlaceholderText = "Contraseña";
-            this.txbPasswordLogin.Size = new System.Drawing.Size(302, 41);
+            this.txbPasswordLogin.Size = new System.Drawing.Size(302, 47);
             this.txbPasswordLogin.TabIndex = 4;
             this.txbPasswordLogin.Texts = "";
             this.txbPasswordLogin.UnderlineStyle = false;
@@ -159,7 +159,7 @@
             // 
             this.txtCorreoLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreoLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtCorreoLogin.BorderColor = System.Drawing.Color.Silver;
+            this.txtCorreoLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtCorreoLogin.BorderFocusColor = System.Drawing.Color.Silver;
             this.txtCorreoLogin.BorderRadius = 10;
             this.txtCorreoLogin.BorderSize = 2;
@@ -174,7 +174,7 @@
             this.txtCorreoLogin.PasswordChar = false;
             this.txtCorreoLogin.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCorreoLogin.PlaceholderText = "Usuario";
-            this.txtCorreoLogin.Size = new System.Drawing.Size(302, 41);
+            this.txtCorreoLogin.Size = new System.Drawing.Size(302, 47);
             this.txtCorreoLogin.TabIndex = 3;
             this.txtCorreoLogin.Texts = "";
             this.txtCorreoLogin.UnderlineStyle = false;
@@ -193,7 +193,7 @@
             // 
             // LoginForm
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(401, 520);
             this.Controls.Add(this.linkLabel1);
