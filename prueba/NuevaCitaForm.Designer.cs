@@ -318,7 +318,7 @@
             // cmbxPodologo
             // 
             this.cmbxPodologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbxPodologo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.cmbxPodologo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbxPodologo.BorderSize = 1;
             this.cmbxPodologo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbxPodologo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -340,7 +340,7 @@
             // cmbxHora
             // 
             this.cmbxHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbxHora.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.cmbxHora.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbxHora.BorderSize = 1;
             this.cmbxHora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -361,7 +361,7 @@
             // cmbxTipoCita
             // 
             this.cmbxTipoCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbxTipoCita.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.cmbxTipoCita.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbxTipoCita.BorderSize = 1;
             this.cmbxTipoCita.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbxTipoCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

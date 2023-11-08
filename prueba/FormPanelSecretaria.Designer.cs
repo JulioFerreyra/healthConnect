@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPanelSecretaria));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReporte = new CustomControls.RJControls.RJButton();
             this.btnNuevaCita = new CustomControls.RJControls.RJButton();
@@ -37,13 +38,16 @@
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Panelformularios = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnNuevaCita);
             this.panel1.Controls.Add(this.rjButton2);
@@ -231,6 +235,16 @@
             this.Panelformularios.TabIndex = 1;
             this.Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(35, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(340, 238);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormPanelSecretaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,6 +261,7 @@
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +278,6 @@
         private CustomControls.RJControls.RJButton btnNuevaCita;
         private CustomControls.RJControls.RJButton btnReporte;
         public System.Windows.Forms.Panel Panelformularios;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

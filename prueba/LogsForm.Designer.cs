@@ -52,20 +52,23 @@
             "Ignacio Tello Gónzález"});
             this.CmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.CmbxPodologo.ListTextColor = System.Drawing.Color.Black;
-            this.CmbxPodologo.Location = new System.Drawing.Point(22, 77);
-            this.CmbxPodologo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.CmbxPodologo.Location = new System.Drawing.Point(29, 95);
+            this.CmbxPodologo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmbxPodologo.MinimumSize = new System.Drawing.Size(267, 37);
             this.CmbxPodologo.Name = "CmbxPodologo";
             this.CmbxPodologo.Padding = new System.Windows.Forms.Padding(1);
-            this.CmbxPodologo.Size = new System.Drawing.Size(250, 56);
+            this.CmbxPodologo.Size = new System.Drawing.Size(333, 69);
             this.CmbxPodologo.TabIndex = 18;
             this.CmbxPodologo.Texts = "TIPO";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 139);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 171);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(766, 289);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1021, 356);
             this.dataGridView1.TabIndex = 19;
             // 
             // label1
@@ -73,46 +76,51 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(16, 40);
+            this.label1.Location = new System.Drawing.Point(21, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 31);
+            this.label1.Size = new System.Drawing.Size(476, 39);
             this.label1.TabIndex = 74;
             this.label1.Text = "REGISTROS DEL SISTEMA";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 37);
+            this.panel1.Size = new System.Drawing.Size(1067, 46);
             this.panel1.TabIndex = 75;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(749, -3);
+            this.button1.Location = new System.Drawing.Point(999, -4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 40);
+            this.button1.Size = new System.Drawing.Size(64, 49);
             this.button1.TabIndex = 68;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // LogsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.CmbxPodologo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LogsForm";
             this.Text = "LogsForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

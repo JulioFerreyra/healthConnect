@@ -179,7 +179,10 @@ namespace CapaPresentacion
 
         }
 
-     
+        private void tbxNombre__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

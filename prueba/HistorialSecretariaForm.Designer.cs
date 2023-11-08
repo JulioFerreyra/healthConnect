@@ -46,7 +46,7 @@
             this.dgHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgHistorial.Location = new System.Drawing.Point(61, 249);
-            this.dgHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgHistorial.Margin = new System.Windows.Forms.Padding(4);
             this.dgHistorial.Name = "dgHistorial";
             this.dgHistorial.ReadOnly = true;
             this.dgHistorial.RowHeadersWidth = 51;
@@ -68,18 +68,18 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1312, 46);
             this.panel1.TabIndex = 57;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.button2.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -87,7 +87,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(1248, -4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(64, 49);
             this.button2.TabIndex = 57;
@@ -101,7 +101,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(941, 142);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 55);
             this.button1.TabIndex = 59;
@@ -117,7 +117,7 @@
             this.txbCorreoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCorreoLogin.ForeColor = System.Drawing.Color.White;
             this.txbCorreoLogin.Location = new System.Drawing.Point(343, 142);
-            this.txbCorreoLogin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txbCorreoLogin.Margin = new System.Windows.Forms.Padding(5);
             this.txbCorreoLogin.MaxLength = 10;
             this.txbCorreoLogin.Multiline = false;
             this.txbCorreoLogin.Name = "txbCorreoLogin";
@@ -143,7 +143,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgHistorial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HistorialSecretariaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistorialSecretariaForm";

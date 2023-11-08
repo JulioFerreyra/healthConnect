@@ -46,7 +46,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.White;
             this.txtContraseña.Location = new System.Drawing.Point(68, 96);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
@@ -62,7 +62,7 @@
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
-            this.lblInfo.Location = new System.Drawing.Point(65, 75);
+            this.lblInfo.Location = new System.Drawing.Point(73, 75);
             this.lblInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(240, 16);
@@ -126,7 +126,7 @@
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.txtContraseña);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ComprobarContraseñaForm";
             this.Text = "ComprobarContraseñaForm";
             this.panel1.ResumeLayout(false);

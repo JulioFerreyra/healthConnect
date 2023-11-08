@@ -53,7 +53,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(381, 327);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(200, 49);
             this.btnCancelar.TabIndex = 6;
@@ -74,7 +74,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.Location = new System.Drawing.Point(75, 327);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(200, 49);
             this.btnAceptar.TabIndex = 5;
@@ -99,8 +99,8 @@
             "Xochitil Tello Gónzalez"});
             this.cmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxPodologo.ListTextColor = System.Drawing.Color.Black;
-            this.cmbxPodologo.Location = new System.Drawing.Point(365, 54);
-            this.cmbxPodologo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxPodologo.Location = new System.Drawing.Point(364, 121);
+            this.cmbxPodologo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxPodologo.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxPodologo.Name = "cmbxPodologo";
             this.cmbxPodologo.Padding = new System.Windows.Forms.Padding(1);
@@ -126,7 +126,7 @@
             this.cmbxTipoCita.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxTipoCita.ListTextColor = System.Drawing.Color.Black;
             this.cmbxTipoCita.Location = new System.Drawing.Point(36, 473);
-            this.cmbxTipoCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxTipoCita.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxTipoCita.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxTipoCita.Name = "cmbxTipoCita";
             this.cmbxTipoCita.Padding = new System.Windows.Forms.Padding(1);
@@ -142,7 +142,7 @@
             this.dtFinal.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonFace;
             this.dtFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dtFinal.Location = new System.Drawing.Point(684, 466);
-            this.dtFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtFinal.Margin = new System.Windows.Forms.Padding(4);
             this.dtFinal.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtFinal.Name = "dtFinal";
             this.dtFinal.Size = new System.Drawing.Size(289, 35);
@@ -158,7 +158,7 @@
             this.dtInicio.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonFace;
             this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dtInicio.Location = new System.Drawing.Point(349, 466);
-            this.dtInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtInicio.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(289, 35);
@@ -181,8 +181,8 @@
             "Rango de Fechas"});
             this.cmbxSeleccion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxSeleccion.ListTextColor = System.Drawing.Color.Black;
-            this.cmbxSeleccion.Location = new System.Drawing.Point(36, 54);
-            this.cmbxSeleccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxSeleccion.Location = new System.Drawing.Point(36, 121);
+            this.cmbxSeleccion.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxSeleccion.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxSeleccion.Name = "cmbxSeleccion";
             this.cmbxSeleccion.Padding = new System.Windows.Forms.Padding(1);
@@ -194,23 +194,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(217, 0);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(31, 63);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 29);
-            this.label2.Size = new System.Drawing.Size(194, 24);
+            this.label2.Size = new System.Drawing.Size(244, 29);
             this.label2.TabIndex = 19;
             this.label2.Text = "Seleccionar reporte";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(72)))), ((int)(((byte)(154)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 46);
             this.panel1.TabIndex = 55;
@@ -232,7 +231,7 @@
             this.cmbxEstadoCita.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxEstadoCita.ListTextColor = System.Drawing.Color.Black;
             this.cmbxEstadoCita.Location = new System.Drawing.Point(36, 205);
-            this.cmbxEstadoCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxEstadoCita.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxEstadoCita.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxEstadoCita.Name = "cmbxEstadoCita";
             this.cmbxEstadoCita.Padding = new System.Windows.Forms.Padding(1);
@@ -259,7 +258,7 @@
             this.Controls.Add(this.cmbxSeleccion);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SeleccionReporteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeleccionReporteForm";
