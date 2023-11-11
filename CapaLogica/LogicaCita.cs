@@ -66,6 +66,12 @@ namespace CapaLogica
 
                 return false;
             }
+            if (DateTime.Parse(cita.GetHoraCita()).TimeOfDay < DateTime.Parse(DateTime.Now.ToString("HH:mm")).TimeOfDay && cita.GetFechaCita().DayOfYear < DateTime.Today.DayOfYear)
+            {
+                MessageBox.Show("la Hora seleccionada no es valida");
+
+                return false;
+            }
             if (string.IsNullOrEmpty(cita.GetDetallesCita()))
             {
                 MessageBox.Show("El campo \"Sintomas\" contiene un valor no valido");
