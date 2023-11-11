@@ -118,7 +118,7 @@ namespace CapaLogica
         {
            
                 UsuarioDAO usuarioDAO = new UsuarioDAO();
-                usuarioDAO.ActualizarContraseñaCita(usuario);
+                usuarioDAO.ActualizarContraseñaUsuario(usuario);
         }
 
         public bool ValidarContraseñaAdmin(string contraseña)
@@ -139,7 +139,11 @@ namespace CapaLogica
             return true;
         }
 
-
+        public void ActualizarContraseñaUsuarioMysql(Usuario usuario)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.ActualizarContraseñaUsuarioMysql(usuario);
+        }
 
 
         //private void GetDatosUsuario(Usuario usuario)

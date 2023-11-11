@@ -42,6 +42,7 @@ namespace CapaPresentacion
             {
                 LogicaUsuario logicaUsuario = new LogicaUsuario();
                 logicaUsuario.ActualizarContraseña(usuario);
+                logicaUsuario.ActualizarContraseñaUsuarioMysql(usuario);
 
                 txtConfirmarContraseña.Texts = string.Empty;
                 txtContraseña.Texts = string.Empty;

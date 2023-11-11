@@ -213,7 +213,7 @@
             this.tbxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTelefono.ForeColor = System.Drawing.Color.DimGray;
             this.tbxTelefono.Location = new System.Drawing.Point(65, 223);
-            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTelefono.MaxLength = 10;
             this.tbxTelefono.Multiline = false;
             this.tbxTelefono.Name = "tbxTelefono";
@@ -237,7 +237,7 @@
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
             this.tbxSintomas.Location = new System.Drawing.Point(337, 223);
-            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSintomas.MaxLength = 10;
             this.tbxSintomas.Multiline = false;
             this.tbxSintomas.Name = "tbxSintomas";
@@ -262,7 +262,7 @@
             this.tbxApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellMat.ForeColor = System.Drawing.Color.DimGray;
             this.tbxApellMat.Location = new System.Drawing.Point(611, 122);
-            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellMat.MaxLength = 10;
             this.tbxApellMat.Multiline = false;
             this.tbxApellMat.Name = "tbxApellMat";
@@ -287,7 +287,7 @@
             this.tbxApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellPat.ForeColor = System.Drawing.Color.DimGray;
             this.tbxApellPat.Location = new System.Drawing.Point(337, 122);
-            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellPat.MaxLength = 10;
             this.tbxApellPat.Multiline = false;
             this.tbxApellPat.Name = "tbxApellPat";
@@ -312,7 +312,7 @@
             this.tbxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNombre.ForeColor = System.Drawing.Color.DimGray;
             this.tbxNombre.Location = new System.Drawing.Point(65, 122);
-            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNombre.MaxLength = 10;
             this.tbxNombre.Multiline = false;
             this.tbxNombre.Name = "tbxNombre";
@@ -345,7 +345,7 @@
             this.rjButton4.Name = "rjButton4";
             this.rjButton4.Size = new System.Drawing.Size(198, 56);
             this.rjButton4.TabIndex = 23;
-            this.rjButton4.Text = "Agregar resultado ";
+            this.rjButton4.Text = "Finalizar Cita";
             this.rjButton4.TextColor = System.Drawing.Color.White;
             this.rjButton4.UseVisualStyleBackColor = false;
             this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
@@ -359,7 +359,7 @@
             this.cmbxEstadoCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxEstadoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxEstadoCita.ForeColor = System.Drawing.Color.White;
-            this.cmbxEstadoCita.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
+            this.cmbxEstadoCita.IconColor = System.Drawing.Color.Blue;
             this.cmbxEstadoCita.Items.AddRange(new object[] {
             "Pendiente",
             "Finalizada"});
@@ -399,7 +399,7 @@
             this.CmbxPodologo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbxPodologo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbxPodologo.ForeColor = System.Drawing.Color.White;
-            this.CmbxPodologo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
+            this.CmbxPodologo.IconColor = System.Drawing.Color.Blue;
             this.CmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.CmbxPodologo.ListTextColor = System.Drawing.Color.Black;
             this.CmbxPodologo.Location = new System.Drawing.Point(611, 200);
@@ -420,7 +420,7 @@
             this.cmbxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxHora.ForeColor = System.Drawing.Color.White;
-            this.cmbxHora.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
+            this.cmbxHora.IconColor = System.Drawing.Color.Blue;
             this.cmbxHora.Items.AddRange(new object[] {
             "8:00",
             "8:15",
@@ -450,7 +450,7 @@
             this.cmbxTipoCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxTipoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxTipoCita.ForeColor = System.Drawing.Color.White;
-            this.cmbxTipoCita.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(181)))), ((int)(((byte)(216)))));
+            this.cmbxTipoCita.IconColor = System.Drawing.Color.Blue;
             this.cmbxTipoCita.Items.AddRange(new object[] {
             "Examen",
             "Limpieza",

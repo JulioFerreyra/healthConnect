@@ -29,7 +29,11 @@ namespace prueba
         {
             RellenarGrid(string.Empty);
             AgregarBotonesGrid();
+            if (dgPacientes.Rows.Count != 0)
+            {
+                
             dgPacientes.Columns["ID"].Visible = false;
+            }
             
         }
 

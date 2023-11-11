@@ -26,9 +26,9 @@ namespace CapaDatos
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",c.tel_contacto as \"Telefono\" from citas as c ");
             stringBuilder.Append("join paciente as pc on c.id_paciente=pc.id_paciente ");
-            stringBuilder.Append("join podologo as pod on pod.id_podologo = c.id_podologo ");
-            stringBuilder.Append("join sucursal as s on s.id_sucursal = c.id_sucursal ");
-            stringBuilder.Append("where pod.id_podologo =" + idPodologo + " and c.fecha_cita =\"" + ConvertirFechaString(FechaCita) + "\" and c.estado_cita = \"pendiente\";");
+            stringBuilder.Append("join profesionistas as pod on pod.id_profesionista = c.id_profesionista ");
+            //stringBuilder.Append("join sucursal as s on s.id_sucursal = c.id_sucursal ");
+            stringBuilder.Append("where pod.id_profesionista =" + idPodologo + " and c.fecha_cita =\"" + ConvertirFechaString(FechaCita) + "\" and c.estado_cita = \"pendiente\";");
             string SentenciaSelect = stringBuilder.ToString();
 
             try
@@ -79,7 +79,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO=new UsuarioDAO();
             MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaSelect = "select nombre_comp from podologo where id_podologo = "+idPodologo+";";
+            string SentenciaSelect = "select nombre_comp from profesionistas  where id_profesionista = "+idPodologo+";";
             DataTable NombrePodologo = new DataTable();
             try
             {

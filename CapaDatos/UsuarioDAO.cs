@@ -12,6 +12,9 @@ namespace CapaDatos
         private const string PASSWORD = "Admin";
         private const string BASE_DATOS = "healthconnect";
         private const string HOST = "localhost";
+        //
+        private const string BaseDatosUsuario = "mysql";
+
 
        public void ProbarConexion()
         {
@@ -171,7 +174,7 @@ namespace CapaDatos
         /// <summary>
         /// Update
         /// </summary>
-        public void ActualizarContraseñaCita(Usuario usuario)
+        public void ActualizarContraseñaUsuario(Usuario usuario)
         {
             string consultaUpdate = "update usuario set contraseña = \""+ usuario.GetContraseña()+"\" where usuario = \""+usuario.GetUsuario()+"\"";
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
@@ -193,11 +196,38 @@ namespace CapaDatos
             }
         }
 
+        public void ActualizarContraseñaUsuarioMysql(Usuario usuario)
+        {
+            string consultaAlter = "Alter user \""+usuario.GetUsuario()+"\"@\"%\" identified by \""+usuario.GetContraseña()+"\"";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaAlter, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+
         public string CadenaConexion()
         {
         
         string cadenaConexion = "Server="+HOST+";Database="+BASE_DATOS+";user="+USSER+";password="+PASSWORD+";";
             return cadenaConexion;
+        }
+
+        private string CadenaConexionUsuario()
+        {
+            return "Server="+HOST+"; DATABASE="+BaseDatosUsuario + "; user="+USSER+"; password="+PASSWORD+";";
         }
 
        
