@@ -45,6 +45,8 @@ namespace CapaDatos
                 conexion_a_MySQL.Close();
             }
         }
+
+        
         public void CraerUsuario(Usuario usuario)
         {
             string consultaInsert = "insert into usuario(usuario,contraseña,isAdmin) values(\""+usuario.GetUsuario()+"\",\""+usuario.GetContraseña()+"\","+usuario.GetIsAdmin()+")";
@@ -242,7 +244,7 @@ namespace CapaDatos
 
         public string GetContraseñaUsuario(int idUsuario)
         {
-            UsuarioDAO usuarioDAO = new UsuarioDAO();
+           
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
             string SentenciaSelect = "select contraseña from usuario where id_usuario = " + idUsuario;
             string contraseña;
@@ -258,6 +260,31 @@ namespace CapaDatos
                 MessageBox.Show(ex.Message);
 
                 return null;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+
+        public DataTable GetDatosProfesionista(int idPofesionista)
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select nombre, apell_pat, apell_mat, telefono from profesionistas where id_profesionista =" + idPofesionista;
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return antecendetesNoPat;
             }
             finally
             {
@@ -314,6 +341,29 @@ namespace CapaDatos
                 conexion_a_SQL.Close();
             }
         }
+
+        public void EliminarProfesionista(int idProfesionista)
+        {
+            string sentenciaDelete = "Delete from profesionistas where id_profesionista = " + idProfesionista + ";";
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaDelete, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Profesionista eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        
+    }
         /// <summary>
         /// Update
         /// </summary>

@@ -219,6 +219,7 @@
             this.dgProfesionistas.Size = new System.Drawing.Size(949, 233);
             this.dgProfesionistas.TabIndex = 76;
             this.dgProfesionistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellClick);
+            this.dgProfesionistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellContentClick);
             // 
             // textBoxD1
             // 

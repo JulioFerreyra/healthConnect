@@ -102,6 +102,7 @@ namespace CapaPresentacion
 
                     ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
                     comprobarContraseñaForm.ShowDialog();
+                    EliminarProfesionista(Convert.ToInt16(dgProfesionistas.Rows[FilaSeleccionada].Cells["ID"].Value));
                     RellenarGridProfesionistas("");
                     permitirVisualizar = false;
                 }
@@ -171,7 +172,16 @@ namespace CapaPresentacion
                 logicaUsuario.EliminarUsuarioMysql(usuario);
             }
         }
-         
+        private void EliminarProfesionista(int idProfesionista)
+        {
+            if (permitirVisualizar)
+            {
+                LogicaPodologo logicaPodologo = new LogicaPodologo();
+                logicaPodologo.EliminarProfesionista(idProfesionista);
+                return;
+            }
+        }
+
         private void AgregarColumnasDataGrid()
         {
             DataGridViewButtonColumn editarCol = new DataGridViewButtonColumn();
@@ -184,6 +194,11 @@ namespace CapaPresentacion
 
             dgProfesionistas.Columns.Add(editarCol);
             dgProfesionistas.Columns.Add(eliminarCol);
+        }
+
+        private void dgProfesionistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
        

@@ -197,5 +197,17 @@ namespace CapaLogica
             return false;
 
         }
+
+        public void EliminarProfesionista(int idProfesionista)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            podologodao.EliminarProfesionista(idProfesionista);
+        }
+
+        public DataTable GetDatosProfesionista(int idPofesionista)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+           return  podologodao.GetDatosProfesionista(idPofesionista);
+        }
     }
     }
