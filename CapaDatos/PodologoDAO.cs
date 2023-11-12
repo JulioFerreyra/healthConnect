@@ -17,7 +17,10 @@ namespace CapaDatos
         private const string HOST = "localhost";
         private const string BASE_DATOS = "healthconnect";
 
-
+        /// <summary>
+        /// Insert
+        /// </summary>
+        /// <param name="usuario"></param>
         public void CraerUsuario(Usuario usuario)
         {
             string consultaInsert = "insert into usuario(usuario,contraseña,isAdmin) values(\""+usuario.GetUsuario()+"\",\""+usuario.GetContraseña()+"\","+usuario.GetIsAdmin()+")";
@@ -41,12 +44,41 @@ namespace CapaDatos
                 conexion_a_MySQL.Close();
             }
         }
+
+
         /// <summary>
         /// Select
         /// </summary>
         /// <param name="FechaCita"></param>
         /// <param name="idPodologo"></param>
         /// <returns></returns>
+        /// 
+        public DataTable VerProfesionistas(string profesionistaLike)
+        {
+            
+                DataTable datos = new DataTable();
+                UsuarioDAO usuarioDAO = new UsuarioDAO();
+                string SentenciaSelect = "select id_profesionista as ID, concat(nombre, ' ', apell_pat, ' ' , apell_mat) as Profesionista, telefono as Teléfono, 'El Grullo' as Sucursal from profesionistas where nombre like '%"+profesionistaLike+ "%' or apell_pat like '%"+profesionistaLike+"%'";
+                MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+                try
+                {
+                    conexion_a_MySQL.Open();
+                    MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                    comando.Fill(datos);
+
+                    return datos;
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                    return datos;
+                }
+                finally
+                {
+                    conexion_a_MySQL.Close();
+                }
+            }
         public DataTable VerCitasPodologo(DateTime FechaCita, int idPodologo)
         {
             DataTable citas = new DataTable();

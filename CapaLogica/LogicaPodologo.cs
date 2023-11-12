@@ -34,8 +34,13 @@ namespace CapaLogica
             return podologoDAO.GetNombrePodologo(idPodologo);
         }
 
-
-        public void EliminarCita(Cita cita)
+        public DataTable VerProfesionistas(string profesionistaLike)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.VerProfesionistas(profesionistaLike);
+        }
+        
+            public void EliminarCita(Cita cita)
         {
             DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar la cita?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
             if (resultado == DialogResult.Yes)
@@ -151,5 +156,3 @@ namespace CapaLogica
         }
     }
 }
-
-

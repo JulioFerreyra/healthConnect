@@ -21,6 +21,7 @@ namespace CapaPresentacion
         }
         private void UsuariosForm_Load(object sender, EventArgs e)
         {
+            RellenarGridProfesionistas("");
             RellenarGridUsuarios("");
         }
 
@@ -35,6 +36,7 @@ namespace CapaPresentacion
             NuevoUsuarioForm nuevoUsuarioForm = new NuevoUsuarioForm();
             nuevoUsuarioForm.ShowDialog();
             RellenarGridUsuarios("");
+           
         }
         private void btnAgregarProfesionsitas_Click(object sender, EventArgs e)
         {
@@ -97,6 +99,11 @@ namespace CapaPresentacion
             {
                 dgUsuarios.Rows.Insert(0, Convert.ToString(dataRow[0]), Convert.ToString(dataRow[1]), Convert.ToBoolean(dataRow[3]) ? "Adminstrador" : "Secretaria");
             }
+        }
+        private void RellenarGridProfesionistas(string profesionista)
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            dgProfesionistas.DataSource = logicaPodologo.VerProfesionistas("");
         }
 
        private void VisualizarContraseña(int fila)
