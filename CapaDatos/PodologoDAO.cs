@@ -49,6 +49,34 @@ namespace CapaDatos
             }
 
         }
+
+        public DataTable VerUsuarios()
+        {
+
+            DataTable datos = new DataTable();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            string SentenciaSelect = "select usuario as Usuario, contraseña as Contraseña isAdmin as Rol";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(datos);
+
+                return datos;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                return datos;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
         public DataTable GetDatosPaciente(int idPaciente)
         {
             DataTable datos = new DataTable();

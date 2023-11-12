@@ -16,5 +16,38 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+        private void UsuariosForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        /// <summary>
+        /// Botones
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            NuevoUsuarioForm nuevoUsuarioForm = new NuevoUsuarioForm();
+            nuevoUsuarioForm.ShowDialog();
+            RellenarGridUsuarios();
+        }
+        private void btnAgregarProfesionsitas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Metodos
+        /// </summary>
+        private void RellenarGridUsuarios()
+        {
+
+        }
+
+       
+
+        
     }
 }

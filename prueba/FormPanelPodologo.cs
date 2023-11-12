@@ -143,12 +143,18 @@ namespace CapaPresentacion
             Close();
         }
 
+
         private void btnReporte_Click(object sender, EventArgs e)
         {
             ElementosGlobales.PodologoGlobal = ElementosGlobales.idUsuarioGlobal;
             ElementosGlobales.UsuarioCondicion = false;
             SeleccionReporteForm seleccionReporteForm = new SeleccionReporteForm();
             seleccionReporteForm.ShowDialog();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<UsuariosForm>();
         }
     }
 }
