@@ -199,7 +199,7 @@ namespace CapaDatos
         public void ActualizarContraseñaUsuarioMysql(Usuario usuario)
         {
             string consultaAlter = "Alter user \""+usuario.GetUsuario()+"\"@\"%\" identified by \""+usuario.GetContraseña()+"\"";
-            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionUsuario());
             try
             {
                 conexion_a_MySQL.Open();
@@ -221,8 +221,8 @@ namespace CapaDatos
         public string CadenaConexion()
         {
         
-        string cadenaConexion = "Server="+HOST+";Database="+BASE_DATOS+";user="+USSER+";password="+PASSWORD+";";
-            return cadenaConexion;
+        return "Server="+HOST+";Database="+BASE_DATOS+";user="+USSER+";password="+PASSWORD+";";
+            
         }
 
         private string CadenaConexionUsuario()

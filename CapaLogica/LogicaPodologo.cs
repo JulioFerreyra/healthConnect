@@ -66,6 +66,30 @@ namespace CapaLogica
             podologoDAO.ActualizarAntecedentesPatologicosPaciente(antecedentes);
         }
 
+        public DataTable VerUsuarios(string usuario)
+        {
+            PodologoDAO podologoDAO= new PodologoDAO();
+            return podologoDAO.VerUsuarios(usuario);
+        }
+
+        public void EliminarUsuario(int idUsuario)
+        {
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este usuario?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            {
+                PodologoDAO podologoDAO = new PodologoDAO();
+                podologoDAO.EliminarUsuario(idUsuario);
+            }
+            return;
+
+            
+        }
+
+        public string GetContraseñaUsuario(int idUsuario)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.GetContraseñaUsuario(idUsuario);
+        }
     }
 }
 

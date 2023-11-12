@@ -37,7 +37,7 @@ namespace CapaDatos
             DataTable ConsultasPodologo = new DataTable();
             
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",pc.telefono as \"Telefono\" from citas as c ");
+            stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",pc.apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",pc.telefono as \"Telefono\" from citas as c ");
             stringBuilder.Append("join pacientes as pc on c.id_paciente=pc.id_paciente ");
             stringBuilder.Append("join profesionistas as pod on pod.id_profesionista = c.id_profesionista ");
             //stringBuilder.Append("join sucursal as s on s.id_sucursal = c.id_sucursal ");
@@ -54,7 +54,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
                 return ConsultasPodologo;
             }
             finally

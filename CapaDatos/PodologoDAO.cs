@@ -12,6 +12,10 @@ namespace CapaDatos
 {
     public class PodologoDAO
     {
+        private const string USSER = "Admin";
+        private const string PASSWORD = "Admin";
+        private const string HOST = "localhost";
+        private const string BASE_DATOS = "healthconnect";
         /// <summary>
         /// Select
         /// </summary>
@@ -22,7 +26,7 @@ namespace CapaDatos
         {
             DataTable citas = new DataTable();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            MySqlConnection conexion_a_mysql = new MySqlConnection(usuarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",c.tel_contacto as \"Telefono\" from citas as c ");
             stringBuilder.Append("join paciente as pc on c.id_paciente=pc.id_paciente ");
@@ -50,13 +54,13 @@ namespace CapaDatos
 
         }
 
-        public DataTable VerUsuarios()
+        public DataTable VerUsuarios(string usuario)
         {
 
             DataTable datos = new DataTable();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            string SentenciaSelect = "select usuario as Usuario, contraseña as Contraseña isAdmin as Rol";
-            MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            string SentenciaSelect = "select id_usuario,usuario, contraseña, isAdmin from usuario where usuario like \"%"+usuario+"%\" and usuario <> 'Admin'";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
             try
             {
                 conexion_a_MySQL.Open();
@@ -82,7 +86,7 @@ namespace CapaDatos
             DataTable datos = new DataTable();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             string SentenciaSelect = "select nombre as Nombre, apell_pat as 'Apellido Paterno', apell_mat as 'Apellido Materno', telefono as Telefono,   year(now()) - year(fecha_nac) as Edad, sexo as Sexo from pacientes where id_paciente = " + idPaciente+";";
-            MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
             try
             {
                 conexion_a_MySQL.Open();
@@ -106,7 +110,7 @@ namespace CapaDatos
         public DataTable GetNombrePodologo(int idPodologo)
         {
             UsuarioDAO usuarioDAO=new UsuarioDAO();
-            MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
             string SentenciaSelect = "select concat(nombre, ' ', apell_pat, ' ', apell_mat) from profesionistas  where id_profesionista = "+idPodologo+";";
             DataTable NombrePodologo = new DataTable();
             try
@@ -132,7 +136,7 @@ namespace CapaDatos
         public DataTable GetAntecendetesNoPatologicosPaciente(int idPaciente)
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
             string SentenciaSelect = "Select no.parto, no.hiperlaxitud, no.tabaco, no.frec_tab, no.alcohol, no.frec_alc, no.act_fisica, no.frec_actF,no.drogas, pat.diabetes, pat.presion_arterial, pat.tiroides, pat.hepatitis, pat.cardiopatias,pat.intervenciones,pat.neoplasia, pat.medicacion from ant_nopat no join ant_pat pat on no.id_paciente = pat.id_paciente where no.id_paciente="+idPaciente;
             DataTable antecendetesNoPat = new DataTable();
             try
@@ -155,6 +159,32 @@ namespace CapaDatos
             }
         }
 
+        public string GetContraseñaUsuario(int idUsuario)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select contraseña from usuario where id_usuario = " + idUsuario;
+            string contraseña;
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaSelect,conexion_a_MySQL);
+                contraseña = Convert.ToString(comando.ExecuteScalar());
+                return contraseña;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return null;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+
         /// <summary>
         /// Delete
         /// </summary>
@@ -162,7 +192,7 @@ namespace CapaDatos
         public void EliminarCita(Cita cita)
         {
             UsuarioDAO usuarioDAO =new UsuarioDAO();
-            MySqlConnection conexion_a_SQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
             string SentenciaDelete = "delete from citas where id_cita = "+cita.GetIdCita()+";";
             try
             {
@@ -182,11 +212,35 @@ namespace CapaDatos
             }
         }
 
-       
+       public void EliminarUsuario(int idUsuario)
+        {
+            string sentenciaDelete = "Delete from usuario where id_usuario = "+idUsuario+";";
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaDelete, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Usuario eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        }
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="antecedentes"></param>
         public void ActualizarDatosNoPatologicosPaciente(AntecedentesNoPatologicos antecedentes)
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            MySqlConnection conexion_a_SQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
             string sentenciaUpdate = "UPDATE ant_nopat SET parto = "+antecedentes.GetParto()+", hiperlaxitud = "+antecedentes.GetHiperlaxitud()+", tabaco = "+antecedentes.GetTabaco()+", frec_tab = "+antecedentes.GetFrecuenciaTabaco()+", alcohol = "+antecedentes.GetAlcohol()+", frec_alc = "+antecedentes.GetFrecueciaAlcohol()+", act_fisica = "+antecedentes.GetActividadFisica()+", frec_actF= "+antecedentes.GetFrecuenciaActividad()+", drogas = "+antecedentes.GetDrogas()+" WHERE id_paciente =" + antecedentes.GetIdPaciente();
             try
             {
@@ -210,7 +264,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             string sentenciaUpdate = "UPDATE ant_pat SET diabetes = \""+antecedentes.GetDiabetes()+"\", presion_arterial = \""+antecedentes.GetPresionArterial()+"\", tiroides = \""+antecedentes.GetTiroides()+"\", hepatitis = \""+antecedentes.GetHepatitis()+"\",cardiopatias = "+antecedentes.GetCardiopatias()+",intervenciones = \""+antecedentes.GetIntervenciones()+"\",neoplasia = "+antecedentes.GetNeoplasia()+",medicacion =\""+antecedentes.GetMedicacion()+"\" WHERE id_paciente = "+ antecedentes.GetIdPaciente();
-            MySqlConnection conexion_a_SQL = new MySqlConnection(usuarioDAO.CadenaConexion());
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
             try
             {
                 conexion_a_SQL.Open();
@@ -238,6 +292,13 @@ namespace CapaDatos
         private string ConvertirFechaString(DateTime Fecha)
         {
             return Fecha.ToString("yyyy-MM-dd");
+        }
+
+        public string CadenaConexion()
+        {
+
+            return "Server=" + HOST + ";Database=" + BASE_DATOS + ";user=" + USSER + ";password=" + PASSWORD + ";";
+
         }
     }
 }
