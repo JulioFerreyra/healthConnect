@@ -78,6 +78,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarProfesionistaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProfesionistaForm.Designer.cs">
+      <DependentUpon>AgregarProfesionistaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnadirResultadoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     <Compile Include="UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarProfesionistaForm.resx">
+      <DependentUpon>AgregarProfesionistaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnadirResultadoForm.resx">
       <DependentUpon>AnadirResultadoForm.cs</DependentUpon>
     </EmbeddedResource>

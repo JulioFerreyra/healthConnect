@@ -30,11 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.txtApellMat = new prueba.TextBoxD();
-            this.txtApellPat = new prueba.TextBoxD();
+            this.txtConfirmar = new prueba.TextBoxD();
+            this.txtContraseña = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.cmbPuesto = new CustomControls.RJControls.pComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(102, 289);
+            this.rjButton1.Location = new System.Drawing.Point(102, 329);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(160, 50);
             this.rjButton1.TabIndex = 71;
@@ -72,51 +73,51 @@
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // txtApellMat
+            // txtConfirmar
             // 
-            this.txtApellMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtApellMat.BorderColor = System.Drawing.Color.White;
-            this.txtApellMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtApellMat.BorderRadius = 0;
-            this.txtApellMat.BorderSize = 2;
-            this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellMat.ForeColor = System.Drawing.Color.Black;
-            this.txtApellMat.Location = new System.Drawing.Point(59, 231);
-            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtApellMat.MaxLength = 10;
-            this.txtApellMat.Multiline = false;
-            this.txtApellMat.Name = "txtApellMat";
-            this.txtApellMat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtApellMat.PasswordChar = false;
-            this.txtApellMat.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtApellMat.PlaceholderText = "Confirmar contraseña";
-            this.txtApellMat.Size = new System.Drawing.Size(250, 35);
-            this.txtApellMat.TabIndex = 70;
-            this.txtApellMat.Texts = "";
-            this.txtApellMat.UnderlineStyle = true;
+            this.txtConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtConfirmar.BorderColor = System.Drawing.Color.White;
+            this.txtConfirmar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtConfirmar.BorderRadius = 0;
+            this.txtConfirmar.BorderSize = 2;
+            this.txtConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmar.ForeColor = System.Drawing.Color.Black;
+            this.txtConfirmar.Location = new System.Drawing.Point(59, 273);
+            this.txtConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmar.MaxLength = 10;
+            this.txtConfirmar.Multiline = false;
+            this.txtConfirmar.Name = "txtConfirmar";
+            this.txtConfirmar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtConfirmar.PasswordChar = false;
+            this.txtConfirmar.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtConfirmar.PlaceholderText = "Confirmar contraseña";
+            this.txtConfirmar.Size = new System.Drawing.Size(250, 35);
+            this.txtConfirmar.TabIndex = 70;
+            this.txtConfirmar.Texts = "";
+            this.txtConfirmar.UnderlineStyle = true;
             // 
-            // txtApellPat
+            // txtContraseña
             // 
-            this.txtApellPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtApellPat.BorderColor = System.Drawing.Color.White;
-            this.txtApellPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtApellPat.BorderRadius = 0;
-            this.txtApellPat.BorderSize = 2;
-            this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellPat.ForeColor = System.Drawing.Color.Black;
-            this.txtApellPat.Location = new System.Drawing.Point(59, 170);
-            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtApellPat.MaxLength = 10;
-            this.txtApellPat.Multiline = false;
-            this.txtApellPat.Name = "txtApellPat";
-            this.txtApellPat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtApellPat.PasswordChar = false;
-            this.txtApellPat.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtApellPat.PlaceholderText = "Nueva contraseña";
-            this.txtApellPat.Size = new System.Drawing.Size(250, 35);
-            this.txtApellPat.TabIndex = 69;
-            this.txtApellPat.Texts = "";
-            this.txtApellPat.UnderlineStyle = true;
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtContraseña.BorderColor = System.Drawing.Color.White;
+            this.txtContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtContraseña.BorderRadius = 0;
+            this.txtContraseña.BorderSize = 2;
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.ForeColor = System.Drawing.Color.Black;
+            this.txtContraseña.Location = new System.Drawing.Point(59, 212);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.MaxLength = 10;
+            this.txtContraseña.Multiline = false;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContraseña.PasswordChar = false;
+            this.txtContraseña.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtContraseña.PlaceholderText = "Nueva contraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(250, 35);
+            this.txtContraseña.TabIndex = 69;
+            this.txtContraseña.Texts = "";
+            this.txtContraseña.UnderlineStyle = true;
             // 
             // txtNombre
             // 
@@ -128,7 +129,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(59, 106);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
@@ -167,17 +168,37 @@
             this.btnCancelar.TabIndex = 68;
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
+            // cmbPuesto
+            // 
+            this.cmbPuesto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbPuesto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPuesto.BorderSize = 1;
+            this.cmbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbPuesto.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbPuesto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPuesto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbPuesto.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbPuesto.Location = new System.Drawing.Point(59, 162);
+            this.cmbPuesto.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbPuesto.Name = "cmbPuesto";
+            this.cmbPuesto.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbPuesto.Size = new System.Drawing.Size(250, 30);
+            this.cmbPuesto.TabIndex = 74;
+            this.cmbPuesto.Texts = "";
+            // 
             // EditarUsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(379, 377);
+            this.ClientSize = new System.Drawing.Size(379, 391);
+            this.Controls.Add(this.cmbPuesto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.txtApellMat);
-            this.Controls.Add(this.txtApellPat);
+            this.Controls.Add(this.txtConfirmar);
+            this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -194,10 +215,11 @@
 
         private System.Windows.Forms.Label label1;
         private CustomControls.RJControls.RJButton rjButton1;
-        private prueba.TextBoxD txtApellMat;
-        private prueba.TextBoxD txtApellPat;
+        private prueba.TextBoxD txtConfirmar;
+        private prueba.TextBoxD txtContraseña;
         private prueba.TextBoxD txtNombre;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCancelar;
+        private CustomControls.RJControls.pComboBox cmbPuesto;
     }
 }
