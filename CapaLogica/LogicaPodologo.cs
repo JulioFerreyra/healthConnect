@@ -13,7 +13,7 @@ namespace CapaLogica
     public class LogicaPodologo
     {
 
-     
+
 
         /// <summary>
         /// Select
@@ -39,8 +39,8 @@ namespace CapaLogica
             PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.VerProfesionistas(profesionistaLike);
         }
-        
-            public void EliminarCita(Cita cita)
+
+        public void EliminarCita(Cita cita)
         {
             DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar la cita?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
             if (resultado == DialogResult.Yes)
@@ -66,7 +66,7 @@ namespace CapaLogica
         public void ActualizarDatosNoPatologicosPaciente(AntecedentesNoPatologicos antecedentes)
         {
             PodologoDAO podologoDAO = new PodologoDAO();
-             podologoDAO.ActualizarDatosNoPatologicosPaciente(antecedentes);
+            podologoDAO.ActualizarDatosNoPatologicosPaciente(antecedentes);
         }
         public void ActualizarAntecedentesPatologicosPaciente(AntecedentesPatologicos antecedentes)
         {
@@ -76,18 +76,18 @@ namespace CapaLogica
 
         public DataTable VerUsuarios(string usuario)
         {
-            PodologoDAO podologoDAO= new PodologoDAO();
+            PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.VerUsuarios(usuario);
         }
 
         public void EliminarUsuario(int idUsuario)
         {
-           
-                PodologoDAO podologoDAO = new PodologoDAO();
-                podologoDAO.EliminarUsuario(idUsuario);
-          
 
-            
+            PodologoDAO podologoDAO = new PodologoDAO();
+            podologoDAO.EliminarUsuario(idUsuario);
+
+
+
         }
 
         public string GetContraseñaUsuario(int idUsuario)
@@ -102,8 +102,8 @@ namespace CapaLogica
         /// </summary>
         /// <param name="usuario"></param>
         /// 
-        
-        private bool ValidarCamposCrearUsuario(Usuario usuario, string puesto,string comprobarContraseña)
+
+        private bool ValidarCamposCrearUsuario(Usuario usuario, string puesto, string comprobarContraseña)
         {
             if (puesto == "Puesto")
             {
@@ -125,34 +125,77 @@ namespace CapaLogica
                 MessageBox.Show("Compruebe la contraseña para continuar");
                 return false;
             }
-           
+
             return true;
         }
 
         public bool ValidacionCrearUsuario(Usuario usuario, string puesto, string comprobarContraseña)
         {
             LogicaUsuario logicaUsuario = new LogicaUsuario();
-            if (!ValidarCamposCrearUsuario(usuario,puesto,comprobarContraseña))
+            if (!ValidarCamposCrearUsuario(usuario, puesto, comprobarContraseña))
             {
                 return false;
             }
-            if (!logicaUsuario.ValidarContraseñaConfirmada(usuario,comprobarContraseña))
+            if (!logicaUsuario.ValidarContraseñaConfirmada(usuario, comprobarContraseña))
             {
                 MessageBox.Show("Las contraseña no coinciden");
                 return false;
-                
+
             }
             return true;
         }
         public void CraerUsuario(Usuario usuario, string puesto, string comprobarContraseña)
         {
-            if (ValidacionCrearUsuario(usuario,puesto,comprobarContraseña))
+            if (ValidacionCrearUsuario(usuario, puesto, comprobarContraseña))
             {
                 LogicaUsuario logicaUsuario = new LogicaUsuario();
                 PodologoDAO podologodao = new PodologoDAO();
                 podologodao.CraerUsuario(usuario);
                 logicaUsuario.CrearUsuarioMysql(usuario);
             }
+
+        }
+
+        /// <summary>
+        /// Crear Profesionista
+        /// </summary>
+        /// <param name="profesionista"></param>
+        /// 
+
+        public bool ValidarCamposCrearProfesionistaVacios(Profesionista profesionista)
+        {
+            if (string.IsNullOrEmpty(profesionista.GetNombre()))
+            {
+                MessageBox.Show("El nombre no es valido");
+                return false;
+            }
+            if (string.IsNullOrEmpty(profesionista.GetApellidoPaterno()))
+            {
+                MessageBox.Show("El Apellido Paterno no es valido");
+                return false;
+            }
+            if (string.IsNullOrEmpty(profesionista.GetApellidoMaterno()))
+            {
+                MessageBox.Show("El Apellido Materno no es valido");
+                return false;
+            }
+            if (string.IsNullOrEmpty(profesionista.GetTelefono()))
+            {
+                MessageBox.Show("El Teléfono no es valido");
+                return false;
+            }
+            return true;
+        }
+        public bool CrearProfesionista(Profesionista profesionista)
+        {
+            if (ValidarCamposCrearProfesionistaVacios(profesionista))
+            {
+                PodologoDAO podologodao = new PodologoDAO();
+                podologodao.CrearProfesionista(profesionista);
+                return true;
+            }
+            return false;
+
         }
     }
-}
+    }

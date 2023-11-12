@@ -32,6 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.dgUsuarios = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PuestoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EliminarCol = new System.Windows.Forms.DataGridViewImageColumn();
+            this.VerContraseñaCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,11 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.dgProfesionistas = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PuestoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EliminarCol = new System.Windows.Forms.DataGridViewImageColumn();
-            this.VerContraseñaCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.textBoxD1 = new prueba.TextBoxD();
             this.txtBuscar = new prueba.TextBoxD();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
@@ -89,6 +89,39 @@
             this.dgUsuarios.Size = new System.Drawing.Size(949, 233);
             this.dgUsuarios.TabIndex = 41;
             this.dgUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgUsuarios_CellMouseClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // usuarioCol
+            // 
+            this.usuarioCol.HeaderText = "Usuario";
+            this.usuarioCol.Name = "usuarioCol";
+            this.usuarioCol.ReadOnly = true;
+            // 
+            // PuestoCol
+            // 
+            this.PuestoCol.HeaderText = "Puesto";
+            this.PuestoCol.Name = "PuestoCol";
+            this.PuestoCol.ReadOnly = true;
+            // 
+            // EliminarCol
+            // 
+            this.EliminarCol.HeaderText = "Eliminar";
+            this.EliminarCol.Image = global::CapaPresentacion.Properties.Resources.eliminar;
+            this.EliminarCol.Name = "EliminarCol";
+            this.EliminarCol.ReadOnly = true;
+            // 
+            // VerContraseñaCol
+            // 
+            this.VerContraseñaCol.HeaderText = "Ver Contraseña";
+            this.VerContraseñaCol.Image = global::CapaPresentacion.Properties.Resources.detalles;
+            this.VerContraseñaCol.Name = "VerContraseñaCol";
+            this.VerContraseñaCol.ReadOnly = true;
             // 
             // panel1
             // 
@@ -185,39 +218,7 @@
             this.dgProfesionistas.RowHeadersWidth = 51;
             this.dgProfesionistas.Size = new System.Drawing.Size(949, 233);
             this.dgProfesionistas.TabIndex = 76;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // usuarioCol
-            // 
-            this.usuarioCol.HeaderText = "Usuario";
-            this.usuarioCol.Name = "usuarioCol";
-            this.usuarioCol.ReadOnly = true;
-            // 
-            // PuestoCol
-            // 
-            this.PuestoCol.HeaderText = "Puesto";
-            this.PuestoCol.Name = "PuestoCol";
-            this.PuestoCol.ReadOnly = true;
-            // 
-            // EliminarCol
-            // 
-            this.EliminarCol.HeaderText = "Eliminar";
-            this.EliminarCol.Image = global::CapaPresentacion.Properties.Resources.eliminar;
-            this.EliminarCol.Name = "EliminarCol";
-            this.EliminarCol.ReadOnly = true;
-            // 
-            // VerContraseñaCol
-            // 
-            this.VerContraseñaCol.HeaderText = "Ver Contraseña";
-            this.VerContraseñaCol.Image = global::CapaPresentacion.Properties.Resources.detalles;
-            this.VerContraseñaCol.Name = "VerContraseñaCol";
-            this.VerContraseñaCol.ReadOnly = true;
+            this.dgProfesionistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellClick);
             // 
             // textBoxD1
             // 

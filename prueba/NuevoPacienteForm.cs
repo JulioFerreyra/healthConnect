@@ -136,5 +136,10 @@ namespace prueba
         {
             Close();
         }
+
+        private void txtTelefono__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

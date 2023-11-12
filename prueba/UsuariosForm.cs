@@ -23,6 +23,7 @@ namespace CapaPresentacion
         {
             RellenarGridProfesionistas("");
             RellenarGridUsuarios("");
+            AgregarColumnasDataGrid();
         }
 
 
@@ -42,7 +43,7 @@ namespace CapaPresentacion
         {
             AgregarProfesionistaForm agregarProfesionistaForm = new AgregarProfesionistaForm();
             agregarProfesionistaForm.ShowDialog();
-
+            RellenarGridProfesionistas("");
         }
 
         private void dgUsuarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -87,6 +88,50 @@ namespace CapaPresentacion
                 }
                
             }
+
+        }
+
+        private void dgProfesionistas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgProfesionistas.Columns[e.ColumnIndex].Name == "EliminarCol")
+            {
+                try
+                {
+                    int FilaSeleccionada = dgProfesionistas.Rows.IndexOf(dgProfesionistas.Rows[e.RowIndex]);
+
+
+                    ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
+                    comprobarContraseñaForm.ShowDialog();
+                    RellenarGridProfesionistas("");
+                    permitirVisualizar = false;
+                }
+                catch (Exception)
+                {
+
+
+                }
+
+            }
+            if (dgProfesionistas.Columns[e.ColumnIndex].Name == "EditarCol")
+            {
+                try
+                {
+
+                    int FilaSeleccionada = dgProfesionistas.Rows.IndexOf(dgProfesionistas.Rows[e.RowIndex]);
+                    EditarProfesionsitaForm editarProfesionsitaForm = new EditarProfesionsitaForm();
+                    editarProfesionsitaForm.ShowDialog();
+                    RellenarGridProfesionistas("");
+                    permitirVisualizar = false;
+
+
+                }
+                catch (Exception)
+                {
+
+
+                }
+
+            }
         }
         /// <summary>
         /// Metodos
@@ -126,5 +171,21 @@ namespace CapaPresentacion
                 logicaUsuario.EliminarUsuarioMysql(usuario);
             }
         }
+         
+        private void AgregarColumnasDataGrid()
+        {
+            DataGridViewButtonColumn editarCol = new DataGridViewButtonColumn();
+            editarCol.HeaderText = "Editar";
+            editarCol.Name = "EditarCol";
+
+            DataGridViewButtonColumn eliminarCol = new DataGridViewButtonColumn();
+            eliminarCol.HeaderText = "Eliminar";
+            eliminarCol.Name = "EliminarCol";
+
+            dgProfesionistas.Columns.Add(editarCol);
+            dgProfesionistas.Columns.Add(eliminarCol);
+        }
+
+       
     }
 }

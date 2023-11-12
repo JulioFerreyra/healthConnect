@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,44 @@ namespace CapaPresentacion
         public AgregarProfesionistaForm()
         {
             InitializeComponent();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+            Profesionista profesionista = new Profesionista(txtNombre.Texts,txtPat.Texts,txtMat.Texts,txtTelefono.Texts);
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            if (logicaPodologo.CrearProfesionista(profesionista))
+            {
+                Close();
+            }
+            
+
+
+        }
+
+        private void txtTelefono__TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                if (e.KeyChar == '\b')
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (txtTelefono.Texts.Length >= 10)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

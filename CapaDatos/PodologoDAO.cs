@@ -21,6 +21,30 @@ namespace CapaDatos
         /// Insert
         /// </summary>
         /// <param name="usuario"></param>
+        /// 
+        public void CrearProfesionista(Profesionista profesionista)
+        {
+            string consultaInsert = "insert into profesionistas(nombre,apell_mat, apell_pat, telefono) values(\""+profesionista.GetNombre()+"\",\""+profesionista.GetApellidoPaterno()+"\",\""+profesionista.GetApellidoMaterno()+"\",\""+profesionista.GetTelefono()+"\")";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre(),profesionista.GetApellidoPaterno(), profesionista.GetApellidoMaterno())+" Creado correctamente");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
         public void CraerUsuario(Usuario usuario)
         {
             string consultaInsert = "insert into usuario(usuario,contraseña,isAdmin) values(\""+usuario.GetUsuario()+"\",\""+usuario.GetContraseña()+"\","+usuario.GetIsAdmin()+")";
@@ -357,5 +381,6 @@ namespace CapaDatos
             return "Server=" + HOST + ";Database=" + BASE_DATOS + ";user=" + USSER + ";password=" + PASSWORD + ";";
 
         }
+
     }
 }
