@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class AgregarProfesionistaForm
+    partial class NuevoProfesionistaForm
     {
         /// <summary>
         /// Required designer variable.

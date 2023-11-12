@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class EditarProfesionsitaForm
+    partial class EditarProfesionistaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -143,6 +143,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextColor = System.Drawing.Color.White;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtTel
             // 
@@ -166,6 +167,7 @@
             this.txtTel.TabIndex = 85;
             this.txtTel.Texts = "";
             this.txtTel.UnderlineStyle = true;
+            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
             // 
             // txtMat
             // 
@@ -238,7 +240,7 @@
             this.button1.TabIndex = 68;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // EditarProfesionsitaForm
+            // EditarProfesionistaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +256,7 @@
             this.Controls.Add(this.txtMat);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
-            this.Name = "EditarProfesionsitaForm";
+            this.Name = "EditarProfesionistaForm";
             this.Text = "EditarProfesionsitaForm";
             this.Load += new System.EventHandler(this.EditarProfesionsitaForm_Load);
             this.panel1.ResumeLayout(false);

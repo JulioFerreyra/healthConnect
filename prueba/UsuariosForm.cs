@@ -41,7 +41,7 @@ namespace CapaPresentacion
         }
         private void btnAgregarProfesionsitas_Click(object sender, EventArgs e)
         {
-            AgregarProfesionistaForm agregarProfesionistaForm = new AgregarProfesionistaForm();
+            NuevoProfesionistaForm agregarProfesionistaForm = new NuevoProfesionistaForm();
             agregarProfesionistaForm.ShowDialog();
             RellenarGridProfesionistas("");
         }
@@ -120,7 +120,7 @@ namespace CapaPresentacion
 
                     int FilaSeleccionada = dgProfesionistas.Rows.IndexOf(dgProfesionistas.Rows[e.RowIndex]);
                     ElementosGlobales.PodologoGlobal = Convert.ToInt32(dgProfesionistas.Rows[FilaSeleccionada].Cells["ID"].Value);
-                    EditarProfesionsitaForm editarProfesionsitaForm = new EditarProfesionsitaForm();
+                    EditarProfesionistaForm editarProfesionsitaForm = new EditarProfesionistaForm();
                     editarProfesionsitaForm.ShowDialog();
                     RellenarGridProfesionistas("");
                     permitirVisualizar = false;

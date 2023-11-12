@@ -1413,3 +1413,5 @@ C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.Comp
 C:\Users\2003y\Downloads\RHC\healthConnect\prueba\obj\Debug\CapaPresentacion.ComprobarContraseñaForm.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.AgregarProfesionistaForm.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.EditarProfesionsitaForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.NuevoProfesionistaForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.EditarProfesionistaForm.resources

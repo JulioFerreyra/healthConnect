@@ -13,10 +13,38 @@ namespace CapaLogica
     public class LogicaPodologo
     {
 
+        /// <summary>
+        /// CREATE
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="puesto"></param>
+        /// <param name="comprobarContraseña"></param>
+        public void CraerUsuario(Usuario usuario, string puesto, string comprobarContraseña)
+        {
+            if (ValidacionCrearUsuario(usuario, puesto, comprobarContraseña))
+            {
+                LogicaUsuario logicaUsuario = new LogicaUsuario();
+                PodologoDAO podologodao = new PodologoDAO();
+                podologodao.CraerUsuario(usuario);
+                logicaUsuario.CrearUsuarioMysql(usuario);
+            }
+
+        }
+        public bool CrearProfesionista(Profesionista profesionista)
+        {
+            if (ValidarCamposCrearProfesionistaVacios(profesionista))
+            {
+                PodologoDAO podologodao = new PodologoDAO();
+                podologodao.CrearProfesionista(profesionista);
+                return true;
+            }
+            return false;
+
+        }
 
 
         /// <summary>
-        /// Select
+        /// READ
         /// </summary>
         /// <param name="FechaCita"></param>
         /// <param name="idPodologo"></param>
@@ -33,36 +61,41 @@ namespace CapaLogica
             PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.GetNombrePodologo(idPodologo);
         }
-
         public DataTable VerProfesionistas(string profesionistaLike)
         {
             PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.VerProfesionistas(profesionistaLike);
         }
-
-        public void EliminarCita(Cita cita)
-        {
-            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar la cita?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
-                PodologoDAO podologoDAO = new PodologoDAO();
-                podologoDAO.EliminarCita(cita);
-            }
-            return;
-        }
-
         public DataTable GetDatosPaciente(int idPaciente)
         {
             PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.GetDatosPaciente(idPaciente);
         }
-
         public DataTable GetAntecendetesNoPatologicosPaciente(int idPaciente)
         {
             PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.GetAntecendetesNoPatologicosPaciente(idPaciente);
         }
+        public DataTable VerUsuarios(string usuario)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.VerUsuarios(usuario);
+        }
+        public string GetContraseñaUsuario(int idUsuario)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.GetContraseñaUsuario(idUsuario);
+        }
+        public DataTable GetDatosProfesionista(int idPofesionista)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.GetDatosProfesionista(idPofesionista);
+        }
 
+        /// <summary>
+        /// UPDATE
+        /// </summary>
+        /// <param name="antecedentes"></param>
         public void ActualizarDatosNoPatologicosPaciente(AntecedentesNoPatologicos antecedentes)
         {
             PodologoDAO podologoDAO = new PodologoDAO();
@@ -73,13 +106,32 @@ namespace CapaLogica
             PodologoDAO podologoDAO = new PodologoDAO();
             podologoDAO.ActualizarAntecedentesPatologicosPaciente(antecedentes);
         }
-
-        public DataTable VerUsuarios(string usuario)
+        public bool ActualizarDatosProfesionista(Profesionista profesionista)
         {
-            PodologoDAO podologoDAO = new PodologoDAO();
-            return podologoDAO.VerUsuarios(usuario);
+            if (ValidarCamposCrearProfesionistaVacios(profesionista))
+            {
+                PodologoDAO podologoDAO = new PodologoDAO();
+                podologoDAO.ActualizarDatosProfesionista(profesionista);
+                return true;
+            }
+            return false;
+           
         }
 
+        /// <summary>
+        /// DELETE
+        /// </summary>
+        /// <param name="cita"></param>
+        public void EliminarCita(Cita cita)
+        {
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar la cita?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            {
+                PodologoDAO podologoDAO = new PodologoDAO();
+                podologoDAO.EliminarCita(cita);
+            }
+            return;
+        }
         public void EliminarUsuario(int idUsuario)
         {
 
@@ -89,20 +141,19 @@ namespace CapaLogica
 
 
         }
-
-        public string GetContraseñaUsuario(int idUsuario)
+        public void EliminarProfesionista(int idProfesionista)
         {
             PodologoDAO podologodao = new PodologoDAO();
-            return podologodao.GetContraseñaUsuario(idUsuario);
+            podologodao.EliminarProfesionista(idProfesionista);
         }
 
+       
 
         /// <summary>
         /// Crear usuario
         /// </summary>
         /// <param name="usuario"></param>
         /// 
-
         private bool ValidarCamposCrearUsuario(Usuario usuario, string puesto, string comprobarContraseña)
         {
             if (puesto == "Puesto")
@@ -128,8 +179,7 @@ namespace CapaLogica
 
             return true;
         }
-
-        public bool ValidacionCrearUsuario(Usuario usuario, string puesto, string comprobarContraseña)
+        private bool ValidacionCrearUsuario(Usuario usuario, string puesto, string comprobarContraseña)
         {
             LogicaUsuario logicaUsuario = new LogicaUsuario();
             if (!ValidarCamposCrearUsuario(usuario, puesto, comprobarContraseña))
@@ -144,25 +194,14 @@ namespace CapaLogica
             }
             return true;
         }
-        public void CraerUsuario(Usuario usuario, string puesto, string comprobarContraseña)
-        {
-            if (ValidacionCrearUsuario(usuario, puesto, comprobarContraseña))
-            {
-                LogicaUsuario logicaUsuario = new LogicaUsuario();
-                PodologoDAO podologodao = new PodologoDAO();
-                podologodao.CraerUsuario(usuario);
-                logicaUsuario.CrearUsuarioMysql(usuario);
-            }
-
-        }
+       
 
         /// <summary>
         /// Crear Profesionista
         /// </summary>
         /// <param name="profesionista"></param>
         /// 
-
-        public bool ValidarCamposCrearProfesionistaVacios(Profesionista profesionista)
+        private bool ValidarCamposCrearProfesionistaVacios(Profesionista profesionista)
         {
             if (string.IsNullOrEmpty(profesionista.GetNombre()))
             {
@@ -186,28 +225,10 @@ namespace CapaLogica
             }
             return true;
         }
-        public bool CrearProfesionista(Profesionista profesionista)
-        {
-            if (ValidarCamposCrearProfesionistaVacios(profesionista))
-            {
-                PodologoDAO podologodao = new PodologoDAO();
-                podologodao.CrearProfesionista(profesionista);
-                return true;
-            }
-            return false;
+       
 
-        }
+        
 
-        public void EliminarProfesionista(int idProfesionista)
-        {
-            PodologoDAO podologodao = new PodologoDAO();
-            podologodao.EliminarProfesionista(idProfesionista);
-        }
-
-        public DataTable GetDatosProfesionista(int idPofesionista)
-        {
-            PodologoDAO podologodao = new PodologoDAO();
-           return  podologodao.GetDatosProfesionista(idPofesionista);
-        }
+        
     }
-    }
+}
