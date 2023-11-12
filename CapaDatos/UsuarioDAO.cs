@@ -33,6 +33,28 @@ namespace CapaDatos
             }
         }
        
+
+        public void CrearUsuarioMysql(Usuario usuario)
+        {
+            string SentenciaInsert = "create user '"+usuario.GetUsuario()+"'@'%' identified by '" +usuario.GetContraseña()+"'";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionUsuario());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaInsert, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
         /// <summary>
         /// SElECT
         /// </summary>
@@ -216,6 +238,29 @@ namespace CapaDatos
             {
                 conexion_a_MySQL.Close();
             }
+        }
+
+        public void EliminarUsuarioMysql(string usuario)
+        {
+            string consultaDelete = "Delete from user where user = '"+usuario+"'";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionUsuario());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaDelete, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
         }
 
         public string CadenaConexion()

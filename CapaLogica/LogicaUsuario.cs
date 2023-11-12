@@ -145,6 +145,19 @@ namespace CapaLogica
             usuarioDAO.ActualizarContraseñaUsuarioMysql(usuario);
         }
 
+        public void EliminarUsuarioMysql(string usuario)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.EliminarUsuarioMysql(usuario);
+        }
+
+        public void CrearUsuarioMysql(Usuario usuario)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.CrearUsuarioMysql(usuario);
+
+        }
+
 
         //private void GetDatosUsuario(Usuario usuario)
         //{

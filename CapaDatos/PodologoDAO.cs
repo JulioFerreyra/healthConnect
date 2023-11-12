@@ -16,6 +16,31 @@ namespace CapaDatos
         private const string PASSWORD = "Admin";
         private const string HOST = "localhost";
         private const string BASE_DATOS = "healthconnect";
+
+
+        public void CraerUsuario(Usuario usuario)
+        {
+            string consultaInsert = "insert into usuario(usuario,contraseña,isAdmin) values(\""+usuario.GetUsuario()+"\",\""+usuario.GetContraseña()+"\","+usuario.GetIsAdmin()+")";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
+               comando.ExecuteNonQuery();
+                MessageBox.Show("Usuario " +usuario.GetUsuario()+" Creado correctamente");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+               
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
         /// <summary>
         /// Select
         /// </summary>

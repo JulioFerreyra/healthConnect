@@ -1,4 +1,5 @@
-﻿using CapaLogica;
+﻿using CapaEntidad;
+using CapaLogica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,10 +50,13 @@ namespace CapaPresentacion
                 try
                 {
                     int FilaSeleccionada = dgUsuarios.Rows.IndexOf(dgUsuarios.Rows[e.RowIndex]);
-                    LogicaPodologo logicaPodologo = new LogicaPodologo();
 
-                    logicaPodologo.EliminarUsuario(Convert.ToInt16(dgUsuarios.Rows[FilaSeleccionada].Cells["ID"].Value));
+
+                    ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
+                    comprobarContraseñaForm.ShowDialog();
+                    EliminarUsuario(Convert.ToInt16(dgUsuarios.Rows[FilaSeleccionada].Cells["ID"].Value), Convert.ToString(dgUsuarios.Rows[FilaSeleccionada].Cells["usuarioCol"].Value));
                     RellenarGridUsuarios("");
+                    permitirVisualizar = false;
                 }
                 catch (Exception)
                 {
@@ -70,6 +74,7 @@ namespace CapaPresentacion
                     ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
                     comprobarContraseñaForm.ShowDialog();
                     VisualizarContraseña(FilaSeleccionada);
+                    permitirVisualizar = false;
 
 
                 }
@@ -103,6 +108,16 @@ namespace CapaPresentacion
                 return;
             }
             MessageBox.Show("Contraseña de administrador incorrecta");
+        }
+        private void EliminarUsuario(int idUsuario, string usuario)
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            if (permitirVisualizar)
+            {
+                logicaPodologo.EliminarUsuario(idUsuario);
+                logicaUsuario.EliminarUsuarioMysql(usuario);
+            }
         }
     }
 }

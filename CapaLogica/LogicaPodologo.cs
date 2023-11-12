@@ -12,6 +12,9 @@ namespace CapaLogica
 {
     public class LogicaPodologo
     {
+
+     
+
         /// <summary>
         /// Select
         /// </summary>
@@ -74,13 +77,10 @@ namespace CapaLogica
 
         public void EliminarUsuario(int idUsuario)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este usuario?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
+           
                 PodologoDAO podologoDAO = new PodologoDAO();
                 podologoDAO.EliminarUsuario(idUsuario);
-            }
-            return;
+          
 
             
         }
@@ -89,6 +89,65 @@ namespace CapaLogica
         {
             PodologoDAO podologodao = new PodologoDAO();
             return podologodao.GetContraseñaUsuario(idUsuario);
+        }
+
+
+        /// <summary>
+        /// Crear usuario
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// 
+        
+        private bool ValidarCamposCrearUsuario(Usuario usuario, string puesto,string comprobarContraseña)
+        {
+            if (puesto == "Puesto")
+            {
+                MessageBox.Show("Seleccione un puesto valido para continuar");
+                return false;
+            }
+            if (string.IsNullOrEmpty(usuario.GetUsuario()))
+            {
+                MessageBox.Show("Usuario invalido");
+                return false;
+            }
+            if (string.IsNullOrEmpty(usuario.GetContraseña()))
+            {
+                MessageBox.Show("Contraseña invalida");
+                return false;
+            }
+            if (string.IsNullOrEmpty(comprobarContraseña))
+            {
+                MessageBox.Show("Compruebe la contraseña para continuar");
+                return false;
+            }
+           
+            return true;
+        }
+
+        public bool ValidacionCrearUsuario(Usuario usuario, string puesto, string comprobarContraseña)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            if (!ValidarCamposCrearUsuario(usuario,puesto,comprobarContraseña))
+            {
+                return false;
+            }
+            if (!logicaUsuario.ValidarContraseñaConfirmada(usuario,comprobarContraseña))
+            {
+                MessageBox.Show("Las contraseña no coinciden");
+                return false;
+                
+            }
+            return true;
+        }
+        public void CraerUsuario(Usuario usuario, string puesto, string comprobarContraseña)
+        {
+            if (ValidacionCrearUsuario(usuario,puesto,comprobarContraseña))
+            {
+                LogicaUsuario logicaUsuario = new LogicaUsuario();
+                PodologoDAO podologodao = new PodologoDAO();
+                podologodao.CraerUsuario(usuario);
+                logicaUsuario.CrearUsuarioMysql(usuario);
+            }
         }
     }
 }
