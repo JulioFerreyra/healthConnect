@@ -91,7 +91,7 @@
             "Femenino"});
             this.cmbxSexo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxSexo.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbxSexo.Location = new System.Drawing.Point(100, 473);
+            this.cmbxSexo.Location = new System.Drawing.Point(97, 507);
             this.cmbxSexo.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbxSexo.Name = "cmbxSexo";
             this.cmbxSexo.Padding = new System.Windows.Forms.Padding(1);
@@ -104,7 +104,7 @@
             this.dtpFechaNac.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.dtpFechaNac.BorderSize = 1;
             this.dtpFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpFechaNac.Location = new System.Drawing.Point(100, 429);
+            this.dtpFechaNac.Location = new System.Drawing.Point(100, 438);
             this.dtpFechaNac.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(247, 35);
@@ -127,7 +127,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(140, 522);
+            this.rjButton1.Location = new System.Drawing.Point(143, 579);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(160, 50);
             this.rjButton1.TabIndex = 10;
@@ -146,7 +146,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.Color.DimGray;
             this.txtDireccion.Location = new System.Drawing.Point(97, 369);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.MaxLength = 100;
             this.txtDireccion.Multiline = false;
             this.txtDireccion.Name = "txtDireccion";
@@ -169,7 +169,7 @@
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
             this.txtTelefono.Location = new System.Drawing.Point(97, 298);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Multiline = false;
             this.txtTelefono.Name = "txtTelefono";
@@ -194,7 +194,7 @@
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellMat.Location = new System.Drawing.Point(97, 228);
-            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellMat.MaxLength = 10;
             this.txtApellMat.Multiline = false;
             this.txtApellMat.Name = "txtApellMat";
@@ -218,7 +218,7 @@
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellPat.Location = new System.Drawing.Point(97, 153);
-            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellPat.MaxLength = 10;
             this.txtApellPat.Multiline = false;
             this.txtApellPat.Name = "txtApellPat";
@@ -242,7 +242,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombre.Location = new System.Drawing.Point(97, 89);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
@@ -261,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(456, 601);
+            this.ClientSize = new System.Drawing.Size(456, 658);
             this.Controls.Add(this.cmbxSexo);
             this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.button1);

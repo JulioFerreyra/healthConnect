@@ -119,6 +119,7 @@ namespace CapaPresentacion
                 {
 
                     int FilaSeleccionada = dgProfesionistas.Rows.IndexOf(dgProfesionistas.Rows[e.RowIndex]);
+                    ElementosGlobales.PodologoGlobal = Convert.ToInt32(dgProfesionistas.Rows[FilaSeleccionada].Cells["ID"].Value);
                     EditarProfesionsitaForm editarProfesionsitaForm = new EditarProfesionsitaForm();
                     editarProfesionsitaForm.ShowDialog();
                     RellenarGridProfesionistas("");

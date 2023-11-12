@@ -256,6 +256,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "EditarProfesionsitaForm";
             this.Text = "EditarProfesionsitaForm";
+            this.Load += new System.EventHandler(this.EditarProfesionsitaForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

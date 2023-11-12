@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,25 @@ namespace CapaPresentacion
         public EditarProfesionsitaForm()
         {
             InitializeComponent();
+        }
+
+        private void EditarProfesionsitaForm_Load(object sender, EventArgs e)
+        {
+            RellenarCamposProfesionista();
+        }
+
+        private void RellenarCamposProfesionista()
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            foreach (DataRow fila in logicaPodologo.GetDatosProfesionista(ElementosGlobales.PodologoGlobal).Rows)
+            {
+                txtNombre.Texts = Convert.ToString(fila[0]);
+                txtPat.Texts = Convert.ToString(fila[1]);
+                txtMat.Texts = Convert.ToString(fila[2]);
+                txtTel.Texts = Convert.ToString(fila[3]);
+
+
+            }
         }
     }
 }
