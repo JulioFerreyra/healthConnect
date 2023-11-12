@@ -198,7 +198,11 @@ namespace prueba
         private void RellenarDataGridPodologos(int idPodologo)
         {
             RellenarGridXochitil(idPodologo);
+            if (dgXochitl.Rows.Count != 0)
+            {
+
             dgXochitl.Columns["ID"].Visible = false;
+            }
         }
 
         private void RellenarListaPodologos()

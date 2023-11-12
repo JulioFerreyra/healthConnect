@@ -122,6 +122,12 @@
     <Compile Include="EditarPacienteForm.Designer.cs">
       <DependentUpon>EditarPacienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarProfesionsitaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarProfesionsitaForm.Designer.cs">
+      <DependentUpon>EditarProfesionsitaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarUsuariosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarPacienteForm.resx">
       <DependentUpon>EditarPacienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarProfesionsitaForm.resx">
+      <DependentUpon>EditarProfesionsitaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarUsuariosForm.resx">
       <DependentUpon>EditarUsuariosForm.cs</DependentUpon>

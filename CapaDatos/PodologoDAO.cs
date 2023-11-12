@@ -107,7 +107,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO=new UsuarioDAO();
             MySqlConnection conexion_a_MySQL = new MySqlConnection(usuarioDAO.CadenaConexion());
-            string SentenciaSelect = "select nombre_comp from profesionistas  where id_profesionista = "+idPodologo+";";
+            string SentenciaSelect = "select concat(nombre, ' ', apell_pat, ' ', apell_mat) from profesionistas  where id_profesionista = "+idPodologo+";";
             DataTable NombrePodologo = new DataTable();
             try
             {

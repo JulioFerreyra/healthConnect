@@ -94,7 +94,7 @@ namespace CapaDatos
         {
             
             DataTable dt = new DataTable();
-            string sentenciaSelect = "select id_profesionista, nombre_comp from profesionistas";
+            string sentenciaSelect = "select id_profesionista, concat(nombre,' ',apell_pat, ' ', apell_mat) from profesionistas";
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
             try {
                 conexion_a_mysql.Open();
