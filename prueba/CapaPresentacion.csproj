@@ -78,11 +78,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarProfesionistaForm.cs">
+    <Compile Include="ConfiguracionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarProfesionistaForm.Designer.cs">
-      <DependentUpon>AgregarProfesionistaForm.cs</DependentUpon>
+    <Compile Include="ConfiguracionForm.Designer.cs">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoProfesionistaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoProfesionistaForm.Designer.cs">
+      <DependentUpon>NuevoProfesionistaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AnadirResultadoForm.cs">
       <SubType>Form</SubType>
@@ -122,11 +128,11 @@
     <Compile Include="EditarPacienteForm.Designer.cs">
       <DependentUpon>EditarPacienteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarProfesionsitaForm.cs">
+    <Compile Include="EditarProfesionistaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarProfesionsitaForm.Designer.cs">
-      <DependentUpon>EditarProfesionsitaForm.cs</DependentUpon>
+    <Compile Include="EditarProfesionistaForm.Designer.cs">
+      <DependentUpon>EditarProfesionistaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EditarUsuariosForm.cs">
       <SubType>Form</SubType>
@@ -265,8 +271,11 @@
     <Compile Include="UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AgregarProfesionistaForm.resx">
-      <DependentUpon>AgregarProfesionistaForm.cs</DependentUpon>
+    <EmbeddedResource Include="ConfiguracionForm.resx">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoProfesionistaForm.resx">
+      <DependentUpon>NuevoProfesionistaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnadirResultadoForm.resx">
       <DependentUpon>AnadirResultadoForm.cs</DependentUpon>
@@ -283,8 +292,8 @@
     <EmbeddedResource Include="EditarPacienteForm.resx">
       <DependentUpon>EditarPacienteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarProfesionsitaForm.resx">
-      <DependentUpon>EditarProfesionsitaForm.cs</DependentUpon>
+    <EmbeddedResource Include="EditarProfesionistaForm.resx">
+      <DependentUpon>EditarProfesionistaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarUsuariosForm.resx">
       <DependentUpon>EditarUsuariosForm.cs</DependentUpon>

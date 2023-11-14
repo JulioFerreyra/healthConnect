@@ -24,7 +24,9 @@ namespace CapaPresentacion
 
             if (logica.ValidarCampoAdminVacio(txtContraseña.Texts))
             {
-                ElementosGlobales.isAdmin = logica.ValidarContraseñaAdmin(txtContraseña.Texts);
+                bool autorizar = logica.ValidarContraseñaAdmin(txtContraseña.Texts);
+                UsuariosForm.permitirVisualizar = autorizar;
+                ElementosGlobales.isAdmin = autorizar;
                 Close();
                
             }

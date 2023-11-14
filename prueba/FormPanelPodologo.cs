@@ -156,5 +156,10 @@ namespace CapaPresentacion
         {
             AbrirFormulario<UsuariosForm>();
         }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<ConfiguracionForm>();
+        }
     }
 }

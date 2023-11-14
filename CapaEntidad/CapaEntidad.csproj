@@ -45,6 +45,7 @@
     <Compile Include="AntecedentesPatologicos.cs" />
     <Compile Include="Cita.cs" />
     <Compile Include="Paciente.cs" />
+    <Compile Include="Profesionista.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

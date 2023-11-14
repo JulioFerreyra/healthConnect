@@ -15,6 +15,8 @@ namespace CapaEntidad
         private int idUsuario { get; set; }
         private string usuario { get; set; }
         private string contraseña { get; set;}
+        private bool isAdmin;
+
 
         ///
         ///<summary>
@@ -27,7 +29,12 @@ namespace CapaEntidad
             this.usuario = usuario;
             this.contraseña = contraseña;
         }
-
+        public Usuario(string usuario, string contraseña, bool isAdmin)
+        {
+            this.usuario = usuario;
+            this.contraseña = contraseña;
+            this.isAdmin = isAdmin;
+        }
 
         public void SetIdUsuario(int idUsuario)
         {
@@ -51,6 +58,10 @@ namespace CapaEntidad
         public int GetIdUsuario()
         {
             return idUsuario;
+        }
+        public bool GetIsAdmin()
+        {
+            return isAdmin;
         }
     }
    

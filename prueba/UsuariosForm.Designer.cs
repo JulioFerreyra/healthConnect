@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
-            this.dgPacientes = new System.Windows.Forms.DataGridView();
+            this.dgUsuarios = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PuestoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EliminarCol = new System.Windows.Forms.DataGridViewImageColumn();
+            this.VerContraseñaCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtBuscar = new prueba.TextBoxD();
             this.btnAgregarProfesionsitas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.dgProfesionistas = new System.Windows.Forms.DataGridView();
             this.textBoxD1 = new prueba.TextBoxD();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtBuscar = new prueba.TextBoxD();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProfesionistas)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -56,27 +61,67 @@
             this.label7.TabIndex = 44;
             this.label7.Text = "Usuarios";
             // 
-            // dgPacientes
+            // dgUsuarios
             // 
-            this.dgPacientes.AllowUserToAddRows = false;
-            this.dgPacientes.AllowUserToDeleteRows = false;
-            this.dgPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgPacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPacientes.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgPacientes.Location = new System.Drawing.Point(122, 178);
-            this.dgPacientes.Name = "dgPacientes";
-            this.dgPacientes.ReadOnly = true;
-            this.dgPacientes.RowHeadersWidth = 51;
-            this.dgPacientes.Size = new System.Drawing.Size(949, 233);
-            this.dgPacientes.TabIndex = 41;
+            this.dgUsuarios.AllowUserToAddRows = false;
+            this.dgUsuarios.AllowUserToDeleteRows = false;
+            this.dgUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.usuarioCol,
+            this.PuestoCol,
+            this.EliminarCol,
+            this.VerContraseñaCol});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgUsuarios.Location = new System.Drawing.Point(122, 178);
+            this.dgUsuarios.Name = "dgUsuarios";
+            this.dgUsuarios.ReadOnly = true;
+            this.dgUsuarios.RowHeadersWidth = 51;
+            this.dgUsuarios.Size = new System.Drawing.Size(949, 233);
+            this.dgUsuarios.TabIndex = 41;
+            this.dgUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgUsuarios_CellMouseClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // usuarioCol
+            // 
+            this.usuarioCol.HeaderText = "Usuario";
+            this.usuarioCol.Name = "usuarioCol";
+            this.usuarioCol.ReadOnly = true;
+            // 
+            // PuestoCol
+            // 
+            this.PuestoCol.HeaderText = "Puesto";
+            this.PuestoCol.Name = "PuestoCol";
+            this.PuestoCol.ReadOnly = true;
+            // 
+            // EliminarCol
+            // 
+            this.EliminarCol.HeaderText = "Eliminar";
+            this.EliminarCol.Image = global::CapaPresentacion.Properties.Resources.eliminar;
+            this.EliminarCol.Name = "EliminarCol";
+            this.EliminarCol.ReadOnly = true;
+            // 
+            // VerContraseñaCol
+            // 
+            this.VerContraseñaCol.HeaderText = "Ver Contraseña";
+            this.VerContraseñaCol.Image = global::CapaPresentacion.Properties.Resources.detalles;
+            this.VerContraseñaCol.Name = "VerContraseñaCol";
+            this.VerContraseñaCol.ReadOnly = true;
             // 
             // panel1
             // 
@@ -113,30 +158,6 @@
             this.button1.Size = new System.Drawing.Size(48, 45);
             this.button1.TabIndex = 43;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
-            this.txtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtBuscar.BorderRadius = 10;
-            this.txtBuscar.BorderSize = 2;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(356, 125);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.MaxLength = 10;
-            this.txtBuscar.Multiline = false;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBuscar.PasswordChar = false;
-            this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtBuscar.PlaceholderText = "Buscar";
-            this.txtBuscar.Size = new System.Drawing.Size(444, 46);
-            this.txtBuscar.TabIndex = 42;
-            this.txtBuscar.Texts = "";
-            this.txtBuscar.UnderlineStyle = false;
             // 
             // btnAgregarProfesionsitas
             // 
@@ -176,6 +197,30 @@
             this.button3.TabIndex = 78;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // dgProfesionistas
+            // 
+            this.dgProfesionistas.AllowUserToAddRows = false;
+            this.dgProfesionistas.AllowUserToDeleteRows = false;
+            this.dgProfesionistas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgProfesionistas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgProfesionistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProfesionistas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgProfesionistas.Location = new System.Drawing.Point(122, 551);
+            this.dgProfesionistas.Name = "dgProfesionistas";
+            this.dgProfesionistas.ReadOnly = true;
+            this.dgProfesionistas.RowHeadersWidth = 51;
+            this.dgProfesionistas.Size = new System.Drawing.Size(949, 233);
+            this.dgProfesionistas.TabIndex = 76;
+            this.dgProfesionistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellClick);
+            this.dgProfesionistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellContentClick);
+            // 
             // textBoxD1
             // 
             this.textBoxD1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -200,27 +245,29 @@
             this.textBoxD1.Texts = "";
             this.textBoxD1.UnderlineStyle = false;
             // 
-            // dataGridView1
+            // txtBuscar
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(122, 551);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(949, 233);
-            this.dataGridView1.TabIndex = 76;
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
+            this.txtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtBuscar.BorderRadius = 10;
+            this.txtBuscar.BorderSize = 2;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtBuscar.Location = new System.Drawing.Point(356, 125);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.MaxLength = 10;
+            this.txtBuscar.Multiline = false;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBuscar.PasswordChar = false;
+            this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtBuscar.PlaceholderText = "Buscar";
+            this.txtBuscar.Size = new System.Drawing.Size(444, 46);
+            this.txtBuscar.TabIndex = 42;
+            this.txtBuscar.Texts = "";
+            this.txtBuscar.UnderlineStyle = false;
             // 
             // UsuariosForm
             // 
@@ -232,19 +279,19 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBoxD1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgProfesionistas);
             this.Controls.Add(this.btnAgregarUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.dgPacientes);
+            this.Controls.Add(this.dgUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UsuariosForm";
             this.Text = "UsuariosForm";
             this.Load += new System.EventHandler(this.UsuariosForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProfesionistas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,7 +300,7 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dgPacientes;
+        private System.Windows.Forms.DataGridView dgUsuarios;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAgregarUsuario;
         private System.Windows.Forms.Button button1;
@@ -262,6 +309,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private prueba.TextBoxD textBoxD1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgProfesionistas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PuestoCol;
+        private System.Windows.Forms.DataGridViewImageColumn EliminarCol;
+        private System.Windows.Forms.DataGridViewImageColumn VerContraseñaCol;
     }
 }

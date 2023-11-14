@@ -76,6 +76,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextColor = System.Drawing.Color.White;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtConfirmar
             // 
@@ -225,6 +226,7 @@
             this.cmbPuesto.Size = new System.Drawing.Size(250, 30);
             this.cmbPuesto.TabIndex = 71;
             this.cmbPuesto.Texts = "Puesto";
+            this.cmbPuesto.OnSelectedIndexChanged += new System.EventHandler(this.cmbPuesto_OnSelectedIndexChanged);
             // 
             // lblPuesto
             // 
