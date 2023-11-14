@@ -55,6 +55,7 @@ namespace CapaPresentacion
             }
         }
 
+
         /// <summary>
         /// Métodos
         /// </summary>
@@ -67,8 +68,6 @@ namespace CapaPresentacion
                 txtPat.Texts = Convert.ToString(fila[1]);
                 txtMat.Texts = Convert.ToString(fila[2]);
                 txtTel.Texts = Convert.ToString(fila[3]);
-                
-
             }
         }
 
