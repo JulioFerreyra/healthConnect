@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -40,6 +41,26 @@ namespace CapaLogica
             }
             return false;
 
+        }
+        public void CrearTiposCita(string tiposCita)
+        {
+            if (ValidarCampoTipoCitaVacio(tiposCita))
+            {
+                
+                PodologoDAO podologoDAO = new PodologoDAO();
+                podologoDAO.CrearTiposCita(tiposCita);
+               // MessageBox.Show("Los 'Tipos de Citas' se han registrado correctamentn");
+            }
+            
+        }
+        public void CrearHoras(string horas)
+        {
+            if (ValidarHoras(horas))
+            {
+                PodologoDAO podologoDAO = new PodologoDAO();
+                podologoDAO.CrearHoras(horas);
+            }
+            
         }
 
 
@@ -91,6 +112,21 @@ namespace CapaLogica
             PodologoDAO podologodao = new PodologoDAO();
             return podologodao.GetDatosProfesionista(idPofesionista);
         }
+        public DataTable VerLogs()
+        {
+            PodologoDAO podologoDAO=new PodologoDAO();
+            return podologoDAO.VerLogs();
+        }
+        public DataTable GetTiposDeCita()
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.GetTiposDeCita();
+        }
+        public DataTable GetHoras()
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.GetHoras();
+        }
 
         /// <summary>
         /// UPDATE
@@ -115,7 +151,7 @@ namespace CapaLogica
                 return true;
             }
             return false;
-           
+
         }
 
         /// <summary>
@@ -147,7 +183,17 @@ namespace CapaLogica
             podologodao.EliminarProfesionista(idProfesionista);
         }
 
-       
+        public void EliminarTiposCita()
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            podologoDAO.EliminarTiposCita();
+        }
+
+        public void EliminarHoras()
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            podologoDAO.EliminarHoras();
+        }
 
         /// <summary>
         /// Crear usuario
@@ -194,7 +240,7 @@ namespace CapaLogica
             }
             return true;
         }
-       
+
 
         /// <summary>
         /// Crear Profesionista
@@ -225,10 +271,49 @@ namespace CapaLogica
             }
             return true;
         }
-       
 
-        
 
+        private bool ValidarCampoTipoCitaVacio(string TipoCita)
+        {
+            if (string.IsNullOrEmpty(TipoCita))
+            {
+                MessageBox.Show("Agregue un 'Tipo de Cita' para continuar");
+                return false;
+
+            }
+            return true;
+        }
         
+        private bool ValidarHoras(string horas)
+        {
+            if (string.IsNullOrEmpty(horas))
+            {
+                MessageBox.Show("No es posible agregar elementos vacios");
+                return false;
+            }
+            if (!horas.Contains(":")) 
+            {
+                MessageBox.Show("Formato de Hora invalido, es necesario agregar ':' entre las horas y los minutos");
+                return false; 
+            }
+            if(horas.Length<4 || horas.Length > 5)
+            {
+                MessageBox.Show("Formato invalido, la hora ingresada no cuenta con el formato correcto");
+                return false;
+            }
+            if (!ValidarFormatoHoras(horas))
+            {
+                MessageBox.Show("Formato invalido, la hora ingresada no cuenta con el formato correcto");
+                return false;
+            }
+            return true;
+        }
+
+
+        public bool ValidarFormatoHoras(string horas)
+        {
+            return DateTime.TryParse(horas, out _);
+
+        }
     }
 }

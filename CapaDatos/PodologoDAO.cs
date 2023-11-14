@@ -46,6 +46,50 @@ namespace CapaDatos
             }
         }
 
+        public void CrearTiposCita(string tiposCita) 
+        {
+            string sentenciaInsert = "insert into tiposCita values(\""+tiposCita+"\")";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(sentenciaInsert, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+               
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+        public void CrearHoras(string horas)
+        {
+            string sentenciaInsert = "insert into Horas values(\"" + horas + "\")";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(sentenciaInsert, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
         public void CraerUsuario(Usuario usuario)
         {
             string consultaInsert = "insert into usuario(usuario,contraseña,isAdmin) values(\""+usuario.GetUsuario()+"\",\""+usuario.GetContraseña()+"\","+usuario.GetIsAdmin()+")";
@@ -294,6 +338,81 @@ namespace CapaDatos
             }
         }
 
+        public DataTable VerLogs()
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select usuario Usuario, accion 'Accion Realizada', fecha Fecha from logs;";
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+        public DataTable GetTiposDeCita()
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select * from tiposCita;";
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+        public DataTable GetHoras()
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select * from Horas;";
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+
+
+
         /// <summary>
         /// Update
         /// </summary>
@@ -439,7 +558,48 @@ namespace CapaDatos
         
     }
 
-       
+       public void EliminarTiposCita()
+        {
+            string sentenciaDelete = "delete from tiposCita";
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            MySqlCommand comando = new MySqlCommand(sentenciaDelete,conexion_a_mysql);
+            try
+            {
+                conexion_a_mysql.Open();    
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+
+        }
+        public void EliminarHoras()
+        {
+            string sentenciaDelete = "delete from Horas";
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            MySqlCommand comando = new MySqlCommand(sentenciaDelete, conexion_a_mysql);
+            try
+            {
+                conexion_a_mysql.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+
+        }
 
 
         /// <summary>
