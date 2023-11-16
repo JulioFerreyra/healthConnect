@@ -31,7 +31,7 @@ namespace CapaDatos
                 conexion_a_MySQL.Open();
                 MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre(),profesionista.GetApellidoPaterno(), profesionista.GetApellidoMaterno())+" Creado correctamente");
+                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre(),profesionista.GetApellidoPaterno(), profesionista.GetApellidoMaterno())+" registrado correctamente","Registro Exitoso",MessageBoxButtons.OK);
 
             }
             catch (Exception ex)
@@ -60,7 +60,7 @@ namespace CapaDatos
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -82,7 +82,8 @@ namespace CapaDatos
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
             }
             finally
@@ -99,14 +100,14 @@ namespace CapaDatos
                 conexion_a_MySQL.Open();
                 MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
                comando.ExecuteNonQuery();
-                MessageBox.Show("Usuario " +usuario.GetUsuario()+" Creado correctamente");
+                MessageBox.Show("Usuario " +usuario.GetUsuario()+ " registrado correctamente", "Registro exitoso");
 
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
-               
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             finally
             {
@@ -140,8 +141,8 @@ namespace CapaDatos
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show(ex.Message);
-                    return datos;
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datos;
                 }
                 finally
                 {
@@ -171,7 +172,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return citas;
             }
             finally
@@ -199,7 +200,7 @@ namespace CapaDatos
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return datos;
             }
             finally
@@ -226,7 +227,7 @@ namespace CapaDatos
             catch (Exception ex)
             {
 
-                MessageBox.Show (ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return datos;
             }
             finally
@@ -250,7 +251,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return NombrePodologo;
             }
@@ -276,7 +277,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return antecendetesNoPat;
             }
@@ -302,7 +303,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return null;
             }
@@ -327,7 +328,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return antecendetesNoPat;
             }
@@ -352,7 +353,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return antecendetesNoPat;
             }
@@ -376,7 +377,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return antecendetesNoPat;
             }
@@ -400,7 +401,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return antecendetesNoPat;
             }
@@ -427,11 +428,11 @@ namespace CapaDatos
                 conexion_a_SQL.Open();
                 MySqlCommand commando = new MySqlCommand(sentenciaUpdate, conexion_a_SQL);
                 commando.ExecuteNonQuery();
-                MessageBox.Show("Antecedentes actualizados correctamente");
+                MessageBox.Show("Antecedentes actualizados correctamente","Actualización exitosa");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -450,11 +451,11 @@ namespace CapaDatos
                 conexion_a_SQL.Open();
                 MySqlCommand commando = new MySqlCommand(sentenciaUpdate, conexion_a_SQL);
                 commando.ExecuteNonQuery();
-                MessageBox.Show("Antecedentes actualizados correctamente");
+                MessageBox.Show("Antecedentes actualizados correctamente", "Actualización exitosa");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -472,11 +473,11 @@ namespace CapaDatos
             {
                 conexion_a_muysql.Open();
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Datos actualizados correctamente");
+                MessageBox.Show("Datos del profesionista "+string.Concat(profesionista.GetNombre()," ",profesionista.GetApellidoPaterno()," ",profesionista.GetApellidoMaterno())+" actualizado correctamente");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally 
@@ -504,7 +505,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             finally
@@ -526,7 +527,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -548,7 +549,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -571,7 +572,7 @@ namespace CapaDatos
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -592,7 +593,7 @@ namespace CapaDatos
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
