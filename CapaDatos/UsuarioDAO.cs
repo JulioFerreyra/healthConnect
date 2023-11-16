@@ -13,6 +13,8 @@ namespace CapaDatos
         private const string BASE_DATOS = "healthconnect";
         private const string HOST = "localhost";
         //
+        private const string USER = "root";
+        private const string PASSWORD_USER = "jafete210403";
         private const string BaseDatosUsuario = "mysql";
 
 
@@ -242,7 +244,7 @@ namespace CapaDatos
 
         public void EliminarUsuarioMysql(string usuario)
         {
-            string consultaDelete = "Delete from user where user = '"+usuario+"'";
+            string consultaDelete = "drop user \""+usuario+"\"@"+"\"%\"";
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionUsuario());
             try
             {
@@ -263,6 +265,49 @@ namespace CapaDatos
 
         }
 
+        public void GrantAccessAdministrador(string UsuarioAdministrador)
+        {
+            string sentenciaGrant = "grant all privileges on *.* to \""+UsuarioAdministrador+"\"@\"%\"";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionUsuario());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(sentenciaGrant, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+
+        public void GrantAccessSecretaria(string usuarioSecretaria)
+        {
+            string sentenciaGrant = "grant select,update,insert,delete on healthconnect.* to \"" + usuarioSecretaria + "\"@\"%\"";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionUsuario());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(sentenciaGrant, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
         public string CadenaConexion()
         {
         
@@ -272,7 +317,7 @@ namespace CapaDatos
 
         private string CadenaConexionUsuario()
         {
-            return "Server="+HOST+"; DATABASE="+BaseDatosUsuario + "; user="+USSER+"; password="+PASSWORD+";";
+            return "Server="+HOST+"; DATABASE="+BaseDatosUsuario + "; user="+USER+"; password="+PASSWORD_USER+";";
         }
 
        

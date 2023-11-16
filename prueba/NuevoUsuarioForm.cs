@@ -22,9 +22,12 @@ namespace CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            LogicaPodologo logica = new LogicaPodologo();
+            
+            
             Usuario usuario = new Usuario(txtNombre.Texts,txtContra.Texts, isAdmin);
-            logica.CraerUsuario(usuario,cmbPuesto.Texts,txtConfirmar.Texts);
+            CrearUsuario(usuario);
+
+
         }
 
         private void cmbPuesto_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -39,6 +42,25 @@ namespace CapaPresentacion
                 isAdmin = true;
                 return;
             }
+        }
+
+        private void CrearUsuario(Usuario usuario)
+        {
+            LogicaPodologo logica = new LogicaPodologo();
+            if (logica.CraerUsuario(usuario, cmbPuesto.Texts, txtConfirmar.Texts))
+            {
+                GrantAccess();
+            }
+        }
+        private void GrantAccess()
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            if (isAdmin)
+            {
+                logicaUsuario.GrantAccessAdministrador(txtNombre.Texts);
+                return;
+            }
+            logicaUsuario.GrantAccessSecreataria(txtNombre.Texts);
         }
     }
 }

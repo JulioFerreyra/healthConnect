@@ -31,7 +31,7 @@ namespace CapaPresentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-           
+            CrearHoras();
 
         }
 
@@ -43,7 +43,7 @@ namespace CapaPresentacion
         private void btnAplicar_Click(object sender, EventArgs e)
         {
             CrearTiposCita();
-            CrearHoras();
+            
 
         }
         private void tagControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,18 +57,13 @@ namespace CapaPresentacion
         private void RellenarTiposCita()
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
-            foreach (DataRow registro in logicaPodologo.GetTiposDeCita().Rows)
-            {
-                txtTiposCita.Texts += string.Concat(Convert.ToString(registro[0]));
-            }
+            dgTiposCita.DataSource = logicaPodologo.GetTiposDeCita(); 
+            
         }
         private void RellenarHoras()
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
-            foreach (DataRow registro in logicaPodologo.GetHoras().Rows)
-            {
-                txtHoras.Texts += string.Concat(Convert.ToString(registro[0]));
-            }
+            dgHorario.DataSource = logicaPodologo.GetHoras();
         }
         private void RellenarLogs()
         {
@@ -80,24 +75,25 @@ namespace CapaPresentacion
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             logicaPodologo.EliminarHoras();
-            string[] TiposCita = txtHoras.Texts.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.None);
-            foreach (string tipoCita in TiposCita)
+            for (int fila = 0; fila < dgHorario.Rows.Count - 1; fila++)
             {
 
-                logicaPodologo.CrearHoras(tipoCita);
+                logicaPodologo.CrearHoras(Convert.ToString(dgHorario.Rows[fila].Cells[0].Value));
             }
+
         }
 
         private void CrearTiposCita()
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             logicaPodologo.EliminarTiposCita();
-            string[] TiposCita = txtTiposCita.Texts.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.None);
-            foreach (string tipoCita in TiposCita)
+           
+            for (int fila = 0; fila < dgTiposCita.Rows.Count-1; fila++)
             {
-
-                logicaPodologo.CrearTiposCita(tipoCita);
+               
+            logicaPodologo.CrearTiposCita(Convert.ToString(dgTiposCita.Rows[fila].Cells[0].Value));
             }
+
         }
         private void textBoxD1__TextChanged(object sender, EventArgs e)
         {

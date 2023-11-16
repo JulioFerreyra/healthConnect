@@ -59,6 +59,12 @@ namespace CapaLogica
             return secretariaDAO.VerHistorialCitasPaciente(paciente);
         }
 
+        public DataTable GetTiposDeCita()
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.GetTiposDeCita();
+        }
+
         public DataTable GetPodologos()
         {
             SecretariaDAO secretaria=new SecretariaDAO();

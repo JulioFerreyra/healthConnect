@@ -90,11 +90,37 @@ namespace CapaDatos
 
         }
 
-        public DataTable GetPodologos()
+
+        public DataTable GetTiposDeCita()
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select tipo_cita from tiposCita;";
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+
+            public DataTable GetPodologos()
         {
             
             DataTable dt = new DataTable();
-            string sentenciaSelect = "select id_profesionista, concat(nombre,' ',apell_pat, ' ', apell_mat) from profesionistas";
+            string sentenciaSelect = "select id_profesionista, concat(nombre,' ',apell_pat, ' ', apell_mat) from profesionistas where estado = true";
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
             try {
                 conexion_a_mysql.Open();
@@ -147,7 +173,7 @@ namespace CapaDatos
             
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
             DataTable DatosCita = new DataTable();
-            string SentenciaSelect = "select p.nombre as \"Nombre\", p.apell_pat as \"Apellido Paterno\",p.apell_mat as \"Apellido Materno\", p.telefono as \"Teléfono\", c.fecha_cita as \"Fecha\",c.hora, c.motivo_cita,c.tipo_cita, c.estado_cita, pod.nombre_comp, c.id_paciente from pacientes as p join citas as c on c.id_paciente = p.id_paciente join profesionistas as pod on c.id_profesionista = pod.id_profesionista where c.id_cita =" + idCita + ";";
+            string SentenciaSelect = "select p.nombre as \"Nombre\", p.apell_pat as \"Apellido Paterno\",p.apell_mat as \"Apellido Materno\", p.telefono as \"Teléfono\", c.fecha_cita as \"Fecha\",c.hora, c.motivo_cita,c.tipo_cita, c.estado_cita, concat(pod.nombre, ' ', pod.apell_pat, ' ' , pod.apell_mat), c.id_paciente from pacientes as p join citas as c on c.id_paciente = p.id_paciente join profesionistas as pod on c.id_profesionista = pod.id_profesionista where c.id_cita =" + idCita + ";";
             try
             {
                 conexion_a_mysql.Open();
@@ -221,7 +247,7 @@ namespace CapaDatos
             
             DataTable DetallesCita = new DataTable();
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
-            string SentenciaSelect = "select p.nombre, p.apell_pat, p.apell_mat, p.telefono, c.motivo_cita, c.diagnostico, pod.nombre_comp, c.tipo_cita,c.hora, c.fecha_cita from citas c  join pacientes p on p.id_paciente = c.id_paciente  join profesionistas pod on pod.id_profesionista = c.id_profesionista  where c.id_cita =" + cita.GetIdCita()+";";
+            string SentenciaSelect = "select p.nombre, p.apell_pat, p.apell_mat, p.telefono, c.motivo_cita, c.diagnostico, concat(pod.nombre, ' ', pod.apell_pat, ' ', pod.apell_mat), c.tipo_cita,c.hora, c.fecha_cita from citas c  join pacientes p on p.id_paciente = c.id_paciente  join profesionistas pod on pod.id_profesionista = c.id_profesionista  where c.id_cita =" + cita.GetIdCita()+";";
             try
             {
                 conexion_a_mysql.Open();
@@ -245,7 +271,7 @@ namespace CapaDatos
             DataTable HistorialPaciente = new DataTable();
             
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
-            string SentenciaSelectWhere = "select c.id_cita as ID, concat(pac.nombre, \" \", pac.apell_pat, \" \", pac.apell_mat) as Paciente, c.fecha_cita as Fecha, pod.nombre_comp as Podólogo, c.tipo_cita as \"Tipo de Cita\", c.estado_cita as Estado from citas c join pacientes pac on c.id_paciente = pac.id_paciente join profesionistas pod on pod.id_profesionista=c.id_profesionista where c.id_paciente =" + paciente.GetIdPaciente()+" and estado_cita = \"finalizada\";";
+            string SentenciaSelectWhere = "select c.id_cita as ID, concat(pac.nombre, \" \", pac.apell_pat, \" \", pac.apell_mat) as Paciente, c.fecha_cita as Fecha, concat(pod.nombre, ' ', pod.apell_pat, ' ', pod.apell_mat) as Podólogo, c.tipo_cita as \"Tipo de Cita\", c.estado_cita as Estado from citas c join pacientes pac on c.id_paciente = pac.id_paciente join profesionistas pod on pod.id_profesionista=c.id_profesionista where c.id_paciente =" + paciente.GetIdPaciente()+" and estado_cita = \"finalizada\";";
             try
             {
                 conexion_a_mysql.Open();

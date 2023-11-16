@@ -18,7 +18,17 @@ namespace CapaLogica
             usuarioDAO.ProbarConexion();
         }
 
+        public void GrantAccessAdministrador(string UsuarioAdministrador)
+        {
+            UsuarioDAO usuario = new UsuarioDAO();
+            usuario.GrantAccessAdministrador(UsuarioAdministrador);
+        }
 
+        public void GrantAccessSecreataria(string usuarioSecretaria)
+        {
+            UsuarioDAO usuario = new UsuarioDAO();
+            usuario.GrantAccessSecretaria(usuarioSecretaria);
+        }
         private bool ValidarCamposVacios(Usuario usuario)
         {
             if (string.IsNullOrEmpty(usuario.GetUsuario()) || string.IsNullOrEmpty(usuario.GetContraseña()))

@@ -55,7 +55,7 @@ namespace CapaDatos
                 conexion_a_MySQL.Open();
                 MySqlCommand comando = new MySqlCommand(sentenciaInsert, conexion_a_MySQL);
                 comando.ExecuteNonQuery();
-               
+                
             }
             catch (Exception ex)
             {
@@ -127,7 +127,7 @@ namespace CapaDatos
             
                 DataTable datos = new DataTable();
                 UsuarioDAO usuarioDAO = new UsuarioDAO();
-                string SentenciaSelect = "select id_profesionista as ID, concat(nombre, ' ', apell_pat, ' ' , apell_mat) as Profesionista, telefono as Teléfono, 'El Grullo' as Sucursal from profesionistas where nombre like '%"+profesionistaLike+ "%' or apell_pat like '%"+profesionistaLike+"%'";
+                string SentenciaSelect = "select id_profesionista as ID, concat(nombre, ' ', apell_pat, ' ' , apell_mat) as Profesionista, telefono as Teléfono, 'El Grullo' as Sucursal from profesionistas where (nombre like '%"+profesionistaLike+ "%' or apell_pat like '%"+profesionistaLike+"%') and estado = true";
                 MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
                 try
                 {
@@ -365,7 +365,7 @@ namespace CapaDatos
         public DataTable GetTiposDeCita()
         {
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string SentenciaSelect = "select * from tiposCita;";
+            string SentenciaSelect = "select tipo_cita as 'Tipos de Cita disponibles' from tiposCita;";
             DataTable antecendetesNoPat = new DataTable();
             try
             {
@@ -389,7 +389,7 @@ namespace CapaDatos
         public DataTable GetHoras()
         {
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string SentenciaSelect = "select * from Horas;";
+            string SentenciaSelect = "select horas as 'Horarios Disponibles' from Horas;";
             DataTable antecendetesNoPat = new DataTable();
             try
             {
@@ -537,7 +537,7 @@ namespace CapaDatos
 
         public void EliminarProfesionista(int idProfesionista)
         {
-            string sentenciaDelete = "Delete from profesionistas where id_profesionista = " + idProfesionista + ";";
+            string sentenciaDelete = "update profesionistas set estado = 0 where id_profesionista = " + idProfesionista;
             MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
             try
             {

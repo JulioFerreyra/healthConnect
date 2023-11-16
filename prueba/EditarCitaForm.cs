@@ -32,7 +32,7 @@ namespace CapaPresentacion
             RellenarComboBoxPodologo();
             RellenarBoxHoras();
             RellenarCampos();
-           
+            RellenarTiposCita();
             //if (ElementosGlobales.idUsuarioGlobal != 3)
             //{
             //    CmbxPodologo.Enabled = false;
@@ -177,6 +177,15 @@ namespace CapaPresentacion
             cmbxHora.Texts = "Hora";
             cmbxHora.SelectedIndex = -1;
 
+        }
+
+        private void RellenarTiposCita()
+        {
+            LogicaSecretaria logicaSecretsaria = new LogicaSecretaria();
+            foreach (DataRow fila in logicaSecretsaria.GetTiposDeCita().Rows)
+            {
+                cmbxTipoCita.Items.Add(Convert.ToString(fila[0]));
+            }
         }
 
      

@@ -28,6 +28,7 @@ namespace prueba
             RellenarGrid();
             RellenarComboBoxHora();
             RestablecerComboBoxHora();
+            RellenarTiposCita();
             cmbxHora.Enabled = false;
 
         }
@@ -173,6 +174,13 @@ namespace prueba
             cmbxHora.SelectedIndex = -1;
             cmbxHora.Texts = "Hora";
         }
-  
+        private void RellenarTiposCita()
+        {
+            LogicaSecretaria logicaSecretsaria = new LogicaSecretaria();
+            foreach (DataRow fila in logicaSecretsaria.GetTiposDeCita().Rows)
+            {
+                cmbxTipoCita.Items.Add(Convert.ToString(fila[0]));
+            }
+        }
     }
 }

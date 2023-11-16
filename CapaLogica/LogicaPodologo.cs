@@ -20,7 +20,7 @@ namespace CapaLogica
         /// <param name="usuario"></param>
         /// <param name="puesto"></param>
         /// <param name="comprobarContraseña"></param>
-        public void CraerUsuario(Usuario usuario, string puesto, string comprobarContraseña)
+        public bool CraerUsuario(Usuario usuario, string puesto, string comprobarContraseña)
         {
             if (ValidacionCrearUsuario(usuario, puesto, comprobarContraseña))
             {
@@ -28,7 +28,9 @@ namespace CapaLogica
                 PodologoDAO podologodao = new PodologoDAO();
                 podologodao.CraerUsuario(usuario);
                 logicaUsuario.CrearUsuarioMysql(usuario);
+                return true;
             }
+            return false;
 
         }
         public bool CrearProfesionista(Profesionista profesionista)
