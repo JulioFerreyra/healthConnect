@@ -150,7 +150,7 @@ namespace CapaPresentacion
         private void RellenarGridProfesionistas(string profesionista)
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
-            dgProfesionistas.DataSource = logicaPodologo.VerProfesionistas("");
+            dgProfesionistas.DataSource = logicaPodologo.VerProfesionistas(profesionista);
         }
 
        private void VisualizarContraseña(int fila)
@@ -159,6 +159,7 @@ namespace CapaPresentacion
             if (permitirVisualizar)
             {
                 MessageBox.Show("Su contraseña es: " + logica.GetContraseñaUsuario(Convert.ToInt16(dgUsuarios.Rows[fila].Cells["ID"].Value)));
+                permitirVisualizar = false;
                 return;
             }
             MessageBox.Show("Contraseña de administrador incorrecta");
@@ -171,6 +172,7 @@ namespace CapaPresentacion
             {
                 logicaPodologo.EliminarUsuario(idUsuario);
                 logicaUsuario.EliminarUsuarioMysql(usuario);
+                permitirVisualizar = false;
             }
         }
         private void EliminarProfesionista(int idProfesionista)

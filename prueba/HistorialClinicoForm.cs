@@ -150,7 +150,7 @@ namespace CapaPresentacion
                 numFrecAct.Value = int.Parse(fila[7].ToString());
                 cmbDrogas.SelectedIndex = bool.Parse(fila[8].ToString()) ? 0 : 1;
                 //Antecedentes patológicos
-                MessageBox.Show(fila[9].ToString());
+              
                 cmbDiabetes.SelectedIndex = cmbDiabetes.Items.IndexOf(fila[9].ToString()); 
                 cmbTension.SelectedIndex= cmbTension.Items.IndexOf(fila[10].ToString()); 
                 cmbTiroides.SelectedIndex = cmbTiroides.Items.IndexOf(fila[11].ToString());

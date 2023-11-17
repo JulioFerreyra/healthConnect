@@ -68,9 +68,11 @@ namespace prueba
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "EliminarCol")
                 {
                     int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
-                    int idCita = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
-                    Cita cita = new Cita(idCita);
-                    ObjLogicaSecretaria.EliminarCita(cita);
+                    
+                    Cita cita = new Cita((int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value);
+                    ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
+                    comprobarContraseñaForm.ShowDialog();
+                    EliminarCita(cita);
                     RellenarGridXochitil(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
                 }
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "EditarCol")
@@ -223,6 +225,14 @@ namespace prueba
             }
         }
 
+        private void EliminarCita(Cita cita)
+        {
+            if(ElementosGlobales.isAdmin)
+            {
+                ObjLogicaSecretaria.EliminarCita(cita);
+                ElementosGlobales.isAdmin = false;
+            }
+        }
         private void dgXochitl_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

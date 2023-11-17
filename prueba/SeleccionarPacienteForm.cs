@@ -29,7 +29,7 @@ namespace prueba
         {
             RellenarGrid(string.Empty);
             AgregarBotonesGrid();
-            if (dgPacientes.Rows.Count != 0)
+            if (dgPacientes.ColumnCount >2)
             {
                 
             dgPacientes.Columns["ID"].Visible = false;
@@ -78,10 +78,11 @@ namespace prueba
                 {
 
                     int FilaSeleccionada = dgPacientes.Rows.IndexOf(dgPacientes.Rows[e.RowIndex]);
-                    int idPacienteEliminar = (int)dgPacientes.Rows[FilaSeleccionada].Cells["ID"].Value;
-                    Paciente paciente = new Paciente(idPacienteEliminar);
-                    LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-                    logicaSecretaria.EliminarPaciente(paciente);
+                   
+                    Paciente paciente = new Paciente((int)dgPacientes.Rows[FilaSeleccionada].Cells["ID"].Value);
+                    ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
+                    comprobarContraseñaForm.ShowDialog();
+                    EliminarPaciente(paciente);
                     RellenarGrid(string.Empty);
                 }
                 if(dgPacientes.Columns[e.ColumnIndex].Name == "HistorialCitasCol")
@@ -150,9 +151,19 @@ namespace prueba
             dgPacientes.Columns.Add(EditarBtnGrid);
             dgPacientes.Columns.Add(EliminarBtnGrid);
             dgPacientes.Columns.Add(VerHistoralBtnGrid);
-            dgPacientes.Columns.Add(VerHistoralClinicioBtnGrid);
+            if (ElementosGlobales.isAdmin) dgPacientes.Columns.Add(VerHistoralClinicioBtnGrid);
+
         }
 
+        private void EliminarPaciente(Paciente paciente)
+        {
+            if (ElementosGlobales.isAdmin)
+            {
+                LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+                logicaSecretaria.EliminarPaciente(paciente);
+                
+            }
+        }
         private void label7_Click(object sender, EventArgs e)
         {
 
