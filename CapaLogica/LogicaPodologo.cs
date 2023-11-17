@@ -162,13 +162,10 @@ namespace CapaLogica
         /// <param name="cita"></param>
         public void EliminarCita(Cita cita)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar la cita?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
+           
                 PodologoDAO podologoDAO = new PodologoDAO();
                 podologoDAO.EliminarCita(cita);
-            }
-            return;
+            
         }
         public void EliminarUsuario(int idUsuario)
         {
@@ -206,22 +203,22 @@ namespace CapaLogica
         {
             if (puesto == "Puesto")
             {
-                MessageBox.Show("Seleccione un puesto valido para continuar");
+                MessageBox.Show("Seleccione un puesto valido para continuar", "Puesto invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(usuario.GetUsuario()))
             {
-                MessageBox.Show("Usuario invalido");
+                MessageBox.Show("Usuario vacio", "Usuario invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(usuario.GetContraseña()))
             {
-                MessageBox.Show("Contraseña invalida");
+                MessageBox.Show("Contraseña vacia","Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(comprobarContraseña))
             {
-                MessageBox.Show("Compruebe la contraseña para continuar");
+                MessageBox.Show("Confirme la contraseña para continuar","Confirmación de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -236,7 +233,7 @@ namespace CapaLogica
             }
             if (!logicaUsuario.ValidarContraseñaConfirmada(usuario, comprobarContraseña))
             {
-                MessageBox.Show("Las contraseña no coinciden");
+                MessageBox.Show("Las contraseñas no coinciden","Contraseñas no coinciden", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
 
             }
@@ -253,22 +250,22 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(profesionista.GetNombre()))
             {
-                MessageBox.Show("El nombre no es valido");
+                MessageBox.Show("Nombre vacio","Nombre invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(profesionista.GetApellidoPaterno()))
             {
-                MessageBox.Show("El Apellido Paterno no es valido");
+                MessageBox.Show("Apellido Paterno vacio", "Apellido Paterno invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(profesionista.GetApellidoMaterno()))
             {
-                MessageBox.Show("El Apellido Materno no es valido");
+                MessageBox.Show("Apellido Materno vacio", "Apellido Materno invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(profesionista.GetTelefono()))
             {
-                MessageBox.Show("El Teléfono no es valido");
+                MessageBox.Show("Teléfono ", "Teléfono invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -279,7 +276,7 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(TipoCita))
             {
-                MessageBox.Show("Agregue un 'Tipo de Cita' para continuar");
+                MessageBox.Show("Agregue un 'Tipo de Cita' para continuar","Tipo de cita invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
 
             }
@@ -290,22 +287,22 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(horas))
             {
-                MessageBox.Show("No es posible agregar elementos vacios");
+                MessageBox.Show("Hora vacio","Hora invalida",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!horas.Contains(":")) 
             {
-                MessageBox.Show("Formato de Hora invalido, es necesario agregar ':' entre las horas y los minutos");
+                MessageBox.Show("Formato de Hora invalido, es necesario agregar ':' entre las horas y los minutos","Formato de hora invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false; 
             }
             if(horas.Length<4 || horas.Length > 5)
             {
-                MessageBox.Show("Formato invalido, la hora ingresada no cuenta con el formato correcto");
+                MessageBox.Show("La hora ingresada: "+horas+" no cuenta con el formato correcto", "Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!ValidarFormatoHoras(horas))
             {
-                MessageBox.Show("Formato invalido, la hora ingresada no cuenta con el formato correcto");
+                MessageBox.Show("La hora ingresada: " + horas + " no cuenta con el formato correcto","Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;

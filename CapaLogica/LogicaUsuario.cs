@@ -69,19 +69,19 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(usuario.GetUsuario()))
             {
-                MessageBox.Show("Usuario vacio");
+                MessageBox.Show("Usuario vacio","Usuario invalido",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return false;
             }
 
             if (string.IsNullOrEmpty(usuario.GetContraseña()))
             {
-                MessageBox.Show("Contraseña vacia");
+                MessageBox.Show("Contraseña vacia", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (string.IsNullOrEmpty(confirmacionContraseña))
             {
-                MessageBox.Show("Confirme la contraseña para continuar");
+                MessageBox.Show("Confirme la contraseña para continuar", "Confirmación de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -114,12 +114,12 @@ namespace CapaLogica
             }
             if (!ValidarContraseñaConfirmada(usuario,ConfirmacionContraseña))
             {
-                MessageBox.Show("La contraseña no coincide");
+                MessageBox.Show("La contraseña no coincide", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!GetUsuario(usuario))
             {
-                MessageBox.Show("El usuario que desea actualizar no existe");
+                MessageBox.Show("El usuario que desea actualizar no existe", "Usuario invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -142,7 +142,7 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(ContraseñaAdmin))
             {
-                MessageBox.Show("Ingrese una contraseña de administrador para continuar");
+                MessageBox.Show("Ingrese una contraseña de administrador para continuar","Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
 
             }

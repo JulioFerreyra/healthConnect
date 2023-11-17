@@ -76,26 +76,20 @@ namespace CapaLogica
         /// <param name="cita"></param>
         public void EliminarCita(Cita cita)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar la cita?\n Una vez eliminado no se podrá recuperar", "Confirmación necesario", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
+           
                 SecretariaDAO secretariaDAO = new SecretariaDAO();
                 secretariaDAO.EliminarCita(cita);
-            }
-            return;
+            
            
         }
         
         public void EliminarPaciente(Paciente paciente)
         {
-            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar los registros del Paciente?\n El hacerlo eliminará consigo las citas registradas a su nombre permanentemente", "Confirmación necesario", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
+           
                 SecretariaDAO secretariaDAO = new SecretariaDAO();
                 secretariaDAO.EliminarCitasPaciente(paciente);
                 secretariaDAO.EliminarPaciente(paciente);
-            }
-            return;
+            
 
         }
 
@@ -137,7 +131,7 @@ namespace CapaLogica
             {
                 return false;
             }
-            DialogResult resultado = MessageBox.Show("¿Está seguro que desea modificar la cita?\n", "Confirmación necesaria", MessageBoxButtons.YesNo);
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea modificar la cita?\n", "Confirmación necesaria", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (resultado == DialogResult.Yes)
             {
                 SecretariaDAO secretariaDao = new SecretariaDAO();
