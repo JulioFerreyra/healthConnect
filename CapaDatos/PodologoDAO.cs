@@ -24,14 +24,14 @@ namespace CapaDatos
         /// 
         public void CrearProfesionista(Profesionista profesionista)
         {
-            string consultaInsert = "insert into profesionistas(nombre,apell_mat, apell_pat, telefono) values(\""+profesionista.GetNombre()+"\",\""+profesionista.GetApellidoPaterno()+"\",\""+profesionista.GetApellidoMaterno()+"\",\""+profesionista.GetTelefono()+"\")";
+            string consultaInsert = "insert into profesionistas(nombre,apell_mat, apell_pat, telefono,estado) values(\""+profesionista.GetNombre()+"\",\""+profesionista.GetApellidoPaterno()+"\",\""+profesionista.GetApellidoMaterno()+"\",\""+profesionista.GetTelefono()+"\",true)";
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
             try
             {
                 conexion_a_MySQL.Open();
                 MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre(),profesionista.GetApellidoPaterno(), profesionista.GetApellidoMaterno())+" registrado correctamente","Registro Exitoso",MessageBoxButtons.OK);
+                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre()," ",profesionista.GetApellidoPaterno()," ",profesionista.GetApellidoMaterno())+" registrado correctamente","Registro Exitoso",MessageBoxButtons.OK);
 
             }
             catch (Exception ex)

@@ -34,6 +34,7 @@
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -42,13 +43,13 @@
             // vwReporte
             // 
             this.vwReporte.AutoSize = true;
-            this.vwReporte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vwReporte.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.vwReporte.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Report1.rdlc";
-            this.vwReporte.Location = new System.Drawing.Point(0, 38);
-            this.vwReporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vwReporte.Location = new System.Drawing.Point(0, 973);
+            this.vwReporte.Margin = new System.Windows.Forms.Padding(4);
             this.vwReporte.Name = "vwReporte";
             this.vwReporte.ServerReport.BearerToken = null;
-            this.vwReporte.Size = new System.Drawing.Size(1295, 937);
+            this.vwReporte.Size = new System.Drawing.Size(1295, 2);
             this.vwReporte.TabIndex = 0;
             // 
             // dataSet1
@@ -64,10 +65,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1295, 38);
             this.panel1.TabIndex = 1;
@@ -88,6 +90,13 @@
             this.button1.TabIndex = 61;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 36);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1295, 114);
+            this.panel2.TabIndex = 2;
+            // 
             // ReporteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -97,7 +106,7 @@
             this.Controls.Add(this.vwReporte);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReporteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteForm";
@@ -117,5 +126,6 @@
         private DataSet1 dataSet1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
