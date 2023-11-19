@@ -77,6 +77,7 @@
             this.cmbHiperlax = new CustomControls.RJControls.pComboBox();
             this.cmbTabaco = new CustomControls.RJControls.pComboBox();
             this.cmbParto = new CustomControls.RJControls.pComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tabHistorial.SuspendLayout();
             this.tabAntPat.SuspendLayout();
@@ -84,8 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFrecAct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFrecAlc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFrecTab)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -191,10 +194,10 @@
             this.tabHistorial.Controls.Add(this.tabAntPat);
             this.tabHistorial.Controls.Add(this.tabNoPat);
             this.tabHistorial.Controls.Add(this.tabPage1);
-            this.tabHistorial.Location = new System.Drawing.Point(159, 499);
+            this.tabHistorial.Location = new System.Drawing.Point(153, 396);
             this.tabHistorial.Name = "tabHistorial";
             this.tabHistorial.SelectedIndex = 0;
-            this.tabHistorial.Size = new System.Drawing.Size(901, 781);
+            this.tabHistorial.Size = new System.Drawing.Size(880, 781);
             this.tabHistorial.TabIndex = 97;
             // 
             // tabAntPat
@@ -216,7 +219,7 @@
             this.tabAntPat.Location = new System.Drawing.Point(4, 25);
             this.tabAntPat.Name = "tabAntPat";
             this.tabAntPat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAntPat.Size = new System.Drawing.Size(893, 752);
+            this.tabAntPat.Size = new System.Drawing.Size(872, 752);
             this.tabAntPat.TabIndex = 0;
             this.tabAntPat.Text = "Antecedentes Patológicos";
             this.tabAntPat.UseVisualStyleBackColor = true;
@@ -364,12 +367,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(893, 752);
+            this.tabPage1.Size = new System.Drawing.Size(872, 752);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Otros antecedentes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -388,9 +392,9 @@
             this.groupBox1.Controls.Add(this.txtApePat);
             this.groupBox1.Controls.Add(this.lblTelefono);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Location = new System.Drawing.Point(94, 186);
+            this.groupBox1.Location = new System.Drawing.Point(88, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1005, 238);
+            this.groupBox1.Size = new System.Drawing.Size(984, 238);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del paciente";
@@ -399,7 +403,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(154, 453);
+            this.label1.Location = new System.Drawing.Point(148, 350);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 29);
@@ -543,6 +547,7 @@
             this.txtApePat.BorderRadius = 12;
             this.txtApePat.BorderSize = 2;
             this.txtApePat.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtApePat.Enabled = false;
             this.txtApePat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApePat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApePat.Location = new System.Drawing.Point(357, 64);
@@ -955,6 +960,16 @@
             this.cmbParto.TabIndex = 97;
             this.cmbParto.Texts = "PARTO";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(40, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(794, 431);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // HistorialClinicoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -984,9 +999,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFrecAct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFrecAlc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numFrecTab)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1043,5 +1060,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAlergias;
         private DataSet1 dataSet11;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
