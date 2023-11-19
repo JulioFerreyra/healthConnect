@@ -15,13 +15,13 @@
         <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:string" minOccurs="0" />
               <xs:element name="Paciente" msprop:Generator_ColumnPropNameInTable="PacienteColumn" msprop:Generator_ColumnPropNameInRow="Paciente" msprop:Generator_UserColumnName="Paciente" msprop:Generator_ColumnVarNameInTable="columnPaciente" type="xs:string" minOccurs="0" />
               <xs:element name="Profesionista" msprop:Generator_ColumnPropNameInTable="ProfesionistaColumn" msprop:Generator_ColumnPropNameInRow="Profesionista" msprop:Generator_UserColumnName="Profesionista" msprop:Generator_ColumnVarNameInTable="columnProfesionista" type="xs:string" minOccurs="0" />
               <xs:element name="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" type="xs:string" minOccurs="0" />
               <xs:element name="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_UserColumnName="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" type="xs:string" minOccurs="0" />
               <xs:element name="Sintomas" msprop:Generator_ColumnPropNameInTable="SintomasColumn" msprop:Generator_ColumnPropNameInRow="Sintomas" msprop:Generator_UserColumnName="Sintomas" msprop:Generator_ColumnVarNameInTable="columnSintomas" type="xs:string" minOccurs="0" />
               <xs:element name="Diagnostico" msprop:Generator_ColumnPropNameInTable="DiagnosticoColumn" msprop:Generator_ColumnPropNameInRow="Diagnostico" msprop:Generator_UserColumnName="Diagnostico" msprop:Generator_ColumnVarNameInTable="columnDiagnostico" type="xs:string" minOccurs="0" />
+              <xs:element name="Sucursal" msprop:Generator_ColumnPropNameInRow="Sucursal" msprop:Generator_ColumnPropNameInTable="SucursalColumn" msprop:Generator_ColumnVarNameInTable="columnSucursal" msprop:Generator_UserColumnName="Sucursal" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

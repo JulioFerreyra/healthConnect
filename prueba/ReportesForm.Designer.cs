@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlOpciones = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rvReportes = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbPodologos = new CustomControls.RJControls.pComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.dtFinal = new CustomControls.RJControls.pDatePicker();
             this.dtInicio = new CustomControls.RJControls.pDatePicker();
             this.cmbTiposCita = new CustomControls.RJControls.pComboBox();
             this.cmbFiltro = new CustomControls.RJControls.pComboBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.cmbPodologos = new CustomControls.RJControls.pComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rvReportes = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSetReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetReportesBindingSource)).BeginInit();
@@ -62,30 +62,35 @@
             this.pnlOpciones.TabIndex = 1;
             this.pnlOpciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOpciones_Paint);
             // 
-            // panel1
+            // cmbPodologos
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.rvReportes);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1449, 620);
-            this.panel1.TabIndex = 2;
+            this.cmbPodologos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmbPodologos.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPodologos.BorderSize = 1;
+            this.cmbPodologos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbPodologos.Enabled = false;
+            this.cmbPodologos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbPodologos.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbPodologos.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPodologos.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbPodologos.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbPodologos.Location = new System.Drawing.Point(253, 36);
+            this.cmbPodologos.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbPodologos.Name = "cmbPodologos";
+            this.cmbPodologos.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbPodologos.Size = new System.Drawing.Size(200, 30);
+            this.cmbPodologos.TabIndex = 5;
+            this.cmbPodologos.Texts = "Profesionistas";
             // 
-            // rvReportes
+            // btnBuscar
             // 
-            this.rvReportes.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.rvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rvReportes.LocalReport.ReportEmbeddedResource = "CapaPresentacion.InformeReporte.rdlc";
-            this.rvReportes.Location = new System.Drawing.Point(0, 0);
-            this.rvReportes.Name = "rvReportes";
-            this.rvReportes.ServerReport.BearerToken = null;
-            this.rvReportes.Size = new System.Drawing.Size(1449, 620);
-            this.rvReportes.TabIndex = 1;
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.lupa;
+            this.btnBuscar.Location = new System.Drawing.Point(1388, 31);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(40, 35);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dtFinal
             // 
@@ -158,33 +163,30 @@
             this.cmbFiltro.Texts = "";
             this.cmbFiltro.OnSelectedIndexChanged += new System.EventHandler(this.cmbFiltro_OnSelectedIndexChanged);
             // 
-            // btnBuscar
+            // panel1
             // 
-            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(1388, 31);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 35);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.rvReportes);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1449, 620);
+            this.panel1.TabIndex = 2;
             // 
-            // cmbPodologos
+            // rvReportes
             // 
-            this.cmbPodologos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbPodologos.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbPodologos.BorderSize = 1;
-            this.cmbPodologos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbPodologos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbPodologos.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPodologos.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbPodologos.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbPodologos.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbPodologos.Location = new System.Drawing.Point(253, 36);
-            this.cmbPodologos.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbPodologos.Name = "cmbPodologos";
-            this.cmbPodologos.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbPodologos.Size = new System.Drawing.Size(200, 30);
-            this.cmbPodologos.TabIndex = 5;
-            this.cmbPodologos.Texts = "Profesionistas";
+            this.rvReportes.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.rvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rvReportes.LocalReport.ReportEmbeddedResource = "CapaPresentacion.InformeReporte.rdlc";
+            this.rvReportes.Location = new System.Drawing.Point(0, 0);
+            this.rvReportes.Name = "rvReportes";
+            this.rvReportes.ServerReport.BearerToken = null;
+            this.rvReportes.Size = new System.Drawing.Size(1449, 620);
+            this.rvReportes.TabIndex = 1;
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
             // 
             // ReportesForm
             // 

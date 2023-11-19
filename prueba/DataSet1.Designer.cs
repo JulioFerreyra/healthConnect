@@ -279,8 +279,6 @@ namespace CapaPresentacion {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnID;
-            
             private global::System.Data.DataColumn columnPaciente;
             
             private global::System.Data.DataColumn columnProfesionista;
@@ -292,6 +290,8 @@ namespace CapaPresentacion {
             private global::System.Data.DataColumn columnSintomas;
             
             private global::System.Data.DataColumn columnDiagnostico;
+            
+            private global::System.Data.DataColumn columnSucursal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -324,14 +324,6 @@ namespace CapaPresentacion {
             protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -384,6 +376,14 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SucursalColumn {
+                get {
+                    return this.columnSucursal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,16 +419,16 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string ID, string Paciente, string Profesionista, string Fecha, string Tipo, string Sintomas, string Diagnostico) {
+            public DataTable1Row AddDataTable1Row(string Paciente, string Profesionista, string Fecha, string Tipo, string Sintomas, string Diagnostico, string Sucursal) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
                         Paciente,
                         Profesionista,
                         Fecha,
                         Tipo,
                         Sintomas,
-                        Diagnostico};
+                        Diagnostico,
+                        Sucursal};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -451,20 +451,18 @@ namespace CapaPresentacion {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
                 this.columnPaciente = base.Columns["Paciente"];
                 this.columnProfesionista = base.Columns["Profesionista"];
                 this.columnFecha = base.Columns["Fecha"];
                 this.columnTipo = base.Columns["Tipo"];
                 this.columnSintomas = base.Columns["Sintomas"];
                 this.columnDiagnostico = base.Columns["Diagnostico"];
+                this.columnSucursal = base.Columns["Sucursal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
                 this.columnPaciente = new global::System.Data.DataColumn("Paciente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPaciente);
                 this.columnProfesionista = new global::System.Data.DataColumn("Profesionista", typeof(string), null, global::System.Data.MappingType.Element);
@@ -477,6 +475,8 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnSintomas);
                 this.columnDiagnostico = new global::System.Data.DataColumn("Diagnostico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDiagnostico);
+                this.columnSucursal = new global::System.Data.DataColumn("Sucursal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSucursal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -619,22 +619,6 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ID {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'DataTable1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Paciente {
                 get {
                     try {
@@ -731,14 +715,18 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsIDNull() {
-                return this.IsNull(this.tableDataTable1.IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetIDNull() {
-                this[this.tableDataTable1.IDColumn] = global::System.Convert.DBNull;
+            public string Sucursal {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.SucursalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Sucursal\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.SucursalColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -811,6 +799,18 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetDiagnosticoNull() {
                 this[this.tableDataTable1.DiagnosticoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSucursalNull() {
+                return this.IsNull(this.tableDataTable1.SucursalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSucursalNull() {
+                this[this.tableDataTable1.SucursalColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -261,8 +261,31 @@ namespace CapaDatos
                 
             }
         }
+        public DataTable GetPodologos()
+        {
 
-        public DataTable GetAntecendetesNoPatologicosPaciente(int idPaciente)
+            DataTable dt = new DataTable();
+            string sentenciaSelect = "select id_profesionista, concat(nombre,' ',apell_pat, ' ', apell_mat) from profesionistas where estado = true";
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaSelect, conexion_a_mysql);
+                adaptador.Fill(dt);
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return dt;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+        }
+            public DataTable GetAntecendetesNoPatologicosPaciente(int idPaciente)
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
@@ -598,6 +621,60 @@ namespace CapaDatos
             finally
             {
                 conexion_a_mysql.Close();
+            }
+
+        }
+
+        public DataTable ReportesCitasFechas()
+        {
+            DataTable datosReporte = new DataTable();
+
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string sentenciaReporte = "select c.id_cita ID, concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista";
+            try
+            {
+                // MessageBox.Show(sentenciaReporte);
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaReporte, conexion_a_MySQL);
+                adaptador.Fill(datosReporte);
+                return datosReporte;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datosReporte;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
+
+        public DataTable ReportesCitasTipoCita(int idPodologo, string tipoCita)
+        {
+            DataTable datosReporte = new DataTable();
+
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where pr.id_profesionista = "+idPodologo+" and tipo_cita = \""+tipoCita+"\" and  estado <> 'pendiente'; ";
+            try
+            {
+                // MessageBox.Show(sentenciaReporte);
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaReporte, conexion_a_MySQL);
+                adaptador.Fill(datosReporte);
+                return datosReporte;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datosReporte;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
             }
 
         }

@@ -79,6 +79,12 @@ namespace CapaLogica
 
 
         }
+
+        public DataTable GetPodologos()
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.GetPodologos();
+        }
         public DataTable GetNombrePodologo(int idPodologo)
         {
             PodologoDAO podologoDAO = new PodologoDAO();
@@ -313,6 +319,32 @@ namespace CapaLogica
         {
             return DateTime.TryParse(horas, out _);
 
+        }
+
+
+        //Reportes
+
+        public bool ValidarReportesTipoCita(int idPodologo, string tipoCita)
+        {
+            if (idPodologo == 0)
+            {
+                MessageBox.Show("Selecciones un profesionista para contiunar", "Profesionista invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+
+            }
+            if (tipoCita == "Tipo de Cita")
+            {
+                MessageBox.Show("Selecciones un 'Tipo de Cita' para contiunar", "Tipo de cita invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+        public DataTable ReportesCitasTipoCita(int idPodologo, string tipoCita)
+        {
+          
+                PodologoDAO podologodao = new PodologoDAO();
+                return podologodao.ReportesCitasTipoCita(idPodologo, tipoCita);
+            
         }
     }
 }

@@ -154,6 +154,7 @@ namespace prueba
             ElementosGlobales.EstadoCita = string.Empty;
             ElementosGlobales.FechasReporte.Clear();
             ElementosGlobales.TipoReporte = 0;
+            ElementosGlobales.isAdmin = false;
         }
 
         private void EstablecerDatosUsuario(Usuario usuario)
