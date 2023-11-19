@@ -84,6 +84,14 @@
     <Compile Include="ConfiguracionForm.Designer.cs">
       <DependentUpon>ConfiguracionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsReporte.cs">
+      <DependentUpon>dsReporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReporte.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NuevoProfesionistaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +288,7 @@
     <EmbeddedResource Include="ConfiguracionForm.resx">
       <DependentUpon>ConfiguracionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformeReporte.rdlc" />
     <EmbeddedResource Include="NuevoProfesionistaForm.resx">
       <DependentUpon>NuevoProfesionistaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +400,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dsReporte.xsc">
+      <DependentUpon>dsReporte.xsd</DependentUpon>
+    </None>
+    <None Include="dsReporte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReporte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsReporte.xss">
+      <DependentUpon>dsReporte.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

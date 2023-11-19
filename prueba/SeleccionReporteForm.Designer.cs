@@ -99,7 +99,7 @@
             "Xochitil Tello Gónzalez"});
             this.cmbxPodologo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxPodologo.ListTextColor = System.Drawing.Color.Black;
-            this.cmbxPodologo.Location = new System.Drawing.Point(376, 108);
+            this.cmbxPodologo.Location = new System.Drawing.Point(379, 190);
             this.cmbxPodologo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxPodologo.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxPodologo.Name = "cmbxPodologo";
@@ -181,7 +181,7 @@
             "Rango de Fechas"});
             this.cmbxSeleccion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxSeleccion.ListTextColor = System.Drawing.Color.Black;
-            this.cmbxSeleccion.Location = new System.Drawing.Point(33, 108);
+            this.cmbxSeleccion.Location = new System.Drawing.Point(36, 190);
             this.cmbxSeleccion.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxSeleccion.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxSeleccion.Name = "cmbxSeleccion";
@@ -197,7 +197,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(28, 64);
+            this.label2.Location = new System.Drawing.Point(31, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(244, 29);
@@ -211,7 +211,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(680, 46);
+            this.panel1.Size = new System.Drawing.Size(858, 46);
             this.panel1.TabIndex = 55;
             // 
             // cmbxEstadoCita
@@ -246,7 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(680, 449);
+            this.ClientSize = new System.Drawing.Size(858, 576);
             this.Controls.Add(this.cmbxEstadoCita);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);

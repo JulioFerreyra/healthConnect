@@ -1416,3 +1416,4 @@ C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.Edit
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.NuevoProfesionistaForm.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.EditarProfesionistaForm.resources
 C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.ConfiguracionForm.resources
+C:\Users\jaft2\source\repos\healthConnect\prueba\obj\Debug\CapaPresentacion.ReportesForm.resources

@@ -501,6 +501,46 @@ namespace CapaDatos
         /// </summary>
         /// <param name="TipoCita"></param>
         /// <returns></returns>
+        /// 
+
+
+
+
+
+
+
+
+        public DataTable ReportesCitas()
+        {
+            DataTable datosReporte = new DataTable();
+
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string sentenciaReporte = "select c.id_cita ID, concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista";
+            try
+            {
+                // MessageBox.Show(sentenciaReporte);
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaReporte, conexion_a_MySQL);
+                adaptador.Fill(datosReporte);
+                return datosReporte;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datosReporte;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
+
+
+
+
+
         public DataTable ReporteTipoCitaPodologo(string TipoCita,string EstadoCita, string idPodologo)
         {
             DataTable datosReporte = new DataTable();
@@ -532,7 +572,7 @@ namespace CapaDatos
             DataTable datosReporte = new DataTable();
             
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string sentenciaReporte = "select c.id_cita ID, concat(pc.nombre, \" \", pc.apell_pat, \" \", pc.apell_mat) Paciente,pd.nombre_comp Podólogo, c.fecha_cita Fecha, c.Tipo_cita as Tipo, c.detalle_cita Detalles, c.historial_cli Resultado from citas c join podologo pd on c.id_podologo = pd.id_podologo join paciente pc on pc.id_paciente = c.id_paciente where c.estado_cita like \"%"+EstadoCita+"%\" and c.fecha_cita between \""+ConvertirFechaCadena(FechaInicio)+"\" and \""+ConvertirFechaCadena(FechaFinal)+"\" and c.id_podologo like '%"+idPodologo+"%';";
+            string sentenciaReporte = "select c.id_cita ID, concat(pc.nombre, \" \", pc.apell_pat, \" \", pc.apell_mat) Paciente,concat(pd.nombre, \" \", pd.apell_pat, \" \", pd.apell_mat) Podólogo, c.fecha_cita Fecha, c.Tipo_cita as Tipo, c.motivo_cita Detalles, c.diagnostico Resultado from citas c join profesionistas pd on c.id_profesionista = pd.id_profesionista join pacientes pc on pc.id_paciente = c.id_paciente where c.estado_cita like \"%" + EstadoCita+"%\" and c.fecha_cita between \""+ConvertirFechaCadena(FechaInicio)+"\" and \""+ConvertirFechaCadena(FechaFinal)+"\" and c.id_profesionista like '%"+idPodologo+"%';";
             try
             {
              //   MessageBox.Show(sentenciaReporte);
@@ -553,7 +593,7 @@ namespace CapaDatos
             }
         }
 
-     
+        
 
 
 

@@ -219,9 +219,11 @@ namespace CapaPresentacion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            SeleccionReporteForm seleccionReporteForm = new SeleccionReporteForm();
-            ElementosGlobales.UsuarioCondicion = true;
-            seleccionReporteForm.ShowDialog();
+            //SeleccionReporteForm seleccionReporteForm = new SeleccionReporteForm();
+            //ElementosGlobales.UsuarioCondicion = true;
+            //seleccionReporteForm.ShowDialog();
+            ReportesForm reportes = new ReportesForm();
+            reportes.ShowDialog();
         }
 
         private void Panelformularios_Paint(object sender, PaintEventArgs e)

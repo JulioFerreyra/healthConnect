@@ -57,7 +57,7 @@ namespace CapaPresentacion
         private void RellenarTiposCita()
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
-            dgTiposCita.DataSource = logicaPodologo.GetTiposDeCita(); 
+            dgTiposCita.DataSource = logicaPodologo.GetTiposDeCita();
             
         }
         private void RellenarHoras()

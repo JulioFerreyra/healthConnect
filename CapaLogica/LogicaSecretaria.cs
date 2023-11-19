@@ -192,5 +192,11 @@ namespace CapaLogica
         }
 
 
+        //
+        public DataTable ReportesCitas()
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.ReportesCitas();
+        }
     }
 }
