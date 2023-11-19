@@ -44,19 +44,19 @@
             this.txtContraseña.BorderRadius = 10;
             this.txtContraseña.BorderSize = 2;
             this.txtContraseña.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña.ForeColor = System.Drawing.Color.Black;
             this.txtContraseña.Location = new System.Drawing.Point(50, 107);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
-            this.txtContraseña.PasswordChar = false;
-            this.txtContraseña.PlaceholderColor = System.Drawing.Color.Violet;
+            this.txtContraseña.PasswordChar = true;
+            this.txtContraseña.PlaceholderColor = System.Drawing.Color.Black;
             this.txtContraseña.PlaceholderText = "";
             this.txtContraseña.Size = new System.Drawing.Size(410, 44);
             this.txtContraseña.TabIndex = 0;
-            this.txtContraseña.Texts = "";
+            this.txtContraseña.Texts = "Contraseña";
             this.txtContraseña.UnderlineStyle = false;
             // 
             // lblInfo
@@ -100,6 +100,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(502, 46);
             this.panel1.TabIndex = 56;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -128,8 +129,9 @@
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.txtContraseña);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ComprobarContraseñaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ComprobarContraseñaForm";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

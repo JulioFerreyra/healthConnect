@@ -197,7 +197,7 @@
             this.txtTipoCita.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipoCita.ForeColor = System.Drawing.Color.White;
             this.txtTipoCita.Location = new System.Drawing.Point(71, 527);
-            this.txtTipoCita.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTipoCita.Margin = new System.Windows.Forms.Padding(5);
             this.txtTipoCita.MaxLength = 10;
             this.txtTipoCita.Multiline = false;
             this.txtTipoCita.Name = "txtTipoCita";
@@ -221,7 +221,7 @@
             this.txtPod.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPod.ForeColor = System.Drawing.Color.White;
             this.txtPod.Location = new System.Drawing.Point(71, 406);
-            this.txtPod.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPod.Margin = new System.Windows.Forms.Padding(5);
             this.txtPod.MaxLength = 10;
             this.txtPod.Multiline = false;
             this.txtPod.Name = "txtPod";
@@ -245,7 +245,7 @@
             this.txtFecha.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
             this.txtFecha.Location = new System.Drawing.Point(849, 527);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(5);
             this.txtFecha.MaxLength = 10;
             this.txtFecha.Multiline = false;
             this.txtFecha.Name = "txtFecha";
@@ -269,7 +269,7 @@
             this.txtHora.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHora.ForeColor = System.Drawing.Color.White;
             this.txtHora.Location = new System.Drawing.Point(467, 527);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtHora.Margin = new System.Windows.Forms.Padding(5);
             this.txtHora.MaxLength = 10;
             this.txtHora.Multiline = false;
             this.txtHora.Name = "txtHora";
@@ -294,7 +294,7 @@
             this.txtResultado.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResultado.ForeColor = System.Drawing.Color.White;
             this.txtResultado.Location = new System.Drawing.Point(1195, 175);
-            this.txtResultado.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtResultado.Margin = new System.Windows.Forms.Padding(5);
             this.txtResultado.MaxLength = 10;
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
@@ -319,7 +319,7 @@
             this.tbxSintomas.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
             this.tbxSintomas.Location = new System.Drawing.Point(467, 302);
-            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(5);
             this.tbxSintomas.MaxLength = 100;
             this.tbxSintomas.Multiline = true;
             this.tbxSintomas.Name = "tbxSintomas";
@@ -344,7 +344,7 @@
             this.tbxTelefono.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTelefono.ForeColor = System.Drawing.Color.Gainsboro;
             this.tbxTelefono.Location = new System.Drawing.Point(71, 302);
-            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.tbxTelefono.MaxLength = 10;
             this.tbxTelefono.Multiline = false;
             this.tbxTelefono.Name = "tbxTelefono";
@@ -369,7 +369,7 @@
             this.tbxApellMat.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellMat.ForeColor = System.Drawing.Color.White;
             this.tbxApellMat.Location = new System.Drawing.Point(837, 175);
-            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(5);
             this.tbxApellMat.MaxLength = 10;
             this.tbxApellMat.Multiline = false;
             this.tbxApellMat.Name = "tbxApellMat";
@@ -394,7 +394,7 @@
             this.tbxApellPat.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellPat.ForeColor = System.Drawing.Color.White;
             this.tbxApellPat.Location = new System.Drawing.Point(467, 175);
-            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(5);
             this.tbxApellPat.MaxLength = 10;
             this.tbxApellPat.Multiline = false;
             this.tbxApellPat.Name = "tbxApellPat";
@@ -419,7 +419,7 @@
             this.tbxNombre.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNombre.ForeColor = System.Drawing.Color.White;
             this.tbxNombre.Location = new System.Drawing.Point(71, 175);
-            this.tbxNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbxNombre.Margin = new System.Windows.Forms.Padding(5);
             this.tbxNombre.MaxLength = 10;
             this.tbxNombre.Multiline = false;
             this.tbxNombre.Name = "tbxNombre";
@@ -442,7 +442,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1588, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 42);
             this.button1.TabIndex = 53;
@@ -455,10 +455,11 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1643, 46);
             this.panel1.TabIndex = 54;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // DetallesCitaForm
             // 
@@ -491,7 +492,7 @@
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DetallesCitaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetallesCitaForm";

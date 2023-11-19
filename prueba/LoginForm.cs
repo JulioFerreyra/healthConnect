@@ -10,12 +10,28 @@ using System.Windows.Forms;
 using CapaLogica;
 using CapaEntidad;
 using CapaPresentacion;
+using System.Runtime.InteropServices;
 
 namespace prueba
 {
     public partial class LoginForm : Form
     {
-     
+        /// <summary>
+        /// para mover el ratón
+        /// </summary>
+        /// <param name="hWnd"></param>
+        /// <param name="Msg"></param>
+        /// <param name="wParam"></param>
+        /// <param name="lParam"></param>
+        /// <returns></returns>
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        const int WM_NCLBUTTONDOWN = 0xA1;
+        const int HT_CAPTION = 0x2;
+
+  
         public LoginForm()
         {
             InitializeComponent();
@@ -61,45 +77,19 @@ namespace prueba
 
 
         /// <summary>
-        /// Métodos
+        /// Mover mouse
         /// </summary>
-        /// <param name="usuario"></param>
-        //private void InicarSesion(Usuario usuario)
-        //{
-        //    LogicaUsuario logicaUsuario = new LogicaUsuario();
-        //   ElementosGlobales.idUsuarioGlobal= logicaUsuario.InciarSesion(usuario);
-
-        //    switch (ElementosGlobales.idUsuarioGlobal)
-        //    {
-        //        case 1:
-        //            Hide();
-        //            FormPanelPodologo principalForm = new FormPanelPodologo();
-        //            principalForm.ShowDialog();
-        //            Show();
-        //           ;
-        //            break;
-        //        case 2:
-        //            Hide(); 
-        //            FormPanelPodologo principalpodologo = new FormPanelPodologo();
-        //            principalpodologo.ShowDialog();
-        //            Show();
-        //            break;
-        //        case 3:
-        //            Hide();
-        //            FormPanelSecretaria principal = new FormPanelSecretaria();
-        //            principal.ShowDialog();
-        //            Show();
-        //            break;
-
-        //        default:
-        //            break;
-
-
-        //    }
-        //    RestablecerValores();
-
-
-        //}
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
         private void IniciarSesionUsuario(Usuario usuario)
         {
             LogicaUsuario logicaUsuario = new LogicaUsuario();
@@ -123,6 +113,7 @@ namespace prueba
 
             if (logicaUsuario.GetisAdmin(usuario))
             {
+                EstablecerDatosUsuario(usuario);
                 ElementosGlobales.isAdmin = true;
                 Hide();
                 FormPanelPodologo principalForm = new FormPanelPodologo();
@@ -168,5 +159,6 @@ namespace prueba
 
         }
 
+       
     }
 }

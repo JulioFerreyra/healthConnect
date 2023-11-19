@@ -44,9 +44,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(82, 41);
+            this.label1.Location = new System.Drawing.Point(109, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 31);
+            this.label1.Size = new System.Drawing.Size(232, 38);
             this.label1.TabIndex = 72;
             this.label1.Text = "Editar usuario";
             // 
@@ -65,9 +66,10 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(102, 329);
+            this.rjButton1.Location = new System.Drawing.Point(136, 405);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(160, 50);
+            this.rjButton1.Size = new System.Drawing.Size(213, 62);
             this.rjButton1.TabIndex = 71;
             this.rjButton1.Text = "Guardar";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -82,16 +84,16 @@
             this.txtConfirmar.BorderSize = 2;
             this.txtConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmar.Location = new System.Drawing.Point(59, 273);
-            this.txtConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmar.Location = new System.Drawing.Point(79, 336);
+            this.txtConfirmar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtConfirmar.MaxLength = 10;
             this.txtConfirmar.Multiline = false;
             this.txtConfirmar.Name = "txtConfirmar";
-            this.txtConfirmar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtConfirmar.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtConfirmar.PasswordChar = false;
             this.txtConfirmar.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtConfirmar.PlaceholderText = "Confirmar contraseña";
-            this.txtConfirmar.Size = new System.Drawing.Size(250, 35);
+            this.txtConfirmar.Size = new System.Drawing.Size(333, 44);
             this.txtConfirmar.TabIndex = 70;
             this.txtConfirmar.Texts = "";
             this.txtConfirmar.UnderlineStyle = true;
@@ -105,16 +107,16 @@
             this.txtContraseña.BorderSize = 2;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
-            this.txtContraseña.Location = new System.Drawing.Point(59, 212);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.Location = new System.Drawing.Point(79, 261);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContraseña.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtContraseña.PasswordChar = false;
             this.txtContraseña.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtContraseña.PlaceholderText = "Nueva contraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(250, 35);
+            this.txtContraseña.Size = new System.Drawing.Size(333, 44);
             this.txtContraseña.TabIndex = 69;
             this.txtContraseña.Texts = "";
             this.txtContraseña.UnderlineStyle = true;
@@ -128,16 +130,16 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(59, 106);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(79, 130);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtNombre.PasswordChar = false;
             this.txtNombre.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtNombre.PlaceholderText = "Usuario";
-            this.txtNombre.Size = new System.Drawing.Size(250, 35);
+            this.txtNombre.Size = new System.Drawing.Size(333, 44);
             this.txtNombre.TabIndex = 68;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = true;
@@ -149,9 +151,11 @@
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 37);
+            this.panel1.Size = new System.Drawing.Size(505, 46);
             this.panel1.TabIndex = 73;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnCancelar
             // 
@@ -162,9 +166,10 @@
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(331, -3);
+            this.btnCancelar.Location = new System.Drawing.Point(441, -4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(48, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(64, 49);
             this.btnCancelar.TabIndex = 68;
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -179,21 +184,22 @@
             this.cmbPuesto.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbPuesto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbPuesto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbPuesto.Location = new System.Drawing.Point(59, 162);
-            this.cmbPuesto.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbPuesto.Location = new System.Drawing.Point(79, 199);
+            this.cmbPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPuesto.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbPuesto.Name = "cmbPuesto";
             this.cmbPuesto.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbPuesto.Size = new System.Drawing.Size(250, 30);
+            this.cmbPuesto.Size = new System.Drawing.Size(333, 37);
             this.cmbPuesto.TabIndex = 74;
             this.cmbPuesto.Texts = "";
             // 
             // EditarUsuariosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(379, 391);
+            this.ClientSize = new System.Drawing.Size(505, 481);
             this.Controls.Add(this.cmbPuesto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjButton1);
@@ -202,9 +208,11 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditarUsuariosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarUsuariosForm";
+            this.Load += new System.EventHandler(this.EditarUsuariosForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

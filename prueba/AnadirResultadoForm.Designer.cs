@@ -59,11 +59,11 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 46);
             this.panel1.TabIndex = 55;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -75,7 +75,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(920, -4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 49);
             this.button1.TabIndex = 21;
@@ -93,7 +93,7 @@
             this.txtDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetalles.ForeColor = System.Drawing.Color.DimGray;
             this.txtDetalles.Location = new System.Drawing.Point(413, 144);
-            this.txtDetalles.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDetalles.Margin = new System.Windows.Forms.Padding(5);
             this.txtDetalles.MaxLength = 100;
             this.txtDetalles.Multiline = true;
             this.txtDetalles.Name = "txtDetalles";
@@ -116,7 +116,7 @@
             this.txtRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRes.ForeColor = System.Drawing.Color.DimGray;
             this.txtRes.Location = new System.Drawing.Point(413, 309);
-            this.txtRes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtRes.Margin = new System.Windows.Forms.Padding(5);
             this.txtRes.MaxLength = 200;
             this.txtRes.Multiline = true;
             this.txtRes.Name = "txtRes";
@@ -145,7 +145,7 @@
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(391, 507);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(213, 62);
             this.rjButton1.TabIndex = 17;
@@ -165,7 +165,7 @@
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.DimGray;
             this.txtTel.Location = new System.Drawing.Point(51, 394);
-            this.txtTel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(5);
             this.txtTel.MaxLength = 100;
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
@@ -189,7 +189,7 @@
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellMat.Location = new System.Drawing.Point(51, 309);
-            this.txtApellMat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellMat.MaxLength = 100;
             this.txtApellMat.Multiline = true;
             this.txtApellMat.Name = "txtApellMat";
@@ -213,7 +213,7 @@
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.Color.DimGray;
             this.txtApellPat.Location = new System.Drawing.Point(51, 228);
-            this.txtApellPat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellPat.MaxLength = 100;
             this.txtApellPat.Multiline = true;
             this.txtApellPat.Name = "txtApellPat";
@@ -237,7 +237,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombre.Location = new System.Drawing.Point(51, 144);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -267,7 +267,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AnadirResultadoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AnadirResultadoForm";

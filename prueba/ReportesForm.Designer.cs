@@ -196,7 +196,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlOpciones);
             this.Name = "ReportesForm";
-            this.Text = "ReportesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Reportes";
             this.Load += new System.EventHandler(this.ReportesForm_Load);
             this.pnlOpciones.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

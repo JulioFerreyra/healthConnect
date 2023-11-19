@@ -625,12 +625,20 @@ namespace CapaDatos
 
         }
 
-        public DataTable ReportesCitasFechas()
+
+        /// <summary>
+        /// Reportes
+        /// </summary>
+        /// <param name="idPodologo"></param>
+        /// <param name="fechaInicio"></param>
+        /// <param name="fecnaFin"></param>
+        /// <returns></returns>
+        public DataTable ReportesCitasFechas(int idPodologo, DateTime fechaInicio, DateTime fecnaFin)
         {
             DataTable datosReporte = new DataTable();
 
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string sentenciaReporte = "select c.id_cita ID, concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista";
+            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where pr.id_profesionista = " + idPodologo + " and fecha_cita between \""+ConvertirFechaString(fechaInicio)+"\" and \""+ConvertirFechaString(fecnaFin)+" \" and  estado <> 'pendiente'; ";
             try
             {
                 // MessageBox.Show(sentenciaReporte);
@@ -651,8 +659,32 @@ namespace CapaDatos
             }
 
         }
+        public DataTable ReporteFechas(DateTime fechaInicio, DateTime fecnaFin)
+        {
+            DataTable datosReporte = new DataTable();
 
-        public DataTable ReportesCitasTipoCita(int idPodologo, string tipoCita)
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where fecha_cita between \"" + ConvertirFechaString(fechaInicio) + "\" and \"" + ConvertirFechaString(fecnaFin) + " \" and  estado <> 'pendiente'; ";
+            try
+            {
+                // MessageBox.Show(sentenciaReporte);
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaReporte, conexion_a_MySQL);
+                adaptador.Fill(datosReporte);
+                return datosReporte;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datosReporte;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+            public DataTable ReportesCitasTipoCita(int idPodologo, string tipoCita)
         {
             DataTable datosReporte = new DataTable();
 
@@ -678,7 +710,32 @@ namespace CapaDatos
             }
 
         }
+        public DataTable ReportesTipoCita(string tipoCita)
+        {
+            DataTable datosReporte = new DataTable();
 
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where tipo_cita = \"" + tipoCita + "\" and  estado <> 'pendiente'; ";
+            try
+            {
+                // MessageBox.Show(sentenciaReporte);
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaReporte, conexion_a_MySQL);
+                adaptador.Fill(datosReporte);
+                return datosReporte;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datosReporte;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
 
         /// <summary>
         /// Métodos

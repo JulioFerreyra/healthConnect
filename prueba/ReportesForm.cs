@@ -28,12 +28,9 @@ namespace CapaPresentacion
             cmbPodologos.Enabled = false;
             CambiarVisibilidad(false);
             cmbTiposCita.Visible = false;
-            this.rvReportes.Clear();
+            rvReportes.Clear();
 
-            LogicaPodologo logica = new LogicaPodologo();
-            ReportDataSource reportDataSource = new ReportDataSource("DataSet1", logica.ReportesCitasTipoCita(1,"Examen"));
-            rvReportes.LocalReport.DataSources.Add(reportDataSource);
-            rvReportes.RefreshReport();
+           
         }
 
         private void cmbFiltro_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -63,6 +60,10 @@ namespace CapaPresentacion
             {
                 cmbPodologos.Items.Add(Convert.ToString(fila[1]));
             }
+            if (cmbPodologos.Items.Count > 1)
+            {
+                cmbPodologos.Items.Add("Todos");
+            }
         }
 
         private void RellenarTiposCita()
@@ -72,6 +73,7 @@ namespace CapaPresentacion
             {
                 cmbTiposCita.Items.Add(Convert.ToString(fila[0]));
             }
+           
         }
 
         private void RellenarListaPodologos()
@@ -86,11 +88,14 @@ namespace CapaPresentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            ValidarCondiciones();
+            if (ValidarCondiciones())
+            {
+                SeleccionReporte();
+            }
 
         }
 
-        public bool ValidarCondiciones()
+        private bool ValidarCondiciones()
         {
             if (cmbFiltro.SelectedIndex == -1)
             {
@@ -115,6 +120,39 @@ namespace CapaPresentacion
             return true;
         }
 
+        private void SeleccionReporte()
+        {
+            if (cmbFiltro.SelectedIndex == 0 && cmbPodologos.SelectedIndex == cmbPodologos.Items.Count-1)
+            {
+                LogicaPodologo logica = new LogicaPodologo();
+                Reporte(logica.ReporteFechas(dtFinal.Value, dtFinal.Value));
+            }
+            if (cmbFiltro.SelectedIndex == 0 && cmbPodologos.SelectedIndex != cmbPodologos.Items.Count - 1)
+            {
+                LogicaPodologo logica = new LogicaPodologo();
+                Reporte(logica.ReportesCitasFechas(ElementosGlobales.idPodologos[cmbPodologos.SelectedIndex], dtFinal.Value, dtFinal.Value));
+            }
+            if (cmbFiltro.SelectedIndex == 1 && cmbPodologos.SelectedIndex == cmbPodologos.Items.Count - 1)
+            {
+                LogicaPodologo logica = new LogicaPodologo();
+                Reporte(logica.ReportesTipoCita(cmbTiposCita.Texts));
+            }
+            if (cmbFiltro.SelectedIndex == 1 && cmbPodologos.SelectedIndex != cmbPodologos.Items.Count - 1)
+            {
+                LogicaPodologo logica = new LogicaPodologo();
+                Reporte(logica.ReportesCitasTipoCita(ElementosGlobales.idPodologos[cmbPodologos.SelectedIndex], cmbTiposCita.Texts));
+            }
+        }
+
+        private void Reporte(DataTable tablaConsulta)
+        {
+            this.rvReportes.Clear();
+
+           
+            ReportDataSource reportDataSource = new ReportDataSource("DataSet1", tablaConsulta);
+            rvReportes.LocalReport.DataSources.Add(reportDataSource);
+            rvReportes.RefreshReport();
+        }
        
     }
 }

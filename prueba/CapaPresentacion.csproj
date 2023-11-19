@@ -184,12 +184,6 @@
     <Compile Include="HistorialSecretariaForm.Designer.cs">
       <DependentUpon>HistorialSecretariaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LogsForm.Designer.cs">
-      <DependentUpon>LogsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MonthCalendarX.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,9 +324,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HistorialSecretariaForm.resx">
       <DependentUpon>HistorialSecretariaForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LogsForm.resx">
-      <DependentUpon>LogsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonthCalendarX.resx">
       <DependentUpon>MonthCalendarX.cs</DependentUpon>

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,24 @@ namespace CapaPresentacion
 {
     public partial class HistorialClinicoForm : Form
     {
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        // Constantes necesarias para manipular la posición de la ventana
+        const int WM_NCLBUTTONDOWN = 0xA1;
+        const int HT_CAPTION = 0x2;
+
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
         public HistorialClinicoForm()
         {
             InitializeComponent();
@@ -23,7 +42,7 @@ namespace CapaPresentacion
         {
             RellenarCamposPacientes();
             RellenarAntecedentesPaciente();
-            cmbTipoPat.SelectedIndex = 0;
+           
             CambiarEstadoCamposNoPat(false);
             CambiarEstadoCamposPat(false);
 
@@ -71,10 +90,12 @@ namespace CapaPresentacion
         {
             if (cmbTabaco.SelectedIndex == 0)
             {
+                lblFrecTab.Visible = true;
                 numFrecTab.Visible = true;
                 return;
             }
-            numFrecTab.Visible = !true;
+            lblFrecTab.Visible = false;
+            numFrecTab.Visible = false;
             numFrecTab.Value = 0;
         }
 
@@ -83,9 +104,11 @@ namespace CapaPresentacion
             if (cmbAlc.SelectedIndex == 0)
             {
                 numFrecAlc.Visible = true;
+                lblFrecAlc.Visible = true;
                 return;
             }
-            numFrecAlc.Visible = !true;
+            lblFrecAlc.Visible = false;
+            numFrecAlc.Visible = false;
             numFrecAlc.Value = 0;
         }
 
@@ -94,27 +117,16 @@ namespace CapaPresentacion
 
             if (cmbActFis.SelectedIndex == 0)
             {
+                lblFrecAct.Visible = true;
                 numFrecAct.Visible = true;
                 return;
             }
+            lblFrecAct.Visible = false;
             numFrecAct.Visible = false;
             numFrecAct.Value = 0;
         }
 
-        private void cmbTipoPat_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbTipoPat.SelectedIndex == 1)
-            {
-                pnlNoPat.Visible = false;
-                pnlPat.Visible = true;
-
-                return;
-
-            }
-            //CambiarEstadoCamposNoPat(false);
-            pnlNoPat.Visible = true;
-            pnlPat.Visible = false;
-        }
+        
 
         /// <summary>
         /// Métodos
@@ -176,7 +188,10 @@ namespace CapaPresentacion
             numFrecAlc.Enabled = estadoCampo;
             numFrecTab.Enabled = estadoCampo;
             numFrecAct.Enabled = estadoCampo;
-           
+            lblFrecAct.Visible = cmbActFis.SelectedIndex == 0;
+            lblFrecAlc.Visible = cmbAlc.SelectedIndex == 0;
+            lblFrecTab.Visible = cmbTabaco.SelectedIndex == 0;
+
         }
 
         private void CambiarEstadoCamposPat(bool estadoCampo)
@@ -193,6 +208,9 @@ namespace CapaPresentacion
             BtnEdPat.Visible = !estadoCampo;
         }
 
-        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -48,12 +48,12 @@ namespace CapaLogica
         {
             if (ValidarCampoTipoCitaVacio(tiposCita))
             {
-                
+
                 PodologoDAO podologoDAO = new PodologoDAO();
                 podologoDAO.CrearTiposCita(tiposCita);
-               // MessageBox.Show("Los 'Tipos de Citas' se han registrado correctamentn");
+                // MessageBox.Show("Los 'Tipos de Citas' se han registrado correctamentn");
             }
-            
+
         }
         public void CrearHoras(string horas)
         {
@@ -62,7 +62,7 @@ namespace CapaLogica
                 PodologoDAO podologoDAO = new PodologoDAO();
                 podologoDAO.CrearHoras(horas);
             }
-            
+
         }
 
 
@@ -122,7 +122,7 @@ namespace CapaLogica
         }
         public DataTable VerLogs()
         {
-            PodologoDAO podologoDAO=new PodologoDAO();
+            PodologoDAO podologoDAO = new PodologoDAO();
             return podologoDAO.VerLogs();
         }
         public DataTable GetTiposDeCita()
@@ -168,10 +168,10 @@ namespace CapaLogica
         /// <param name="cita"></param>
         public void EliminarCita(Cita cita)
         {
-           
-                PodologoDAO podologoDAO = new PodologoDAO();
-                podologoDAO.EliminarCita(cita);
-            
+
+            PodologoDAO podologoDAO = new PodologoDAO();
+            podologoDAO.EliminarCita(cita);
+
         }
         public void EliminarUsuario(int idUsuario)
         {
@@ -219,12 +219,12 @@ namespace CapaLogica
             }
             if (string.IsNullOrEmpty(usuario.GetContraseña()))
             {
-                MessageBox.Show("Contraseña vacia","Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Contraseña vacia", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(comprobarContraseña))
             {
-                MessageBox.Show("Confirme la contraseña para continuar","Confirmación de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Confirme la contraseña para continuar", "Confirmación de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -239,7 +239,7 @@ namespace CapaLogica
             }
             if (!logicaUsuario.ValidarContraseñaConfirmada(usuario, comprobarContraseña))
             {
-                MessageBox.Show("Las contraseñas no coinciden","Contraseñas no coinciden", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Las contraseñas no coinciden", "Contraseñas no coinciden", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
 
             }
@@ -256,7 +256,7 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(profesionista.GetNombre()))
             {
-                MessageBox.Show("Nombre vacio","Nombre invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nombre vacio", "Nombre invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(profesionista.GetApellidoPaterno()))
@@ -282,33 +282,33 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(TipoCita))
             {
-                MessageBox.Show("Agregue un 'Tipo de Cita' para continuar","Tipo de cita invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Agregue un 'Tipo de Cita' para continuar", "Tipo de cita invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
 
             }
             return true;
         }
-        
+
         private bool ValidarHoras(string horas)
         {
             if (string.IsNullOrEmpty(horas))
             {
-                MessageBox.Show("Hora vacio","Hora invalida",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hora vacio", "Hora invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (!horas.Contains(":")) 
+            if (!horas.Contains(":"))
             {
-                MessageBox.Show("Formato de Hora invalido, es necesario agregar ':' entre las horas y los minutos","Formato de hora invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false; 
+                MessageBox.Show("Formato de Hora invalido, es necesario agregar ':' entre las horas y los minutos", "Formato de hora invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
-            if(horas.Length<4 || horas.Length > 5)
+            if (horas.Length < 4 || horas.Length > 5)
             {
-                MessageBox.Show("La hora ingresada: "+horas+" no cuenta con el formato correcto", "Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La hora ingresada: " + horas + " no cuenta con el formato correcto", "Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!ValidarFormatoHoras(horas))
             {
-                MessageBox.Show("La hora ingresada: " + horas + " no cuenta con el formato correcto","Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La hora ingresada: " + horas + " no cuenta con el formato correcto", "Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -324,27 +324,31 @@ namespace CapaLogica
 
         //Reportes
 
-        public bool ValidarReportesTipoCita(int idPodologo, string tipoCita)
-        {
-            if (idPodologo == 0)
-            {
-                MessageBox.Show("Selecciones un profesionista para contiunar", "Profesionista invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
 
-            }
-            if (tipoCita == "Tipo de Cita")
-            {
-                MessageBox.Show("Selecciones un 'Tipo de Cita' para contiunar", "Tipo de cita invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;
-        }
         public DataTable ReportesCitasTipoCita(int idPodologo, string tipoCita)
         {
-          
-                PodologoDAO podologodao = new PodologoDAO();
-                return podologodao.ReportesCitasTipoCita(idPodologo, tipoCita);
-            
+
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.ReportesCitasTipoCita(idPodologo, tipoCita);
+
         }
-    }
+
+        public DataTable ReportesTipoCita(string tipoCita)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.ReportesTipoCita(tipoCita);
+        }
+
+        public DataTable ReportesCitasFechas(int idPodologo, DateTime fechaInicio, DateTime fechaFin)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.ReportesCitasFechas(idPodologo, fechaInicio, fechaFin);
+        }
+
+        public DataTable ReporteFechas(DateTime fechaInicio, DateTime fechaFin)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.ReporteFechas( fechaInicio, fechaFin);
+        }
+     }
 }

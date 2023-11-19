@@ -48,9 +48,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(91, 356);
+            this.label4.Location = new System.Drawing.Point(121, 438);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 24);
+            this.label4.Size = new System.Drawing.Size(118, 29);
             this.label4.TabIndex = 81;
             this.label4.Text = "Teléfono";
             // 
@@ -59,9 +60,10 @@
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuesto.ForeColor = System.Drawing.Color.Black;
-            this.lblPuesto.Location = new System.Drawing.Point(91, 183);
+            this.lblPuesto.Location = new System.Drawing.Point(121, 225);
+            this.lblPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(158, 24);
+            this.lblPuesto.Size = new System.Drawing.Size(200, 29);
             this.lblPuesto.TabIndex = 79;
             this.lblPuesto.Text = "Apellito Paterno";
             // 
@@ -70,9 +72,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(91, 272);
+            this.label3.Location = new System.Drawing.Point(121, 335);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 24);
+            this.label3.Size = new System.Drawing.Size(212, 29);
             this.label3.TabIndex = 80;
             this.label3.Text = "Apellido Materno";
             // 
@@ -81,9 +84,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(91, 110);
+            this.label2.Location = new System.Drawing.Point(121, 135);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.Size = new System.Drawing.Size(107, 29);
             this.label2.TabIndex = 78;
             this.label2.Text = "Nombre";
             // 
@@ -92,9 +96,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(73, 49);
+            this.label1.Location = new System.Drawing.Point(97, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 31);
+            this.label1.Size = new System.Drawing.Size(365, 39);
             this.label1.TabIndex = 76;
             this.label1.Text = "Agregar Profesionista";
             // 
@@ -104,9 +109,11 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(447, 37);
+            this.panel1.Size = new System.Drawing.Size(596, 46);
             this.panel1.TabIndex = 77;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button1
             // 
@@ -117,9 +124,10 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(399, 0);
+            this.button1.Location = new System.Drawing.Point(532, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 40);
+            this.button1.Size = new System.Drawing.Size(64, 49);
             this.button1.TabIndex = 68;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -132,16 +140,16 @@
             this.txtPat.BorderSize = 2;
             this.txtPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPat.ForeColor = System.Drawing.Color.Black;
-            this.txtPat.Location = new System.Drawing.Point(95, 211);
-            this.txtPat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPat.Location = new System.Drawing.Point(127, 260);
+            this.txtPat.Margin = new System.Windows.Forms.Padding(5);
             this.txtPat.MaxLength = 45;
             this.txtPat.Multiline = false;
             this.txtPat.Name = "txtPat";
-            this.txtPat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtPat.PasswordChar = false;
             this.txtPat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtPat.PlaceholderText = "Usuario";
-            this.txtPat.Size = new System.Drawing.Size(250, 35);
+            this.txtPat.Size = new System.Drawing.Size(333, 44);
             this.txtPat.TabIndex = 2;
             this.txtPat.Texts = "";
             this.txtPat.UnderlineStyle = true;
@@ -161,9 +169,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(140, 444);
+            this.btnGuardar.Location = new System.Drawing.Point(187, 546);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(160, 50);
+            this.btnGuardar.Size = new System.Drawing.Size(213, 62);
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextColor = System.Drawing.Color.White;
@@ -179,16 +188,16 @@
             this.txtMat.BorderSize = 2;
             this.txtMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat.ForeColor = System.Drawing.Color.Black;
-            this.txtMat.Location = new System.Drawing.Point(95, 300);
-            this.txtMat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMat.Location = new System.Drawing.Point(127, 369);
+            this.txtMat.Margin = new System.Windows.Forms.Padding(5);
             this.txtMat.MaxLength = 45;
             this.txtMat.Multiline = false;
             this.txtMat.Name = "txtMat";
-            this.txtMat.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtMat.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtMat.PasswordChar = false;
             this.txtMat.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtMat.PlaceholderText = "Contraseña";
-            this.txtMat.Size = new System.Drawing.Size(250, 35);
+            this.txtMat.Size = new System.Drawing.Size(333, 44);
             this.txtMat.TabIndex = 3;
             this.txtMat.Texts = "";
             this.txtMat.UnderlineStyle = true;
@@ -202,16 +211,16 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(95, 138);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(127, 170);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.MaxLength = 45;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtNombre.PasswordChar = false;
             this.txtNombre.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtNombre.PlaceholderText = "Usuario";
-            this.txtNombre.Size = new System.Drawing.Size(250, 35);
+            this.txtNombre.Size = new System.Drawing.Size(333, 44);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = true;
@@ -225,27 +234,27 @@
             this.txtTelefono.BorderSize = 2;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(95, 384);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefono.Location = new System.Drawing.Point(127, 473);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Multiline = false;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTelefono.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtTelefono.PasswordChar = false;
             this.txtTelefono.PlaceholderColor = System.Drawing.Color.White;
             this.txtTelefono.PlaceholderText = "Teléfono";
-            this.txtTelefono.Size = new System.Drawing.Size(250, 35);
+            this.txtTelefono.Size = new System.Drawing.Size(333, 44);
             this.txtTelefono.TabIndex = 4;
             this.txtTelefono.Texts = "";
             this.txtTelefono.UnderlineStyle = true;
             this.txtTelefono._TextChanged += new System.EventHandler(this.txtTelefono__TextChanged);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
-            // AgregarProfesionistaForm
+            // NuevoProfesionistaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 505);
+            this.ClientSize = new System.Drawing.Size(596, 622);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtPat);
             this.Controls.Add(this.label4);
@@ -257,7 +266,10 @@
             this.Controls.Add(this.txtMat);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
-            this.Name = "AgregarProfesionistaForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "NuevoProfesionistaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Profesionista";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
