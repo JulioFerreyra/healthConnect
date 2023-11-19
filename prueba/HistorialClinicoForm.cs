@@ -75,7 +75,7 @@ namespace CapaPresentacion
 
         private void BtnGuPat_Click(object sender, EventArgs e)
         {
-            AntecedentesPatologicos antecedentes = new AntecedentesPatologicos(ElementosGlobales.idPacienteGlobal, cmbDiabetes.Texts, cmbTension.Texts, cmbTiroides.Texts, cmbHepatitis.Texts, cmbCardiopatias.SelectedIndex ==0, txtInterv.Text, cmbNeoplasia.SelectedIndex == 0, txtMed.Text);
+            AntecedentesPatologicos antecedentes = new AntecedentesPatologicos(ElementosGlobales.idPacienteGlobal, cmbDiabetes.Texts, cmbTension.Texts, cmbTiroides.Texts, cmbHepatitis.Texts, cmbCardiopatias.SelectedIndex ==0, txtInterv.Text, cmbNeoplasia.SelectedIndex == 0, txtMed.Text, txtAlergias.Text);
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             logicaPodologo.ActualizarAntecedentesPatologicosPaciente(antecedentes);
             CambiarEstadoCamposPat(false);
@@ -171,6 +171,8 @@ namespace CapaPresentacion
                 txtInterv.Text = string.IsNullOrEmpty(fila[14].ToString()) ? "" : fila[14].ToString();
                 cmbNeoplasia.SelectedIndex = bool.Parse(fila[15].ToString()) ? 0 : 1 ;
                 txtMed.Text = fila[16].ToString();
+                txtAlergias.Text = fila[17].ToString();
+                lblFicha.Text += fila[18].ToString();
 
             }
         }
@@ -203,9 +205,11 @@ namespace CapaPresentacion
             cmbTiroides.Enabled = estadoCampo;
             cmbNeoplasia.Enabled = estadoCampo;
             txtInterv.Enabled = estadoCampo;
+            txtAlergias.Enabled = estadoCampo;
             txtMed.Enabled = estadoCampo;
             BtnGuPat.Visible = estadoCampo;
             BtnEdPat.Visible = !estadoCampo;
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

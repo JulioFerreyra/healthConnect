@@ -17,8 +17,9 @@ namespace CapaEntidad
         private string intervenciones;
         private bool neoplasia;
         private string medicacion;
+        private string alergias;
 
-        public AntecedentesPatologicos(int idPaciente, string diabetes, string presionArterial, string tiroides, string hepatitis, bool cardiopatias, string intervenciones, bool neoplasia, string medicacion)
+        public AntecedentesPatologicos(int idPaciente, string diabetes, string presionArterial, string tiroides, string hepatitis, bool cardiopatias, string intervenciones, bool neoplasia, string medicacion, string alergias)
         {
             this.idPaciente = idPaciente;
             this.diabetes = diabetes;
@@ -29,6 +30,7 @@ namespace CapaEntidad
             this.intervenciones = intervenciones;
             this.neoplasia = neoplasia;
             this.medicacion = medicacion;
+            this.alergias = alergias;
         }
 
         public int GetIdPaciente() {  return idPaciente; }
@@ -39,6 +41,7 @@ namespace CapaEntidad
         public string GetHepatitis() { return hepatitis; }
         public string GetIntervenciones() {  return intervenciones; }
         public string GetMedicacion() {  return medicacion; }
+        public string GetAlergias() { return alergias; }
         public bool GetNeoplasia() { return neoplasia; }
     }
 }

@@ -289,7 +289,7 @@ namespace CapaDatos
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string SentenciaSelect = "Select no.parto, no.hiperlaxitud, no.tabaco, no.frec_tab, no.alcohol, no.frec_alc, no.act_fisica, no.frec_actF,no.drogas, pat.diabetes, pat.presion_arterial, pat.tiroides, pat.hepatitis, pat.cardiopatias,pat.intervenciones,pat.neoplasia, pat.medicacion from ant_nopat no join ant_pat pat on no.id_paciente = pat.id_paciente where no.id_paciente="+idPaciente;
+            string SentenciaSelect = "Select no.parto, no.hiperlaxitud, no.tabaco, no.frec_tab, no.alcohol, no.frec_alc, no.act_fisica, no.frec_actF,no.drogas, pat.diabetes, pat.presion_arterial, pat.tiroides, pat.hepatitis, pat.cardiopatias,pat.intervenciones,pat.neoplasia, pat.medicacion,pat.alergias, his.num_ficha from ant_nopat no join ant_pat pat on no.id_paciente = pat.id_paciente join historial_clinico his on pat.id_paciente = his.id_paciente where no.id_paciente="+idPaciente;
             DataTable antecendetesNoPat = new DataTable();
             try
             {
@@ -467,7 +467,7 @@ namespace CapaDatos
         public void ActualizarAntecedentesPatologicosPaciente(AntecedentesPatologicos antecedentes)
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            string sentenciaUpdate = "UPDATE ant_pat SET diabetes = \"" + antecedentes.GetDiabetes() + "\", presion_arterial = \"" + antecedentes.GetPresionArterial() + "\", tiroides = \"" + antecedentes.GetTiroides() + "\", hepatitis = \"" + antecedentes.GetHepatitis() + "\",cardiopatias = " + antecedentes.GetCardiopatias() + ",intervenciones = \"" + antecedentes.GetIntervenciones() + "\",neoplasia = " + antecedentes.GetNeoplasia() + ",medicacion =\"" + antecedentes.GetMedicacion() + "\" WHERE id_paciente = " + antecedentes.GetIdPaciente();
+            string sentenciaUpdate = "UPDATE ant_pat SET diabetes = \"" + antecedentes.GetDiabetes() + "\", presion_arterial = \"" + antecedentes.GetPresionArterial() + "\", tiroides = \"" + antecedentes.GetTiroides() + "\", hepatitis = \"" + antecedentes.GetHepatitis() + "\",cardiopatias = " + antecedentes.GetCardiopatias() + ",intervenciones = \"" + antecedentes.GetIntervenciones() + "\",neoplasia = " + antecedentes.GetNeoplasia() + ",medicacion =\"" + antecedentes.GetMedicacion() + "\" WHERE id_paciente = " + antecedentes.GetIdPaciente() + ", alergias = '"+antecedentes.GetAlergias()+"'";
             MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
             try
             {
