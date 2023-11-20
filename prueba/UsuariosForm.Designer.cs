@@ -39,14 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.dgProfesionistas = new System.Windows.Forms.DataGridView();
-            this.textBoxD1 = new prueba.TextBoxD();
-            this.txtBuscar = new prueba.TextBoxD();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PuestoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sucursalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EliminarCol = new System.Windows.Forms.DataGridViewImageColumn();
             this.VerContraseñaCol = new System.Windows.Forms.DataGridViewImageColumn();
+            this.textBoxD1 = new prueba.TextBoxD();
+            this.txtBuscar = new prueba.TextBoxD();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProfesionistas)).BeginInit();
             this.SuspendLayout();
@@ -96,7 +96,7 @@
             this.dgUsuarios.RowHeadersWidth = 51;
             this.dgUsuarios.Size = new System.Drawing.Size(949, 233);
             this.dgUsuarios.TabIndex = 41;
-            this.dgUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgUsuarios_CellMouseClick);
+            this.dgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUsuarios_CellClick);
             // 
             // panel1
             // 
@@ -203,6 +203,49 @@
             this.dgProfesionistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellClick);
             this.dgProfesionistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellContentClick);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // usuarioCol
+            // 
+            this.usuarioCol.HeaderText = "Usuario";
+            this.usuarioCol.MinimumWidth = 6;
+            this.usuarioCol.Name = "usuarioCol";
+            this.usuarioCol.ReadOnly = true;
+            // 
+            // PuestoCol
+            // 
+            this.PuestoCol.HeaderText = "Puesto";
+            this.PuestoCol.MinimumWidth = 6;
+            this.PuestoCol.Name = "PuestoCol";
+            this.PuestoCol.ReadOnly = true;
+            // 
+            // sucursalCol
+            // 
+            this.sucursalCol.HeaderText = "Sucursal";
+            this.sucursalCol.Name = "sucursalCol";
+            this.sucursalCol.ReadOnly = true;
+            // 
+            // EliminarCol
+            // 
+            this.EliminarCol.HeaderText = "Eliminar";
+            this.EliminarCol.Image = global::CapaPresentacion.Properties.Resources.eliminar;
+            this.EliminarCol.MinimumWidth = 6;
+            this.EliminarCol.Name = "EliminarCol";
+            this.EliminarCol.ReadOnly = true;
+            // 
+            // VerContraseñaCol
+            // 
+            this.VerContraseñaCol.HeaderText = "Ver Contraseña";
+            this.VerContraseñaCol.Image = global::CapaPresentacion.Properties.Resources.detalles;
+            this.VerContraseñaCol.MinimumWidth = 6;
+            this.VerContraseñaCol.Name = "VerContraseñaCol";
+            this.VerContraseñaCol.ReadOnly = true;
+            // 
             // textBoxD1
             // 
             this.textBoxD1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -254,49 +297,6 @@
             this.txtBuscar.TabIndex = 42;
             this.txtBuscar.Texts = "";
             this.txtBuscar.UnderlineStyle = false;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // usuarioCol
-            // 
-            this.usuarioCol.HeaderText = "Usuario";
-            this.usuarioCol.MinimumWidth = 6;
-            this.usuarioCol.Name = "usuarioCol";
-            this.usuarioCol.ReadOnly = true;
-            // 
-            // PuestoCol
-            // 
-            this.PuestoCol.HeaderText = "Puesto";
-            this.PuestoCol.MinimumWidth = 6;
-            this.PuestoCol.Name = "PuestoCol";
-            this.PuestoCol.ReadOnly = true;
-            // 
-            // sucursalCol
-            // 
-            this.sucursalCol.HeaderText = "Sucursal";
-            this.sucursalCol.Name = "sucursalCol";
-            this.sucursalCol.ReadOnly = true;
-            // 
-            // EliminarCol
-            // 
-            this.EliminarCol.HeaderText = "Eliminar";
-            this.EliminarCol.Image = global::CapaPresentacion.Properties.Resources.eliminar;
-            this.EliminarCol.MinimumWidth = 6;
-            this.EliminarCol.Name = "EliminarCol";
-            this.EliminarCol.ReadOnly = true;
-            // 
-            // VerContraseñaCol
-            // 
-            this.VerContraseñaCol.HeaderText = "Ver Contraseña";
-            this.VerContraseñaCol.Image = global::CapaPresentacion.Properties.Resources.detalles;
-            this.VerContraseñaCol.MinimumWidth = 6;
-            this.VerContraseñaCol.Name = "VerContraseñaCol";
-            this.VerContraseñaCol.ReadOnly = true;
             // 
             // UsuariosForm
             // 

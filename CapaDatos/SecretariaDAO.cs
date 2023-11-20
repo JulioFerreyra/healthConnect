@@ -618,7 +618,89 @@ namespace CapaDatos
             DatosGlobales.mysqlPassword = password;
         }
 
-        
-        
+        /// <summary>
+        /// Remoto
+        /// </summary>
+        /// <param name="paciente"></param>
+        /// 
+
+        private string userRemoto = DatosGlobales.mysqlUser;
+        private string passwordRemoto = DatosGlobales.mysqlPassword;
+
+        private const string BaseDatosRemota = "healthconnect";
+        private const string HostRemota = "192.168.3.95";
+
+        private string CadenaConexionRemota()
+        {
+            return "user = " + userRemoto + "; password = " + passwordRemoto + "; database =" + BaseDatosRemota + "; server = " + HostRemota + ";";
+        }
+
+        public void CrearNuevoPacienteRemoto(Paciente paciente)
+        {
+
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaInsert = "insert into pacientes(nombre,apell_pat,apell_mat,telefono, direccion, fecha_nac ,sexo) values(\"" + paciente.GetNombre() + "\",\"" + paciente.GetApellidoPaterno() + "\",\"" + paciente.GetApellidoMaterno() + "\",\"" + paciente.GetTelefono() + "\", \"" + paciente.GetDireccion() + "\", \"" + ConvertirFechaCadena(paciente.GetFechaNacimiento()) + "\",\"" + paciente.GetSexo() + "\");";
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlCommand comandoMysql = new MySqlCommand(SentenciaInsert, conexion_a_mysql);
+                comandoMysql.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+        }
+        public void EliminarPacienteRemoto(Paciente paciente)
+        {
+
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaDelete = "delete from pacientes where id_paciente = " + paciente.GetIdPaciente() + ";";
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaDelete, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
+
+        public void ActualizarPacienteRemoto(Paciente paciente)
+        {
+
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaUpdate = "update pacientes set nombre = \"" + paciente.GetNombre() + "\", apell_pat =\"" + paciente.GetApellidoPaterno() + "\", apell_mat =\"" + paciente.GetApellidoMaterno() + "\", telefono = \"" + paciente.GetTelefono() + "\",direccion = \"" + paciente.GetDireccion() + "\", fecha_nac = \"" + ConvertirFechaCadena(paciente.GetFechaNacimiento()) + "\", sexo = \"" + paciente.GetSexo() + "\" where id_paciente =" + paciente.GetIdPaciente() + ";";
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaUpdate, conexion_a_mysql);
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+
+        }
     }
 }

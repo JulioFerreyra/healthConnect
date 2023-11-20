@@ -48,7 +48,7 @@ namespace CapaPresentacion
             RellenarGridProfesionistas("");
         }
 
-        private void dgUsuarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgUsuarios.Columns[e.ColumnIndex].Name == "EliminarCol")
             {
@@ -66,18 +66,19 @@ namespace CapaPresentacion
                 catch (Exception)
                 {
 
-                    
+
                 }
-                
+
             }
             if (dgUsuarios.Columns[e.ColumnIndex].Name == "VerContraseñaCol")
             {
                 try
                 {
-                   
+
                     int FilaSeleccionada = dgUsuarios.Rows.IndexOf(dgUsuarios.Rows[e.RowIndex]);
                     ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
                     comprobarContraseñaForm.ShowDialog();
+
                     VisualizarContraseña(FilaSeleccionada);
                     permitirVisualizar = false;
 
@@ -86,13 +87,11 @@ namespace CapaPresentacion
                 catch (Exception)
                 {
 
-                   
+
                 }
-               
+
             }
-
         }
-
         private void dgProfesionistas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgProfesionistas.Columns[e.ColumnIndex].Name == "EliminarCol")
@@ -160,15 +159,18 @@ namespace CapaPresentacion
        private void VisualizarContraseña(int fila)
         {
             
+           
             LogicaPodologo logica = new LogicaPodologo();
-            if (permitirVisualizar && Convert.ToString(dgProfesionistas.Rows[fila].Cells["Sucursal"].Value) == "El Grullo")
-            {   
+            if (permitirVisualizar && Convert.ToString(dgUsuarios.Rows[fila].Cells["SucursalCol"].Value) == "El Grullo")
+            {
                 MessageBox.Show("Su contraseña es: " + logica.GetContraseñaUsuario(Convert.ToInt16(dgUsuarios.Rows[fila].Cells["ID"].Value)));
                
+
                 return;
             }
-            if (permitirVisualizar && Convert.ToString(dgProfesionistas.Rows[fila].Cells["Sucursal"].Value) == "Ciudad Guzman")
+            if (permitirVisualizar && Convert.ToString(dgUsuarios.Rows[fila].Cells["sucursalCol"].Value) == "Ciudad Guzman")
             {
+
                 MessageBox.Show("Su contraseña es: " + logica.GetContraseñaUsuarioRemoto(Convert.ToInt16(dgUsuarios.Rows[fila].Cells["ID"].Value)));
 
                 return;

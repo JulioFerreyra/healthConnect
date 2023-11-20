@@ -89,6 +89,7 @@ namespace CapaLogica
                 SecretariaDAO secretariaDAO = new SecretariaDAO();
                 secretariaDAO.EliminarCitasPaciente(paciente);
                 secretariaDAO.EliminarPaciente(paciente);
+                EliminarPacienteRemoto(paciente);
             
 
         }
@@ -115,6 +116,7 @@ namespace CapaLogica
             {
                 SecretariaDAO secretariaDAO = new SecretariaDAO();
                 secretariaDAO.CrearNuevoPaciente(paciente);
+                CrearNuevoPacienteRemoto(paciente);
                 return true;
             }
             return false;
@@ -147,6 +149,7 @@ namespace CapaLogica
             {
                 SecretariaDAO SecretariaDAO = new SecretariaDAO();
                 SecretariaDAO.ActualizarPaciente(paciente);
+                ActualizarPacienteRemoto(paciente);
                 return true;
             }
             return false;
@@ -207,6 +210,22 @@ namespace CapaLogica
         /// <param name="usuario"></param>
         /// <returns></returns>
 
-       
+        public void CrearNuevoPacienteRemoto(Paciente paciente)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            secretariaDAO.CrearNuevoPacienteRemoto(paciente);
+        }
+
+        public void EliminarPacienteRemoto(Paciente paciente)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            secretariaDAO.EliminarPacienteRemoto(paciente);
+        }
+
+        public void ActualizarPacienteRemoto(Paciente paciente)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            secretariaDAO.ActualizarPacienteRemoto(paciente);
+        }
     }
 }
