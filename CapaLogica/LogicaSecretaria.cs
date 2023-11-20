@@ -227,5 +227,44 @@ namespace CapaLogica
             SecretariaDAO secretariaDAO = new SecretariaDAO();
             secretariaDAO.ActualizarPacienteRemoto(paciente);
         }
+
+        public bool CrearNuevaCitaRemota(Cita cita)
+        {
+            LogicaCita logicaCita = new LogicaCita();
+            if (logicaCita.ValidarInsertarCamposCita(cita))
+            {
+                SecretariaDAO secretariaDAO = new SecretariaDAO();
+                secretariaDAO.CrearNuevaCitaRemota(cita);
+                return true;
+            }
+            return false;
+        }
+
+        public DataTable GetPodologosRemoto() 
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.GetPodologosRemoto();
+        }
+            public DataTable GetHorasTrabajoRemoto() 
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.GetHorasTrabajoRemoto();
+        }
+            public DataTable GetHorasPodologoRemoto(DateTime fechaCita, int idPodologo)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.GetHorasPodologoRemoto(fechaCita,idPodologo);
+        }
+        public DataTable VerCitasPodologoRemotas(DateTime fechaCita, int idPodologo)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.VerCitasPodologoRemotas(fechaCita, idPodologo);
+        }
+        public DataTable GetTiposDeCitaRemoto()
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.GetTiposDeCitaRemoto();
+        }
+
     }
 }

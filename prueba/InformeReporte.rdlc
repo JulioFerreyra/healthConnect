@@ -51,26 +51,7 @@
         <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DataSet2">
-      <Query>
-        <DataSourceName>dsReporte</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="tipoCita">
-          <DataField>tipoCita</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>dsReporte</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\jaft2\source\repos\healthConnect\prueba\dsReporte.xsd</rd:SchemaPath>
-        <rd:TableName>DataTable2</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
-    </DataSet>
+    
   </DataSets>
   <ReportSections>
     <ReportSection>

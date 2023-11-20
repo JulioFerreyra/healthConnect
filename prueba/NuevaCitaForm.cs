@@ -17,6 +17,8 @@ namespace prueba
 {
     public partial class NuevaCitaForm : Form
     {
+
+        List<int> profesionistasRomotos = new List<int>();
         public NuevaCitaForm()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace prueba
         private bool letram = false;
         private void NuevaCitaForm_Load(object sender, EventArgs e)
         {
+            cmbSucursal.SelectedIndex = 0;
             RellenarComboBoxPodologos();
             RellenarGrid();
             RellenarComboBoxHora();
@@ -56,10 +59,20 @@ namespace prueba
         }
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, cmbxPodologo.SelectedIndex == -1 ? 0 : ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex], tbxSintomas.Texts, cmbxTipoCita.Texts);
-            LimpiarCampos(cita);
-            //RestablecerComboBoxHora();
-            RellenarGrid();
+            
+            if (cmbSucursal.SelectedIndex == 0)
+            {
+                Cita cita = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, cmbxPodologo.SelectedIndex == -1 ? 0 : ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex], tbxSintomas.Texts, cmbxTipoCita.Texts);
+
+                LimpiarCampos(cita);
+                //RestablecerComboBoxHora();
+                RellenarGrid();
+                return;
+            }
+            Cita citaRemota = new Cita(ElementosGlobales.idPacienteGlobal, dtFechaCita.Value, cmbxHora.Texts, cmbxPodologo.SelectedIndex == -1 ? 0 : profesionistasRomotos[cmbxPodologo.SelectedIndex], tbxSintomas.Texts, cmbxTipoCita.Texts);
+
+            InsertarCitaRemota(citaRemota);
+            RellenarGridRemoto();
 
 
         }
@@ -76,10 +89,20 @@ namespace prueba
         /// 
         private void dtFechaCita_ValueChanged(object sender, EventArgs e)
         {
-            RellenarGrid();
-            RellenarComboBoxHora();
-            DeshabilitarHora();
-            RestablecerComboBoxHora();
+            if (cmbSucursal.SelectedIndex == 0)
+            {
+                RellenarGrid();
+                RellenarComboBoxHora();
+                DeshabilitarHora();
+                RestablecerComboBoxHora();
+            }
+            if (cmbSucursal.SelectedIndex == 1)
+            {
+                RellenarGridRemoto();
+                RellenarComboBoxHoraRemota();
+                DeshabilitarHoraRemota();
+                RestablecerComboBoxHora();
+            }
         }
 
 
@@ -89,13 +112,23 @@ namespace prueba
         /// 
         private void cmbxPodologo_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-           
-            RellenarGrid();
-            RellenarComboBoxHora();
-            DeshabilitarHora();
-            RestablecerComboBoxHora();
-            cmbxHora.Enabled = true;
-        }
+            if (cmbSucursal.SelectedIndex == 0)
+            {
+                RellenarGrid();
+                RellenarComboBoxHora();
+                DeshabilitarHora();
+                RestablecerComboBoxHora();
+                cmbxHora.Enabled = true;
+            }
+            if (cmbSucursal.SelectedIndex == 1)
+            {
+                RellenarGridRemoto();
+                RellenarComboBoxHoraRemota();
+                DeshabilitarHoraRemota();
+                RestablecerComboBoxHora();
+                cmbxHora.Enabled = true;
+            }
+            }
 
 
         ///<summary>
@@ -135,6 +168,7 @@ namespace prueba
 
         private void RellenarComboBoxPodologos()
         {
+            cmbxPodologo.Items.Clear();
             LogicaSecretaria secretaria = new LogicaSecretaria();
             foreach (DataRow registro in secretaria.GetPodologos().Rows)
             {
@@ -176,11 +210,105 @@ namespace prueba
         }
         private void RellenarTiposCita()
         {
+            cmbxTipoCita.Items.Clear();
             LogicaSecretaria logicaSecretsaria = new LogicaSecretaria();
             foreach (DataRow fila in logicaSecretsaria.GetTiposDeCita().Rows)
             {
                 cmbxTipoCita.Items.Add(Convert.ToString(fila[0]));
             }
         }
+
+        private void cmbSucursal_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSucursal.SelectedIndex == 0)
+            {
+                RellenarGrid();
+                RellenarComboBoxPodologos();
+                RellenarComboBoxHora();
+                RellenarTiposCita();
+            }
+            if (cmbSucursal.SelectedIndex ==1)
+            {
+                RellenarGridRemoto();
+                RellenarComboBoxPodologosRemoto();
+                RellenarComboBoxHoraRemota();
+                RellenarTiposCitaRemoto();
+            }
+        }
+
+        /// <summary>
+        /// Remoto
+        /// </summary>
+        private void RellenarComboBoxPodologosRemoto()
+        {
+            cmbxPodologo.Items.Clear();
+            LogicaSecretaria secretaria = new LogicaSecretaria();
+            foreach (DataRow registro in secretaria.GetPodologosRemoto().Rows)
+            {
+                cmbxPodologo.Items.Add(registro[1].ToString());
+                profesionistasRomotos.Add(Convert.ToInt32(registro[0]));
+            }
+        }
+
+        private void RellenarComboBoxHoraRemota()
+        {
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            cmbxHora.Items.Clear();
+            foreach (DataRow hora in logicaSecretaria.GetHorasTrabajoRemoto().Rows)
+            {
+                cmbxHora.Items.Add(hora[0]);
+            }
+        }
+        private void DeshabilitarHoraRemota()
+        {
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            foreach (DataRow hora in logicaSecretaria.GetHorasPodologoRemoto(dtFechaCita.Value, cmbxPodologo.SelectedIndex == -1 ? 0 : profesionistasRomotos[cmbxPodologo.SelectedIndex]).Rows)
+            {
+                int index = cmbxHora.Items.IndexOf(hora[0].ToString());
+                cmbxHora.Items.RemoveAt(index);
+            }
+        }
+
+        private void RellenarTiposCitaRemoto()
+        {
+            cmbxTipoCita.Items.Clear();
+            LogicaSecretaria logicaSecretsaria = new LogicaSecretaria();
+            foreach (DataRow fila in logicaSecretsaria.GetTiposDeCitaRemoto().Rows)
+            {
+                cmbxTipoCita.Items.Add(Convert.ToString(fila[0]));
+            }
+        }
+
+        private void RellenarGridRemoto()
+        {
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            if (cmbxPodologo.SelectedIndex < 0)
+            {
+                dgPodologos.DataSource = logicaSecretaria.VerCitasPodologoRemotas(dtFechaCita.Value, 0);
+                return;
+            }
+            dgPodologos.DataSource = logicaSecretaria.VerCitasPodologoRemotas(dtFechaCita.Value, ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+        }
+
+        private void InsertarCitaRemota(Cita cita)
+        {
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+
+            if (logicaSecretaria.CrearNuevaCitaRemota(cita))
+            {
+                ElementosGlobales.idPacienteGlobal = 0;
+                tbxApellMat.Texts = string.Empty;
+                tbxApellPat.Texts = string.Empty;
+                tbxNombre.Texts = string.Empty;
+                tbxTelefono.Texts = string.Empty;
+                tbxSintomas.Texts = string.Empty;
+                RestablecerComboBoxHora();
+                cmbxHora.Enabled = false;
+                cmbxPodologo.Texts = "Podólogo";
+                cmbxTipoCita.Texts = "Tipo de cita";
+            }
+
+        }
+
     }
 }

@@ -702,5 +702,166 @@ namespace CapaDatos
             }
 
         }
+
+        public void CrearNuevaCitaRemota(Cita cita)
+        {
+
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaInsert = "insert into confirmarCitas(id_paciente,fecha_cita,hora,id_profesionista,motivo_cita,tipo_cita) values(" + cita.GetIdPaciente() + ",\"" + ConvertirFechaCadena(cita.GetFechaCita()) + "\",\"" + cita.GetHoraCita() + "\"," + cita.GetIdPodologo()+",\""+cita.GetDetallesCita()+"\",\""+cita.GetTipoCita()+"\");";
+            MySqlCommand comandoMysql = new MySqlCommand(SentenciaInsert, conexion_a_mysql);
+
+            try
+            {
+                conexion_a_mysql.Open();
+                comandoMysql.ExecuteNonQuery();
+                MessageBox.Show("La cita se ha registrado correctamente. \n La sucursal debe aprobar el registro de la cita. Ponganse en contacto en ella para más información.", "Registro exitoso");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+
+        }
+
+        public DataTable GetPodologosRemoto()
+        {
+
+            DataTable dt = new DataTable();
+            string sentenciaSelect = "select id_profesionista, concat(nombre,' ',apell_pat, ' ', apell_mat) from profesionistas where estado = true";
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sentenciaSelect, conexion_a_mysql);
+                adaptador.Fill(dt);
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return dt;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+
+
+        }
+
+        public DataTable GetHorasTrabajoRemoto()
+        {
+
+            DataTable DatosHoras = new DataTable();
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select horas from horas;";
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(SentenciaSelect, conexion_a_mysql);
+                adaptador.Fill(DatosHoras);
+                return DatosHoras;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return DatosHoras;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+
+        }
+
+        public DataTable GetHorasPodologoRemoto(DateTime fechaCita, int idPodologo)
+        {
+            DataTable DatosHoras = new DataTable();
+
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaSelect = "select hora from citas where fecha_cita = \"" + ConvertirFechaCadena(fechaCita) + "\" and id_profesionista = " + idPodologo + " and estado_cita = \"pendiente\" order by hora;";
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                adaptador.Fill(DatosHoras);
+                return DatosHoras;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return DatosHoras;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+        public DataTable GetTiposDeCitaRemoto()
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaSelect = "select tipo_cita from tiposCita;";
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+
+
+        }
+        public DataTable VerCitasPodologoRemotas(DateTime fechaCita, int idPodologo)
+        {
+
+            UsuarioDAO ObjUsarioDAO = new UsuarioDAO();
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexionRemota());
+            DataTable ConsultasPodologo = new DataTable();
+
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("select  c.id_cita as \"ID\", concat(pc.nombre,\" \",pc.apell_pat,\" \",pc.apell_mat) as \"Paciente\",c.fecha_cita as \"Fecha\",c.hora as \"Hora\",c.tipo_cita as \"Tipo de Cita\",pc.telefono as \"Telefono\" from citas as c ");
+            stringBuilder.Append("join pacientes as pc on c.id_paciente=pc.id_paciente ");
+            stringBuilder.Append("join profesionistas as pod on pod.id_profesionista = c.id_profesionista ");
+            //stringBuilder.Append("join sucursal as s on s.id_sucursal = c.id_sucursal ");
+            stringBuilder.Append("where pod.id_profesionista =" + idPodologo + " and c.fecha_cita =\"" + ConvertirFechaCadena(fechaCita) + "\" and c.estado_cita = \"pendiente\";");
+
+            string ConsultaSelect = stringBuilder.ToString();
+
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(ConsultaSelect, conexion_a_mysql);
+                dataAdapter.Fill(ConsultasPodologo);
+                return ConsultasPodologo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return ConsultasPodologo;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+        }
     }
 }
