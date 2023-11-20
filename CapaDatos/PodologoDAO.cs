@@ -754,5 +754,126 @@ namespace CapaDatos
 
         }
 
+        /// <summary>
+        /// Remoto
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+        private const string remoteUser = "Admin";
+        private const string remoteDataBase = "healthconnect";
+        private const string remotePassword = "Admin";
+        private const string remoteServer = "192.168.3.95";
+        private string CadenaConexionRemota()
+        {
+            return "Server=" + remoteServer + ";Database=" + remoteDataBase + ";user=" + remoteUser + ";password=" + remotePassword + ";";
+
+        }
+        public DataTable VerUsuariosRemoto(string usuario)
+        {
+            DataTable datos = new DataTable();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            string SentenciaSelect = "select id_usuario,usuario, contraseña, isAdmin from usuario where usuario like \"%" + usuario + "%\" and usuario <> 'Admin'";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(datos);
+
+                return datos;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datos;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+
+
+        //Profesionistas
+        public DataTable VerProfesionistasRemoto(string profesionistaLike)
+        {
+
+            DataTable datos = new DataTable();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            string SentenciaSelect = "select id_profesionista as ID, concat(nombre, ' ', apell_pat, ' ' , apell_mat) as Profesionista, telefono as Teléfono, 'Ciudad Guzman' as Sucursal from profesionistas where (nombre like '%" + profesionistaLike + "%' or apell_pat like '%" + profesionistaLike + "%') and estado = true";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(datos);
+
+                return datos;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datos;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
+        public string GetContraseñaUsuarioRemoto(int idUsuario)
+        {
+
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaSelect = "select contraseña from usuario where id_usuario = " + idUsuario;
+            string contraseña;
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaSelect, conexion_a_MySQL);
+                contraseña = Convert.ToString(comando.ExecuteScalar());
+                return contraseña;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return null;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+            public void CrearProfesionistaRemoto(Profesionista profesionista)
+        {
+            string consultaInsert = "insert into profesionistas(nombre,apell_mat, apell_pat, telefono,estado) values(\"" + profesionista.GetNombre() + "\",\"" + profesionista.GetApellidoPaterno() + "\",\"" + profesionista.GetApellidoMaterno() + "\",\"" + profesionista.GetTelefono() + "\",true)";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre(), " ", profesionista.GetApellidoPaterno(), " ", profesionista.GetApellidoMaterno()) + " registrado correctamente", "Registro Exitoso", MessageBoxButtons.OK);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+
+
+
     }
 }

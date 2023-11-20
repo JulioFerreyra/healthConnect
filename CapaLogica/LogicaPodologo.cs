@@ -350,5 +350,40 @@ namespace CapaLogica
             PodologoDAO podologodao = new PodologoDAO();
             return podologodao.ReporteFechas( fechaInicio, fechaFin);
         }
-     }
+
+
+        /// <summary>
+        /// Remoto
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+        public DataTable VerUsuariosRemoto(string usuario)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.VerUsuariosRemoto(usuario);
+        }
+
+        //Profesionista
+        public DataTable VerProfesionistasRemoto(string profesionistaLike)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            return podologodao.VerProfesionistasRemoto(profesionistaLike);
+        }
+        public void CrearProfesionistaRemoto(Profesionista profesionista)
+        {
+            if (ValidarCamposCrearProfesionistaVacios(profesionista))
+            {
+                PodologoDAO podologodao = new PodologoDAO();
+                podologodao.CrearProfesionistaRemoto(profesionista);
+            }
+
+
+        }
+
+        public string GetContraseñaUsuarioRemoto(int idUsuario)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+           return podologodao.GetContraseñaUsuarioRemoto(idUsuario);
+        }
+    }
 }

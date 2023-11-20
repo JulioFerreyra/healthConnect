@@ -22,8 +22,10 @@ namespace CapaPresentacion
         private void UsuariosForm_Load(object sender, EventArgs e)
         {
             RellenarGridProfesionistas("");
-            RellenarGridUsuarios("");
+            
+            RellenarDataGridUsuarios();
             AgregarColumnasDataGrid();
+            
         }
 
 
@@ -104,7 +106,7 @@ namespace CapaPresentacion
                     comprobarContraseñaForm.ShowDialog();
                     EliminarProfesionista(Convert.ToInt16(dgProfesionistas.Rows[FilaSeleccionada].Cells["ID"].Value));
                     RellenarGridProfesionistas("");
-                    permitirVisualizar = false;
+                    
                 }
                 catch (Exception)
                 {
@@ -144,24 +146,34 @@ namespace CapaPresentacion
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             foreach (DataRow dataRow in logicaPodologo.VerUsuarios(usuario).Rows)
             {
-                dgUsuarios.Rows.Insert(0, Convert.ToString(dataRow[0]), Convert.ToString(dataRow[1]), Convert.ToBoolean(dataRow[3]) ? "Adminstrador" : "Secretaria");
+                dgUsuarios.Rows.Insert(0, Convert.ToString(dataRow[0]), Convert.ToString(dataRow[1]), Convert.ToBoolean(dataRow[3]) ? "Adminstrador" : "Secretaria", "El Grullo");
             }
         }
         private void RellenarGridProfesionistas(string profesionista)
         {
             LogicaPodologo logicaPodologo = new LogicaPodologo();
-            dgProfesionistas.DataSource = logicaPodologo.VerProfesionistas(profesionista);
+            DataTable profesionistas = logicaPodologo.VerProfesionistas(profesionista);
+            profesionistas.Merge(logicaPodologo.VerProfesionistasRemoto(profesionista));
+            dgProfesionistas.DataSource = profesionistas;
         }
 
        private void VisualizarContraseña(int fila)
         {
+            
             LogicaPodologo logica = new LogicaPodologo();
-            if (permitirVisualizar)
-            {
+            if (permitirVisualizar && Convert.ToString(dgProfesionistas.Rows[fila].Cells["Sucursal"].Value) == "El Grullo")
+            {   
                 MessageBox.Show("Su contraseña es: " + logica.GetContraseñaUsuario(Convert.ToInt16(dgUsuarios.Rows[fila].Cells["ID"].Value)));
-                permitirVisualizar = false;
+               
                 return;
             }
+            if (permitirVisualizar && Convert.ToString(dgProfesionistas.Rows[fila].Cells["Sucursal"].Value) == "Ciudad Guzman")
+            {
+                MessageBox.Show("Su contraseña es: " + logica.GetContraseñaUsuarioRemoto(Convert.ToInt16(dgUsuarios.Rows[fila].Cells["ID"].Value)));
+
+                return;
+            }
+
             MessageBox.Show("Contraseña de administrador incorrecta");
         }
         private void EliminarUsuario(int idUsuario, string usuario)
@@ -199,6 +211,29 @@ namespace CapaPresentacion
             dgProfesionistas.Columns.Add(eliminarCol);
         }
 
+        /// <summary>
+        /// Remoto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        
+        private void RellenarGridUsuariosRemoto(string usuario)
+        {
+           
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            foreach (DataRow dataRow in logicaPodologo.VerUsuariosRemoto(usuario).Rows)
+            {
+                dgUsuarios.Rows.Insert(dgUsuarios.Rows.Count, Convert.ToString(dataRow[0]), Convert.ToString(dataRow[1]), Convert.ToBoolean(dataRow[3]) ? "Adminstrador" : "Secretaria","Ciudad Guzman");
+            }
+        }
+
+        private void RellenarDataGridUsuarios()
+        {
+            dgUsuarios.Rows.Clear();
+            RellenarGridUsuarios("");
+            RellenarGridUsuariosRemoto("");
+        }
         private void dgProfesionistas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

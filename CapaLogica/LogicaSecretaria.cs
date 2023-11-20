@@ -198,5 +198,15 @@ namespace CapaLogica
             SecretariaDAO secretariaDAO = new SecretariaDAO();
             return secretariaDAO.ReportesCitas();
         }
+
+
+
+        /// <summary>
+        /// Remoto
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+
+       
     }
 }
