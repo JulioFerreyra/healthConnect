@@ -81,12 +81,12 @@ namespace prueba
                     int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
                     ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
                     //ElementosGlobales.PodologoGlobal = 2;
-                    //EditarCitaForm editarcita = new EditarCitaForm();
-                    //editarcita.ShowDialog();
+                    EditarCitaForm editarcita = new EditarCitaForm();
+                    editarcita.ShowDialog();
 
-                    FormPanelSecretaria.AbrirFormulario<EditarCitaForm>();
-                    Close();
-                    //RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+                    //FormPanelSecretaria.AbrirFormulario<EditarCitaForm>();
+                    //Close();
+                    RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
 
                 }
                 if (dgXochitl.Columns[e.ColumnIndex].Name == "FinalizarCol")

@@ -362,7 +362,9 @@ namespace CapaDatos
             }
         }
 
-        public DataTable VerLogs()
+       
+
+            public DataTable VerLogs()
         {
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
             string SentenciaSelect = "select usuario Usuario, accion 'Accion Realizada', fecha Fecha from logs;";
@@ -558,8 +560,7 @@ namespace CapaDatos
                 conexion_a_SQL.Close();
             }
         }
-
-        public void EliminarProfesionista(int idProfesionista)
+       public void EliminarProfesionista(int idProfesionista)
         {
             string sentenciaDelete = "update profesionistas set estado = 0 where id_profesionista = " + idProfesionista;
             MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexion());
@@ -581,7 +582,6 @@ namespace CapaDatos
             }
         
     }
-
        public void EliminarTiposCita()
         {
             string sentenciaDelete = "delete from tiposCita";
@@ -603,7 +603,7 @@ namespace CapaDatos
             }
 
         }
-        public void EliminarHoras()
+       public void EliminarHoras()
         {
             string sentenciaDelete = "delete from Horas";
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
@@ -684,7 +684,7 @@ namespace CapaDatos
                 conexion_a_MySQL.Close();
             }
         }
-            public DataTable ReportesCitasTipoCita(int idPodologo, string tipoCita)
+        public DataTable ReportesCitasTipoCita(int idPodologo, string tipoCita)
         {
             DataTable datosReporte = new DataTable();
 
@@ -763,7 +763,7 @@ namespace CapaDatos
         private const string remoteUser = "Admin";
         private const string remoteDataBase = "healthconnect";
         private const string remotePassword = "Admin";
-        private const string remoteServer = "192.168.3.95";
+        private string remoteServer = DatosGlobales.serverRemoto;
         private string CadenaConexionRemota()
         {
             return "Server=" + remoteServer + ";Database=" + remoteDataBase + ";user=" + remoteUser + ";password=" + remotePassword + ";";

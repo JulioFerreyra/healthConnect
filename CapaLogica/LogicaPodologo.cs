@@ -380,10 +380,14 @@ namespace CapaLogica
 
         }
 
+
         public string GetContraseñaUsuarioRemoto(int idUsuario)
         {
             PodologoDAO podologodao = new PodologoDAO();
            return podologodao.GetContraseñaUsuarioRemoto(idUsuario);
         }
+
     }
+
+   
 }

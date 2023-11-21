@@ -220,6 +220,32 @@ namespace CapaDatos
                 conexion_a_MySQL.Close();
             }
         }
+
+        public DataTable VerCitasPorConfirmacion()
+        {
+            DataTable citas = new DataTable();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "Select c.id_paciente idPaciente, Concat(pac.nombre, ' ', pac.apell_pat, ' ', pac.apell_mat) Paciente,Concat(p.nombre, ' ', p.apell_pat, ' ', p.apell_mat) Profesionista, p.id_profesionista idProfesionista, c.motivo_cita as 'Motivo Cita', c.fecha_cita Fecha, c.hora Hora, c.tipo_cita as \"Tipo Cita\" from confirmarcitas c join pacientes pac on pac.id_paciente = c.id_paciente join profesionistas p on p.id_profesionista = c.id_profesionista;";
+
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(SentenciaSelect, conexion_a_mysql);
+                adaptador.Fill(citas);
+                return citas;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return citas;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+        }
+
         public DataTable GetHorasTrabajo()
         {
             
@@ -628,7 +654,7 @@ namespace CapaDatos
         private string passwordRemoto = DatosGlobales.mysqlPassword;
 
         private const string BaseDatosRemota = "healthconnect";
-        private const string HostRemota = "192.168.3.95";
+        private string HostRemota = DatosGlobales.serverRemoto;
 
         private string CadenaConexionRemota()
         {

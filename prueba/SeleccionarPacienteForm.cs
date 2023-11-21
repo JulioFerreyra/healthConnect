@@ -113,7 +113,7 @@ namespace prueba
         /// Métodos
         /// </summary>
         /// <param name="NombrePaciente"></param>
-        public static void RellenarGrid(string NombrePaciente)
+        public  void RellenarGrid(string NombrePaciente)
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             dgPacientes.DataSource = logicaSecretaria.VerPacientes(NombrePaciente);

@@ -68,7 +68,7 @@ namespace CapaPresentacion
             
             if (logicaSecretaria.EditarCita(cita))
             {
-                FormPanelSecretaria.AbrirFormulario<SecretariaPrincipalForm>();
+                //FormPanelSecretaria.AbrirFormulario<SecretariaPrincipalForm>();
                 Close();
             }
            

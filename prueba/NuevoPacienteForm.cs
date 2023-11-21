@@ -56,7 +56,7 @@ namespace prueba
                 dtpFechaNac.Value = DateTime.Now;
                 cmbxSexo.SelectedIndex = -1;
                 cmbxSexo.Texts = "Sexo";
-                SeleccionarPacienteForm.RellenarGrid("");
+                //SeleccionarPacienteForm.RellenarGrid("");
             }
             return;
            

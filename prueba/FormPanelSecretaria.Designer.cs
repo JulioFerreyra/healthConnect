@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            //this.Panelformularios = new System.Windows.Forms.Panel();
-            Panelformularios = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReporte = new CustomControls.RJControls.RJButton();
             this.btnNuevaCita = new CustomControls.RJControls.RJButton();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton4 = new CustomControls.RJControls.RJButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Panelformularios = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,36 +57,15 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel3
+            // pictureBox1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(311, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(844, 53);
-            this.panel3.TabIndex = 8;
-            // 
-            // Panelformularios
-            // 
-            //this.Panelformularios.AutoSize = true;
-            //this.Panelformularios.BackColor = System.Drawing.Color.White;
-            //this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            //this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            //this.Panelformularios.Location = new System.Drawing.Point(311, 53);
-            //this.Panelformularios.Name = "Panelformularios";
-            //this.Panelformularios.Size = new System.Drawing.Size(844, 764);
-            //this.Panelformularios.TabIndex = 1;
-            //this.Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
-
-                 Panelformularios.AutoSize = true;
-            Panelformularios.BackColor = System.Drawing.Color.White;
-            Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            Panelformularios.Location = new System.Drawing.Point(311, 53);
-            Panelformularios.Name = "Panelformularios";
-            Panelformularios.Size = new System.Drawing.Size(844, 764);
-            Panelformularios.TabIndex = 1;
-            Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.WhatsApp_Image_2023_10_24_at_9_19_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 147);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // btnReporte
             // 
@@ -104,7 +82,7 @@
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(26, 595);
+            this.btnReporte.Location = new System.Drawing.Point(26, 585);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(255, 77);
             this.btnReporte.TabIndex = 10;
@@ -209,22 +187,33 @@
             this.rjButton4.UseVisualStyleBackColor = false;
             this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.WhatsApp_Image_2023_10_24_at_9_19_07_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 147);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(311, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(844, 53);
+            this.panel3.TabIndex = 8;
+            // 
+            // Panelformularios
+            // 
+            this.Panelformularios.AutoSize = true;
+            this.Panelformularios.BackColor = System.Drawing.Color.White;
+            this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panelformularios.Location = new System.Drawing.Point(311, 53);
+            this.Panelformularios.Name = "Panelformularios";
+            this.Panelformularios.Size = new System.Drawing.Size(844, 764);
+            this.Panelformularios.TabIndex = 1;
+            this.Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
             // 
             // FormPanelSecretaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 817);
-            this.Controls.Add(Panelformularios);
+            this.Controls.Add(this.Panelformularios);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -246,10 +235,9 @@
         private CustomControls.RJControls.RJButton rjButton2;
         private System.Windows.Forms.Panel panel3;
         private CustomControls.RJControls.RJButton rjButton3;
-        //private System.Windows.Forms.Panel Panelformularios;
-        public static System.Windows.Forms.Panel Panelformularios;
         private CustomControls.RJControls.RJButton btnNuevaCita;
         private CustomControls.RJControls.RJButton btnReporte;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Panel Panelformularios;
     }
 }

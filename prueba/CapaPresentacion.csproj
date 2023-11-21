@@ -84,6 +84,12 @@
     <Compile Include="ConfiguracionForm.Designer.cs">
       <DependentUpon>ConfiguracionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmarCitasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmarCitasForm.Designer.cs">
+      <DependentUpon>ConfirmarCitasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="dsReporte.cs">
       <DependentUpon>dsReporte.xsd</DependentUpon>
     </Compile>
@@ -281,6 +287,9 @@
     </Compile>
     <EmbeddedResource Include="ConfiguracionForm.resx">
       <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmarCitasForm.resx">
+      <DependentUpon>ConfirmarCitasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformeReporte.rdlc" />
     <EmbeddedResource Include="NuevoProfesionistaForm.resx">

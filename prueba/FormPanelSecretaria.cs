@@ -84,7 +84,7 @@ namespace CapaPresentacion
 
         }
       
-        public static void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        public void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
             formulario = Panelformularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
@@ -222,8 +222,29 @@ namespace CapaPresentacion
             //SeleccionReporteForm seleccionReporteForm = new SeleccionReporteForm();
             //ElementosGlobales.UsuarioCondicion = true;
             //seleccionReporteForm.ShowDialog();
-            ReportesForm reportes = new ReportesForm();
-            reportes.ShowDialog();
+            AbrirFormulario<ConfirmarCitasForm>();
+            try
+            {
+                Form formularioCerrar = Application.OpenForms["SecretariaPrincipalForm"];
+                formularioCerrar.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form formularioCerrar = Application.OpenForms["SeleccionarPacienteForm"];
+                formularioCerrar.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+
+
+            //ReportesForm reportes = new ReportesForm();
+            //reportes.ShowDialog();
         }
 
         private void Panelformularios_Paint(object sender, PaintEventArgs e)

@@ -48,6 +48,12 @@ namespace CapaLogica
             SecretariaDAO secretaria = new SecretariaDAO();
             return secretaria.GetHorasTrabajo();
         }
+
+        public DataTable VerCitasPorConfirmacion()
+        {
+            SecretariaDAO secretaria = new SecretariaDAO();
+            return secretaria.VerCitasPorConfirmacion();
+        }
         public DataTable GetDetellesCita(Cita cita)
         {
             SecretariaDAO secretariaDAO = new SecretariaDAO();
