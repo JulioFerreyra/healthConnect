@@ -31,6 +31,7 @@ namespace CapaPresentacion
         /// </summary>
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            ActivateButton(btnPrincipal, RGBColors.colorBoton);
             BotonInicial();
             AbrirFormulario<PodologoPrincipalForm>();
         }
@@ -118,24 +119,24 @@ namespace CapaPresentacion
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
+        //private void rjButton1_Click(object sender, EventArgs e)
+        //{
             
-        }
+        //}
 
-        private void rjButton4_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<SeleccionarPacienteForm>();
-        }
+        //private void rjButton4_Click(object sender, EventArgs e)
+        //{
+        //    AbrirFormulario<SeleccionarPacienteForm>();
+        //}
 
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<PodologoPrincipalForm>();
-        }
-        private void rjButton3_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        //private void rjButton2_Click(object sender, EventArgs e)
+        //{
+        //    AbrirFormulario<PodologoPrincipalForm>();
+        //}
+        //private void rjButton3_Click(object sender, EventArgs e)
+        //{
+        //    Close();
+        //}
 
 
         private void btnReporte_Click(object sender, EventArgs e)
