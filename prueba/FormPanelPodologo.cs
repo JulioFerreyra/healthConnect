@@ -170,7 +170,7 @@ namespace CapaPresentacion
         private void BotonInicial()
         {
             iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = RGBColors.ColorIzquierda;
+            iconCurrentChildForm.IconColor = RGBColors.colorBoton;
             lblTitulo.Text = "Patalla Principal";
         }
 
@@ -180,6 +180,32 @@ namespace CapaPresentacion
             lblTitulo.Text = "Seleccionar paciente";
             AbrirFormulario<SeleccionarPacienteForm>();
 
+        }
+
+        private void btnInicioUsuario_MouseUp(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void btnInicioUsuario_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnInicioUsuario_Click(object sender, EventArgs e)
+        {
+            if (pnlMenu.Visible == true)
+            {
+                pnlMenu.Visible = false;
+                btnAyuda.Visible = false;
+                btnCerrarSesion.Visible = false;
+            }
+            else
+            {
+                pnlMenu.Visible = true;
+                btnAyuda.Visible = true;
+                btnCerrarSesion.Visible = true;
+            }
         }
     }
 }
