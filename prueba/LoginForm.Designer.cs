@@ -194,6 +194,7 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.rjButton1;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(401, 520);

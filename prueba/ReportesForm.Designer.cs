@@ -58,7 +58,7 @@
             this.pnlOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlOpciones.Location = new System.Drawing.Point(0, 0);
             this.pnlOpciones.Name = "pnlOpciones";
-            this.pnlOpciones.Size = new System.Drawing.Size(1449, 100);
+            this.pnlOpciones.Size = new System.Drawing.Size(1491, 100);
             this.pnlOpciones.TabIndex = 1;
             this.pnlOpciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOpciones_Paint);
             // 
@@ -85,7 +85,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(1388, 31);
+            this.btnBuscar.Location = new System.Drawing.Point(1428, 31);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(40, 35);
             this.btnBuscar.TabIndex = 4;
@@ -170,7 +170,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1449, 620);
+            this.panel1.Size = new System.Drawing.Size(1491, 809);
             this.panel1.TabIndex = 2;
             // 
             // rvReportes
@@ -181,7 +181,7 @@
             this.rvReportes.Location = new System.Drawing.Point(0, 0);
             this.rvReportes.Name = "rvReportes";
             this.rvReportes.ServerReport.BearerToken = null;
-            this.rvReportes.Size = new System.Drawing.Size(1449, 620);
+            this.rvReportes.Size = new System.Drawing.Size(1491, 809);
             this.rvReportes.TabIndex = 1;
             // 
             // DataTable1BindingSource
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1449, 720);
+            this.ClientSize = new System.Drawing.Size(1491, 909);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlOpciones);
             this.Name = "ReportesForm";

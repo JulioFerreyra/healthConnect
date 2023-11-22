@@ -10,17 +10,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
+using Color = System.Drawing.Color;
 
 namespace CapaPresentacion
 {
     public partial class FormPanelPodologo : Form
     {
-       
         public FormPanelPodologo()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 70);
+            leftBorderBtn.Size = new Size(10, 80);
             panel1.Controls.Add(leftBorderBtn);
         }
 
@@ -30,70 +31,63 @@ namespace CapaPresentacion
         /// </summary>
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            BotonInicial();
             AbrirFormulario<PodologoPrincipalForm>();
         }
-        private IconButton currentbtn;
+        private IconButton currentBtn;
         private Panel leftBorderBtn;
+
+        private struct RGBColors
+        {
+            public static Color colorBoton = Color.FromArgb(146, 171, 255);
+            public static Color Blanco = Color.White;
+            public static Color ColorIzquierda = Color.FromArgb(230, 210, 240);
+            
+        }
+        //Methods
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if (senderBtn != null)
+            {
+                DisableButton();
+                //Button
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.FromArgb(255,255,255);
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //Left border button
+                leftBorderBtn.BackColor = color;
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+                //Current Child Form Icon
+                iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                iconCurrentChildForm.IconColor = color;
+            }
+        }
+        private void DisableButton()
+        {
+            if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(146, 171, 255);
+                currentBtn.ForeColor = Color.White;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.IconColor = Color.White;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            }
+        }
+
+
 
 
         /// <summary>
         /// Paneles de carga
         /// </summary>
-        //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
-        private int tolerance = 12;
-        private const int WM_NCHITTEST = 132;
-        private const int HTBOTTOMRIGHT = 17;
-        private Rectangle sizeGripRectangle;
 
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case WM_NCHITTEST:
-                    base.WndProc(ref m);
-                    var hitPoint = this.PointToClient(new Point(m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16));
-                    if (sizeGripRectangle.Contains(hitPoint))
-                        m.Result = new IntPtr(HTBOTTOMRIGHT);
-                    break;
-                default:
-                    base.WndProc(ref m);
-                    break;
-            }
-        }
-        //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
-
-        //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(244, 244, 244));
-            e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
-
-            base.OnPaint(e);
-            ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
-        }
-        private struct RGBColors
-        {
-            public static Color panelcolor = Color.FromArgb(59, 59, 59);//PANEL
-            public static Color cerrarcolor = Color.FromArgb(186, 0, 0);//ROJO
-            public static Color botonverdecolor = Color.FromArgb(99, 184, 63);//VERDE
-            public static Color fondocolor = Color.FromArgb(31, 31, 31); //FONDO
-
-        }
- 
-        //estructura para almacenar colores rgb
-
-        private void DisableButton()
-        {
-            if (currentbtn != null)
-            {
-                currentbtn.BackColor = Color.FromArgb(59, 59, 59);
-                currentbtn.ForeColor = Color.White;
-                currentbtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentbtn.IconColor = Color.White;
-                currentbtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentbtn.ImageAlign = ContentAlignment.MiddleLeft;
-            }
-        }
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -146,20 +140,46 @@ namespace CapaPresentacion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            ElementosGlobales.PodologoGlobal = ElementosGlobales.idUsuarioGlobal;
-            ElementosGlobales.UsuarioCondicion = false;
-            SeleccionReporteForm seleccionReporteForm = new SeleccionReporteForm();
-            seleccionReporteForm.ShowDialog();
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Reportes";
+            AbrirFormulario<ReportesForm>();
+           //ReportesForm reportes = new ReportesForm();
+           // reportes .Show();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Usuarios";
             AbrirFormulario<UsuariosForm>();
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Configuración";
             AbrirFormulario<ConfiguracionForm>();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Patalla Principal";
+            AbrirFormulario<PodologoPrincipalForm>();
+        }
+        private void BotonInicial()
+        {
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = RGBColors.ColorIzquierda;
+            lblTitulo.Text = "Patalla Principal";
+        }
+
+        private void btnPacientes_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Seleccionar paciente";
+            AbrirFormulario<SeleccionarPacienteForm>();
+
         }
     }
 }

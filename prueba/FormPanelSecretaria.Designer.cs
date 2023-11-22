@@ -52,17 +52,19 @@
             this.panel1.Controls.Add(this.rjButton4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 817);
+            this.panel1.Size = new System.Drawing.Size(415, 1055);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.WhatsApp_Image_2023_10_24_at_9_19_07_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 39);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 147);
+            this.pictureBox1.Size = new System.Drawing.Size(340, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -82,11 +84,12 @@
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(26, 585);
+            this.btnReporte.Location = new System.Drawing.Point(35, 720);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(255, 77);
+            this.btnReporte.Size = new System.Drawing.Size(340, 95);
             this.btnReporte.TabIndex = 10;
-            this.btnReporte.Text = "Generar reporte";
+            this.btnReporte.Text = "Citas por Confirmar";
             this.btnReporte.TextColor = System.Drawing.Color.White;
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
@@ -106,9 +109,10 @@
             this.btnNuevaCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaCita.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaCita.Location = new System.Drawing.Point(26, 390);
+            this.btnNuevaCita.Location = new System.Drawing.Point(35, 480);
+            this.btnNuevaCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevaCita.Name = "btnNuevaCita";
-            this.btnNuevaCita.Size = new System.Drawing.Size(255, 77);
+            this.btnNuevaCita.Size = new System.Drawing.Size(340, 95);
             this.btnNuevaCita.TabIndex = 9;
             this.btnNuevaCita.Text = "Nueva Cita";
             this.btnNuevaCita.TextColor = System.Drawing.Color.White;
@@ -130,9 +134,10 @@
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(75, 732);
+            this.rjButton3.Location = new System.Drawing.Point(100, 901);
+            this.rjButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(160, 50);
+            this.rjButton3.Size = new System.Drawing.Size(213, 62);
             this.rjButton3.TabIndex = 7;
             this.rjButton3.Text = "Cerrar sesión";
             this.rjButton3.TextColor = System.Drawing.Color.White;
@@ -154,9 +159,10 @@
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(26, 295);
+            this.rjButton2.Location = new System.Drawing.Point(35, 363);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(255, 77);
+            this.rjButton2.Size = new System.Drawing.Size(340, 95);
             this.rjButton2.TabIndex = 6;
             this.rjButton2.Text = "Pantalla Principal";
             this.rjButton2.TextColor = System.Drawing.Color.White;
@@ -178,9 +184,10 @@
             this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(26, 486);
+            this.rjButton4.Location = new System.Drawing.Point(35, 598);
+            this.rjButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(255, 77);
+            this.rjButton4.Size = new System.Drawing.Size(340, 95);
             this.rjButton4.TabIndex = 5;
             this.rjButton4.Text = "Pacientes";
             this.rjButton4.TextColor = System.Drawing.Color.White;
@@ -191,9 +198,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(311, 0);
+            this.panel3.Location = new System.Drawing.Point(415, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(844, 53);
+            this.panel3.Size = new System.Drawing.Size(1509, 65);
             this.panel3.TabIndex = 8;
             // 
             // Panelformularios
@@ -202,21 +210,23 @@
             this.Panelformularios.BackColor = System.Drawing.Color.White;
             this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panelformularios.Location = new System.Drawing.Point(311, 53);
+            this.Panelformularios.Location = new System.Drawing.Point(415, 65);
+            this.Panelformularios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panelformularios.Name = "Panelformularios";
-            this.Panelformularios.Size = new System.Drawing.Size(844, 764);
+            this.Panelformularios.Size = new System.Drawing.Size(1509, 990);
             this.Panelformularios.TabIndex = 1;
             this.Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
             // 
             // FormPanelSecretaria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 817);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.Panelformularios);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPanelSecretaria";
             this.Text = "FormPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
