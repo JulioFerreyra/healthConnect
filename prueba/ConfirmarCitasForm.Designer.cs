@@ -35,11 +35,16 @@
             // 
             // dgCitas
             // 
+            this.dgCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCitas.Location = new System.Drawing.Point(67, 94);
             this.dgCitas.Name = "dgCitas";
             this.dgCitas.Size = new System.Drawing.Size(732, 314);
             this.dgCitas.TabIndex = 0;
+            this.dgCitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCitas_CellClick);
+            this.dgCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCitas_CellContentClick);
             // 
             // label1
             // 

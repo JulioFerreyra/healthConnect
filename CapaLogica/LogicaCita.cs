@@ -12,7 +12,7 @@ namespace CapaLogica
     {
         public bool ValidarInsertarCamposCita(Cita cita)
         {
-            if(ElementosGlobales.idPacienteGlobal == 0)
+            if(cita.GetIdPaciente() == 0)
             {
                 MessageBox.Show("Seleccione un paciente para continuar","Paciente no seleccionado",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return false;

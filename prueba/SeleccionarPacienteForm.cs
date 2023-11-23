@@ -89,7 +89,7 @@ namespace prueba
                 {
                     int FilaSeleccionada = dgPacientes.Rows.IndexOf(dgPacientes.Rows[e.RowIndex]);
                     ElementosGlobales.idPacienteGlobal = (int)dgPacientes.Rows[FilaSeleccionada].Cells["ID"].Value;
-                    HistorialSecretariaForm historialSecretariaForm = new HistorialSecretariaForm();
+                    HistorialSecretariaForm historialSecretariaForm = new HistorialSecretariaForm(GetNombrePaciente(FilaSeleccionada));
                     historialSecretariaForm.ShowDialog();
 
                 }
@@ -155,6 +155,10 @@ namespace prueba
 
         }
 
+        private string GetNombrePaciente(int fila)
+        {
+            return Convert.ToString(dgPacientes.Rows[fila].Cells["Nombre"].Value) + " " + Convert.ToString(dgPacientes.Rows[fila].Cells["Apellido Paterno"].Value) + " " + Convert.ToString(dgPacientes.Rows[fila].Cells["Apellido Materno"].Value);
+        }
         private void EliminarPaciente(Paciente paciente)
         {
             if (ElementosGlobales.isAdmin)

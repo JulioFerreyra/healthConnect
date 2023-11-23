@@ -226,7 +226,7 @@ namespace CapaDatos
             DataTable citas = new DataTable();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
-            string SentenciaSelect = "Select c.id_paciente idPaciente, Concat(pac.nombre, ' ', pac.apell_pat, ' ', pac.apell_mat) Paciente,Concat(p.nombre, ' ', p.apell_pat, ' ', p.apell_mat) Profesionista, p.id_profesionista idProfesionista, c.motivo_cita as 'Motivo Cita', c.fecha_cita Fecha, c.hora Hora, c.tipo_cita as \"Tipo Cita\" from confirmarcitas c join pacientes pac on pac.id_paciente = c.id_paciente join profesionistas p on p.id_profesionista = c.id_profesionista;";
+            string SentenciaSelect = "Select c.id_cita ID, c.id_paciente idPaciente, Concat(pac.nombre, ' ', pac.apell_pat, ' ', pac.apell_mat) Paciente,Concat(p.nombre, ' ', p.apell_pat, ' ', p.apell_mat) Profesionista, p.id_profesionista idProfesionista, c.motivo_cita as 'Motivo Cita', c.fecha_cita Fecha, c.hora Hora, c.tipo_cita as \"Tipo Cita\" from confirmarcitas c join pacientes pac on pac.id_paciente = c.id_paciente join profesionistas p on p.id_profesionista = c.id_profesionista;";
 
             try
             {
@@ -294,12 +294,12 @@ namespace CapaDatos
             }
 
         }
-        public DataTable VerHistorialCitasPaciente(Paciente paciente)
+        public DataTable VerCitasPaciente(Paciente paciente)
         {
             DataTable HistorialPaciente = new DataTable();
             
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
-            string SentenciaSelectWhere = "select c.id_cita as ID, concat(pac.nombre, \" \", pac.apell_pat, \" \", pac.apell_mat) as Paciente, c.fecha_cita as Fecha, concat(pod.nombre, ' ', pod.apell_pat, ' ', pod.apell_mat) as Podólogo, c.tipo_cita as \"Tipo de Cita\", c.estado_cita as Estado from citas c join pacientes pac on c.id_paciente = pac.id_paciente join profesionistas pod on pod.id_profesionista=c.id_profesionista where c.id_paciente =" + paciente.GetIdPaciente()+" and estado_cita = \"finalizada\";";
+            string SentenciaSelectWhere = "select c.id_cita as ID, concat(pac.nombre, \" \", pac.apell_pat, \" \", pac.apell_mat) as Paciente, c.fecha_cita as Fecha,c.hora Hora,concat(pod.nombre, ' ', pod.apell_pat, ' ', pod.apell_mat) as Podólogo, c.tipo_cita as \"Tipo de Cita\", 'El Grullo' Sucursal from citas c join pacientes pac on c.id_paciente = pac.id_paciente join profesionistas pod on pod.id_profesionista=c.id_profesionista where c.id_paciente =" + paciente.GetIdPaciente()+" and estado_cita = \"pendiente\";";
             try
             {
                 conexion_a_mysql.Open();
@@ -370,6 +370,7 @@ namespace CapaDatos
 
         }
 
+        
 
         /// <summary>
         /// Delete
@@ -397,6 +398,28 @@ namespace CapaDatos
             finally
             {
                 conexion_a_mysql.Close();
+            }
+        }
+
+        public void RechazarCita(int idCita)
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaDelete = "delete from confirmarcitas where id_cita = " + idCita + ";";
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaDelete, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Cita rechazada", "Operación exitosa");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
             }
         }
         public void EliminarPaciente(Paciente paciente)
@@ -883,6 +906,30 @@ namespace CapaDatos
             {
                 MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return ConsultasPodologo;
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
+        }
+
+        public DataTable VerCitasPacienteRemoto(Paciente paciente)
+        {
+            DataTable HistorialPaciente = new DataTable();
+
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaSelectWhere = "select c.id_cita as ID, concat(pac.nombre, \" \", pac.apell_pat, \" \", pac.apell_mat) as Paciente, c.fecha_cita as Fecha,c.hora Hora,concat(pod.nombre, ' ', pod.apell_pat, ' ', pod.apell_mat) as Podólogo, c.tipo_cita as \"Tipo de Cita\", 'Ciudad Guzman' Sucursal from citas c join pacientes pac on c.id_paciente = pac.id_paciente join profesionistas pod on pod.id_profesionista=c.id_profesionista where c.id_paciente =" + paciente.GetIdPaciente() + " and estado_cita = \"pendiente\";";
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(SentenciaSelectWhere, conexion_a_mysql);
+                adaptador.Fill(HistorialPaciente);
+                return HistorialPaciente;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return HistorialPaciente;
             }
             finally
             {

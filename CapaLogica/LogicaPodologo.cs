@@ -79,7 +79,11 @@ namespace CapaLogica
 
 
         }
-
+        public DataTable GetDiagnosticosCitasPaciente(int idPaciente)
+        {
+            PodologoDAO podologoDAO = new PodologoDAO();
+            return podologoDAO.GetDiagnosticosCitasPaciente(idPaciente);
+        }
         public DataTable GetPodologos()
         {
             PodologoDAO podologoDAO = new PodologoDAO();
@@ -379,7 +383,11 @@ namespace CapaLogica
 
 
         }
-
+        public DataTable GetDiagnosticosCitasPacienteRemoto(int idPaciente)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+           return podologodao.GetDiagnosticosCitasPacienteRemoto(idPaciente);
+        }
 
         public string GetContraseñaUsuarioRemoto(int idUsuario)
         {

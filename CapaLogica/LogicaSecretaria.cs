@@ -49,6 +49,7 @@ namespace CapaLogica
             return secretaria.GetHorasTrabajo();
         }
 
+
         public DataTable VerCitasPorConfirmacion()
         {
             SecretariaDAO secretaria = new SecretariaDAO();
@@ -62,7 +63,7 @@ namespace CapaLogica
         public DataTable VerHistoralPaciente(Paciente paciente)
         {
             SecretariaDAO secretariaDAO=new SecretariaDAO();
-            return secretariaDAO.VerHistorialCitasPaciente(paciente);
+            return secretariaDAO.VerCitasPaciente(paciente);
         }
 
         public DataTable GetTiposDeCita()
@@ -100,6 +101,11 @@ namespace CapaLogica
 
         }
 
+        public void RechazarCita(int idCita)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            secretariaDAO.RechazarCita(idCita);
+        }
         /// <summary>
         /// Insert
         /// </summary>
@@ -270,6 +276,12 @@ namespace CapaLogica
         {
             SecretariaDAO secretariaDAO = new SecretariaDAO();
             return secretariaDAO.GetTiposDeCitaRemoto();
+        }
+
+        public DataTable VerCitasPacienteRemoto(Paciente paciente)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            return secretariaDAO.VerCitasPacienteRemoto(paciente);
         }
 
     }

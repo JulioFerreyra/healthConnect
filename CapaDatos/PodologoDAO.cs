@@ -437,7 +437,31 @@ namespace CapaDatos
             }
         }
 
+        public DataTable GetDiagnosticosCitasPaciente(int idPaciente)
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
+            string SentenciaSelect = "select fecha_cita Fecha,tipo_cita 'Tipo Cita',motivo_cita as 'Motivo Cita',diagnostico Diagnóstico, 'El Grullo' from citas where id_paciente =" + idPaciente + " and estado_cita = 'finalizada'";
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
+        
 
         /// <summary>
         /// Update
@@ -873,6 +897,30 @@ namespace CapaDatos
             }
         }
 
+        public DataTable GetDiagnosticosCitasPacienteRemoto(int idPaciente)
+        {
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            string SentenciaSelect = "select fecha_cita Fecha,tipo_cita 'Tipo Cita',motivo_cita as 'Motivo Cita',diagnostico Diagnóstico, 'El Grullo' from citas where id_paciente =" + idPaciente + " and estado_cita = 'finalizada'";
+            DataTable antecendetesNoPat = new DataTable();
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlDataAdapter comando = new MySqlDataAdapter(SentenciaSelect, conexion_a_MySQL);
+                comando.Fill(antecendetesNoPat);
+                return antecendetesNoPat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return antecendetesNoPat;
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+
+            }
+        }
 
 
     }

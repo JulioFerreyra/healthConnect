@@ -16,8 +16,10 @@ namespace prueba
 {
     public partial class HistorialSecretariaForm : Form
     {
-        public HistorialSecretariaForm()
+        private string nombrePaciente; 
+        public HistorialSecretariaForm(string nombrePaciente)
         {
+            this.nombrePaciente = nombrePaciente;
             InitializeComponent();
         }
         /// <summary>
@@ -46,7 +48,7 @@ namespace prueba
         }
         private void HistorialSecretariaForm_Load(object sender, EventArgs e)
         {
-           
+            lblPaciente.Text += nombrePaciente;
             Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal);
             RellenarDataGrid(paciente);
             AgregarBotonGrid();
@@ -70,7 +72,10 @@ namespace prueba
         private void RellenarDataGrid(Paciente paciente)
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-            dgHistorial.DataSource = logicaSecretaria.VerHistoralPaciente(paciente);
+            DataTable citasPaciente = logicaSecretaria.VerHistoralPaciente(paciente);
+            citasPaciente.Merge(logicaSecretaria.VerCitasPacienteRemoto(paciente));
+            dgHistorial.DataSource = citasPaciente;
+
         }
         private void AgregarBotonGrid()
         {
@@ -104,5 +109,9 @@ namespace prueba
            
         }
 
+        private void dgHistorial_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

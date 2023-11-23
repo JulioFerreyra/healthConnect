@@ -216,5 +216,26 @@ namespace CapaPresentacion
         {
             Close();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RellenarGridDiagnosticos()
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            DataTable diagnosticos = logicaPodologo.GetDiagnosticosCitasPaciente(ElementosGlobales.idPacienteGlobal);
+            diagnosticos.Merge(logicaPodologo.GetDiagnosticosCitasPacienteRemoto(ElementosGlobales.idPacienteGlobal));
+            dgDiagnosticos.DataSource = diagnosticos;
+    }
+        private void tabHistorial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabHistorial.SelectedIndex == 2)
+            {
+
+                RellenarGridDiagnosticos();
+            }
+        }
     }
 }
