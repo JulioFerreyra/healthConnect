@@ -206,5 +206,10 @@ namespace CapaPresentacion
                 btnCerrarSesion.Visible = true;
             }
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

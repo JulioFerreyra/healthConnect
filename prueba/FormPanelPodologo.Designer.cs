@@ -44,11 +44,14 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,7 +65,7 @@
             this.panel1.Controls.Add(this.pnlLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 1055);
             this.panel1.TabIndex = 0;
@@ -184,6 +187,7 @@
             // 
             // pnlLogo
             // 
+            this.pnlLogo.Controls.Add(this.pictureBox1);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -197,7 +201,7 @@
             this.Panelformularios.BackColor = System.Drawing.Color.White;
             this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panelformularios.Location = new System.Drawing.Point(0, 0);
-            this.Panelformularios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panelformularios.Margin = new System.Windows.Forms.Padding(4);
             this.Panelformularios.Name = "Panelformularios";
             this.Panelformularios.Size = new System.Drawing.Size(1621, 964);
             this.Panelformularios.TabIndex = 1;
@@ -211,7 +215,7 @@
             this.panel3.Controls.Add(this.iconCurrentChildForm);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(303, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1621, 91);
             this.panel3.TabIndex = 11;
@@ -229,6 +233,9 @@
             // 
             // btnCerrarSesion
             // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCerrarSesion.IconColor = System.Drawing.Color.Black;
@@ -239,10 +246,14 @@
             this.btnCerrarSesion.Size = new System.Drawing.Size(136, 30);
             this.btnCerrarSesion.TabIndex = 5;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnAyuda
             // 
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
             this.btnAyuda.IconColor = System.Drawing.Color.Black;
@@ -257,12 +268,15 @@
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.UseVisualStyleBackColor = false;
             // 
             // btnInicioUsuario
             // 
-            this.btnInicioUsuario.BackColor = System.Drawing.Color.White;
+            this.btnInicioUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicioUsuario.FlatAppearance.BorderSize = 0;
+            this.btnInicioUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicioUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicioUsuario.ForeColor = System.Drawing.Color.Black;
             this.btnInicioUsuario.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
             this.btnInicioUsuario.IconColor = System.Drawing.Color.Black;
             this.btnInicioUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -311,10 +325,20 @@
             this.panel2.Controls.Add(this.Panelformularios);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(303, 91);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1621, 964);
             this.panel2.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.WhatsApp_Image_2023_10_24_at_9_19_07_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(271, 168);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormPanelPodologo
             // 
@@ -325,18 +349,20 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPanelPodologo";
             this.Text = "FormPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.panel1.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,5 +385,6 @@
         private FontAwesome.Sharp.IconButton btnInicioUsuario;
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
