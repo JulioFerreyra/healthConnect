@@ -33,7 +33,7 @@ namespace CapaPresentacion
         {
             ActivateButton(btnPrincipal, RGBColors.colorBoton);
             BotonInicial();
-            AbrirFormulario<PodologoPrincipalForm>();
+            AbrirFormulario<SecretariaPrincipalForm>();
         }
         private IconButton currentBtn;
         private Panel leftBorderBtn;
@@ -164,7 +164,7 @@ namespace CapaPresentacion
         {
             ActivateButton(sender, RGBColors.colorBoton);
             lblTitulo.Text = "Patalla Principal";
-            AbrirFormulario<PodologoPrincipalForm>();
+            AbrirFormulario<SecretariaPrincipalForm>();
         }
         private void BotonInicial()
         {
