@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(129, 50);
+            this.label1.Location = new System.Drawing.Point(128, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 38);
@@ -70,7 +70,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(136, 463);
+            this.rjButton1.Location = new System.Drawing.Point(136, 457);
             this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(213, 62);
@@ -88,7 +88,7 @@
             this.txtConfirmar.BorderSize = 2;
             this.txtConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmar.Location = new System.Drawing.Point(79, 370);
+            this.txtConfirmar.Location = new System.Drawing.Point(79, 387);
             this.txtConfirmar.Margin = new System.Windows.Forms.Padding(5);
             this.txtConfirmar.MaxLength = 10;
             this.txtConfirmar.Multiline = false;
@@ -111,7 +111,7 @@
             this.txtContraseña.BorderSize = 2;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
-            this.txtContraseña.Location = new System.Drawing.Point(79, 283);
+            this.txtContraseña.Location = new System.Drawing.Point(79, 300);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(5);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Multiline = false;
@@ -134,7 +134,7 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(79, 130);
+            this.txtNombre.Location = new System.Drawing.Point(79, 147);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
@@ -179,29 +179,29 @@
             // 
             // cmbPuesto
             // 
-            this.cmbPuesto.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbPuesto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbPuesto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbPuesto.BorderSize = 1;
             this.cmbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbPuesto.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPuesto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPuesto.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPuesto.ForeColor = System.Drawing.Color.White;
+            this.cmbPuesto.IconColor = System.Drawing.Color.CornflowerBlue;
             this.cmbPuesto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbPuesto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbPuesto.Location = new System.Drawing.Point(79, 211);
+            this.cmbPuesto.Location = new System.Drawing.Point(79, 228);
             this.cmbPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPuesto.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbPuesto.Name = "cmbPuesto";
             this.cmbPuesto.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbPuesto.Size = new System.Drawing.Size(333, 37);
+            this.cmbPuesto.Size = new System.Drawing.Size(333, 39);
             this.cmbPuesto.TabIndex = 74;
-            this.cmbPuesto.Texts = "";
+            this.cmbPuesto.Texts = "Puesto";
             // 
             // lblNom
             // 
             this.lblNom.AutoSize = true;
             this.lblNom.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNom.Location = new System.Drawing.Point(74, 97);
+            this.lblNom.Location = new System.Drawing.Point(74, 114);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(88, 28);
             this.lblNom.TabIndex = 77;
@@ -211,31 +211,31 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 179);
+            this.label2.Location = new System.Drawing.Point(74, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 28);
+            this.label2.Size = new System.Drawing.Size(75, 28);
             this.label2.TabIndex = 78;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Puesto";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 252);
+            this.label3.Location = new System.Drawing.Point(74, 269);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 28);
+            this.label3.Size = new System.Drawing.Size(124, 28);
             this.label3.TabIndex = 79;
-            this.label3.Text = "Nombre";
+            this.label3.Text = "Contraseña";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(74, 337);
+            this.label4.Location = new System.Drawing.Point(74, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 28);
+            this.label4.Size = new System.Drawing.Size(225, 28);
             this.label4.TabIndex = 80;
-            this.label4.Text = "Nombre";
+            this.label4.Text = "Confirmar contraseña";
             // 
             // EditarUsuariosForm
             // 
