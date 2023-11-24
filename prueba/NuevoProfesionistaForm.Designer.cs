@@ -46,48 +46,48 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(121, 438);
+            this.label4.Location = new System.Drawing.Point(55, 417);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 29);
+            this.label4.Size = new System.Drawing.Size(93, 28);
             this.label4.TabIndex = 81;
             this.label4.Text = "Teléfono";
             // 
             // lblPuesto
             // 
             this.lblPuesto.AutoSize = true;
-            this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuesto.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblPuesto.ForeColor = System.Drawing.Color.Black;
-            this.lblPuesto.Location = new System.Drawing.Point(121, 225);
+            this.lblPuesto.Location = new System.Drawing.Point(55, 221);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(200, 29);
+            this.lblPuesto.Size = new System.Drawing.Size(163, 28);
             this.lblPuesto.TabIndex = 79;
             this.lblPuesto.Text = "Apellito Paterno";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(121, 335);
+            this.label3.Location = new System.Drawing.Point(55, 319);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 29);
+            this.label3.Size = new System.Drawing.Size(174, 28);
             this.label3.TabIndex = 80;
             this.label3.Text = "Apellido Materno";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(121, 135);
+            this.label2.Location = new System.Drawing.Point(55, 123);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 29);
+            this.label2.Size = new System.Drawing.Size(88, 28);
             this.label2.TabIndex = 78;
             this.label2.Text = "Nombre";
             // 
@@ -96,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(97, 60);
+            this.label1.Location = new System.Drawing.Point(45, 60);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(365, 39);
@@ -111,7 +111,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(596, 46);
+            this.panel1.Size = new System.Drawing.Size(444, 46);
             this.panel1.TabIndex = 77;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -124,10 +124,10 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(532, 0);
+            this.button1.Location = new System.Drawing.Point(387, -4);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 49);
+            this.button1.Size = new System.Drawing.Size(53, 49);
             this.button1.TabIndex = 68;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -135,12 +135,12 @@
             // 
             this.txtPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtPat.BorderColor = System.Drawing.Color.White;
-            this.txtPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.txtPat.BorderRadius = 0;
             this.txtPat.BorderSize = 2;
             this.txtPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPat.ForeColor = System.Drawing.Color.Black;
-            this.txtPat.Location = new System.Drawing.Point(127, 260);
+            this.txtPat.Location = new System.Drawing.Point(55, 262);
             this.txtPat.Margin = new System.Windows.Forms.Padding(5);
             this.txtPat.MaxLength = 45;
             this.txtPat.Multiline = false;
@@ -169,7 +169,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(187, 546);
+            this.btnGuardar.Location = new System.Drawing.Point(109, 532);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(213, 62);
@@ -183,12 +183,12 @@
             // 
             this.txtMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtMat.BorderColor = System.Drawing.Color.White;
-            this.txtMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.txtMat.BorderRadius = 0;
             this.txtMat.BorderSize = 2;
             this.txtMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat.ForeColor = System.Drawing.Color.Black;
-            this.txtMat.Location = new System.Drawing.Point(127, 369);
+            this.txtMat.Location = new System.Drawing.Point(55, 360);
             this.txtMat.Margin = new System.Windows.Forms.Padding(5);
             this.txtMat.MaxLength = 45;
             this.txtMat.Multiline = false;
@@ -206,12 +206,12 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtNombre.BorderColor = System.Drawing.Color.White;
-            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.txtNombre.BorderRadius = 0;
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(127, 170);
+            this.txtNombre.Location = new System.Drawing.Point(55, 164);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.MaxLength = 45;
             this.txtNombre.Multiline = false;
@@ -229,12 +229,12 @@
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtTelefono.BorderColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.txtTelefono.BorderRadius = 0;
             this.txtTelefono.BorderSize = 2;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(127, 473);
+            this.txtTelefono.Location = new System.Drawing.Point(55, 458);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Multiline = false;
@@ -254,7 +254,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 622);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(444, 622);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtPat);
             this.Controls.Add(this.label4);
