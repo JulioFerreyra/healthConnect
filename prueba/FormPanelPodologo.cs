@@ -110,9 +110,7 @@ namespace CapaPresentacion
             {
                 formulario.BringToFront();
             }
-        }
-
-
+        } 
      
         /// <summary>
         /// botones

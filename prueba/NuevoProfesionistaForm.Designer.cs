@@ -271,6 +271,7 @@
             this.Name = "NuevoProfesionistaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Profesionista";
+            this.Load += new System.EventHandler(this.NuevoProfesionistaForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

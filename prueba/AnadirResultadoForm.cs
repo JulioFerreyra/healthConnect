@@ -47,7 +47,6 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void AnadirResultadoForm_Load(object sender, EventArgs e)
         {
-            BackColor = Color.FromArgb(31, 31, 31);
             Cita cita = new Cita(ElementosGlobales.idCitaGlobal);
             RellenarCampos(cita);
 
@@ -93,8 +92,10 @@ namespace CapaPresentacion
         {
             Close();
         }
+      
 
-
-
+        private void txtRes_Paint(object sender, PaintEventArgs e)
+        { 
+        }
     }
 }

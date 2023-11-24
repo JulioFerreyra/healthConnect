@@ -75,5 +75,10 @@ namespace CapaPresentacion
                 e.Handled = true;
             }
         }
+
+        private void NuevoProfesionistaForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

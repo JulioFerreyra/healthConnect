@@ -38,7 +38,6 @@ namespace CapaPresentacion
 
         private void HistorialPodologoForm_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(31, 31, 31);
 
         }
 
