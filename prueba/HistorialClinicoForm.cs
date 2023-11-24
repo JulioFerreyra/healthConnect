@@ -237,5 +237,10 @@ namespace CapaPresentacion
                 RellenarGridDiagnosticos();
             }
         }
+
+        private void cmbDiabetes_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
