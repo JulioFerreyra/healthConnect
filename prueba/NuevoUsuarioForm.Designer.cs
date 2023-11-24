@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(93, 60);
+            this.label1.Location = new System.Drawing.Point(39, 60);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(382, 39);
@@ -70,7 +70,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(188, 524);
+            this.btnGuardar.Location = new System.Drawing.Point(134, 524);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(213, 62);
@@ -84,12 +84,12 @@
             // 
             this.txtConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtConfirmar.BorderColor = System.Drawing.Color.White;
-            this.txtConfirmar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtConfirmar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.txtConfirmar.BorderRadius = 0;
             this.txtConfirmar.BorderSize = 2;
             this.txtConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmar.Location = new System.Drawing.Point(128, 473);
+            this.txtConfirmar.Location = new System.Drawing.Point(74, 473);
             this.txtConfirmar.Margin = new System.Windows.Forms.Padding(5);
             this.txtConfirmar.MaxLength = 10;
             this.txtConfirmar.Multiline = false;
@@ -107,12 +107,12 @@
             // 
             this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtContra.BorderColor = System.Drawing.Color.White;
-            this.txtContra.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtContra.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.txtContra.BorderRadius = 0;
             this.txtContra.BorderSize = 2;
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.ForeColor = System.Drawing.Color.Black;
-            this.txtContra.Location = new System.Drawing.Point(128, 369);
+            this.txtContra.Location = new System.Drawing.Point(74, 369);
             this.txtContra.Margin = new System.Windows.Forms.Padding(5);
             this.txtContra.MaxLength = 10;
             this.txtContra.Multiline = false;
@@ -130,12 +130,12 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txtNombre.BorderColor = System.Drawing.Color.White;
-            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.txtNombre.BorderRadius = 0;
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(128, 170);
+            this.txtNombre.Location = new System.Drawing.Point(74, 170);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
@@ -157,7 +157,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 46);
+            this.panel1.Size = new System.Drawing.Size(472, 46);
             this.panel1.TabIndex = 67;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -170,7 +170,7 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(523, -6);
+            this.button1.Location = new System.Drawing.Point(408, -3);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 49);
@@ -182,7 +182,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(120, 126);
+            this.label2.Location = new System.Drawing.Point(66, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 29);
@@ -194,7 +194,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(123, 326);
+            this.label3.Location = new System.Drawing.Point(69, 326);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 29);
@@ -206,7 +206,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(120, 428);
+            this.label4.Location = new System.Drawing.Point(66, 428);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(262, 29);
@@ -215,24 +215,24 @@
             // 
             // cmbPuesto
             // 
-            this.cmbPuesto.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbPuesto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbPuesto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbPuesto.BorderSize = 1;
             this.cmbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbPuesto.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPuesto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPuesto.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPuesto.ForeColor = System.Drawing.Color.White;
+            this.cmbPuesto.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.cmbPuesto.Items.AddRange(new object[] {
             "Secretaria",
             "Administrador"});
             this.cmbPuesto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbPuesto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbPuesto.Location = new System.Drawing.Point(125, 271);
+            this.cmbPuesto.Location = new System.Drawing.Point(71, 271);
             this.cmbPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPuesto.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbPuesto.Name = "cmbPuesto";
             this.cmbPuesto.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbPuesto.Size = new System.Drawing.Size(333, 37);
+            this.cmbPuesto.Size = new System.Drawing.Size(333, 39);
             this.cmbPuesto.TabIndex = 71;
             this.cmbPuesto.Texts = "Puesto";
             this.cmbPuesto.OnSelectedIndexChanged += new System.EventHandler(this.cmbPuesto_OnSelectedIndexChanged);
@@ -242,7 +242,7 @@
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuesto.ForeColor = System.Drawing.Color.Black;
-            this.lblPuesto.Location = new System.Drawing.Point(123, 234);
+            this.lblPuesto.Location = new System.Drawing.Point(69, 234);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(94, 29);
@@ -253,7 +253,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 613);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(472, 613);
             this.Controls.Add(this.cmbPuesto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblPuesto);
