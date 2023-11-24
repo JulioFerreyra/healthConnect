@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeleccionarPacienteForm));
             this.dgPacientes = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtBuscar = new prueba.TextBoxD();
             this.label7 = new System.Windows.Forms.Label();
             this.btnNuevoPaciente = new System.Windows.Forms.Button();
+            this.txtBuscar = new prueba.TextBoxD();
             ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,38 +53,38 @@
             this.dgPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPacientes.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPacientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgPacientes.EnableHeadersVisualStyles = false;
             this.dgPacientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.dgPacientes.Location = new System.Drawing.Point(85, 226);
-            this.dgPacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgPacientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgPacientes.Name = "dgPacientes";
             this.dgPacientes.ReadOnly = true;
             this.dgPacientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgPacientes.RowHeadersVisible = false;
             this.dgPacientes.RowHeadersWidth = 51;
             this.dgPacientes.Size = new System.Drawing.Size(1511, 740);
@@ -94,42 +95,18 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.BuscarUsuario;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1143, 143);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 55);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
-            this.txtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtBuscar.BorderRadius = 10;
-            this.txtBuscar.BorderSize = 2;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(544, 143);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtBuscar.MaxLength = 10;
-            this.txtBuscar.Multiline = false;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
-            this.txtBuscar.PasswordChar = false;
-            this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtBuscar.PlaceholderText = "Buscar";
-            this.txtBuscar.Size = new System.Drawing.Size(592, 58);
-            this.txtBuscar.TabIndex = 9;
-            this.txtBuscar.Texts = "";
-            this.txtBuscar.UnderlineStyle = false;
             // 
             // label7
             // 
@@ -142,30 +119,55 @@
             this.label7.Size = new System.Drawing.Size(205, 46);
             this.label7.TabIndex = 40;
             this.label7.Text = "Pacientes";
+            this.label7.Visible = false;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btnNuevoPaciente
             // 
             this.btnNuevoPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevoPaciente.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevoPaciente.BackgroundImage = global::CapaPresentacion.Properties.Resources.AgregarUsuario;
-            this.btnNuevoPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevoPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNuevoPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevoPaciente.FlatAppearance.BorderSize = 0;
             this.btnNuevoPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoPaciente.Location = new System.Drawing.Point(1359, 143);
-            this.btnNuevoPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoPaciente.Image")));
+            this.btnNuevoPaciente.Location = new System.Drawing.Point(1441, 143);
+            this.btnNuevoPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoPaciente.Name = "btnNuevoPaciente";
-            this.btnNuevoPaciente.Size = new System.Drawing.Size(64, 55);
+            this.btnNuevoPaciente.Size = new System.Drawing.Size(57, 55);
             this.btnNuevoPaciente.TabIndex = 10;
             this.btnNuevoPaciente.UseVisualStyleBackColor = false;
             this.btnNuevoPaciente.Click += new System.EventHandler(this.btnNuevoPaciente_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
+            this.txtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.txtBuscar.BorderRadius = 10;
+            this.txtBuscar.BorderSize = 2;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtBuscar.Location = new System.Drawing.Point(544, 143);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5);
+            this.txtBuscar.MaxLength = 10;
+            this.txtBuscar.Multiline = false;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtBuscar.PasswordChar = false;
+            this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtBuscar.PlaceholderText = "Buscar";
+            this.txtBuscar.Size = new System.Drawing.Size(592, 58);
+            this.txtBuscar.TabIndex = 9;
+            this.txtBuscar.Texts = "";
+            this.txtBuscar.UnderlineStyle = false;
             // 
             // SeleccionarPacienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1679, 1060);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnNuevoPaciente);
@@ -173,7 +175,7 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SeleccionarPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeleccionarPacienteForm";

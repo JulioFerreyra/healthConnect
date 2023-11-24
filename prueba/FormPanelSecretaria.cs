@@ -222,10 +222,6 @@ namespace CapaPresentacion
 
         }
 
-        private void rjButton3_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
@@ -288,7 +284,7 @@ namespace CapaPresentacion
         {
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = RGBColors.colorBoton;
-            lblTitulo.Text = "Patalla Principal";
+            lblTitulo.Text = "Pantalla Principal";
         }
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {

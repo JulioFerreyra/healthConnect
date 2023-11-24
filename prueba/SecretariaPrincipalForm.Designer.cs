@@ -94,11 +94,14 @@
             // CalendarioCitas
             // 
             this.CalendarioCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CalendarioCitas.BackColor = System.Drawing.Color.White;
             this.CalendarioCitas.Location = new System.Drawing.Point(1165, 49);
             this.CalendarioCitas.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.CalendarioCitas.MaxSelectionCount = 1;
             this.CalendarioCitas.Name = "CalendarioCitas";
             this.CalendarioCitas.TabIndex = 1;
+            this.CalendarioCitas.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.CalendarioCitas.TrailingForeColor = System.Drawing.Color.RosyBrown;
             this.CalendarioCitas.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarioCitas_DateChanged);
             // 
             // cmbxPodologo

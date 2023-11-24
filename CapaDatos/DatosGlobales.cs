@@ -12,7 +12,7 @@ namespace CapaDatos
 
         public static string mysqlPassword;
 
-        public static string serverRemoto = "172.18.10.33";
+        public static string serverRemoto = "192.168.1.75";
 
 
     }
