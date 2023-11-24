@@ -32,6 +32,8 @@
             this.tagControl = new System.Windows.Forms.TabControl();
             this.TabPersonalizar = new System.Windows.Forms.TabPage();
             this.spConfiguración = new System.Windows.Forms.SplitContainer();
+            this.dgHorario = new System.Windows.Forms.DataGridView();
+            this.dgTiposCita = new System.Windows.Forms.DataGridView();
             this.btnAplicar = new CustomControls.RJControls.RJButton();
             this.btnEditar = new CustomControls.RJControls.RJButton();
             this.lblHoras = new System.Windows.Forms.Label();
@@ -39,26 +41,26 @@
             this.tabLogs = new System.Windows.Forms.TabPage();
             this.lblLogs = new System.Windows.Forms.Label();
             this.dgLogs = new System.Windows.Forms.DataGridView();
-            this.dgTiposCita = new System.Windows.Forms.DataGridView();
-            this.dgHorario = new System.Windows.Forms.DataGridView();
             this.tagControl.SuspendLayout();
             this.TabPersonalizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spConfiguración)).BeginInit();
             this.spConfiguración.Panel1.SuspendLayout();
             this.spConfiguración.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTiposCita)).BeginInit();
             this.tabLogs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgLogs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgTiposCita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).BeginInit();
             this.SuspendLayout();
             // 
             // tagControl
             // 
             this.tagControl.Controls.Add(this.TabPersonalizar);
             this.tagControl.Controls.Add(this.tabLogs);
+            this.tagControl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tagControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tagControl.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tagControl.Location = new System.Drawing.Point(0, 0);
-            this.tagControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tagControl.Margin = new System.Windows.Forms.Padding(4);
             this.tagControl.Name = "tagControl";
             this.tagControl.SelectedIndex = 0;
             this.tagControl.Size = new System.Drawing.Size(1448, 1041);
@@ -68,11 +70,11 @@
             // TabPersonalizar
             // 
             this.TabPersonalizar.Controls.Add(this.spConfiguración);
-            this.TabPersonalizar.Location = new System.Drawing.Point(4, 25);
-            this.TabPersonalizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabPersonalizar.Location = new System.Drawing.Point(4, 37);
+            this.TabPersonalizar.Margin = new System.Windows.Forms.Padding(4);
             this.TabPersonalizar.Name = "TabPersonalizar";
-            this.TabPersonalizar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TabPersonalizar.Size = new System.Drawing.Size(1440, 1012);
+            this.TabPersonalizar.Padding = new System.Windows.Forms.Padding(4);
+            this.TabPersonalizar.Size = new System.Drawing.Size(1440, 1000);
             this.TabPersonalizar.TabIndex = 0;
             this.TabPersonalizar.Text = "Personalización";
             this.TabPersonalizar.UseVisualStyleBackColor = true;
@@ -81,7 +83,7 @@
             // 
             this.spConfiguración.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spConfiguración.Location = new System.Drawing.Point(4, 4);
-            this.spConfiguración.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spConfiguración.Margin = new System.Windows.Forms.Padding(4);
             this.spConfiguración.Name = "spConfiguración";
             this.spConfiguración.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -96,23 +98,42 @@
             this.spConfiguración.Panel1.Controls.Add(this.lblTiposCita);
             this.spConfiguración.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             this.spConfiguración.Panel2Collapsed = true;
-            this.spConfiguración.Size = new System.Drawing.Size(1432, 1004);
+            this.spConfiguración.Size = new System.Drawing.Size(1432, 992);
             this.spConfiguración.SplitterDistance = 520;
             this.spConfiguración.SplitterWidth = 5;
             this.spConfiguración.TabIndex = 0;
             // 
+            // dgHorario
+            // 
+            this.dgHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgHorario.Location = new System.Drawing.Point(37, 371);
+            this.dgHorario.Name = "dgHorario";
+            this.dgHorario.RowHeadersWidth = 20;
+            this.dgHorario.Size = new System.Drawing.Size(199, 221);
+            this.dgHorario.TabIndex = 7;
+            // 
+            // dgTiposCita
+            // 
+            this.dgTiposCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTiposCita.Location = new System.Drawing.Point(37, 73);
+            this.dgTiposCita.Name = "dgTiposCita";
+            this.dgTiposCita.RowHeadersWidth = 20;
+            this.dgTiposCita.RowTemplate.Height = 24;
+            this.dgTiposCita.Size = new System.Drawing.Size(199, 241);
+            this.dgTiposCita.TabIndex = 6;
+            // 
             // btnAplicar
             // 
-            this.btnAplicar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAplicar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAplicar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAplicar.BorderRadius = 0;
-            this.btnAplicar.BorderSize = 0;
+            this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAplicar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAplicar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAplicar.BorderRadius = 15;
+            this.btnAplicar.BorderSize = 5;
             this.btnAplicar.FlatAppearance.BorderSize = 0;
             this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAplicar.ForeColor = System.Drawing.Color.White;
             this.btnAplicar.Location = new System.Drawing.Point(461, 628);
-            this.btnAplicar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAplicar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(200, 46);
             this.btnAplicar.TabIndex = 5;
@@ -123,16 +144,16 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnEditar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnEditar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEditar.BorderRadius = 0;
-            this.btnEditar.BorderSize = 0;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnEditar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnEditar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnEditar.BorderRadius = 15;
+            this.btnEditar.BorderSize = 5;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Location = new System.Drawing.Point(685, 628);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(200, 46);
             this.btnEditar.TabIndex = 4;
@@ -144,20 +165,20 @@
             // lblHoras
             // 
             this.lblHoras.AutoSize = true;
-            this.lblHoras.Location = new System.Drawing.Point(32, 352);
+            this.lblHoras.Location = new System.Drawing.Point(32, 340);
             this.lblHoras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoras.Name = "lblHoras";
-            this.lblHoras.Size = new System.Drawing.Size(143, 16);
+            this.lblHoras.Size = new System.Drawing.Size(237, 28);
             this.lblHoras.TabIndex = 3;
             this.lblHoras.Text = "Horario (Uno por linea)";
             // 
             // lblTiposCita
             // 
             this.lblTiposCita.AutoSize = true;
-            this.lblTiposCita.Location = new System.Drawing.Point(32, 42);
+            this.lblTiposCita.Location = new System.Drawing.Point(30, 30);
             this.lblTiposCita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTiposCita.Name = "lblTiposCita";
-            this.lblTiposCita.Size = new System.Drawing.Size(228, 16);
+            this.lblTiposCita.Size = new System.Drawing.Size(374, 28);
             this.lblTiposCita.TabIndex = 2;
             this.lblTiposCita.Text = "Agregar Tipos de cita (Uno por linea)";
             // 
@@ -165,11 +186,11 @@
             // 
             this.tabLogs.Controls.Add(this.lblLogs);
             this.tabLogs.Controls.Add(this.dgLogs);
-            this.tabLogs.Location = new System.Drawing.Point(4, 25);
-            this.tabLogs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabLogs.Location = new System.Drawing.Point(4, 37);
+            this.tabLogs.Margin = new System.Windows.Forms.Padding(4);
             this.tabLogs.Name = "tabLogs";
-            this.tabLogs.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabLogs.Size = new System.Drawing.Size(1440, 1012);
+            this.tabLogs.Padding = new System.Windows.Forms.Padding(4);
+            this.tabLogs.Size = new System.Drawing.Size(1440, 1000);
             this.tabLogs.TabIndex = 1;
             this.tabLogs.Text = "Logs";
             this.tabLogs.UseVisualStyleBackColor = true;
@@ -180,7 +201,7 @@
             this.lblLogs.Location = new System.Drawing.Point(101, 161);
             this.lblLogs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogs.Name = "lblLogs";
-            this.lblLogs.Size = new System.Drawing.Size(37, 16);
+            this.lblLogs.Size = new System.Drawing.Size(56, 28);
             this.lblLogs.TabIndex = 8;
             this.lblLogs.Text = "Logs";
             // 
@@ -190,32 +211,13 @@
             this.dgLogs.AllowUserToDeleteRows = false;
             this.dgLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgLogs.Location = new System.Drawing.Point(105, 181);
-            this.dgLogs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgLogs.Margin = new System.Windows.Forms.Padding(4);
             this.dgLogs.MultiSelect = false;
             this.dgLogs.Name = "dgLogs";
             this.dgLogs.ReadOnly = true;
             this.dgLogs.RowHeadersWidth = 51;
             this.dgLogs.Size = new System.Drawing.Size(1223, 442);
             this.dgLogs.TabIndex = 7;
-            // 
-            // dgTiposCita
-            // 
-            this.dgTiposCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTiposCita.Location = new System.Drawing.Point(35, 61);
-            this.dgTiposCita.Name = "dgTiposCita";
-            this.dgTiposCita.RowHeadersWidth = 51;
-            this.dgTiposCita.RowTemplate.Height = 24;
-            this.dgTiposCita.Size = new System.Drawing.Size(240, 150);
-            this.dgTiposCita.TabIndex = 6;
-            // 
-            // dgHorario
-            // 
-            this.dgHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgHorario.Location = new System.Drawing.Point(35, 371);
-            this.dgHorario.Name = "dgHorario";
-            this.dgHorario.RowHeadersWidth = 51;
-            this.dgHorario.Size = new System.Drawing.Size(240, 150);
-            this.dgHorario.TabIndex = 7;
             // 
             // ConfiguracionForm
             // 
@@ -224,7 +226,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1448, 1041);
             this.Controls.Add(this.tagControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConfiguracionForm";
             this.Text = "ConfiguracionForm";
             this.Load += new System.EventHandler(this.ConfiguracionForm_Load);
@@ -234,11 +236,11 @@
             this.spConfiguración.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spConfiguración)).EndInit();
             this.spConfiguración.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTiposCita)).EndInit();
             this.tabLogs.ResumeLayout(false);
             this.tabLogs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgLogs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgTiposCita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -45,7 +45,7 @@
             this.txtContraseña.BorderSize = 2;
             this.txtContraseña.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
-            this.txtContraseña.Location = new System.Drawing.Point(50, 107);
+            this.txtContraseña.Location = new System.Drawing.Point(49, 104);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(5);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Multiline = false;
@@ -63,7 +63,7 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(45, 73);
+            this.lblInfo.Location = new System.Drawing.Point(44, 55);
             this.lblInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(415, 29);
@@ -81,7 +81,7 @@
             this.brnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brnAceptar.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnAceptar.ForeColor = System.Drawing.Color.White;
-            this.brnAceptar.Location = new System.Drawing.Point(180, 167);
+            this.brnAceptar.Location = new System.Drawing.Point(176, 180);
             this.brnAceptar.Name = "brnAceptar";
             this.brnAceptar.Size = new System.Drawing.Size(150, 40);
             this.brnAceptar.TabIndex = 3;
@@ -98,7 +98,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 46);
+            this.panel1.Size = new System.Drawing.Size(502, 40);
             this.panel1.TabIndex = 56;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -111,15 +111,16 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(450, -2);
+            this.button1.Location = new System.Drawing.Point(456, 2);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 45);
+            this.button1.Size = new System.Drawing.Size(48, 35);
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // ComprobarContraseñaForm
             // 
+            this.AcceptButton = this.brnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
