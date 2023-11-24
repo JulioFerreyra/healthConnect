@@ -373,13 +373,15 @@ namespace CapaLogica
             PodologoDAO podologodao = new PodologoDAO();
             return podologodao.VerProfesionistasRemoto(profesionistaLike);
         }
-        public void CrearProfesionistaRemoto(Profesionista profesionista)
+        public bool CrearProfesionistaRemoto(Profesionista profesionista)
         {
             if (ValidarCamposCrearProfesionistaVacios(profesionista))
             {
                 PodologoDAO podologodao = new PodologoDAO();
                 podologodao.CrearProfesionistaRemoto(profesionista);
+                return true;
             }
+            return false;
 
 
         }
@@ -394,6 +396,7 @@ namespace CapaLogica
             PodologoDAO podologodao = new PodologoDAO();
            return podologodao.GetContraseñaUsuarioRemoto(idUsuario);
         }
+
 
     }
 

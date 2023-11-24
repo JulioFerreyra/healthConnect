@@ -24,7 +24,10 @@ namespace CapaPresentacion
         const int WM_NCLBUTTONDOWN = 0xA1;
         const int HT_CAPTION = 0x2;
 
-
+        private void NuevoProfesionistaForm_Load(object sender, EventArgs e)
+        {
+            cmbSucursal.SelectedIndex = 0;
+        }
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -42,11 +45,12 @@ namespace CapaPresentacion
         {
 
             Profesionista profesionista = new Profesionista(txtNombre.Texts,txtPat.Texts,txtMat.Texts,txtTelefono.Texts);
-            LogicaPodologo logicaPodologo = new LogicaPodologo();
-            if (logicaPodologo.CrearProfesionista(profesionista))
+            if (cmbSucursal.SelectedIndex == 0)
             {
-                Close();
+                CrearProfesionista(profesionista);
+                return;
             }
+            CrearProfesionistaRemoto(profesionista);
             
 
 
@@ -76,9 +80,24 @@ namespace CapaPresentacion
             }
         }
 
-        private void NuevoProfesionistaForm_Load(object sender, EventArgs e)
-        {
+       
 
+        private void CrearProfesionista(Profesionista profesionista)
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            if (logicaPodologo.CrearProfesionista(profesionista))
+            {
+                Close();
+            }
+        }
+
+        private void CrearProfesionistaRemoto(Profesionista profesionista)
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            if (logicaPodologo.CrearProfesionistaRemoto(profesionista))
+            {
+                Close();
+            }
         }
     }
 }
