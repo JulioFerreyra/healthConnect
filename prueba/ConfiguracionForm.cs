@@ -26,12 +26,15 @@ namespace CapaPresentacion
         {
             RellenarTiposCita();
             RellenarHoras();
+            
         }
 
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             CrearHoras();
+            btnAplicar.Visible = true;
+            btnEditar.Visible = false;
 
         }
 
@@ -43,6 +46,8 @@ namespace CapaPresentacion
         private void btnAplicar_Click(object sender, EventArgs e)
         {
             CrearTiposCita();
+            btnEditar.Visible=true;
+            btnAplicar.Visible=false;   
             
 
         }

@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SelectorDeColor = new System.Windows.Forms.ColorDialog();
             this.tagControl = new System.Windows.Forms.TabControl();
             this.TabPersonalizar = new System.Windows.Forms.TabPage();
@@ -105,18 +110,70 @@
             // 
             // dgHorario
             // 
-            this.dgHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgHorario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgHorario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgHorario.BackgroundColor = System.Drawing.Color.White;
+            this.dgHorario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgHorario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgHorario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgHorario.ColumnHeadersHeight = 30;
+            this.dgHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgHorario.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgHorario.EnableHeadersVisualStyles = false;
+            this.dgHorario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.dgHorario.Location = new System.Drawing.Point(37, 371);
             this.dgHorario.Name = "dgHorario";
+            this.dgHorario.RowHeadersVisible = false;
             this.dgHorario.RowHeadersWidth = 20;
             this.dgHorario.Size = new System.Drawing.Size(199, 221);
             this.dgHorario.TabIndex = 7;
             // 
             // dgTiposCita
             // 
-            this.dgTiposCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTiposCita.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgTiposCita.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgTiposCita.BackgroundColor = System.Drawing.Color.White;
+            this.dgTiposCita.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgTiposCita.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgTiposCita.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgTiposCita.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgTiposCita.ColumnHeadersHeight = 30;
+            this.dgTiposCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgTiposCita.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgTiposCita.EnableHeadersVisualStyles = false;
+            this.dgTiposCita.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.dgTiposCita.Location = new System.Drawing.Point(37, 73);
             this.dgTiposCita.Name = "dgTiposCita";
+            this.dgTiposCita.RowHeadersVisible = false;
             this.dgTiposCita.RowHeadersWidth = 20;
             this.dgTiposCita.RowTemplate.Height = 24;
             this.dgTiposCita.Size = new System.Drawing.Size(199, 241);
@@ -132,7 +189,7 @@
             this.btnAplicar.FlatAppearance.BorderSize = 0;
             this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAplicar.ForeColor = System.Drawing.Color.White;
-            this.btnAplicar.Location = new System.Drawing.Point(461, 628);
+            this.btnAplicar.Location = new System.Drawing.Point(357, 542);
             this.btnAplicar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(200, 46);
@@ -140,6 +197,7 @@
             this.btnAplicar.Text = "Guardar";
             this.btnAplicar.TextColor = System.Drawing.Color.White;
             this.btnAplicar.UseVisualStyleBackColor = false;
+            this.btnAplicar.Visible = false;
             this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
             // 
             // btnEditar
@@ -152,7 +210,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(685, 628);
+            this.btnEditar.Location = new System.Drawing.Point(357, 488);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(200, 46);
@@ -198,10 +256,11 @@
             // lblLogs
             // 
             this.lblLogs.AutoSize = true;
-            this.lblLogs.Location = new System.Drawing.Point(101, 161);
+            this.lblLogs.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogs.Location = new System.Drawing.Point(98, 88);
             this.lblLogs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogs.Name = "lblLogs";
-            this.lblLogs.Size = new System.Drawing.Size(56, 28);
+            this.lblLogs.Size = new System.Drawing.Size(74, 38);
             this.lblLogs.TabIndex = 8;
             this.lblLogs.Text = "Logs";
             // 
@@ -209,13 +268,32 @@
             // 
             this.dgLogs.AllowUserToAddRows = false;
             this.dgLogs.AllowUserToDeleteRows = false;
-            this.dgLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgLogs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgLogs.BackgroundColor = System.Drawing.Color.White;
+            this.dgLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgLogs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgLogs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgLogs.ColumnHeadersHeight = 29;
+            this.dgLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgLogs.EnableHeadersVisualStyles = false;
+            this.dgLogs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.dgLogs.Location = new System.Drawing.Point(105, 181);
             this.dgLogs.Margin = new System.Windows.Forms.Padding(4);
             this.dgLogs.MultiSelect = false;
             this.dgLogs.Name = "dgLogs";
             this.dgLogs.ReadOnly = true;
+            this.dgLogs.RowHeadersVisible = false;
             this.dgLogs.RowHeadersWidth = 51;
+            this.dgLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgLogs.Size = new System.Drawing.Size(1223, 442);
             this.dgLogs.TabIndex = 7;
             // 
