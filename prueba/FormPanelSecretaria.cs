@@ -21,9 +21,10 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 70);
+            leftBorderBtn.Size = new Size(10, 80);
             panel1.Controls.Add(leftBorderBtn);
         }
+
         /// <summary>
         /// Load
         /// </summary>
@@ -31,6 +32,8 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            ActivateButton(btnPrincipal, RGBColors.colorBoton);
+            BotonInicial();
             AbrirFormulario<SecretariaPrincipalForm>();
         }
 
@@ -38,52 +41,53 @@ namespace CapaPresentacion
         /// <summary>
         /// Diseño?
         /// </summary>
-        private IconButton currentbtn;
+        private IconButton currentBtn;
         private Panel leftBorderBtn;
 
-
-        //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION
-
-        private int tolerance = 12;
-        private const int WM_NCHITTEST = 132;
-        private const int HTBOTTOMRIGHT = 17;
-        private Rectangle sizeGripRectangle;
-
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case WM_NCHITTEST:
-                    base.WndProc(ref m);
-                    var hitPoint = this.PointToClient(new Point(m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16));
-                    if (sizeGripRectangle.Contains(hitPoint))
-                        m.Result = new IntPtr(HTBOTTOMRIGHT);
-                    break;
-                default:
-                    base.WndProc(ref m);
-                    break;
-            }
-        }
-        //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
-
-        //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(244, 244, 244));
-            e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
-
-            base.OnPaint(e);
-            ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
-        }
         private struct RGBColors
         {
-            public static Color panelcolor = Color.FromArgb(59, 59, 59);//PANEL
-            public static Color cerrarcolor = Color.FromArgb(186, 0, 0);//ROJO
-            public static Color botonverdecolor = Color.FromArgb(99, 184, 63);//VERDE
-            public static Color fondocolor = Color.FromArgb(31, 31, 31); //FONDO
+            public static Color colorBoton = Color.FromArgb(146, 171, 255);
+            public static Color Blanco = Color.White;
+            public static Color ColorIzquierda = Color.FromArgb(230, 210, 240);
 
         }
-      
+        //Methods
+        private void ActivateButton(object senderBtn, Color color)
+        {
+            if (senderBtn != null)
+            {
+                DisableButton();
+                //Button
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.FromArgb(255, 255, 255);
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //Left border button
+                leftBorderBtn.BackColor = color;
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+                //Current Child Form Icon
+                iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                iconCurrentChildForm.IconColor = color;
+            }
+        }
+        private void DisableButton()
+        {
+            if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(146, 171, 255);
+                currentBtn.ForeColor = Color.White;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.IconColor = Color.White;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            }
+        }
+
         public void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -136,6 +140,8 @@ namespace CapaPresentacion
         //Seleccionar Paciente
         private void rjButton4_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Pacientes";
             AbrirFormulario<SeleccionarPacienteForm>();
             try
             {
@@ -162,6 +168,8 @@ namespace CapaPresentacion
         //Secretaria Principal
         private void rjButton2_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Pantalla Principal";
             AbrirFormulario<SecretariaPrincipalForm>();
             try
             {
@@ -188,6 +196,8 @@ namespace CapaPresentacion
         //Nueva cita
         private void rjButton5_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Nueva Cita";
             ElementosGlobales.PodologoGlobal = 0;
             AbrirFormulario<NuevaCitaForm>();
             try
@@ -219,6 +229,8 @@ namespace CapaPresentacion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.colorBoton);
+            lblTitulo.Text = "Citas por confirmar";
             //SeleccionReporteForm seleccionReporteForm = new SeleccionReporteForm();
             //ElementosGlobales.UsuarioCondicion = true;
             //seleccionReporteForm.ShowDialog();
@@ -255,6 +267,32 @@ namespace CapaPresentacion
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnInicioUsuario_Click(object sender, EventArgs e)
+        {
+            if (pnlMenu.Visible == true)
+            {
+                pnlMenu.Visible = false;
+                btnAyuda.Visible = false;
+                btnCerrarSesion.Visible = false;
+            }
+            else
+            {
+                pnlMenu.Visible = true;
+                btnAyuda.Visible = true;
+                btnCerrarSesion.Visible = true;
+            }
+        }
+        private void BotonInicial()
+        {
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = RGBColors.colorBoton;
+            lblTitulo.Text = "Patalla Principal";
+        }
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
