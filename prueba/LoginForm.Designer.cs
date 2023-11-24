@@ -49,7 +49,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(47, 245);
+            this.label2.Location = new System.Drawing.Point(47, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 26);
             this.label2.TabIndex = 7;

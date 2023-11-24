@@ -48,7 +48,7 @@
             // 
             // pnlOpciones
             // 
-            this.pnlOpciones.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlOpciones.BackColor = System.Drawing.Color.White;
             this.pnlOpciones.Controls.Add(this.cmbPodologos);
             this.pnlOpciones.Controls.Add(this.btnBuscar);
             this.pnlOpciones.Controls.Add(this.dtFinal);
@@ -64,59 +64,62 @@
             // 
             // cmbPodologos
             // 
-            this.cmbPodologos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbPodologos.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPodologos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbPodologos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbPodologos.BorderSize = 1;
             this.cmbPodologos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cmbPodologos.Enabled = false;
-            this.cmbPodologos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbPodologos.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPodologos.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbPodologos.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPodologos.ForeColor = System.Drawing.Color.White;
+            this.cmbPodologos.IconColor = System.Drawing.Color.MediumBlue;
             this.cmbPodologos.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbPodologos.ListTextColor = System.Drawing.Color.DimGray;
             this.cmbPodologos.Location = new System.Drawing.Point(253, 36);
             this.cmbPodologos.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbPodologos.Name = "cmbPodologos";
             this.cmbPodologos.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbPodologos.Size = new System.Drawing.Size(200, 30);
+            this.cmbPodologos.Size = new System.Drawing.Size(200, 38);
             this.cmbPodologos.TabIndex = 5;
             this.cmbPodologos.Texts = "Profesionistas";
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(1428, 31);
+            this.btnBuscar.Location = new System.Drawing.Point(1432, 31);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 35);
+            this.btnBuscar.Size = new System.Drawing.Size(36, 31);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dtFinal
             // 
-            this.dtFinal.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dtFinal.BorderSize = 0;
+            this.dtFinal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.dtFinal.BorderSize = 3;
+            this.dtFinal.CalendarMonthBackground = System.Drawing.Color.Black;
             this.dtFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtFinal.Location = new System.Drawing.Point(722, 31);
+            this.dtFinal.Location = new System.Drawing.Point(812, 39);
             this.dtFinal.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtFinal.Name = "dtFinal";
-            this.dtFinal.Size = new System.Drawing.Size(200, 35);
-            this.dtFinal.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dtFinal.Size = new System.Drawing.Size(277, 35);
+            this.dtFinal.SkinColor = System.Drawing.Color.White;
             this.dtFinal.TabIndex = 3;
-            this.dtFinal.TextColor = System.Drawing.Color.White;
+            this.dtFinal.TextColor = System.Drawing.Color.Black;
             // 
             // dtInicio
             // 
-            this.dtInicio.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dtInicio.BorderSize = 0;
+            this.dtInicio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.dtInicio.BorderSize = 3;
+            this.dtInicio.CalendarMonthBackground = System.Drawing.Color.Black;
             this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtInicio.Location = new System.Drawing.Point(485, 31);
+            this.dtInicio.Location = new System.Drawing.Point(485, 39);
             this.dtInicio.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(200, 35);
-            this.dtInicio.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dtInicio.Size = new System.Drawing.Size(282, 35);
+            this.dtInicio.SkinColor = System.Drawing.Color.White;
             this.dtInicio.TabIndex = 2;
-            this.dtInicio.TextColor = System.Drawing.Color.White;
+            this.dtInicio.TextColor = System.Drawing.Color.Black;
             // 
             // cmbTiposCita
             // 
@@ -132,7 +135,7 @@
             "Tipos de Cita"});
             this.cmbTiposCita.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbTiposCita.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTiposCita.Location = new System.Drawing.Point(485, 36);
+            this.cmbTiposCita.Location = new System.Drawing.Point(485, 44);
             this.cmbTiposCita.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbTiposCita.Name = "cmbTiposCita";
             this.cmbTiposCita.Padding = new System.Windows.Forms.Padding(1);
@@ -142,13 +145,13 @@
             // 
             // cmbFiltro
             // 
-            this.cmbFiltro.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbFiltro.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbFiltro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbFiltro.BorderSize = 1;
             this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbFiltro.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbFiltro.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbFiltro.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltro.ForeColor = System.Drawing.Color.White;
+            this.cmbFiltro.IconColor = System.Drawing.Color.MediumBlue;
             this.cmbFiltro.Items.AddRange(new object[] {
             "Rango de fechas",
             "Tipos de Cita"});
@@ -158,7 +161,7 @@
             this.cmbFiltro.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbFiltro.Name = "cmbFiltro";
             this.cmbFiltro.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbFiltro.Size = new System.Drawing.Size(200, 30);
+            this.cmbFiltro.Size = new System.Drawing.Size(200, 38);
             this.cmbFiltro.TabIndex = 0;
             this.cmbFiltro.Texts = "";
             this.cmbFiltro.OnSelectedIndexChanged += new System.EventHandler(this.cmbFiltro_OnSelectedIndexChanged);

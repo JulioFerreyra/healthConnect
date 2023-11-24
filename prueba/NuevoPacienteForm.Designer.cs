@@ -39,6 +39,14 @@
             this.txtApellMat = new prueba.TextBoxD();
             this.txtApellPat = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -46,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(101, 50);
+            this.label1.Location = new System.Drawing.Point(39, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(400, 39);
@@ -56,11 +64,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(608, 46);
+            this.panel1.Size = new System.Drawing.Size(474, 46);
             this.panel1.TabIndex = 59;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -73,10 +82,10 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(547, -5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(414, -3);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 49);
+            this.button1.Size = new System.Drawing.Size(56, 45);
             this.button1.TabIndex = 60;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -84,19 +93,19 @@
             // cmbxSexo
             // 
             this.cmbxSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbxSexo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbxSexo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbxSexo.BorderSize = 1;
             this.cmbxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cmbxSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbxSexo.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbxSexo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbxSexo.ForeColor = System.Drawing.Color.White;
+            this.cmbxSexo.IconColor = System.Drawing.Color.Black;
             this.cmbxSexo.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
             this.cmbxSexo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxSexo.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbxSexo.Location = new System.Drawing.Point(129, 624);
-            this.cmbxSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxSexo.Location = new System.Drawing.Point(72, 660);
+            this.cmbxSexo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxSexo.MinimumSize = new System.Drawing.Size(267, 37);
             this.cmbxSexo.Name = "cmbxSexo";
             this.cmbxSexo.Padding = new System.Windows.Forms.Padding(1);
@@ -109,8 +118,8 @@
             this.dtpFechaNac.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.dtpFechaNac.BorderSize = 1;
             this.dtpFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpFechaNac.Location = new System.Drawing.Point(133, 539);
-            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNac.Location = new System.Drawing.Point(77, 583);
+            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNac.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(328, 35);
@@ -133,8 +142,8 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(191, 713);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rjButton1.Location = new System.Drawing.Point(129, 739);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(213, 62);
             this.rjButton1.TabIndex = 10;
@@ -152,8 +161,8 @@
             this.txtDireccion.BorderSize = 2;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.Color.DimGray;
-            this.txtDireccion.Location = new System.Drawing.Point(129, 454);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDireccion.Location = new System.Drawing.Point(77, 497);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(5);
             this.txtDireccion.MaxLength = 100;
             this.txtDireccion.Multiline = false;
             this.txtDireccion.Name = "txtDireccion";
@@ -175,8 +184,8 @@
             this.txtTelefono.BorderSize = 2;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(129, 367);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTelefono.Location = new System.Drawing.Point(77, 411);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(5);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Multiline = false;
             this.txtTelefono.Name = "txtTelefono";
@@ -200,8 +209,8 @@
             this.txtApellMat.BorderSize = 2;
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellMat.Location = new System.Drawing.Point(129, 281);
-            this.txtApellMat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellMat.Location = new System.Drawing.Point(77, 325);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellMat.MaxLength = 10;
             this.txtApellMat.Multiline = false;
             this.txtApellMat.Name = "txtApellMat";
@@ -224,8 +233,8 @@
             this.txtApellPat.BorderSize = 2;
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellPat.Location = new System.Drawing.Point(129, 188);
-            this.txtApellPat.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellPat.Location = new System.Drawing.Point(77, 239);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellPat.MaxLength = 10;
             this.txtApellPat.Multiline = false;
             this.txtApellPat.Name = "txtApellPat";
@@ -248,14 +257,14 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(129, 110);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNombre.Location = new System.Drawing.Point(77, 153);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
             this.txtNombre.PasswordChar = false;
-            this.txtNombre.PlaceholderColor = System.Drawing.Color.White;
+            this.txtNombre.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtNombre.PlaceholderText = "Nombre";
             this.txtNombre.Size = new System.Drawing.Size(333, 44);
             this.txtNombre.TabIndex = 3;
@@ -263,15 +272,105 @@
             this.txtNombre.UnderlineStyle = true;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(77, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 28);
+            this.label2.TabIndex = 101;
+            this.label2.Text = "Nombre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(77, 206);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 28);
+            this.label3.TabIndex = 102;
+            this.label3.Text = "Apellido paterno";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(77, 292);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(177, 28);
+            this.label4.TabIndex = 103;
+            this.label4.Text = "Apellido materno";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(77, 378);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 28);
+            this.label5.TabIndex = 104;
+            this.label5.Text = "Teléfono";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(77, 464);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 28);
+            this.label6.TabIndex = 105;
+            this.label6.Text = "Dirección";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(77, 551);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(212, 28);
+            this.label7.TabIndex = 106;
+            this.label7.Text = "Fecha de nacimiento";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(77, 628);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 28);
+            this.label8.TabIndex = 107;
+            this.label8.Text = "Sexo";
+            // 
             // NuevoPacienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(608, 810);
+            this.ClientSize = new System.Drawing.Size(474, 851);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbxSexo);
             this.Controls.Add(this.dtpFechaNac);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.txtDireccion);
@@ -281,11 +380,12 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NuevoPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoPacienteForm";
             this.Load += new System.EventHandler(this.NuevoPacienteForm_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +404,12 @@
         private TextBoxD txtDireccion;
         private CustomControls.RJControls.pDatePicker dtpFechaNac;
         private CustomControls.RJControls.pComboBox cmbxSexo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
