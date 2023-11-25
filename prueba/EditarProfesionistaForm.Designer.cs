@@ -55,7 +55,7 @@
             this.txtPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPat.ForeColor = System.Drawing.Color.Black;
             this.txtPat.Location = new System.Drawing.Point(41, 194);
-            this.txtPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPat.Margin = new System.Windows.Forms.Padding(4);
             this.txtPat.MaxLength = 10;
             this.txtPat.Multiline = false;
             this.txtPat.Name = "txtPat";
@@ -157,7 +157,7 @@
             this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.ForeColor = System.Drawing.Color.Black;
             this.txtTel.Location = new System.Drawing.Point(41, 350);
-            this.txtTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtTel.MaxLength = 10;
             this.txtTel.Multiline = false;
             this.txtTel.Name = "txtTel";
@@ -181,7 +181,7 @@
             this.txtMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat.ForeColor = System.Drawing.Color.Black;
             this.txtMat.Location = new System.Drawing.Point(41, 272);
-            this.txtMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMat.Margin = new System.Windows.Forms.Padding(4);
             this.txtMat.MaxLength = 10;
             this.txtMat.Multiline = false;
             this.txtMat.Name = "txtMat";
@@ -204,7 +204,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(41, 115);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
@@ -260,6 +260,7 @@
             this.cmbSucursal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbSucursal.BorderSize = 1;
             this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbSucursal.Enabled = false;
             this.cmbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cmbSucursal.ForeColor = System.Drawing.Color.DimGray;
             this.cmbSucursal.IconColor = System.Drawing.Color.Blue;
@@ -272,7 +273,7 @@
             this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbSucursal.Name = "cmbSucursal";
             this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbSucursal.Size = new System.Drawing.Size(250, 35);
+            this.cmbSucursal.Size = new System.Drawing.Size(266, 35);
             this.cmbSucursal.TabIndex = 94;
             this.cmbSucursal.Texts = "";
             // 

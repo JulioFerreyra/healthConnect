@@ -922,7 +922,95 @@ namespace CapaDatos
             }
         }
 
-        
+        public void EliminarProfesionistaRemoto(int idProfesionista)
+        {
+            string sentenciaDelete = "update profesionistas set estado = 0 where id_profesionista = " + idProfesionista;
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaDelete, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Profesionista eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+
+        }
+        public void ActualizarDatosProfesionistaRemoto(Profesionista profesionista)
+        {
+            string sentenciaUpdate = "update profesionistas set nombre= \"" + profesionista.GetNombre() + "\", apell_pat = \"" + profesionista.GetApellidoPaterno() + "\", apell_mat =\"" + profesionista.GetApellidoMaterno() + "\", telefono = \"" + profesionista.GetTelefono() + "\" where id_profesionista = " + profesionista.GetIdProfesionista();
+            MySqlConnection conexion_a_muysql = new MySqlConnection(CadenaConexionRemota());
+            MySqlCommand comando = new MySqlCommand(sentenciaUpdate, conexion_a_muysql);
+            try
+            {
+                conexion_a_muysql.Open();
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Datos del profesionista " + string.Concat(profesionista.GetNombre(), " ", profesionista.GetApellidoPaterno(), " ", profesionista.GetApellidoMaterno()) + " actualizado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_muysql.Close();
+            }
+
+        }
+
+        public void CraerUsuarioRemoto(Usuario usuario)
+        {
+            string consultaInsert = "insert into usuario(usuario,contraseña,isAdmin) values(\"" + usuario.GetUsuario() + "\",\"" + usuario.GetContraseña() + "\"," + usuario.GetIsAdmin() + ")";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Usuario " + usuario.GetUsuario() + " registrado correctamente", "Registro exitoso");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+        public void EliminarUsuarioRemoto(int idUsuario)
+        {
+            string sentenciaDelete = "Delete from usuario where id_usuario = " + idUsuario + ";";
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexionRemota   ());
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaDelete, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Usuario eliminado correctamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        }
 
 
     }

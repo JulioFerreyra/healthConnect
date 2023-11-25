@@ -352,7 +352,7 @@ namespace CapaLogica
         public DataTable ReporteFechas(DateTime fechaInicio, DateTime fechaFin)
         {
             PodologoDAO podologodao = new PodologoDAO();
-            return podologodao.ReporteFechas( fechaInicio, fechaFin);
+            return podologodao.ReporteFechas(fechaInicio, fechaFin);
         }
 
 
@@ -388,17 +388,50 @@ namespace CapaLogica
         public DataTable GetDiagnosticosCitasPacienteRemoto(int idPaciente)
         {
             PodologoDAO podologodao = new PodologoDAO();
-           return podologodao.GetDiagnosticosCitasPacienteRemoto(idPaciente);
+            return podologodao.GetDiagnosticosCitasPacienteRemoto(idPaciente);
         }
 
         public string GetContraseñaUsuarioRemoto(int idUsuario)
         {
             PodologoDAO podologodao = new PodologoDAO();
-           return podologodao.GetContraseñaUsuarioRemoto(idUsuario);
+            return podologodao.GetContraseñaUsuarioRemoto(idUsuario);
         }
 
+        public void EliminarProfesionistaRemoto(int idProfesionista)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            podologodao.EliminarProfesionistaRemoto(idProfesionista);
+        }
 
+        public bool ActualizarDatosProfesionistaRemoto(Profesionista profesionista)
+        {
+            if (ValidarCamposCrearProfesionistaVacios(profesionista))
+            {
+                PodologoDAO podologodao = new PodologoDAO();
+                podologodao.ActualizarDatosProfesionistaRemoto(profesionista);
+                return true;
+            }
+            return false;
+        }
+
+        public bool CraerUsuarioRemoto(Usuario usuario, string puesto, string comprobarContraseña)
+        {
+            if (ValidacionCrearUsuario(usuario, puesto, comprobarContraseña))
+            {
+                LogicaUsuario logicaUsuario = new LogicaUsuario();
+                PodologoDAO podologodao = new PodologoDAO();
+                podologodao.CraerUsuarioRemoto(usuario);
+                logicaUsuario.CrearUsuarioMysqlRemoto(usuario);
+                return true;
+            }
+            return false;
+        }
+
+        public void EliminarUsuarioRemoto(int idUsuario)
+        {
+            PodologoDAO podologodao = new PodologoDAO();
+            podologodao.EliminarUsuarioRemoto(idUsuario);
+        }
     }
-
    
 }

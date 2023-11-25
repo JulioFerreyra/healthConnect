@@ -38,8 +38,8 @@ namespace CapaPresentacion
         {
             NuevoUsuarioForm nuevoUsuarioForm = new NuevoUsuarioForm();
             nuevoUsuarioForm.ShowDialog();
-            RellenarGridUsuarios("");
-           
+            RellenarDataGridUsuarios();
+
         }
         private void btnAgregarProfesionsitas_Click(object sender, EventArgs e)
         {
@@ -59,8 +59,8 @@ namespace CapaPresentacion
 
                     ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
                     comprobarContraseñaForm.ShowDialog();
-                    EliminarUsuario(Convert.ToInt16(dgUsuarios.Rows[FilaSeleccionada].Cells["ID"].Value), Convert.ToString(dgUsuarios.Rows[FilaSeleccionada].Cells["usuarioCol"].Value));
-                    RellenarGridUsuarios("");
+                    EliminarUsuario(FilaSeleccionada);
+                    RellenarDataGridUsuarios();
                     permitirVisualizar = false;
                 }
                 catch (Exception)
@@ -103,7 +103,8 @@ namespace CapaPresentacion
 
                     ComprobarContraseñaForm comprobarContraseñaForm = new ComprobarContraseñaForm();
                     comprobarContraseñaForm.ShowDialog();
-                    EliminarProfesionista(Convert.ToInt16(dgProfesionistas.Rows[FilaSeleccionada].Cells["ID"].Value));
+                    EliminarProfesionista(FilaSeleccionada);
+                    
                     RellenarGridProfesionistas("");
                     
                 }
@@ -121,7 +122,8 @@ namespace CapaPresentacion
 
                     int FilaSeleccionada = dgProfesionistas.Rows.IndexOf(dgProfesionistas.Rows[e.RowIndex]);
                     ElementosGlobales.PodologoGlobal = Convert.ToInt32(dgProfesionistas.Rows[FilaSeleccionada].Cells["ID"].Value);
-                    EditarProfesionistaForm editarProfesionsitaForm = new EditarProfesionistaForm();
+                    
+                    EditarProfesionistaForm editarProfesionsitaForm = new EditarProfesionistaForm(Convert.ToString(dgProfesionistas.Rows[FilaSeleccionada].Cells["Sucursal"].Value));
                     editarProfesionsitaForm.ShowDialog();
                     RellenarGridProfesionistas("");
                     permitirVisualizar = false;
@@ -178,25 +180,43 @@ namespace CapaPresentacion
 
             MessageBox.Show("Contraseña de administrador incorrecta");
         }
-        private void EliminarUsuario(int idUsuario, string usuario)
+        
+        private void EliminarProfesionistaLocal(int idProfesionista)
         {
-            LogicaPodologo logicaPodologo = new LogicaPodologo();
-            LogicaUsuario logicaUsuario = new LogicaUsuario();
-            if (permitirVisualizar)
-            {
-                logicaPodologo.EliminarUsuario(idUsuario);
-                logicaUsuario.EliminarUsuarioMysql(usuario);
-                permitirVisualizar = false;
-            }
-        }
-        private void EliminarProfesionista(int idProfesionista)
-        {
-            if (permitirVisualizar)
-            {
+            
                 LogicaPodologo logicaPodologo = new LogicaPodologo();
                 logicaPodologo.EliminarProfesionista(idProfesionista);
                 return;
-            }
+            
+        }
+
+        private void EliminarProfesionistaRemoto(int idProfesionista)
+        {
+           
+                LogicaPodologo logicaPodologo = new LogicaPodologo();
+                logicaPodologo.EliminarProfesionistaRemoto(idProfesionista);
+                return;
+            
+        }
+
+        private void EliminarUsuarioLocal(int idUsuario, string usuario)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            logicaPodologo.EliminarUsuario(idUsuario);
+            logicaUsuario.EliminarUsuarioMysql(usuario);
+            permitirVisualizar = false;
+
+        }
+
+        private void EliminarUsuarioRemoto(int idUsuario, string usuario)
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            logicaPodologo.EliminarUsuarioRemoto(idUsuario);
+            logicaUsuario.EliminarUsuarioMysqlRemoto(usuario);
+            return;
+
         }
 
         private void AgregarColumnasDataGrid()
@@ -241,6 +261,47 @@ namespace CapaPresentacion
 
         }
 
-       
+        private void EliminarProfesionista(int fila)
+        {
+           
+            if (permitirVisualizar && Convert.ToString(dgProfesionistas.Rows[fila].Cells["Sucursal"].Value) == "El Grullo")
+            {
+
+                EliminarProfesionistaLocal(Convert.ToInt32(dgProfesionistas.Rows[fila].Cells["ID"].Value));
+
+                return;
+            }
+            if (permitirVisualizar && Convert.ToString(dgProfesionistas.Rows[fila].Cells["sucursal"].Value) == "Ciudad Guzman")
+            {
+
+                EliminarProfesionistaRemoto(Convert.ToInt32(dgProfesionistas.Rows[fila].Cells["ID"].Value));
+
+                return;
+            }
+        }
+
+        private void EliminarUsuario(int fila)
+        {
+
+            if (permitirVisualizar && Convert.ToString(dgUsuarios.Rows[fila].Cells["sucursalCol"].Value) == "El Grullo")
+            {
+
+                EliminarUsuarioLocal(Convert.ToInt32(dgUsuarios.Rows[fila].Cells["ID"].Value), Convert.ToString(dgUsuarios.Rows[fila].Cells["usuarioCol"].Value));
+
+                return;
+            }
+            if (permitirVisualizar && Convert.ToString(dgUsuarios.Rows[fila].Cells["sucursalCol"].Value) == "Ciudad Guzman")
+            {
+
+                EliminarUsuarioRemoto(Convert.ToInt32(dgUsuarios.Rows[fila].Cells["ID"].Value), Convert.ToString(dgUsuarios.Rows[fila].Cells["usuarioCol"].Value));
+
+                return;
+            }
+            if (!permitirVisualizar)
+            {
+                MessageBox.Show("Contraseña de administrador invalida", "Contraseña incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

@@ -38,13 +38,26 @@ namespace CapaPresentacion
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        
+        
+        }
+
+        private void NuevoUsuarioForm_Load(object sender, EventArgs e)
+        {
+            cmbSucursal.SelectedIndex = 0;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             
             
             Usuario usuario = new Usuario(txtNombre.Texts,txtContra.Texts, isAdmin);
+            if (cmbSucursal.SelectedIndex == 0)
+            {
+
             CrearUsuario(usuario);
+                return;
+            }
+            CrearUsuarioRemoto(usuario);
 
 
         }
@@ -81,5 +94,26 @@ namespace CapaPresentacion
             }
             logicaUsuario.GrantAccessSecreataria(txtNombre.Texts);
         }
+
+        private void CrearUsuarioRemoto(Usuario usuario)
+        {
+            LogicaPodologo logica = new LogicaPodologo();
+            if (logica.CraerUsuarioRemoto(usuario, cmbPuesto.Texts, txtConfirmar.Texts))
+            {
+                GrantAccessRemoto();
+            }
+        }
+        private void GrantAccessRemoto()
+        {
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            if (isAdmin)
+            {
+                logicaUsuario.GrantAccessAdministradorRemoto(txtNombre.Texts);
+                return;
+            }
+            logicaUsuario.GrantAccessSecretariaRemoto(txtNombre.Texts);
+        }
+
+        
     }
 }

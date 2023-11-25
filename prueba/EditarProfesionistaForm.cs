@@ -15,6 +15,8 @@ namespace CapaPresentacion
 {
     public partial class EditarProfesionistaForm : Form
     {
+
+        private string sucursal; 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
@@ -33,9 +35,10 @@ namespace CapaPresentacion
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-        public EditarProfesionistaForm()
+        public EditarProfesionistaForm(string sucursal) 
         {
             InitializeComponent();
+            this.sucursal = sucursal;
         }
 
         private void EditarProfesionsitaForm_Load(object sender, EventArgs e)
@@ -45,13 +48,14 @@ namespace CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            LogicaPodologo logicaPodologo = new LogicaPodologo();
+           
             Profesionista profesionista = new Profesionista(ElementosGlobales.PodologoGlobal, txtNombre.Texts,txtPat.Texts,txtMat.Texts,txtTel.Texts);
-            if (logicaPodologo.ActualizarDatosProfesionista(profesionista))
+            if (cmbSucursal.SelectedIndex == 0)
             {
-                Close();
+                ActualizarProfesionistasLocal(profesionista);
                 return;
             }
+            ActualizarProfesionistasRemoto(profesionista);
             
         }
 
@@ -88,8 +92,30 @@ namespace CapaPresentacion
                 txtMat.Texts = Convert.ToString(fila[2]);
                 txtTel.Texts = Convert.ToString(fila[3]);
             }
+            cmbSucursal.SelectedIndex = cmbSucursal.Items.IndexOf(sucursal);
         }
 
-        
+        private void ActualizarProfesionistasLocal(Profesionista profesionista)
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            if (logicaPodologo.ActualizarDatosProfesionista(profesionista))
+            {
+                Close();
+                return;
+            }
+        }
+
+        private void ActualizarProfesionistasRemoto(Profesionista profesionista)
+        {
+            LogicaPodologo logicaPodologo = new LogicaPodologo();
+            if (logicaPodologo.ActualizarDatosProfesionistaRemoto(profesionista))
+            {
+                Close();
+                return;
+            }
+
+        }
+
+
     }
 }

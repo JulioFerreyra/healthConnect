@@ -307,7 +307,110 @@ namespace CapaDatos
             {
                 conexion_a_MySQL.Close();
             }
+
         }
+
+
+        /// <summary>
+        /// Remoto
+        /// </summary>
+        /// <param name="usuario"></param>
+        public void EliminarUsuarioMysqlRemoto(string usuario)
+        {
+            string consultaDelete = "drop user \"" + usuario + "\"@" + "\"%\"";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(consultaDelete, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
+
+        public void CrearUsuarioMysqlRemoto(Usuario usuario)
+        {
+            string SentenciaInsert = "create user '" + usuario.GetUsuario() + "'@'%' identified by '" + usuario.GetContraseña() + "'";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaInsert, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Access 2 No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
+
+        public void GrantAccessAdministradorRemoto(string UsuarioAdministrador)
+        {
+            string sentenciaGrant = "grant all privileges on healthconnect.* to \"" + UsuarioAdministrador + "\"@\"%\"";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(sentenciaGrant, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Access 1 No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+        }
+
+        public void GrantAccessSecretariaRemoto(string usuarioSecretaria)
+        {
+            string sentenciaGrant = "grant select,update,insert,delete on healthconnect.* to \"" + usuarioSecretaria + "\"@\"%\"";
+            MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_MySQL.Open();
+                MySqlCommand comando = new MySqlCommand(sentenciaGrant, conexion_a_MySQL);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Access No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_MySQL.Close();
+            }
+
+        }
+
+
+        /// <summary>
+        /// Métodos y conexiones
+        /// </summary>
+        /// <returns></returns>
         public string CadenaConexion()
         {
         
@@ -320,6 +423,10 @@ namespace CapaDatos
             return "Server="+HOST+"; DATABASE="+BaseDatosUsuario + "; user="+USER+"; password="+PASSWORD_USER+";";
         }
 
+        private string CadenaConexionRemota()
+        {
+            return "Server=" + DatosGlobales.serverRemoto + "; DATABASE=" + BaseDatosUsuario + "; user=Admin; password= 'Admin';";
+        }
        
     }
 }

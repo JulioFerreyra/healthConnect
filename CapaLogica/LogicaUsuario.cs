@@ -208,7 +208,30 @@ namespace CapaLogica
         //    return 0;
         //}
 
+        public void EliminarUsuarioMysqlRemoto(string usuario)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.EliminarUsuarioMysqlRemoto(usuario);
+        }
 
+        public void CrearUsuarioMysqlRemoto(Usuario usuario)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.CrearUsuarioMysqlRemoto(usuario);
+        }
+
+        public void GrantAccessSecretariaRemoto(string usuarioSecretaria)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.GrantAccessSecretariaRemoto(usuarioSecretaria);
+        }
+
+        public void GrantAccessAdministradorRemoto(string UsuarioAdministrador)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.GrantAccessAdministradorRemoto(UsuarioAdministrador);
+        }
     }
+
 
 }
