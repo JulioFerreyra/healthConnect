@@ -226,7 +226,7 @@ namespace CapaDatos
             DataTable citas = new DataTable();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
-            string SentenciaSelect = "Select c.id_cita ID, c.id_paciente idPaciente, Concat(pac.nombre, ' ', pac.apell_pat, ' ', pac.apell_mat) Paciente,Concat(p.nombre, ' ', p.apell_pat, ' ', p.apell_mat) Profesionista, p.id_profesionista idProfesionista, c.motivo_cita as 'Motivo Cita', c.fecha_cita Fecha, c.hora Hora, c.tipo_cita as \"Tipo Cita\" from confirmarcitas c join pacientes pac on pac.id_paciente = c.id_paciente join profesionistas p on p.id_profesionista = c.id_profesionista;";
+            string SentenciaSelect = "Select c.id_cita ID, Concat(pac.nombre, ' ', pac.apell_pat, ' ', pac.apell_mat) Paciente,Concat(p.nombre, ' ', p.apell_pat, ' ', p.apell_mat) Profesionista, c.motivo_cita as 'Motivo Cita', c.fecha_cita Fecha, c.hora Hora, c.tipo_cita as \"Tipo Cita\" from citas c join pacientes pac on pac.id_paciente = c.id_paciente join profesionistas p on p.id_profesionista = c.id_profesionista where c.estado_cita = 'confirmacion'";
 
             try
             {
@@ -404,7 +404,7 @@ namespace CapaDatos
         public void RechazarCita(int idCita)
         {
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string SentenciaDelete = "delete from confirmarcitas where id_cita = " + idCita + ";";
+            string SentenciaDelete = "delete from citas where id_cita = " + idCita + ";";
             try
             {
                 conexion_a_MySQL.Open();
@@ -474,7 +474,7 @@ namespace CapaDatos
         {
             
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
-            string SentenciaUpdate = "Update citas set id_paciente = "+cita.GetIdPaciente()+", fecha_cita=\""+ConvertirFechaCadena(cita.GetFechaCita())+"\", id_profesionista="+cita.GetIdPodologo()+", motivo_cita=\""+cita.GetDetallesCita()+"\", estado_cita =\""+cita.GetEstadoCita()+"\", hora =\""+cita.GetHoraCita()+"\" where id_cita="+cita.GetIdCita()+";";
+            string SentenciaUpdate = "Update citas set id_paciente = "+cita.GetIdPaciente()+", fecha_cita=\""+ConvertirFechaCadena(cita.GetFechaCita())+"\", id_profesionista="+cita.GetIdPodologo()+", motivo_cita=\""+cita.GetDetallesCita()+"\", estado_cita =\"pendiente\", hora =\""+cita.GetHoraCita()+"\" where id_cita="+cita.GetIdCita()+";";
             try
             {
                 conexion_a_mysql.Open();
@@ -514,6 +514,27 @@ namespace CapaDatos
                 conexion_a_mysql.Close();
             }
         
+        }
+
+        public void AceptarCita(Cita cita)
+        {
+            MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexion());
+            string SentenciaUpdate = "update citas set estado_cita = 'pendiente' where id_cita = " + cita.GetIdCita(); 
+            try
+            {
+                conexion_a_mysql.Open();
+                MySqlCommand comando = new MySqlCommand(SentenciaUpdate, conexion_a_mysql);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Cita agendada correctamente", "Registro exitoso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion_a_mysql.Close();
+            }
         }
 
 
@@ -756,7 +777,7 @@ namespace CapaDatos
         {
 
             MySqlConnection conexion_a_mysql = new MySqlConnection(CadenaConexionRemota());
-            string SentenciaInsert = "insert into confirmarCitas(id_paciente,fecha_cita,hora,id_profesionista,motivo_cita,tipo_cita) values(" + cita.GetIdPaciente() + ",\"" + ConvertirFechaCadena(cita.GetFechaCita()) + "\",\"" + cita.GetHoraCita() + "\"," + cita.GetIdPodologo()+",\""+cita.GetDetallesCita()+"\",\""+cita.GetTipoCita()+"\");";
+            string SentenciaInsert = "insert into citas(id_paciente,fecha_cita,hora,id_profesionista,motivo_cita,tipo_cita,estado_cita) values(" + cita.GetIdPaciente() + ",\"" + ConvertirFechaCadena(cita.GetFechaCita()) + "\",\"" + cita.GetHoraCita() + "\"," + cita.GetIdPodologo() + ",\"" + cita.GetDetallesCita() + "\",\"" + cita.GetTipoCita() + "\",\"confirmacion\");";
             MySqlCommand comandoMysql = new MySqlCommand(SentenciaInsert, conexion_a_mysql);
 
             try

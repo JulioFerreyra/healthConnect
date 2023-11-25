@@ -15,10 +15,12 @@ namespace CapaPresentacion
 {
     public partial class EditarCitaForm : Form
     {
+        private bool condicionEditarCita;
         private int podologo;
-        public EditarCitaForm()
+        public EditarCitaForm(bool condicionEditarCita)
         {
             InitializeComponent();
+            this.condicionEditarCita = condicionEditarCita;
         }
 
 
@@ -63,10 +65,10 @@ namespace CapaPresentacion
         }
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            Cita cita = new Cita(ElementosGlobales.idCitaGlobal, ElementosGlobales.idPacienteGlobal, dtFecha.Value, cmbxHora.Texts, ElementosGlobales.PodologoGlobal, tbxSintomas.Texts, cmbxTipoCita.Texts, cmbxEstadoCita.Texts.ToLower());
+            Cita cita = new Cita(ElementosGlobales.idCitaGlobal, ElementosGlobales.idPacienteGlobal, dtFecha.Value, cmbxHora.Texts, ElementosGlobales.PodologoGlobal, tbxSintomas.Texts, cmbxTipoCita.Texts, "pendiente");
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             
-            if (logicaSecretaria.EditarCita(cita))
+            if (logicaSecretaria.EditarCita(cita, condicionEditarCita))
             {
                 //FormPanelSecretaria.AbrirFormulario<SecretariaPrincipalForm>();
                 Close();
@@ -122,8 +124,7 @@ namespace CapaPresentacion
                 tbxTelefono.Texts = renglon[3].ToString();
                 dtFecha.Value = DateTime.Parse(renglon[4].ToString());
                 tbxSintomas.Texts = renglon[6].ToString();
-                cmbxTipoCita.Texts = renglon[7].ToString();
-                cmbxEstadoCita.Texts= renglon[8].ToString();
+                cmbxTipoCita.Texts = renglon[7].ToString(); 
                 
                 CmbxPodologo.SelectedIndex = CmbxPodologo.Items.IndexOf(renglon[9].ToString());
                 ElementosGlobales.PodologoGlobal = ElementosGlobales.idPodologos[CmbxPodologo.SelectedIndex];

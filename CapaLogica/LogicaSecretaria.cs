@@ -138,14 +138,14 @@ namespace CapaLogica
         /// Update
         /// </summary>
         /// <param name="cita"></param>
-        public bool EditarCita(Cita cita)
+        public bool EditarCita(Cita cita, bool condicionEditarCita)
         {
             LogicaCita logicaCitaEditar = new LogicaCita();
             if (logicaCitaEditar.ValidarCamposCitaActualizar(cita)==false)
             {
                 return false;
             }
-            DialogResult resultado = MessageBox.Show("¿Está seguro que desea modificar la cita?\n", "Confirmación necesaria", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult resultado = MessageBox.Show(condicionEditarCita ? "¿Está seguro que desea modificar la cita?\n" : "¿Está seguro que desea modificar la cita? \n La cita será aceptada y agendada", "Confirmación necesaria", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (resultado == DialogResult.Yes)
             {
                 SecretariaDAO secretariaDao = new SecretariaDAO();
@@ -165,6 +165,12 @@ namespace CapaLogica
                 return true;
             }
             return false;
+        }
+
+        public void AceptarCita(Cita cita)
+        {
+            SecretariaDAO secretariaDAO = new SecretariaDAO();
+            secretariaDAO.AceptarCita(cita);
         }
 
         /// <summary>

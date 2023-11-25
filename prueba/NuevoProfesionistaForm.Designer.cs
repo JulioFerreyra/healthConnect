@@ -35,13 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbSucursal = new CustomControls.RJControls.pComboBox();
+            this.txtTelefono = new prueba.TextBoxD();
             this.txtPat = new prueba.TextBoxD();
             this.btnGuardar = new CustomControls.RJControls.RJButton();
             this.txtMat = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
-            this.txtTelefono = new prueba.TextBoxD();
-            this.cmbSucursal = new CustomControls.RJControls.pComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +126,64 @@
             this.button1.TabIndex = 68;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(41, 421);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.TabIndex = 83;
+            this.label5.Text = "Sucursal";
+            // 
+            // cmbSucursal
+            // 
+            this.cmbSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbSucursal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbSucursal.BorderSize = 1;
+            this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cmbSucursal.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbSucursal.IconColor = System.Drawing.Color.Blue;
+            this.cmbSucursal.Items.AddRange(new object[] {
+            "El Grullo",
+            "Ciudad Guzman"});
+            this.cmbSucursal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbSucursal.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbSucursal.Location = new System.Drawing.Point(40, 441);
+            this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbSucursal.Name = "cmbSucursal";
+            this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbSucursal.Size = new System.Drawing.Size(250, 35);
+            this.cmbSucursal.TabIndex = 82;
+            this.cmbSucursal.Texts = "";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTelefono.BorderColor = System.Drawing.Color.DimGray;
+            this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.txtTelefono.BorderRadius = 0;
+            this.txtTelefono.BorderSize = 2;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTelefono.Location = new System.Drawing.Point(41, 372);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefono.MaxLength = 10;
+            this.txtTelefono.Multiline = false;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTelefono.PasswordChar = false;
+            this.txtTelefono.PlaceholderColor = System.Drawing.Color.White;
+            this.txtTelefono.PlaceholderText = "Teléfono";
+            this.txtTelefono.Size = new System.Drawing.Size(250, 35);
+            this.txtTelefono.TabIndex = 4;
+            this.txtTelefono.Texts = "";
+            this.txtTelefono.UnderlineStyle = true;
+            this.txtTelefono._TextChanged += new System.EventHandler(this.txtTelefono__TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            // 
             // txtPat
             // 
             this.txtPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -136,7 +194,7 @@
             this.txtPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPat.ForeColor = System.Drawing.Color.Black;
             this.txtPat.Location = new System.Drawing.Point(41, 213);
-            this.txtPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPat.Margin = new System.Windows.Forms.Padding(4);
             this.txtPat.MaxLength = 45;
             this.txtPat.Multiline = false;
             this.txtPat.Name = "txtPat";
@@ -164,7 +222,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(82, 493);
+            this.btnGuardar.Location = new System.Drawing.Point(82, 497);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(160, 50);
             this.btnGuardar.TabIndex = 5;
@@ -183,7 +241,7 @@
             this.txtMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat.ForeColor = System.Drawing.Color.Black;
             this.txtMat.Location = new System.Drawing.Point(41, 292);
-            this.txtMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMat.Margin = new System.Windows.Forms.Padding(4);
             this.txtMat.MaxLength = 45;
             this.txtMat.Multiline = false;
             this.txtMat.Name = "txtMat";
@@ -206,7 +264,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(41, 133);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 45;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
@@ -218,64 +276,6 @@
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = true;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTelefono.BorderColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.txtTelefono.BorderRadius = 0;
-            this.txtTelefono.BorderSize = 2;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(41, 372);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTelefono.MaxLength = 10;
-            this.txtTelefono.Multiline = false;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtTelefono.PasswordChar = false;
-            this.txtTelefono.PlaceholderColor = System.Drawing.Color.White;
-            this.txtTelefono.PlaceholderText = "Teléfono";
-            this.txtTelefono.Size = new System.Drawing.Size(250, 35);
-            this.txtTelefono.TabIndex = 4;
-            this.txtTelefono.Texts = "";
-            this.txtTelefono.UnderlineStyle = true;
-            this.txtTelefono._TextChanged += new System.EventHandler(this.txtTelefono__TextChanged);
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            // 
-            // cmbSucursal
-            // 
-            this.cmbSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbSucursal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbSucursal.BorderSize = 1;
-            this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbSucursal.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbSucursal.IconColor = System.Drawing.Color.Blue;
-            this.cmbSucursal.Items.AddRange(new object[] {
-            "El Grullo",
-            "Ciudad Guzman"});
-            this.cmbSucursal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbSucursal.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbSucursal.Location = new System.Drawing.Point(40, 441);
-            this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbSucursal.Name = "cmbSucursal";
-            this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbSucursal.Size = new System.Drawing.Size(250, 35);
-            this.cmbSucursal.TabIndex = 82;
-            this.cmbSucursal.Texts = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(41, 421);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
-            this.label5.TabIndex = 83;
-            this.label5.Text = "Sucursal";
             // 
             // NuevoProfesionistaForm
             // 

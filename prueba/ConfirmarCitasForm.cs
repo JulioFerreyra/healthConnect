@@ -33,16 +33,10 @@ namespace CapaPresentacion
                 if (dgCitas.Columns[e.ColumnIndex].Name == "AceptarCol" )
                 {
                     int FilaSeleccionada = dgCitas.Rows.IndexOf(dgCitas.Rows[e.RowIndex]);
-                    Cita cita = new Cita(Convert.ToInt32(dgCitas.Rows[FilaSeleccionada].Cells["idPaciente"].Value),
-                        Convert.ToDateTime(dgCitas.Rows[FilaSeleccionada].Cells["Fecha"].Value),
-                        Convert.ToString(dgCitas.Rows[FilaSeleccionada].Cells["Hora"].Value),
-                        Convert.ToInt32(dgCitas.Rows[FilaSeleccionada].Cells["idProfesionista"].Value),
-                         Convert.ToString(dgCitas.Rows[FilaSeleccionada].Cells["Motivo Cita"].Value),
-                         Convert.ToString(dgCitas.Rows[FilaSeleccionada].Cells["Tipo Cita"].Value)
+                    Cita cita = new Cita(Convert.ToInt32(dgCitas.Rows[FilaSeleccionada].Cells["ID"].Value)
                         );
                     MessageBox.Show(cita.GetIdPaciente().ToString());
                     CrearCita(cita);
-                    RechazarCita(Convert.ToInt32(dgCitas.Rows[FilaSeleccionada].Cells["ID"].Value));
                     RellenarDataGrid();
                 }
 
@@ -56,7 +50,11 @@ namespace CapaPresentacion
             {
                 if (dgCitas.Columns[e.ColumnIndex].Name == "EditarCol")
                 {
-                    MessageBox.Show("Editar");
+                    int FilaSeleccionada = dgCitas.Rows.IndexOf(dgCitas.Rows[e.RowIndex]);
+                    ElementosGlobales.idCitaGlobal = Convert.ToInt32(dgCitas.Rows[FilaSeleccionada].Cells["ID"].Value);
+                    EditarCitaForm editarCitaForm = new EditarCitaForm(false);
+                    editarCitaForm.ShowDialog();
+                    RellenarDataGrid();
                 }
                
             }
@@ -113,7 +111,7 @@ namespace CapaPresentacion
         private void CrearCita(Cita cita)
         {
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
-            logicaSecretaria.CrearNuevaCita(cita);
+            logicaSecretaria.AceptarCita(cita);
         }
 
         private void RechazarCita(int idCita)

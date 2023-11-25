@@ -62,7 +62,7 @@ namespace CapaPresentacion
                     int FilaSeleccionada = dataGridView1.Rows.IndexOf(dataGridView1.Rows[e.RowIndex]);
                     ElementosGlobales.idCitaGlobal = (int)dataGridView1.Rows[FilaSeleccionada].Cells["ID"].Value;
                     ElementosGlobales.PodologoGlobal = ElementosGlobales.idUsuarioGlobal;
-                    EditarCitaForm editarcita = new EditarCitaForm();
+                    EditarCitaForm editarcita = new EditarCitaForm(true);
                     editarcita.ShowDialog();
                     RellenarDataGrid();
 

@@ -37,6 +37,8 @@
             // 
             // dgCitas
             // 
+            this.dgCitas.AllowUserToAddRows = false;
+            this.dgCitas.AllowUserToDeleteRows = false;
             this.dgCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -46,7 +48,7 @@
             this.dgCitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -55,13 +57,13 @@
             this.dgCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCitas.EnableHeadersVisualStyles = false;
             this.dgCitas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.dgCitas.Location = new System.Drawing.Point(19, 101);
-            this.dgCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgCitas.Location = new System.Drawing.Point(14, 82);
             this.dgCitas.Name = "dgCitas";
+            this.dgCitas.ReadOnly = true;
             this.dgCitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -69,7 +71,7 @@
             this.dgCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgCitas.RowHeadersVisible = false;
             this.dgCitas.RowHeadersWidth = 51;
-            this.dgCitas.Size = new System.Drawing.Size(1468, 840);
+            this.dgCitas.Size = new System.Drawing.Size(1101, 682);
             this.dgCitas.TabIndex = 0;
             this.dgCitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCitas_CellClick);
             this.dgCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCitas_CellContentClick);
@@ -77,24 +79,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(575, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(431, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 56);
+            this.label1.Size = new System.Drawing.Size(262, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Citas por confirmar";
             // 
             // ConfirmarCitasForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1509, 990);
+            this.ClientSize = new System.Drawing.Size(1132, 804);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgCitas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConfirmarCitasForm";
             this.Text = "ConfirmarCitasForm";
             this.Load += new System.EventHandler(this.ConfirmarCitasForm_Load);
