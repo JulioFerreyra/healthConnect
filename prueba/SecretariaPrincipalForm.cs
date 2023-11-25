@@ -27,6 +27,7 @@ namespace prueba
         public SecretariaPrincipalForm()
         {
             InitializeComponent();
+            
 
 
         }
@@ -43,7 +44,8 @@ namespace prueba
             RellenarComboBoxPodologos();
             RellenarDataGridPodologos(0);
             AgregarBotonesGrid();
-            
+            RenombrarCantidadCitas();
+
             if (cmbxPodologo.Items.Count == 0)
             {
                 cmbxPodologo.SelectedIndex = -1;
@@ -138,6 +140,7 @@ namespace prueba
         {
             
             RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+            RenombrarCantidadCitas();
         }
 
        
@@ -240,20 +243,31 @@ namespace prueba
 
         private void dgXochitl_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            if (dgXochitl.Rows.Count >0)
-            {
-                lblCitas.Text = "Citas programadas: " + dgXochitl.Rows.Count;
-            }
+
+            RenombrarCantidadCitas();
         }
 
         private void dgXochitl_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            if (dgXochitl.Rows.Count == 0)
-            {
-                lblCitas.Text = "Sin citas programadas";
-            }
+            RenombrarCantidadCitas();
         }
 
+        private void RenombrarCantidadCitas()
+        {
+            string fechaConcat = (CalendarioCitas.SelectionStart.DayOfYear == DateTime.Today.DayOfYear) ? "Hoy" : "el " + CalendarioCitas.SelectionStart.ToString("dddd dd/MM/yyyy");
+
+            if (dgXochitl.Rows.Count > 0)
+            {
+              
+                lblCitas.Text = "Citas programadas para " +fechaConcat+": "+ dgXochitl.Rows.Count;
+                return;
+
+            }
+            if (dgXochitl.Rows.Count == 0)
+            {
+                lblCitas.Text = "Sin citas programadas para " + fechaConcat;
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 

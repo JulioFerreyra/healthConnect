@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgXochitl = new System.Windows.Forms.DataGridView();
             this.CalendarioCitas = new System.Windows.Forms.MonthCalendar();
-            this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
             this.lblCitas = new System.Windows.Forms.Label();
+            this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgXochitl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,6 +105,16 @@
             this.CalendarioCitas.TrailingForeColor = System.Drawing.Color.RosyBrown;
             this.CalendarioCitas.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarioCitas_DateChanged);
             // 
+            // lblCitas
+            // 
+            this.lblCitas.AutoSize = true;
+            this.lblCitas.Location = new System.Drawing.Point(37, 246);
+            this.lblCitas.Name = "lblCitas";
+            this.lblCitas.Size = new System.Drawing.Size(35, 13);
+            this.lblCitas.TabIndex = 12;
+            this.lblCitas.Text = "label1";
+            this.lblCitas.Click += new System.EventHandler(this.label1_Click);
+            // 
             // cmbxPodologo
             // 
             this.cmbxPodologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
@@ -125,16 +135,6 @@
             this.cmbxPodologo.TabIndex = 11;
             this.cmbxPodologo.Texts = "Podólogo";
             this.cmbxPodologo.OnSelectedIndexChanged += new System.EventHandler(this.cmbxPodologo_OnSelectedIndexChanged);
-            // 
-            // lblCitas
-            // 
-            this.lblCitas.AutoSize = true;
-            this.lblCitas.Location = new System.Drawing.Point(37, 246);
-            this.lblCitas.Name = "lblCitas";
-            this.lblCitas.Size = new System.Drawing.Size(35, 13);
-            this.lblCitas.TabIndex = 12;
-            this.lblCitas.Text = "label1";
-            this.lblCitas.Click += new System.EventHandler(this.label1_Click);
             // 
             // SecretariaPrincipalForm
             // 
