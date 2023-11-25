@@ -146,6 +146,19 @@ namespace CapaPresentacion
                 LogicaPodologo logica = new LogicaPodologo();
                 Reporte(logica.ReportesCitasTipoCita(ElementosGlobales.idPodologos[cmbPodologos.SelectedIndex], cmbTiposCita.Texts));
             }
+            if (cmbFiltro.SelectedIndex == 1 && cmbPodologos.SelectedIndex != cmbPodologos.Items.Count - 1 && cmbTiposCita.SelectedIndex == 0)
+            {
+                LogicaPodologo logica = new LogicaPodologo();
+                Reporte(logica.ReportesCitasTipoCita(ElementosGlobales.idPodologos[cmbPodologos.SelectedIndex], ""));
+            }
+            if (cmbFiltro.SelectedIndex == 1 && cmbPodologos.SelectedIndex == cmbPodologos.Items.Count - 1 && cmbTiposCita.SelectedIndex == 0)
+            {
+                LogicaPodologo logica = new LogicaPodologo();
+                Reporte(logica.ReportesTipoCita(""));
+            }
+
+
+
         }
 
         private void Reporte(DataTable tablaConsulta)
@@ -160,6 +173,11 @@ namespace CapaPresentacion
         {
             this.rvReportes.Clear();
             rvReportes.RefreshReport();
+        }
+
+        private void cmbTiposCita_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -713,7 +713,7 @@ namespace CapaDatos
             DataTable datosReporte = new DataTable();
 
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where pr.id_profesionista = "+idPodologo+" and c.tipo_cita = \""+tipoCita+"\"  c.estado_cita = 'finalizada'; ";
+            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where pr.id_profesionista = "+idPodologo+" and c.tipo_cita like \"%"+tipoCita+"%\" and c.estado_cita = 'finalizada'; ";
             try
             {
                 // MessageBox.Show(sentenciaReporte);
@@ -739,7 +739,7 @@ namespace CapaDatos
             DataTable datosReporte = new DataTable();
 
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where c.tipo_cita = \"" + tipoCita + "\" and  c.estado_cita = 'finalizada'; ";
+            string sentenciaReporte = "select concat(pa.nombre, ' ', pa.apell_pat, ' ' , pa.apell_mat) Paciente,concat(pr.nombre, ' ', pr.apell_pat, ' ' , pr.apell_mat) Profesionista, fecha_cita Fecha,hora Hora, tipo_cita tipoCita,estado_cita Estado,'El Grullo' Sucursal from citas c join pacientes pa on pa.id_paciente =  c.id_paciente join profesionistas pr on pr.id_profesionista = c.id_profesionista where c.tipo_cita like \"%" + tipoCita + "%\" and  c.estado_cita = 'finalizada'; ";
             try
             {
                 // MessageBox.Show(sentenciaReporte);
@@ -760,6 +760,8 @@ namespace CapaDatos
             }
 
         }
+
+       
 
         /// <summary>
         /// Métodos
