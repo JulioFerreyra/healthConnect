@@ -177,15 +177,16 @@ namespace CapaLogica
         /// Finalizar Cita
         /// </summary>
         /// <param name="cita"></param>
-        public void FinalizarCita(Cita cita)
+        public bool FinalizarCita(Cita cita)
         {
             LogicaCita logicaCita = new LogicaCita();
             if (logicaCita.ValidarCamposFinalizarCita(cita))
             {
                 SecretariaDAO secretariaDAO = new SecretariaDAO();
                 secretariaDAO.AgregarResultadoCita(cita);
+                return true;
             }
-            return;
+            return false;
         }
 
         public DataTable ReporteTipoCitaPodologo(string tipoCita,string EstadoCita,string idPodologo)

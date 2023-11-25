@@ -151,6 +151,46 @@ namespace CapaPresentacion
             ActivateButton(sender, RGBColors.colorBoton);
             lblTitulo.Text = "Usuarios";
             AbrirFormulario<UsuariosForm>();
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["NuevoPacienteForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["SecretariaPrincipalForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["ConfiguracionForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["SeleccionarPacientesForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
@@ -158,13 +198,93 @@ namespace CapaPresentacion
             ActivateButton(sender, RGBColors.colorBoton);
             lblTitulo.Text = "Configuración";
             AbrirFormulario<ConfiguracionForm>();
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["NuevoPacienteForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["SecretariaPrincipalForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["UsuariosForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["SeleccionarPacientesForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.colorBoton);
-            lblTitulo.Text = "Patalla Principal";
+            lblTitulo.Text = "Pantalla Principal";
             AbrirFormulario<SecretariaPrincipalForm>();
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["NuevoPacienteForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["UsuariosForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["ConfiguracionForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["SeleccionarPacientesForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
         private void BotonInicial()
         {
@@ -179,6 +299,37 @@ namespace CapaPresentacion
             lblTitulo.Text = "Seleccionar paciente";
             AbrirFormulario<SeleccionarPacienteForm>();
 
+           
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["SecretariaPrincipalForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["ConfiguracionForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["SeleccionarPacientesForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void btnInicioUsuario_MouseUp(object sender, MouseEventArgs e)

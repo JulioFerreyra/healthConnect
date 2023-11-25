@@ -87,6 +87,7 @@ namespace CapaPresentacion
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             if (logicaPodologo.CrearProfesionista(profesionista))
             {
+                RestablecerCampos();
                 Close();
             }
         }
@@ -96,8 +97,18 @@ namespace CapaPresentacion
             LogicaPodologo logicaPodologo = new LogicaPodologo();
             if (logicaPodologo.CrearProfesionistaRemoto(profesionista))
             {
+                RestablecerCampos();
                 Close();
             }
+        }
+
+        private void RestablecerCampos()
+        {
+            txtNombre.Texts = string.Empty;
+            txtPat.Texts = string.Empty;
+            txtMat.Texts = string.Empty;
+            txtTelefono.Texts = string.Empty;
+            cmbSucursal.SelectedIndex = 0;
         }
     }
 }

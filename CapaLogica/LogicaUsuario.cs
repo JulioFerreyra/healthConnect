@@ -69,13 +69,13 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(usuario.GetUsuario()))
             {
-                MessageBox.Show("Usuario vacio","Usuario invalido",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un usuario para continuar","Usuario invalido",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return false;
             }
 
             if (string.IsNullOrEmpty(usuario.GetContraseña()))
             {
-                MessageBox.Show("Contraseña vacia", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("ingrese la contraseña para continuars", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -114,12 +114,12 @@ namespace CapaLogica
             }
             if (!ValidarContraseñaConfirmada(usuario,ConfirmacionContraseña))
             {
-                MessageBox.Show("La contraseña no coincide", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Las contraseña no coinciden", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!GetUsuario(usuario))
             {
-                MessageBox.Show("El usuario que desea actualizar no existe", "Usuario invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario no existente", "Usuario invalido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

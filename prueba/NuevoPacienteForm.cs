@@ -53,6 +53,7 @@ namespace prueba
                 txtApellMat.Texts = string.Empty;
                 txtApellPat.Texts = string.Empty;
                 txtTelefono.Texts = string.Empty;
+                txtDireccion.Texts = string.Empty;
                 dtpFechaNac.Value = DateTime.Now;
                 cmbxSexo.SelectedIndex = -1;
                 cmbxSexo.Texts = "Sexo";

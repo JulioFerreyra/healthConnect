@@ -60,7 +60,7 @@ namespace CapaPresentacion
         }
         private void rjButton4_Click(object sender, EventArgs e)
         {
-            AnadirResultadoForm resultado = new AnadirResultadoForm();
+            AnadirResultadoForm resultado = new AnadirResultadoForm(true);
             resultado.ShowDialog();   
         }
         private void rjButton1_Click(object sender, EventArgs e)

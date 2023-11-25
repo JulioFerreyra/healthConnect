@@ -211,19 +211,19 @@ namespace CapaLogica
         /// 
         private bool ValidarCamposCrearUsuario(Usuario usuario, string puesto, string comprobarContraseña)
         {
-            if (puesto == "Puesto")
-            {
-                MessageBox.Show("Seleccione un puesto valido para continuar", "Puesto invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
             if (string.IsNullOrEmpty(usuario.GetUsuario()))
             {
-                MessageBox.Show("Usuario vacio", "Usuario invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese el usuario para continuar", "Usuario invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(usuario.GetContraseña()))
             {
-                MessageBox.Show("Contraseña vacia", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese una contraseña para continuar", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (usuario.GetContraseña().Length != 8)
+            {
+                MessageBox.Show("La contraseña debe contener 8 (ocho) caractéres", "Confirmación de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(comprobarContraseña))
@@ -231,6 +231,13 @@ namespace CapaLogica
                 MessageBox.Show("Confirme la contraseña para continuar", "Confirmación de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (puesto == "Puesto")
+            {
+                MessageBox.Show("Seleccione un puesto para continuar", "Puesto invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+           
+           
 
             return true;
         }
@@ -260,22 +267,27 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(profesionista.GetNombre()))
             {
-                MessageBox.Show("Nombre vacio", "Nombre invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese el nombre del profesionista para continuar", "Nombre invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(profesionista.GetApellidoPaterno()))
             {
-                MessageBox.Show("Apellido Paterno vacio", "Apellido Paterno invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese el apellido paterno del profesionista para continuar", "Apellido Paterno invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(profesionista.GetApellidoMaterno()))
             {
-                MessageBox.Show("Apellido Materno vacio", "Apellido Materno invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese el apellido materno del profesionista para continuar", "Apellido Materno invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (string.IsNullOrEmpty(profesionista.GetTelefono()))
             {
-                MessageBox.Show("Teléfono ", "Teléfono invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese el apellido materno del profesionista para continuar", "Teléfono invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (profesionista.GetTelefono().Length < 10)
+            {
+                MessageBox.Show("El número de teléfono debe contener 10 caractéres", "Teléfono invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -286,7 +298,7 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(TipoCita))
             {
-                MessageBox.Show("Agregue un 'Tipo de Cita' para continuar", "Tipo de cita invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un 'Tipo de Cita' para continuar", "Tipo de cita invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
 
             }
@@ -297,12 +309,7 @@ namespace CapaLogica
         {
             if (string.IsNullOrEmpty(horas))
             {
-                MessageBox.Show("Hora vacio", "Hora invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (!horas.Contains(":"))
-            {
-                MessageBox.Show("Formato de Hora invalido, es necesario agregar ':' entre las horas y los minutos", "Formato de hora invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese una hora para continuar", "Hora invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (horas.Length < 4 || horas.Length > 5)
@@ -310,6 +317,12 @@ namespace CapaLogica
                 MessageBox.Show("La hora ingresada: " + horas + " no cuenta con el formato correcto", "Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (!horas.Contains(":"))
+            {
+                MessageBox.Show("Formato de Hora invalido, es necesario agregar ':' entre las horas y los minutos", "Formato de hora invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+          
             if (!ValidarFormatoHoras(horas))
             {
                 MessageBox.Show("La hora ingresada: " + horas + " no cuenta con el formato correcto", "Formato invalido", MessageBoxButtons.OK, MessageBoxIcon.Warning);

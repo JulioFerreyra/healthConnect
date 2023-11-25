@@ -57,8 +57,9 @@
             this.pnlOpciones.Controls.Add(this.cmbFiltro);
             this.pnlOpciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlOpciones.Location = new System.Drawing.Point(0, 0);
+            this.pnlOpciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlOpciones.Name = "pnlOpciones";
-            this.pnlOpciones.Size = new System.Drawing.Size(1491, 100);
+            this.pnlOpciones.Size = new System.Drawing.Size(1118, 81);
             this.pnlOpciones.TabIndex = 1;
             this.pnlOpciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOpciones_Paint);
             // 
@@ -69,16 +70,17 @@
             this.cmbPodologos.BorderSize = 1;
             this.cmbPodologos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cmbPodologos.Enabled = false;
-            this.cmbPodologos.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPodologos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPodologos.ForeColor = System.Drawing.Color.White;
             this.cmbPodologos.IconColor = System.Drawing.Color.MediumBlue;
             this.cmbPodologos.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbPodologos.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbPodologos.Location = new System.Drawing.Point(253, 36);
-            this.cmbPodologos.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbPodologos.Location = new System.Drawing.Point(190, 29);
+            this.cmbPodologos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPodologos.MinimumSize = new System.Drawing.Size(150, 24);
             this.cmbPodologos.Name = "cmbPodologos";
             this.cmbPodologos.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbPodologos.Size = new System.Drawing.Size(200, 38);
+            this.cmbPodologos.Size = new System.Drawing.Size(150, 31);
             this.cmbPodologos.TabIndex = 5;
             this.cmbPodologos.Texts = "Profesionistas";
             // 
@@ -86,9 +88,10 @@
             // 
             this.btnBuscar.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo;
             this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(1432, 31);
+            this.btnBuscar.Location = new System.Drawing.Point(1074, 25);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(36, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(27, 25);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -99,10 +102,11 @@
             this.dtFinal.BorderSize = 3;
             this.dtFinal.CalendarMonthBackground = System.Drawing.Color.Black;
             this.dtFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtFinal.Location = new System.Drawing.Point(812, 39);
+            this.dtFinal.Location = new System.Drawing.Point(609, 32);
+            this.dtFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtFinal.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtFinal.Name = "dtFinal";
-            this.dtFinal.Size = new System.Drawing.Size(277, 35);
+            this.dtFinal.Size = new System.Drawing.Size(209, 35);
             this.dtFinal.SkinColor = System.Drawing.Color.White;
             this.dtFinal.TabIndex = 3;
             this.dtFinal.TextColor = System.Drawing.Color.Black;
@@ -113,10 +117,11 @@
             this.dtInicio.BorderSize = 3;
             this.dtInicio.CalendarMonthBackground = System.Drawing.Color.Black;
             this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtInicio.Location = new System.Drawing.Point(485, 39);
+            this.dtInicio.Location = new System.Drawing.Point(364, 32);
+            this.dtInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtInicio.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(282, 35);
+            this.dtInicio.Size = new System.Drawing.Size(212, 35);
             this.dtInicio.SkinColor = System.Drawing.Color.White;
             this.dtInicio.TabIndex = 2;
             this.dtInicio.TextColor = System.Drawing.Color.Black;
@@ -135,11 +140,12 @@
             "Tipos de Cita"});
             this.cmbTiposCita.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbTiposCita.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTiposCita.Location = new System.Drawing.Point(485, 44);
-            this.cmbTiposCita.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbTiposCita.Location = new System.Drawing.Point(364, 36);
+            this.cmbTiposCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTiposCita.MinimumSize = new System.Drawing.Size(150, 24);
             this.cmbTiposCita.Name = "cmbTiposCita";
             this.cmbTiposCita.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbTiposCita.Size = new System.Drawing.Size(200, 30);
+            this.cmbTiposCita.Size = new System.Drawing.Size(150, 26);
             this.cmbTiposCita.TabIndex = 1;
             this.cmbTiposCita.Texts = "";
             // 
@@ -149,7 +155,7 @@
             this.cmbFiltro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbFiltro.BorderSize = 1;
             this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbFiltro.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFiltro.ForeColor = System.Drawing.Color.White;
             this.cmbFiltro.IconColor = System.Drawing.Color.MediumBlue;
             this.cmbFiltro.Items.AddRange(new object[] {
@@ -157,11 +163,12 @@
             "Tipos de Cita"});
             this.cmbFiltro.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbFiltro.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbFiltro.Location = new System.Drawing.Point(24, 36);
-            this.cmbFiltro.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbFiltro.Location = new System.Drawing.Point(18, 29);
+            this.cmbFiltro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbFiltro.MinimumSize = new System.Drawing.Size(150, 24);
             this.cmbFiltro.Name = "cmbFiltro";
             this.cmbFiltro.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbFiltro.Size = new System.Drawing.Size(200, 38);
+            this.cmbFiltro.Size = new System.Drawing.Size(150, 31);
             this.cmbFiltro.TabIndex = 0;
             this.cmbFiltro.Texts = "";
             this.cmbFiltro.OnSelectedIndexChanged += new System.EventHandler(this.cmbFiltro_OnSelectedIndexChanged);
@@ -171,9 +178,10 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.rvReportes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 100);
+            this.panel1.Location = new System.Drawing.Point(0, 81);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1491, 809);
+            this.panel1.Size = new System.Drawing.Size(1118, 658);
             this.panel1.TabIndex = 2;
             // 
             // rvReportes
@@ -182,10 +190,12 @@
             this.rvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rvReportes.LocalReport.ReportEmbeddedResource = "CapaPresentacion.InformeReporte.rdlc";
             this.rvReportes.Location = new System.Drawing.Point(0, 0);
+            this.rvReportes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rvReportes.Name = "rvReportes";
             this.rvReportes.ServerReport.BearerToken = null;
-            this.rvReportes.Size = new System.Drawing.Size(1491, 809);
+            this.rvReportes.Size = new System.Drawing.Size(1118, 658);
             this.rvReportes.TabIndex = 1;
+            this.rvReportes.Load += new System.EventHandler(this.rvReportes_Load);
             // 
             // DataTable1BindingSource
             // 
@@ -193,11 +203,12 @@
             // 
             // ReportesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1491, 909);
+            this.ClientSize = new System.Drawing.Size(1118, 739);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlOpciones);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReportesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reportes";

@@ -82,6 +82,7 @@ namespace CapaPresentacion
             if (logica.CraerUsuario(usuario, cmbPuesto.Texts, txtConfirmar.Texts))
             {
                 GrantAccess();
+                Close();
             }
         }
         private void GrantAccess()
@@ -101,6 +102,7 @@ namespace CapaPresentacion
             if (logica.CraerUsuarioRemoto(usuario, cmbPuesto.Texts, txtConfirmar.Texts))
             {
                 GrantAccessRemoto();
+                Close();
             }
         }
         private void GrantAccessRemoto()

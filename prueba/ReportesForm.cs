@@ -21,14 +21,14 @@ namespace CapaPresentacion
 
         private void ReportesForm_Load(object sender, EventArgs e)
         {
-
+            rvReportes.Clear();
             RellenarListaPodologos();
             RellenarProfesionistas();
             RellenarTiposCita();
             cmbPodologos.Enabled = false;
             CambiarVisibilidad(false);
             cmbTiposCita.Visible = false;
-            rvReportes.Clear();
+           rvReportes.Refresh();
 
            
         }
@@ -90,7 +90,9 @@ namespace CapaPresentacion
 
             if (ValidarCondiciones())
             {
+                this.rvReportes.Clear();
                 SeleccionReporte();
+                rvReportes.RefreshReport();
             }
 
         }
@@ -122,15 +124,17 @@ namespace CapaPresentacion
 
         private void SeleccionReporte()
         {
+            
             if (cmbFiltro.SelectedIndex == 0 && cmbPodologos.SelectedIndex == cmbPodologos.Items.Count-1)
             {
                 LogicaPodologo logica = new LogicaPodologo();
-                Reporte(logica.ReporteFechas(dtFinal.Value, dtFinal.Value));
+               
+                Reporte(logica.ReporteFechas(dtInicio.Value, dtFinal.Value));
             }
             if (cmbFiltro.SelectedIndex == 0 && cmbPodologos.SelectedIndex != cmbPodologos.Items.Count - 1)
             {
                 LogicaPodologo logica = new LogicaPodologo();
-                Reporte(logica.ReportesCitasFechas(ElementosGlobales.idPodologos[cmbPodologos.SelectedIndex], dtFinal.Value, dtFinal.Value));
+                Reporte(logica.ReportesCitasFechas(ElementosGlobales.idPodologos[cmbPodologos.SelectedIndex], dtInicio.Value, dtFinal.Value));
             }
             if (cmbFiltro.SelectedIndex == 1 && cmbPodologos.SelectedIndex == cmbPodologos.Items.Count - 1)
             {
@@ -146,13 +150,16 @@ namespace CapaPresentacion
 
         private void Reporte(DataTable tablaConsulta)
         {
-            this.rvReportes.Clear();
-
-           
+            rvReportes.LocalReport.DataSources.Clear();
             ReportDataSource reportDataSource = new ReportDataSource("DataSet1", tablaConsulta);
             rvReportes.LocalReport.DataSources.Add(reportDataSource);
             rvReportes.RefreshReport();
         }
-       
+
+        private void rvReportes_Load(object sender, EventArgs e)
+        {
+            this.rvReportes.Clear();
+            rvReportes.RefreshReport();
+        }
     }
 }

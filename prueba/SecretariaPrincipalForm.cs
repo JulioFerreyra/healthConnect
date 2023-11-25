@@ -94,7 +94,7 @@ namespace prueba
                    
                     int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
                     ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
-                    AnadirResultadoForm detallesCitaForm = new AnadirResultadoForm();
+                    AnadirResultadoForm detallesCitaForm = new AnadirResultadoForm(false);
                     detallesCitaForm.ShowDialog();
                     RellenarDataGridPodologos(ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
                 }
@@ -234,6 +234,27 @@ namespace prueba
             }
         }
         private void dgXochitl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgXochitl_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            if (dgXochitl.Rows.Count >0)
+            {
+                lblCitas.Text = "Citas programadas: " + dgXochitl.Rows.Count;
+            }
+        }
+
+        private void dgXochitl_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            if (dgXochitl.Rows.Count == 0)
+            {
+                lblCitas.Text = "Sin citas programadas";
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

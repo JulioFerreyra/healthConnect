@@ -35,7 +35,7 @@ namespace CapaPresentacion
                     int FilaSeleccionada = dgCitas.Rows.IndexOf(dgCitas.Rows[e.RowIndex]);
                     Cita cita = new Cita(Convert.ToInt32(dgCitas.Rows[FilaSeleccionada].Cells["ID"].Value)
                         );
-                    MessageBox.Show(cita.GetIdPaciente().ToString());
+                   
                     CrearCita(cita);
                     RellenarDataGrid();
                 }

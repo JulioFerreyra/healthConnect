@@ -15,9 +15,11 @@ namespace CapaPresentacion
 {
     public partial class AnadirResultadoForm : Form
     {
-        public AnadirResultadoForm()
+        private bool editarCita;
+        public AnadirResultadoForm(bool editarCita)
         {
             InitializeComponent();
+            this.editarCita = editarCita;
         }
 
         [DllImport("user32.dll")]
@@ -59,10 +61,18 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+          
             Cita cita = new Cita(ElementosGlobales.idCitaGlobal, txtRes.Texts);
-            logicaSecretaria.FinalizarCita(cita);
-            Close();
+            if (editarCita && FinalizarCita(cita))
+            {
+                Form formularioCerrar = Application.OpenForms["EditarCitaForm"];
+                formularioCerrar.Close();
+                Close();
+            }
+            if (!editarCita && FinalizarCita(cita))
+            {
+                Close();   
+            }
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
@@ -93,6 +103,12 @@ namespace CapaPresentacion
             Close();
         }
       
+        private bool FinalizarCita(Cita cita)
+        {
+            LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
+            return logicaSecretaria.FinalizarCita(cita);
+          
+        }
 
         private void txtRes_Paint(object sender, PaintEventArgs e)
         { 

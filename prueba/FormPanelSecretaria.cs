@@ -175,6 +175,7 @@ namespace CapaPresentacion
             {
                 Form formularioCerrar = Application.OpenForms["SeleccionarPacienteForm"];
                 formularioCerrar.Close();
+               
             }
             catch (Exception)
             {
@@ -184,12 +185,23 @@ namespace CapaPresentacion
             {
                 Form formularioCerrar = Application.OpenForms["NuevaCitaForm"];
                 formularioCerrar.Close();
+                
             }
             catch (Exception)
             {
 
             }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["NuevoPacienteForm"];
+                CerrarNuevoPaciente.Close();
 
+            }
+            catch (Exception)
+            {
+
+            }
+           
 
         }
 
@@ -218,7 +230,16 @@ namespace CapaPresentacion
             {
 
             }
-            
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["NuevoPacienteForm"];
+                CerrarNuevoPaciente.Close();
+
+            }
+            catch (Exception)
+            {
+
+            }
 
         }
 
@@ -235,6 +256,7 @@ namespace CapaPresentacion
             {
                 Form formularioCerrar = Application.OpenForms["SecretariaPrincipalForm"];
                 formularioCerrar.Close();
+
             }
             catch (Exception)
             {
@@ -249,7 +271,16 @@ namespace CapaPresentacion
             {
 
             }
+            try
+            {
+                Form CerrarNuevoPaciente = Application.OpenForms["NuevoPacienteForm"];
+                CerrarNuevoPaciente.Close();
 
+            }
+            catch (Exception)
+            {
+
+            }
 
             //ReportesForm reportes = new ReportesForm();
             //reportes.ShowDialog();

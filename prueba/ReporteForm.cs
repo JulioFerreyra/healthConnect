@@ -46,5 +46,10 @@ namespace CapaPresentacion
             }
             vwReporte.RefreshReport();
         }
+
+        private void vwReporte_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
