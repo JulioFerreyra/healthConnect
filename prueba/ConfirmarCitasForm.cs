@@ -17,12 +17,17 @@ namespace CapaPresentacion
         public ConfirmarCitasForm()
         {
             InitializeComponent();
+            ttAyuda.SetToolTip(pctAyuda,"Cada cita pendiente de confirmación tiene columnas adicionales para las siguientes acciones: \n Aceptar: Al presionar sobre la columna de 'Aceptar Cita' la cita que corresponda a la fila y a la columna será aceptada. \n Editar: Al presionar sobre la columna de 'Editar Cita' se abrirá otra ventana donde podrá modificar los datos de la cita. \n Rechazar: Al presionar sobre 'Rechazar Cita' la cita será rechazada.");
         }
 
         private void ConfirmarCitasForm_Load(object sender, EventArgs e)
         {
             RellenarDataGrid();
             AgregarColumnas();
+            if (dgCitas.Columns.Count > 3)
+            {
+                dgCitas.Columns["ID"].Visible = false;
+            }
         }
 
 

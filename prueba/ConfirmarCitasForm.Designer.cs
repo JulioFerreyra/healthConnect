@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmarCitasForm));
             this.dgCitas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.pctAyuda = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAyuda)).BeginInit();
             this.SuspendLayout();
             // 
             // dgCitas
             // 
             this.dgCitas.AllowUserToAddRows = false;
             this.dgCitas.AllowUserToDeleteRows = false;
-            this.dgCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgCitas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgCitas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgCitas.BackgroundColor = System.Drawing.Color.White;
             this.dgCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgCitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -71,7 +76,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgCitas.RowHeadersVisible = false;
-            this.dgCitas.RowHeadersWidth = 51;
+            this.dgCitas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgCitas.Size = new System.Drawing.Size(1101, 682);
             this.dgCitas.TabIndex = 0;
             this.dgCitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCitas_CellClick);
@@ -79,13 +84,26 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(431, 16);
+            this.label1.Location = new System.Drawing.Point(433, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(262, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Citas por confirmar";
+            // 
+            // pctAyuda
+            // 
+            this.pctAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctAyuda.Image = global::CapaPresentacion.Properties.Resources.editar;
+            this.pctAyuda.Location = new System.Drawing.Point(1082, 16);
+            this.pctAyuda.Name = "pctAyuda";
+            this.pctAyuda.Size = new System.Drawing.Size(33, 31);
+            this.pctAyuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctAyuda.TabIndex = 2;
+            this.pctAyuda.TabStop = false;
             // 
             // ConfirmarCitasForm
             // 
@@ -93,6 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1132, 804);
+            this.Controls.Add(this.pctAyuda);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgCitas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -101,6 +120,7 @@
             this.Text = "ConfirmarCitasForm";
             this.Load += new System.EventHandler(this.ConfirmarCitasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAyuda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +130,7 @@
 
         private System.Windows.Forms.DataGridView dgCitas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip ttAyuda;
+        private System.Windows.Forms.PictureBox pctAyuda;
     }
 }
