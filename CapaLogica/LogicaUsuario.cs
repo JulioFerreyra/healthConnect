@@ -75,10 +75,14 @@ namespace CapaLogica
 
             if (string.IsNullOrEmpty(usuario.GetContraseña()))
             {
-                MessageBox.Show("ingrese la contraseña para continuars", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese la contraseña para continuar", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
+            if (usuario.GetContraseña().Length != 0)
+            {
+                MessageBox.Show("La contraseña debe contener 8 carácteres", "Contraseña invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             if (string.IsNullOrEmpty(confirmacionContraseña))
             {
                 MessageBox.Show("Confirme la contraseña para continuar", "Confirmación de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Warning);

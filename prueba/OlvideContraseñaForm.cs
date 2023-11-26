@@ -11,13 +11,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
-{
+namespace CapaPresentacion { 
+
     public partial class OlvideContraseñaForm : Form
     {
-        public OlvideContraseñaForm()
+    string usuarioText;
+        public OlvideContraseñaForm(string usuarioText)
         {
             InitializeComponent();
+            this.usuarioText = usuarioText;
+        
+            ttAyuda.SetToolTip(txtUsuario, "Ingrese su Usuario");
+            ttAyuda.SetToolTip(txtContraseña, "Ingrese una nueva contraseña \n Esta debe tener 8 carácteres");
+            ttAyuda.SetToolTip(txtConfirmarContraseña, "Confirme su nueva contraseña \n Ambas contraseñas deben coincidir" );
+            ttAyuda.SetToolTip(btnAceptar, "Restablecer su contraseña");
+            ttAyuda.SetToolTip(lblRegresar, "Regresar a Inicio de Sesión");
         }
 
         [DllImport("user32.dll")]
@@ -38,6 +46,12 @@ namespace CapaPresentacion
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void OlvideContraseñaForm_Load(object sender, EventArgs e)
+        {
+            txtUsuario.Texts = usuarioText;
+        }
+
         private void rjButton1_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario(txtUsuario.Texts, txtContraseña.Texts);
@@ -49,12 +63,40 @@ namespace CapaPresentacion
                 ActualizarContraseña(usuario);
                 
             }
-           
-           
-            
-            
+        
         }
 
+        private void lblRegresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnMostrarConfirmacion_Click(object sender, EventArgs e)
+        {
+            txtConfirmarContraseña.PasswordChar = !txtConfirmarContraseña.PasswordChar;
+        }
+
+        private void btnMostrarContraseña_Click(object sender, EventArgs e)
+        {
+            txtContraseña.PasswordChar = !txtContraseña.PasswordChar;
+        }
+      
+      
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtContraseña.Texts.Length > 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtConfirmarContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtConfirmarContraseña.Texts.Length > 8)
+            {
+                e.Handled = true;
+            }
+        }
         private void ActualizarContraseña(Usuario usuario)
         {
             if (ElementosGlobales.isAdmin)
@@ -71,9 +113,6 @@ namespace CapaPresentacion
             MessageBox.Show("Contraseña de administrador invalida");
         }
 
-        private void OlvideContraseñaForm_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

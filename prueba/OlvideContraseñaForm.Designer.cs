@@ -28,30 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OlvideContraseñaForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.txtConfirmarContraseña = new prueba.TextBoxD();
-            this.txtContraseña = new prueba.TextBoxD();
-            this.txtUsuario = new prueba.TextBoxD();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblRegresar = new System.Windows.Forms.LinkLabel();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.btnMostrarContraseña = new System.Windows.Forms.Button();
+            this.btnMostrarConfirmacion = new System.Windows.Forms.Button();
+            this.btnAceptar = new CustomControls.RJControls.RJButton();
+            this.txtConfirmarContraseña = new prueba.TextBoxD();
+            this.txtContraseña = new prueba.TextBoxD();
+            this.txtUsuario = new prueba.TextBoxD();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(8, 62);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(64, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 33);
+            this.label1.Size = new System.Drawing.Size(201, 20);
             this.label1.TabIndex = 78;
-            this.label1.Text = "Ingrese los datos del administrador";
+            this.label1.Text = "Restablecer contraseña";
             // 
             // panel1
             // 
@@ -59,9 +64,8 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(423, 46);
+            this.panel1.Size = new System.Drawing.Size(317, 37);
             this.panel1.TabIndex = 79;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -74,37 +78,106 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(359, -5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(269, -4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 49);
+            this.button1.Size = new System.Drawing.Size(48, 40);
             this.button1.TabIndex = 68;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // rjButton1
+            // label2
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.rjButton1.BorderRadius = 15;
-            this.rjButton1.BorderSize = 5;
-            this.rjButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
-            this.rjButton1.FlatAppearance.BorderSize = 4;
-            this.rjButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(103, 443);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(213, 62);
-            this.rjButton1.TabIndex = 77;
-            this.rjButton1.Text = "Aceptar";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(38, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 17);
+            this.label2.TabIndex = 80;
+            this.label2.Text = "Usuario*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(38, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 17);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Nueva contraseña*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(38, 258);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(170, 17);
+            this.label4.TabIndex = 82;
+            this.label4.Text = "Confirmar contraseña*";
+            // 
+            // lblRegresar
+            // 
+            this.lblRegresar.AutoSize = true;
+            this.lblRegresar.LinkColor = System.Drawing.Color.Gray;
+            this.lblRegresar.Location = new System.Drawing.Point(98, 399);
+            this.lblRegresar.Name = "lblRegresar";
+            this.lblRegresar.Size = new System.Drawing.Size(137, 13);
+            this.lblRegresar.TabIndex = 83;
+            this.lblRegresar.TabStop = true;
+            this.lblRegresar.Text = "Regresar a Inicio de Sesión";
+            this.lblRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRegresar_LinkClicked);
+            // 
+            // btnMostrarContraseña
+            // 
+            this.btnMostrarContraseña.BackColor = System.Drawing.Color.LightGray;
+            this.btnMostrarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnMostrarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrarContraseña.Image")));
+            this.btnMostrarContraseña.Location = new System.Drawing.Point(256, 214);
+            this.btnMostrarContraseña.Name = "btnMostrarContraseña";
+            this.btnMostrarContraseña.Size = new System.Drawing.Size(30, 23);
+            this.btnMostrarContraseña.TabIndex = 84;
+            this.btnMostrarContraseña.UseVisualStyleBackColor = false;
+            this.btnMostrarContraseña.Click += new System.EventHandler(this.btnMostrarContraseña_Click);
+            // 
+            // btnMostrarConfirmacion
+            // 
+            this.btnMostrarConfirmacion.BackColor = System.Drawing.Color.LightGray;
+            this.btnMostrarConfirmacion.FlatAppearance.BorderSize = 0;
+            this.btnMostrarConfirmacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarConfirmacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrarConfirmacion.Image")));
+            this.btnMostrarConfirmacion.Location = new System.Drawing.Point(255, 293);
+            this.btnMostrarConfirmacion.Name = "btnMostrarConfirmacion";
+            this.btnMostrarConfirmacion.Size = new System.Drawing.Size(30, 23);
+            this.btnMostrarConfirmacion.TabIndex = 84;
+            this.btnMostrarConfirmacion.UseVisualStyleBackColor = false;
+            this.btnMostrarConfirmacion.Click += new System.EventHandler(this.btnMostrarConfirmacion_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.btnAceptar.BorderRadius = 15;
+            this.btnAceptar.BorderSize = 5;
+            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnAceptar.FlatAppearance.BorderSize = 4;
+            this.btnAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(86, 336);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(160, 50);
+            this.btnAceptar.TabIndex = 4;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextColor = System.Drawing.Color.White;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // txtConfirmarContraseña
             // 
@@ -115,19 +188,20 @@
             this.txtConfirmarContraseña.BorderSize = 2;
             this.txtConfirmarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmarContraseña.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmarContraseña.Location = new System.Drawing.Point(46, 366);
-            this.txtConfirmarContraseña.Margin = new System.Windows.Forms.Padding(5);
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(41, 288);
+            this.txtConfirmarContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmarContraseña.MaxLength = 10;
             this.txtConfirmarContraseña.Multiline = false;
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
-            this.txtConfirmarContraseña.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtConfirmarContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtConfirmarContraseña.PasswordChar = true;
             this.txtConfirmarContraseña.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtConfirmarContraseña.PlaceholderText = "Confirmar contraseña";
-            this.txtConfirmarContraseña.Size = new System.Drawing.Size(333, 44);
-            this.txtConfirmarContraseña.TabIndex = 75;
+            this.txtConfirmarContraseña.Size = new System.Drawing.Size(250, 35);
+            this.txtConfirmarContraseña.TabIndex = 3;
             this.txtConfirmarContraseña.Texts = "";
             this.txtConfirmarContraseña.UnderlineStyle = true;
+            this.txtConfirmarContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConfirmarContraseña_KeyPress);
             // 
             // txtContraseña
             // 
@@ -138,19 +212,20 @@
             this.txtContraseña.BorderSize = 2;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
-            this.txtContraseña.Location = new System.Drawing.Point(46, 268);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5);
+            this.txtContraseña.Location = new System.Drawing.Point(41, 210);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtContraseña.PasswordChar = true;
             this.txtContraseña.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtContraseña.PlaceholderText = "Contraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(333, 44);
-            this.txtContraseña.TabIndex = 75;
+            this.txtContraseña.Size = new System.Drawing.Size(250, 35);
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Texts = "";
             this.txtContraseña.UnderlineStyle = true;
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // txtUsuario
             // 
@@ -161,73 +236,39 @@
             this.txtUsuario.BorderSize = 2;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
-            this.txtUsuario.Location = new System.Drawing.Point(46, 166);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(5);
+            this.txtUsuario.Location = new System.Drawing.Point(41, 132);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.MaxLength = 10;
             this.txtUsuario.Multiline = false;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtUsuario.PasswordChar = false;
             this.txtUsuario.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtUsuario.PlaceholderText = "Usuario";
-            this.txtUsuario.Size = new System.Drawing.Size(333, 44);
-            this.txtUsuario.TabIndex = 74;
+            this.txtUsuario.Size = new System.Drawing.Size(250, 35);
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Texts = "";
             this.txtUsuario.UnderlineStyle = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(41, 133);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 28);
-            this.label2.TabIndex = 80;
-            this.label2.Text = "Usuario";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(41, 235);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 28);
-            this.label3.TabIndex = 81;
-            this.label3.Text = "Contraseña";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(41, 333);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(225, 28);
-            this.label4.TabIndex = 82;
-            this.label4.Text = "Confirmar contraseña";
-            // 
             // OlvideContraseñaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(423, 527);
+            this.ClientSize = new System.Drawing.Size(317, 443);
+            this.Controls.Add(this.btnMostrarConfirmacion);
+            this.Controls.Add(this.btnMostrarContraseña);
+            this.Controls.Add(this.lblRegresar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtConfirmarContraseña);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OlvideContraseñaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OlvideContraseña";
@@ -241,7 +282,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton btnAceptar;
         private prueba.TextBoxD txtContraseña;
         private prueba.TextBoxD txtUsuario;
         private System.Windows.Forms.Panel panel1;
@@ -250,5 +291,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel lblRegresar;
+        private System.Windows.Forms.ToolTip ttAyuda;
+        private System.Windows.Forms.Button btnMostrarContraseña;
+        private System.Windows.Forms.Button btnMostrarConfirmacion;
     }
 }

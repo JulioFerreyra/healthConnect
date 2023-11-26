@@ -35,6 +35,11 @@ namespace prueba
         public LoginForm()
         {
             InitializeComponent();
+            ttAyuda.SetToolTip(txtCorreoLogin, "Ingrese su Usuario");
+            ttAyuda.SetToolTip(txbPasswordLogin, "Ingrese su Contraseña");
+            ttAyuda.SetToolTip(rjButton1, "Iniciar sesión");
+            ttAyuda.SetToolTip(linkLabel1,"¿Olvido su contraseña? \n De clic aquí para recuperarla");
+
         }
 
         /// <summary>
@@ -69,7 +74,7 @@ namespace prueba
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            OlvideContraseñaForm recuperarContraaseña = new OlvideContraseñaForm();
+            OlvideContraseñaForm recuperarContraaseña = new OlvideContraseñaForm(txtCorreoLogin.Texts);
             Hide();
             recuperarContraaseña.ShowDialog();
             Show();
@@ -165,6 +170,11 @@ namespace prueba
             {
                 txbPasswordLogin.PasswordChar = !txbPasswordLogin.PasswordChar;
             }
+        }
+
+        private void ttAyuda_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

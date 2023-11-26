@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.txtCorreoLogin = new prueba.TextBoxD();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.mostrarContraseña = new System.Windows.Forms.Button();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +52,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(47, 242);
+            this.label2.Location = new System.Drawing.Point(44, 245);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 7;
@@ -63,7 +65,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 337);
+            this.label3.Location = new System.Drawing.Point(44, 337);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 8;
@@ -100,7 +102,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel1.Location = new System.Drawing.Point(138, 484);
+            this.linkLabel1.Location = new System.Drawing.Point(151, 483);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(106, 13);
             this.linkLabel1.TabIndex = 59;
@@ -127,7 +129,6 @@
             this.rjButton1.Size = new System.Drawing.Size(143, 45);
             this.rjButton1.TabIndex = 6;
             this.rjButton1.Text = "Iniciar sesión";
-            this.rjButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
@@ -142,7 +143,7 @@
             this.txbPasswordLogin.BorderSize = 2;
             this.txbPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPasswordLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.txbPasswordLogin.Location = new System.Drawing.Point(44, 361);
+            this.txbPasswordLogin.Location = new System.Drawing.Point(48, 361);
             this.txbPasswordLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txbPasswordLogin.MaxLength = 10;
             this.txbPasswordLogin.Multiline = false;
@@ -167,7 +168,7 @@
             this.txtCorreoLogin.BorderSize = 2;
             this.txtCorreoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCorreoLogin.Location = new System.Drawing.Point(44, 269);
+            this.txtCorreoLogin.Location = new System.Drawing.Point(48, 269);
             this.txtCorreoLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoLogin.MaxLength = 10;
             this.txtCorreoLogin.Multiline = false;
@@ -204,6 +205,10 @@
             this.mostrarContraseña.TabIndex = 60;
             this.mostrarContraseña.UseVisualStyleBackColor = false;
             this.mostrarContraseña.Click += new System.EventHandler(this.mostrarContraseña_Click);
+            // 
+            // ttAyuda
+            // 
+            this.ttAyuda.Popup += new System.Windows.Forms.PopupEventHandler(this.ttAyuda_Popup);
             // 
             // LoginForm
             // 
@@ -249,6 +254,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Button mostrarContraseña;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }
 
