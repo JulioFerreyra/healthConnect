@@ -276,7 +276,7 @@
             this.dgLogs.RowHeadersVisible = false;
             this.dgLogs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgLogs.Size = new System.Drawing.Size(917, 359);
+            this.dgLogs.Size = new System.Drawing.Size(917, 550);
             this.dgLogs.TabIndex = 7;
             // 
             // btnAplicar

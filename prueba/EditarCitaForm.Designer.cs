@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarCitaForm));
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,11 +46,13 @@
             this.tbxApellMat = new prueba.TextBoxD();
             this.tbxApellPat = new prueba.TextBoxD();
             this.tbxNombre = new prueba.TextBoxD();
-            this.rjButton4 = new CustomControls.RJControls.RJButton();
+            this.btnFinalizar = new CustomControls.RJControls.RJButton();
             this.dtFecha = new CustomControls.RJControls.pDatePicker();
             this.CmbxPodologo = new CustomControls.RJControls.pComboBox();
             this.cmbxHora = new CustomControls.RJControls.pComboBox();
             this.cmbxTipoCita = new CustomControls.RJControls.pComboBox();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +75,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label4.Location = new System.Drawing.Point(575, 90);
+            this.label4.Location = new System.Drawing.Point(575, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 24);
             this.label4.TabIndex = 33;
@@ -107,16 +110,16 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.label6.Location = new System.Drawing.Point(38, 269);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 24);
+            this.label6.Size = new System.Drawing.Size(103, 24);
             this.label6.TabIndex = 35;
-            this.label6.Text = "Sintomas";
+            this.label6.Text = "Sintomas*";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label5.Location = new System.Drawing.Point(857, 86);
+            this.label5.Location = new System.Drawing.Point(857, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 24);
             this.label5.TabIndex = 34;
@@ -163,6 +166,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -197,14 +201,14 @@
             // 
             // tbxTelefono
             // 
-            this.tbxTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxTelefono.BackColor = System.Drawing.Color.Silver;
+            this.tbxTelefono.BorderColor = System.Drawing.Color.Silver;
             this.tbxTelefono.BorderFocusColor = System.Drawing.Color.Lime;
             this.tbxTelefono.BorderRadius = 8;
             this.tbxTelefono.BorderSize = 2;
             this.tbxTelefono.Enabled = false;
             this.tbxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxTelefono.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxTelefono.ForeColor = System.Drawing.Color.DodgerBlue;
             this.tbxTelefono.Location = new System.Drawing.Point(851, 123);
             this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTelefono.MaxLength = 10;
@@ -221,13 +225,13 @@
             // 
             // tbxSintomas
             // 
-            this.tbxSintomas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxSintomas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxSintomas.BorderFocusColor = System.Drawing.Color.Lime;
+            this.tbxSintomas.BackColor = System.Drawing.Color.LightGray;
+            this.tbxSintomas.BorderColor = System.Drawing.Color.Silver;
+            this.tbxSintomas.BorderFocusColor = System.Drawing.Color.White;
             this.tbxSintomas.BorderRadius = 8;
             this.tbxSintomas.BorderSize = 2;
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxSintomas.ForeColor = System.Drawing.Color.Black;
             this.tbxSintomas.Location = new System.Drawing.Point(40, 297);
             this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSintomas.MaxLength = 10;
@@ -244,8 +248,8 @@
             // 
             // tbxApellMat
             // 
-            this.tbxApellMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxApellMat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxApellMat.BackColor = System.Drawing.Color.Silver;
+            this.tbxApellMat.BorderColor = System.Drawing.Color.Silver;
             this.tbxApellMat.BorderFocusColor = System.Drawing.Color.Lime;
             this.tbxApellMat.BorderRadius = 8;
             this.tbxApellMat.BorderSize = 2;
@@ -268,8 +272,8 @@
             // 
             // tbxApellPat
             // 
-            this.tbxApellPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxApellPat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxApellPat.BackColor = System.Drawing.Color.Silver;
+            this.tbxApellPat.BorderColor = System.Drawing.Color.Silver;
             this.tbxApellPat.BorderFocusColor = System.Drawing.Color.Lime;
             this.tbxApellPat.BorderRadius = 8;
             this.tbxApellPat.BorderSize = 2;
@@ -292,9 +296,9 @@
             // 
             // tbxNombre
             // 
-            this.tbxNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tbxNombre.BackColor = System.Drawing.Color.Silver;
+            this.tbxNombre.BorderColor = System.Drawing.Color.Silver;
+            this.tbxNombre.BorderFocusColor = System.Drawing.Color.White;
             this.tbxNombre.BorderRadius = 8;
             this.tbxNombre.BorderSize = 2;
             this.tbxNombre.Enabled = false;
@@ -314,29 +318,29 @@
             this.tbxNombre.Texts = "";
             this.tbxNombre.UnderlineStyle = false;
             // 
-            // rjButton4
+            // btnFinalizar
             // 
-            this.rjButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.rjButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.rjButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.rjButton4.BorderRadius = 15;
-            this.rjButton4.BorderSize = 5;
-            this.rjButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
-            this.rjButton4.FlatAppearance.BorderSize = 4;
-            this.rjButton4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.rjButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.rjButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(40, 534);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(144, 45);
-            this.rjButton4.TabIndex = 100;
-            this.rjButton4.Text = "Finalizar Cita";
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
-            this.rjButton4.Click += new System.EventHandler(this.rjButton4_Click);
+            this.btnFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnFinalizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnFinalizar.BorderColor = System.Drawing.Color.White;
+            this.btnFinalizar.BorderRadius = 15;
+            this.btnFinalizar.BorderSize = 5;
+            this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnFinalizar.FlatAppearance.BorderSize = 4;
+            this.btnFinalizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.Color.White;
+            this.btnFinalizar.Location = new System.Drawing.Point(40, 534);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(144, 45);
+            this.btnFinalizar.TabIndex = 100;
+            this.btnFinalizar.Text = "Finalizar Cita";
+            this.btnFinalizar.TextColor = System.Drawing.Color.White;
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.rjButton4_Click);
             // 
             // dtFecha
             // 
@@ -422,6 +426,20 @@
             this.cmbxTipoCita.TabIndex = 5;
             this.cmbxTipoCita.Texts = "Tipo de cita";
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1108, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 101;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // EditarCitaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,7 +461,7 @@
             this.Controls.Add(this.tbxApellMat);
             this.Controls.Add(this.tbxApellPat);
             this.Controls.Add(this.tbxNombre);
-            this.Controls.Add(this.rjButton4);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.CmbxPodologo);
@@ -482,6 +500,8 @@
         private CustomControls.RJControls.RJButton txtAceptar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
-        private CustomControls.RJControls.RJButton rjButton4;
+        private CustomControls.RJControls.RJButton btnFinalizar;
+        private System.Windows.Forms.ToolTip ttAyuda;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

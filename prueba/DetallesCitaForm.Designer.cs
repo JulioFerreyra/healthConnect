@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesCitaForm));
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.tbxNombre = new prueba.TextBoxD();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(350, 210);
+            this.label6.Location = new System.Drawing.Point(342, 210);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 24);
             this.label6.TabIndex = 40;
@@ -82,7 +84,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(622, 107);
+            this.label4.Location = new System.Drawing.Point(614, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 24);
             this.label4.TabIndex = 38;
@@ -93,7 +95,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(350, 107);
+            this.label3.Location = new System.Drawing.Point(342, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 24);
             this.label3.TabIndex = 37;
@@ -126,7 +128,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(890, 107);
+            this.label7.Location = new System.Drawing.Point(921, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 24);
             this.label7.TabIndex = 42;
@@ -170,7 +172,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(632, 393);
+            this.label11.Location = new System.Drawing.Point(624, 393);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 24);
             this.label11.TabIndex = 50;
@@ -226,15 +228,15 @@
             // 
             // txtFecha
             // 
-            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtFecha.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.txtFecha.BackColor = System.Drawing.Color.Silver;
+            this.txtFecha.BorderColor = System.Drawing.Color.Silver;
             this.txtFecha.BorderFocusColor = System.Drawing.Color.Honeydew;
             this.txtFecha.BorderRadius = 0;
             this.txtFecha.BorderSize = 2;
             this.txtFecha.Enabled = false;
             this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
-            this.txtFecha.Location = new System.Drawing.Point(637, 428);
+            this.txtFecha.Location = new System.Drawing.Point(629, 428);
             this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.MaxLength = 10;
             this.txtFecha.Multiline = false;
@@ -258,7 +260,7 @@
             this.txtHora.Enabled = false;
             this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHora.ForeColor = System.Drawing.Color.White;
-            this.txtHora.Location = new System.Drawing.Point(350, 428);
+            this.txtHora.Location = new System.Drawing.Point(342, 428);
             this.txtHora.Margin = new System.Windows.Forms.Padding(4);
             this.txtHora.MaxLength = 10;
             this.txtHora.Multiline = false;
@@ -274,7 +276,8 @@
             // 
             // txtResultado
             // 
-            this.txtResultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtResultado.BackColor = System.Drawing.Color.Silver;
             this.txtResultado.BorderColor = System.Drawing.Color.Transparent;
             this.txtResultado.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtResultado.BorderRadius = 8;
@@ -283,7 +286,7 @@
             this.txtResultado.Enabled = false;
             this.txtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResultado.ForeColor = System.Drawing.Color.White;
-            this.txtResultado.Location = new System.Drawing.Point(896, 142);
+            this.txtResultado.Location = new System.Drawing.Point(915, 143);
             this.txtResultado.Margin = new System.Windows.Forms.Padding(4);
             this.txtResultado.MaxLength = 10;
             this.txtResultado.Multiline = true;
@@ -299,7 +302,7 @@
             // 
             // tbxSintomas
             // 
-            this.tbxSintomas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxSintomas.BackColor = System.Drawing.Color.Silver;
             this.tbxSintomas.BorderColor = System.Drawing.Color.Transparent;
             this.tbxSintomas.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tbxSintomas.BorderRadius = 8;
@@ -308,7 +311,7 @@
             this.tbxSintomas.Enabled = false;
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxSintomas.Location = new System.Drawing.Point(350, 245);
+            this.tbxSintomas.Location = new System.Drawing.Point(342, 245);
             this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSintomas.MaxLength = 100;
             this.tbxSintomas.Multiline = true;
@@ -324,7 +327,7 @@
             // 
             // tbxTelefono
             // 
-            this.tbxTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxTelefono.BackColor = System.Drawing.Color.Silver;
             this.tbxTelefono.BorderColor = System.Drawing.Color.Transparent;
             this.tbxTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tbxTelefono.BorderRadius = 8;
@@ -349,7 +352,7 @@
             // 
             // tbxApellMat
             // 
-            this.tbxApellMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxApellMat.BackColor = System.Drawing.Color.Silver;
             this.tbxApellMat.BorderColor = System.Drawing.Color.Transparent;
             this.tbxApellMat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tbxApellMat.BorderRadius = 8;
@@ -358,7 +361,7 @@
             this.tbxApellMat.Enabled = false;
             this.tbxApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellMat.ForeColor = System.Drawing.Color.White;
-            this.tbxApellMat.Location = new System.Drawing.Point(628, 142);
+            this.tbxApellMat.Location = new System.Drawing.Point(620, 142);
             this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellMat.MaxLength = 10;
             this.tbxApellMat.Multiline = false;
@@ -374,7 +377,7 @@
             // 
             // tbxApellPat
             // 
-            this.tbxApellPat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxApellPat.BackColor = System.Drawing.Color.Silver;
             this.tbxApellPat.BorderColor = System.Drawing.Color.Transparent;
             this.tbxApellPat.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tbxApellPat.BorderRadius = 8;
@@ -383,7 +386,7 @@
             this.tbxApellPat.Enabled = false;
             this.tbxApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellPat.ForeColor = System.Drawing.Color.White;
-            this.tbxApellPat.Location = new System.Drawing.Point(350, 142);
+            this.tbxApellPat.Location = new System.Drawing.Point(342, 142);
             this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellPat.MaxLength = 10;
             this.tbxApellPat.Multiline = false;
@@ -399,7 +402,7 @@
             // 
             // tbxNombre
             // 
-            this.tbxNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxNombre.BackColor = System.Drawing.Color.Silver;
             this.tbxNombre.BorderColor = System.Drawing.Color.Transparent;
             this.tbxNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tbxNombre.BorderRadius = 8;
@@ -432,7 +435,7 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1174, 3);
+            this.button1.Location = new System.Drawing.Point(1227, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 34);
             this.button1.TabIndex = 53;
@@ -446,7 +449,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1215, 37);
+            this.panel1.Size = new System.Drawing.Size(1265, 37);
             this.panel1.TabIndex = 54;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -457,7 +460,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.button1;
-            this.ClientSize = new System.Drawing.Size(1215, 530);
+            this.ClientSize = new System.Drawing.Size(1265, 530);
             this.Controls.Add(this.txtTipoCita);
             this.Controls.Add(this.txtPod);
             this.Controls.Add(this.label11);
@@ -517,5 +520,6 @@
         private prueba.TextBoxD txtTipoCita;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }

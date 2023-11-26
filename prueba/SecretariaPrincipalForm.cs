@@ -254,19 +254,15 @@ namespace prueba
 
         private void RenombrarCantidadCitas()
         {
-            string fechaConcat = (CalendarioCitas.SelectionStart.DayOfYear == DateTime.Today.DayOfYear) ? "Hoy" : "el " + CalendarioCitas.SelectionStart.ToString("dddd dd/MM/yyyy");
+            string fechaConcat = (CalendarioCitas.SelectionStart.DayOfYear == DateTime.Today.DayOfYear) ? "Hoy" : CalendarioCitas.SelectionStart.ToString("dddd dd/MM/yyyy");
 
-            if (dgXochitl.Rows.Count > 0)
-            {
+            
               
-                lblCitas.Text = "Citas programadas para " +fechaConcat+": "+ dgXochitl.Rows.Count;
-                return;
+                lblCitas.Text = fechaConcat+"\nTotal de citas: "+ dgXochitl.Rows.Count;
+                
 
-            }
-            if (dgXochitl.Rows.Count == 0)
-            {
-                lblCitas.Text = "Sin citas programadas para " + fechaConcat;
-            }
+            
+            
         }
         private void label1_Click(object sender, EventArgs e)
         {

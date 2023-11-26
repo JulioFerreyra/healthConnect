@@ -19,6 +19,15 @@ namespace CapaPresentacion
         private int podologo;
         public EditarCitaForm(bool condicionEditarCita)
         {
+            ttAyuda.SetToolTip(btnAyuda, "Para seleccionar a un Paciente de clic sobre el icono de lupa");
+            ttAyuda.SetToolTip(button1, "Seleccionar Paciente");
+            ttAyuda.SetToolTip(CmbxPodologo, "Seleccionar Profesionista");
+            ttAyuda.SetToolTip(cmbxHora, "Seleccionar Hora disponible");
+            ttAyuda.SetToolTip(cmbxTipoCita, "Seleccionar Tipo de Cita");
+            ttAyuda.SetToolTip(dtFecha, "Seleccionar Fecha");
+            ttAyuda.SetToolTip(tbxSintomas, "Seleccionar profesionista");
+            ttAyuda.SetToolTip(txtAceptar, "Aceptar y Guardar");
+            ttAyuda.SetToolTip(btnFinalizar, "Finalizar cita y Agregar Resultado");
             InitializeComponent();
             this.condicionEditarCita = condicionEditarCita;
         }
