@@ -138,7 +138,7 @@ namespace prueba
 
 
             DataGridViewButtonColumn VerHistoralBtnGrid = new DataGridViewButtonColumn();
-            VerHistoralBtnGrid.HeaderText = "Ver Historial Citas";
+            VerHistoralBtnGrid.HeaderText = "Citas Proximas";
             VerHistoralBtnGrid.Name = "HistorialCitasCol";
             VerHistoralBtnGrid.Width = 30;
 
