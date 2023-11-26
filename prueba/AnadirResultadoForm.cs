@@ -20,6 +20,13 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             this.editarCita = editarCita;
+            ttAyuda.SetToolTip(txtNombre, "Nombre del paciente");
+            ttAyuda.SetToolTip(txtApellMat, "Apellido Materno del paciente");
+            ttAyuda.SetToolTip(txtApellPat, "Apellido Paterno del paciente");
+            ttAyuda.SetToolTip(txtDetalles, "Detalles o motivo de la cita");
+            ttAyuda.SetToolTip(txtRes, "Ingrese el diágnostico o resultado de la cita \n Este apartado no puede estar vacio");
+            ttAyuda.SetToolTip(rjButton1, "Finalizar cita y agregar diagnóstico");
+
         }
 
         [DllImport("user32.dll")]

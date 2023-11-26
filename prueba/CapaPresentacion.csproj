@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logoHealthConnect.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
@@ -479,6 +482,8 @@
     <None Include="Resources\cerrar %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\hcLOGO1.png" />
+    <None Include="Resources\hcLOGO.png" />
     <None Include="Resources\lupa.png" />
     <None Include="Resources\WhatsApp Image 2023-10-24 at 9.19.07 PM.jpeg" />
     <None Include="Resources\HealthConecctName.png" />
@@ -489,6 +494,7 @@
     <None Include="Resources\cerrar-sesion2.png" />
     <None Include="Resources\cerrar-sesion3.png" />
     <None Include="Resources\cerrar-sesion %282%29.png" />
+    <Content Include="logoHealthConnect.ico" />
     <Content Include="Resources\editar.png" />
     <None Include="Resources\finalizar.png" />
     <None Include="Resources\eliminar1.png" />

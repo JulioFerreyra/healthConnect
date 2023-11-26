@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPanelSecretaria));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCitasConfirmar = new FontAwesome.Sharp.IconButton();
+            this.btnPacientes = new FontAwesome.Sharp.IconButton();
+            this.btnNuevaCita = new FontAwesome.Sharp.IconButton();
             this.btnPrincipal = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Panelformularios = new System.Windows.Forms.Panel();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.btnNuevaCita = new FontAwesome.Sharp.IconButton();
-            this.btnPacientes = new FontAwesome.Sharp.IconButton();
-            this.btnCitasConfirmar = new FontAwesome.Sharp.IconButton();
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnInicioUsuario = new FontAwesome.Sharp.IconButton();
-            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnInicioUsuario = new FontAwesome.Sharp.IconButton();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.Panelformularios = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,133 +60,10 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(415, 1055);
+            this.panel1.Size = new System.Drawing.Size(311, 857);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnPrincipal
-            // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrincipal.ForeColor = System.Drawing.Color.White;
-            this.btnPrincipal.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.btnPrincipal.IconColor = System.Drawing.Color.White;
-            this.btnPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrincipal.IconSize = 55;
-            this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrincipal.Location = new System.Drawing.Point(0, 319);
-            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(415, 80);
-            this.btnPrincipal.TabIndex = 14;
-            this.btnPrincipal.Text = "Pantalla Principal";
-            this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPrincipal.UseVisualStyleBackColor = false;
-            this.btnPrincipal.Click += new System.EventHandler(this.rjButton2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.WhatsApp_Image_2023_10_24_at_9_19_07_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 68);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(340, 181);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.panel3.Controls.Add(this.lblTitulo);
-            this.panel3.Controls.Add(this.btnInicioUsuario);
-            this.panel3.Controls.Add(this.pnlMenu);
-            this.panel3.Controls.Add(this.iconCurrentChildForm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(415, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1509, 96);
-            this.panel3.TabIndex = 8;
-            // 
-            // Panelformularios
-            // 
-            this.Panelformularios.AutoSize = true;
-            this.Panelformularios.BackColor = System.Drawing.Color.White;
-            this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panelformularios.Location = new System.Drawing.Point(415, 96);
-            this.Panelformularios.Margin = new System.Windows.Forms.Padding(4);
-            this.Panelformularios.Name = "Panelformularios";
-            this.Panelformularios.Size = new System.Drawing.Size(1509, 959);
-            this.Panelformularios.TabIndex = 1;
-            this.Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.iconCurrentChildForm.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconCurrentChildForm.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 49;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(7, 25);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(65, 49);
-            this.iconCurrentChildForm.TabIndex = 15;
-            this.iconCurrentChildForm.TabStop = false;
-            // 
-            // btnNuevaCita
-            // 
-            this.btnNuevaCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnNuevaCita.FlatAppearance.BorderSize = 0;
-            this.btnNuevaCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevaCita.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaCita.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.btnNuevaCita.IconColor = System.Drawing.Color.White;
-            this.btnNuevaCita.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevaCita.IconSize = 55;
-            this.btnNuevaCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaCita.Location = new System.Drawing.Point(0, 403);
-            this.btnNuevaCita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNuevaCita.Name = "btnNuevaCita";
-            this.btnNuevaCita.Size = new System.Drawing.Size(415, 80);
-            this.btnNuevaCita.TabIndex = 15;
-            this.btnNuevaCita.Text = "Nueva Cita";
-            this.btnNuevaCita.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaCita.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevaCita.UseVisualStyleBackColor = false;
-            this.btnNuevaCita.Click += new System.EventHandler(this.rjButton5_Click);
-            // 
-            // btnPacientes
-            // 
-            this.btnPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnPacientes.FlatAppearance.BorderSize = 0;
-            this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.ForeColor = System.Drawing.Color.White;
-            this.btnPacientes.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.btnPacientes.IconColor = System.Drawing.Color.White;
-            this.btnPacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPacientes.IconSize = 55;
-            this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPacientes.Location = new System.Drawing.Point(0, 487);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(415, 80);
-            this.btnPacientes.TabIndex = 16;
-            this.btnPacientes.Text = "Pacientes";
-            this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPacientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPacientes.UseVisualStyleBackColor = false;
-            this.btnPacientes.Click += new System.EventHandler(this.rjButton4_Click);
             // 
             // btnCitasConfirmar
             // 
@@ -199,10 +77,10 @@
             this.btnCitasConfirmar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCitasConfirmar.IconSize = 55;
             this.btnCitasConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCitasConfirmar.Location = new System.Drawing.Point(0, 571);
-            this.btnCitasConfirmar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCitasConfirmar.Location = new System.Drawing.Point(0, 464);
+            this.btnCitasConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCitasConfirmar.Name = "btnCitasConfirmar";
-            this.btnCitasConfirmar.Size = new System.Drawing.Size(415, 80);
+            this.btnCitasConfirmar.Size = new System.Drawing.Size(311, 65);
             this.btnCitasConfirmar.TabIndex = 17;
             this.btnCitasConfirmar.Text = "Citas por confirmar";
             this.btnCitasConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,36 +88,108 @@
             this.btnCitasConfirmar.UseVisualStyleBackColor = false;
             this.btnCitasConfirmar.Click += new System.EventHandler(this.btnReporte_Click);
             // 
-            // btnAyuda
+            // btnPacientes
             // 
-            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 20;
-            this.btnAyuda.Location = new System.Drawing.Point(-1, -1);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(136, 30);
-            this.btnAyuda.TabIndex = 16;
-            this.btnAyuda.Text = "Ayuda";
-            this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Visible = false;
+            this.btnPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnPacientes.FlatAppearance.BorderSize = 0;
+            this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPacientes.ForeColor = System.Drawing.Color.White;
+            this.btnPacientes.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnPacientes.IconColor = System.Drawing.Color.White;
+            this.btnPacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPacientes.IconSize = 55;
+            this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPacientes.Location = new System.Drawing.Point(0, 396);
+            this.btnPacientes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPacientes.Name = "btnPacientes";
+            this.btnPacientes.Size = new System.Drawing.Size(311, 65);
+            this.btnPacientes.TabIndex = 16;
+            this.btnPacientes.Text = "Pacientes";
+            this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPacientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPacientes.UseVisualStyleBackColor = false;
+            this.btnPacientes.Click += new System.EventHandler(this.rjButton4_Click);
             // 
-            // pnlMenu
+            // btnNuevaCita
             // 
-            this.pnlMenu.Controls.Add(this.btnCerrarSesion);
-            this.pnlMenu.Controls.Add(this.btnAyuda);
-            this.pnlMenu.Location = new System.Drawing.Point(1295, 39);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(138, 54);
-            this.pnlMenu.TabIndex = 17;
-            this.pnlMenu.Visible = false;
+            this.btnNuevaCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnNuevaCita.FlatAppearance.BorderSize = 0;
+            this.btnNuevaCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevaCita.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaCita.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnNuevaCita.IconColor = System.Drawing.Color.White;
+            this.btnNuevaCita.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevaCita.IconSize = 55;
+            this.btnNuevaCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaCita.Location = new System.Drawing.Point(0, 327);
+            this.btnNuevaCita.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevaCita.Name = "btnNuevaCita";
+            this.btnNuevaCita.Size = new System.Drawing.Size(311, 65);
+            this.btnNuevaCita.TabIndex = 15;
+            this.btnNuevaCita.Text = "Nueva Cita";
+            this.btnNuevaCita.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaCita.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevaCita.UseVisualStyleBackColor = false;
+            this.btnNuevaCita.Click += new System.EventHandler(this.rjButton5_Click);
+            // 
+            // btnPrincipal
+            // 
+            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrincipal.ForeColor = System.Drawing.Color.White;
+            this.btnPrincipal.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnPrincipal.IconColor = System.Drawing.Color.White;
+            this.btnPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrincipal.IconSize = 55;
+            this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrincipal.Location = new System.Drawing.Point(0, 259);
+            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrincipal.Name = "btnPrincipal";
+            this.btnPrincipal.Size = new System.Drawing.Size(311, 65);
+            this.btnPrincipal.TabIndex = 14;
+            this.btnPrincipal.Text = "Pantalla Principal";
+            this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrincipal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrincipal.UseVisualStyleBackColor = false;
+            this.btnPrincipal.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.hcLOGO1;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel3.Controls.Add(this.lblTitulo);
+            this.panel3.Controls.Add(this.btnInicioUsuario);
+            this.panel3.Controls.Add(this.pnlMenu);
+            this.panel3.Controls.Add(this.iconCurrentChildForm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(311, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1132, 78);
+            this.panel3.TabIndex = 8;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(58, 26);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(28, 29);
+            this.lblTitulo.TabIndex = 18;
+            this.lblTitulo.Text = "d";
             // 
             // btnInicioUsuario
             // 
@@ -253,16 +203,27 @@
             this.btnInicioUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInicioUsuario.IconSize = 30;
             this.btnInicioUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnInicioUsuario.Location = new System.Drawing.Point(1234, 4);
-            this.btnInicioUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInicioUsuario.Location = new System.Drawing.Point(926, 3);
+            this.btnInicioUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicioUsuario.Name = "btnInicioUsuario";
-            this.btnInicioUsuario.Size = new System.Drawing.Size(253, 30);
+            this.btnInicioUsuario.Size = new System.Drawing.Size(190, 24);
             this.btnInicioUsuario.TabIndex = 3;
             this.btnInicioUsuario.Text = "Nombre de usuario";
             this.btnInicioUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInicioUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnInicioUsuario.UseVisualStyleBackColor = false;
             this.btnInicioUsuario.Click += new System.EventHandler(this.btnInicioUsuario_Click);
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.Controls.Add(this.btnCerrarSesion);
+            this.pnlMenu.Controls.Add(this.btnAyuda);
+            this.pnlMenu.Location = new System.Drawing.Point(971, 32);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(104, 44);
+            this.pnlMenu.TabIndex = 17;
+            this.pnlMenu.Visible = false;
             // 
             // btnCerrarSesion
             // 
@@ -275,10 +236,10 @@
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 20;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1, 29);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1, 24);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(136, 30);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(102, 24);
             this.btnCerrarSesion.TabIndex = 17;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,26 +248,64 @@
             this.btnCerrarSesion.Visible = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // lblTitulo
+            // btnAyuda
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(78, 32);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(33, 36);
-            this.lblTitulo.TabIndex = 18;
-            this.lblTitulo.Text = "d";
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 20;
+            this.btnAyuda.Location = new System.Drawing.Point(-1, -1);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(102, 24);
+            this.btnAyuda.TabIndex = 16;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Visible = false;
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.iconCurrentChildForm.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconCurrentChildForm.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 40;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(5, 20);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(49, 40);
+            this.iconCurrentChildForm.TabIndex = 15;
+            this.iconCurrentChildForm.TabStop = false;
+            // 
+            // Panelformularios
+            // 
+            this.Panelformularios.AutoSize = true;
+            this.Panelformularios.BackColor = System.Drawing.Color.White;
+            this.Panelformularios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panelformularios.Location = new System.Drawing.Point(311, 78);
+            this.Panelformularios.Name = "Panelformularios";
+            this.Panelformularios.Size = new System.Drawing.Size(1132, 779);
+            this.Panelformularios.TabIndex = 1;
+            this.Panelformularios.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelformularios_Paint);
             // 
             // FormPanelSecretaria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1443, 857);
             this.Controls.Add(this.Panelformularios);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPanelSecretaria";
             this.Text = "FormPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -315,8 +314,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

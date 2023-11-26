@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarPacienteForm));
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -191,7 +192,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.Color.White;
             this.txtDireccion.Location = new System.Drawing.Point(50, 362);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.MaxLength = 10;
             this.txtDireccion.Multiline = false;
             this.txtDireccion.Name = "txtDireccion";
@@ -215,7 +216,7 @@
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.White;
             this.txtTelefono.Location = new System.Drawing.Point(50, 299);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Multiline = false;
             this.txtTelefono.Name = "txtTelefono";
@@ -239,7 +240,7 @@
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellMat.ForeColor = System.Drawing.Color.White;
             this.txtApellMat.Location = new System.Drawing.Point(50, 236);
-            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellMat.MaxLength = 10;
             this.txtApellMat.Multiline = false;
             this.txtApellMat.Name = "txtApellMat";
@@ -263,7 +264,7 @@
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellPat.ForeColor = System.Drawing.Color.White;
             this.txtApellPat.Location = new System.Drawing.Point(50, 172);
-            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellPat.MaxLength = 10;
             this.txtApellPat.Multiline = false;
             this.txtApellPat.Name = "txtApellPat";
@@ -287,7 +288,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
             this.txtNombre.Location = new System.Drawing.Point(50, 109);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Multiline = false;
             this.txtNombre.Name = "txtNombre";
@@ -385,6 +386,7 @@
             this.Controls.Add(this.btnAceptar);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditarPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarPacienteForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComprobarContraseñaForm));
             this.txtContraseña = new prueba.TextBoxD();
             this.lblInfo = new System.Windows.Forms.Label();
             this.brnAceptar = new CustomControls.RJControls.RJButton();
@@ -43,18 +44,18 @@
             this.txtContraseña.BorderFocusColor = System.Drawing.Color.Honeydew;
             this.txtContraseña.BorderRadius = 10;
             this.txtContraseña.BorderSize = 2;
-            this.txtContraseña.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.Black;
-            this.txtContraseña.Location = new System.Drawing.Point(49, 104);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5);
+            this.txtContraseña.Location = new System.Drawing.Point(40, 92);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtContraseña.PasswordChar = true;
             this.txtContraseña.PlaceholderColor = System.Drawing.Color.Black;
             this.txtContraseña.PlaceholderText = "";
-            this.txtContraseña.Size = new System.Drawing.Size(410, 44);
+            this.txtContraseña.Size = new System.Drawing.Size(308, 30);
             this.txtContraseña.TabIndex = 0;
             this.txtContraseña.Texts = "Contraseña";
             this.txtContraseña.UnderlineStyle = false;
@@ -62,11 +63,10 @@
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
-            this.lblInfo.Font = new System.Drawing.Font("Poppins Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(44, 55);
-            this.lblInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(44, 47);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(415, 29);
+            this.lblInfo.Size = new System.Drawing.Size(301, 18);
             this.lblInfo.TabIndex = 2;
             this.lblInfo.Text = "Ingrese la contraseña de administrador";
             // 
@@ -79,11 +79,12 @@
             this.brnAceptar.BorderSize = 0;
             this.brnAceptar.FlatAppearance.BorderSize = 0;
             this.brnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnAceptar.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnAceptar.ForeColor = System.Drawing.Color.White;
-            this.brnAceptar.Location = new System.Drawing.Point(176, 180);
+            this.brnAceptar.Location = new System.Drawing.Point(138, 146);
+            this.brnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.brnAceptar.Name = "brnAceptar";
-            this.brnAceptar.Size = new System.Drawing.Size(150, 40);
+            this.brnAceptar.Size = new System.Drawing.Size(112, 32);
             this.brnAceptar.TabIndex = 3;
             this.brnAceptar.Text = "Aceptar";
             this.brnAceptar.TextColor = System.Drawing.Color.White;
@@ -96,9 +97,8 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 40);
+            this.panel1.Size = new System.Drawing.Size(376, 32);
             this.panel1.TabIndex = 56;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -111,26 +111,25 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(456, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(342, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 35);
+            this.button1.Size = new System.Drawing.Size(36, 28);
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // ComprobarContraseñaForm
             // 
             this.AcceptButton = this.brnAceptar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(502, 250);
+            this.ClientSize = new System.Drawing.Size(376, 203);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.brnAceptar);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.txtContraseña);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComprobarContraseñaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ComprobarContraseñaForm";

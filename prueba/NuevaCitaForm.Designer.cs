@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaCitaForm));
             this.dgPodologos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,27 +65,27 @@
             this.dgPodologos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgPodologos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgPodologos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPodologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPodologos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgPodologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPodologos.EnableHeadersVisualStyles = false;
             this.dgPodologos.Location = new System.Drawing.Point(67, 512);
             this.dgPodologos.Name = "dgPodologos";
             this.dgPodologos.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPodologos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPodologos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgPodologos.RowHeadersVisible = false;
             this.dgPodologos.RowHeadersWidth = 51;
             this.dgPodologos.Size = new System.Drawing.Size(1131, 316);
@@ -189,7 +190,7 @@
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
             this.tbxSintomas.Location = new System.Drawing.Point(73, 317);
-            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSintomas.MaxLength = 100;
             this.tbxSintomas.Multiline = true;
             this.tbxSintomas.Name = "tbxSintomas";
@@ -214,7 +215,7 @@
             this.tbxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTelefono.ForeColor = System.Drawing.Color.Gainsboro;
             this.tbxTelefono.Location = new System.Drawing.Point(930, 141);
-            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTelefono.MaxLength = 10;
             this.tbxTelefono.Multiline = false;
             this.tbxTelefono.Name = "tbxTelefono";
@@ -239,7 +240,7 @@
             this.tbxApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellMat.ForeColor = System.Drawing.Color.White;
             this.tbxApellMat.Location = new System.Drawing.Point(641, 141);
-            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellMat.MaxLength = 10;
             this.tbxApellMat.Multiline = false;
             this.tbxApellMat.Name = "tbxApellMat";
@@ -264,7 +265,7 @@
             this.tbxApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellPat.ForeColor = System.Drawing.Color.White;
             this.tbxApellPat.Location = new System.Drawing.Point(352, 141);
-            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellPat.MaxLength = 10;
             this.tbxApellPat.Multiline = false;
             this.tbxApellPat.Name = "tbxApellPat";
@@ -289,7 +290,7 @@
             this.tbxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNombre.ForeColor = System.Drawing.Color.White;
             this.tbxNombre.Location = new System.Drawing.Point(66, 141);
-            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNombre.MaxLength = 10;
             this.tbxNombre.Multiline = false;
             this.tbxNombre.Name = "tbxNombre";
@@ -445,6 +446,7 @@
             this.Controls.Add(this.cmbxTipoCita);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevaCitaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevaCitaForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesCitaForm));
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -186,7 +187,7 @@
             this.txtTipoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipoCita.ForeColor = System.Drawing.Color.White;
             this.txtTipoCita.Location = new System.Drawing.Point(53, 428);
-            this.txtTipoCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTipoCita.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoCita.MaxLength = 10;
             this.txtTipoCita.Multiline = false;
             this.txtTipoCita.Name = "txtTipoCita";
@@ -210,7 +211,7 @@
             this.txtPod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPod.ForeColor = System.Drawing.Color.White;
             this.txtPod.Location = new System.Drawing.Point(53, 330);
-            this.txtPod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPod.Margin = new System.Windows.Forms.Padding(4);
             this.txtPod.MaxLength = 10;
             this.txtPod.Multiline = false;
             this.txtPod.Name = "txtPod";
@@ -234,7 +235,7 @@
             this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
             this.txtFecha.Location = new System.Drawing.Point(637, 428);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.MaxLength = 10;
             this.txtFecha.Multiline = false;
             this.txtFecha.Name = "txtFecha";
@@ -258,7 +259,7 @@
             this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHora.ForeColor = System.Drawing.Color.White;
             this.txtHora.Location = new System.Drawing.Point(350, 428);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHora.Margin = new System.Windows.Forms.Padding(4);
             this.txtHora.MaxLength = 10;
             this.txtHora.Multiline = false;
             this.txtHora.Name = "txtHora";
@@ -283,7 +284,7 @@
             this.txtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResultado.ForeColor = System.Drawing.Color.White;
             this.txtResultado.Location = new System.Drawing.Point(896, 142);
-            this.txtResultado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtResultado.Margin = new System.Windows.Forms.Padding(4);
             this.txtResultado.MaxLength = 10;
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
@@ -308,7 +309,7 @@
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
             this.tbxSintomas.Location = new System.Drawing.Point(350, 245);
-            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxSintomas.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSintomas.MaxLength = 100;
             this.tbxSintomas.Multiline = true;
             this.tbxSintomas.Name = "tbxSintomas";
@@ -333,7 +334,7 @@
             this.tbxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTelefono.ForeColor = System.Drawing.Color.Gainsboro;
             this.tbxTelefono.Location = new System.Drawing.Point(53, 245);
-            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTelefono.MaxLength = 10;
             this.tbxTelefono.Multiline = false;
             this.tbxTelefono.Name = "tbxTelefono";
@@ -358,7 +359,7 @@
             this.tbxApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellMat.ForeColor = System.Drawing.Color.White;
             this.tbxApellMat.Location = new System.Drawing.Point(628, 142);
-            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellMat.MaxLength = 10;
             this.tbxApellMat.Multiline = false;
             this.tbxApellMat.Name = "tbxApellMat";
@@ -383,7 +384,7 @@
             this.tbxApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxApellPat.ForeColor = System.Drawing.Color.White;
             this.tbxApellPat.Location = new System.Drawing.Point(350, 142);
-            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.tbxApellPat.MaxLength = 10;
             this.tbxApellPat.Multiline = false;
             this.tbxApellPat.Name = "tbxApellPat";
@@ -408,7 +409,7 @@
             this.tbxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNombre.ForeColor = System.Drawing.Color.White;
             this.tbxNombre.Location = new System.Drawing.Point(53, 142);
-            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNombre.MaxLength = 10;
             this.tbxNombre.Multiline = false;
             this.tbxNombre.Name = "tbxNombre";
@@ -423,6 +424,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -430,7 +432,7 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1191, 0);
+            this.button1.Location = new System.Drawing.Point(1174, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 34);
             this.button1.TabIndex = 53;
@@ -479,6 +481,7 @@
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DetallesCitaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetallesCitaForm";
