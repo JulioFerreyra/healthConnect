@@ -83,7 +83,7 @@
             this.btnConfig.IconSize = 55;
             this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfig.Location = new System.Drawing.Point(0, 487);
-            this.btnConfig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(227, 65);
             this.btnConfig.TabIndex = 17;
@@ -106,7 +106,7 @@
             this.btnUsuarios.IconSize = 55;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 422);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(227, 65);
             this.btnUsuarios.TabIndex = 16;
@@ -129,7 +129,7 @@
             this.btnReporte.IconSize = 55;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporte.Location = new System.Drawing.Point(0, 357);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(227, 65);
             this.btnReporte.TabIndex = 15;
@@ -152,7 +152,7 @@
             this.btnPacientes.IconSize = 55;
             this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPacientes.Location = new System.Drawing.Point(0, 292);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.Size = new System.Drawing.Size(227, 65);
             this.btnPacientes.TabIndex = 14;
@@ -175,7 +175,7 @@
             this.btnPrincipal.IconSize = 55;
             this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrincipal.Location = new System.Drawing.Point(0, 227);
-            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(227, 65);
             this.btnPrincipal.TabIndex = 13;
@@ -190,7 +190,7 @@
             this.pnlLogo.Controls.Add(this.pictureBox1);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(227, 227);
             this.pnlLogo.TabIndex = 12;
@@ -199,7 +199,7 @@
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.hcLOGO;
             this.pictureBox1.Location = new System.Drawing.Point(9, 19);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 185);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,8 +233,8 @@
             // 
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnAyuda);
-            this.pnlMenu.Location = new System.Drawing.Point(1070, 24);
-            this.pnlMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMenu.Location = new System.Drawing.Point(1114, 24);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(100, 48);
             this.pnlMenu.TabIndex = 3;
@@ -252,7 +252,7 @@
             this.btnCerrarSesion.IconSize = 20;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 24);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(102, 24);
             this.btnCerrarSesion.TabIndex = 5;
@@ -273,7 +273,7 @@
             this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAyuda.IconSize = 20;
             this.btnAyuda.Location = new System.Drawing.Point(0, 0);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(102, 24);
             this.btnAyuda.TabIndex = 4;
@@ -294,8 +294,8 @@
             this.btnInicioUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInicioUsuario.IconSize = 30;
             this.btnInicioUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnInicioUsuario.Location = new System.Drawing.Point(1017, 2);
-            this.btnInicioUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInicioUsuario.Location = new System.Drawing.Point(1026, 0);
+            this.btnInicioUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicioUsuario.Name = "btnInicioUsuario";
             this.btnInicioUsuario.Size = new System.Drawing.Size(190, 24);
             this.btnInicioUsuario.TabIndex = 2;
@@ -327,7 +327,7 @@
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm.IconSize = 40;
             this.iconCurrentChildForm.Location = new System.Drawing.Point(16, 14);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(2);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.Size = new System.Drawing.Size(49, 40);
             this.iconCurrentChildForm.TabIndex = 0;

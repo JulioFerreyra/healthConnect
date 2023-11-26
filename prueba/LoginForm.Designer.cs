@@ -41,6 +41,7 @@
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.mostrarContraseña = new System.Windows.Forms.Button();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +75,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -119,8 +121,8 @@
             this.rjButton1.BorderRadius = 16;
             this.rjButton1.BorderSize = 0;
             this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.rjButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
@@ -210,6 +212,21 @@
             // 
             this.ttAyuda.Popup += new System.Windows.Forms.PopupEventHandler(this.ttAyuda_Popup);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(333, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.rjButton1;
@@ -255,6 +272,7 @@
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Button mostrarContraseña;
         private System.Windows.Forms.ToolTip ttAyuda;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }
 

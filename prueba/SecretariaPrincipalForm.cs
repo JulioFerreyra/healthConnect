@@ -83,8 +83,9 @@ namespace prueba
                     int FilaSeleccionada = dgXochitl.Rows.IndexOf(dgXochitl.Rows[e.RowIndex]);
                     ElementosGlobales.idCitaGlobal = (int)dgXochitl.Rows[FilaSeleccionada].Cells["ID"].Value;
                     //ElementosGlobales.PodologoGlobal = 2;
-                    EditarCitaForm editarcita = new EditarCitaForm(true);
-                    editarcita.ShowDialog();
+
+                    EditarCitaForm detallesCitaForm = new EditarCitaForm(true);
+                    detallesCitaForm.ShowDialog();
 
                     //FormPanelSecretaria.AbrirFormulario<EditarCitaForm>();
                     //Close();

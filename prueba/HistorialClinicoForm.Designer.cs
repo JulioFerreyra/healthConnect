@@ -94,6 +94,8 @@
             this.txtNombre = new prueba.TextBoxD();
             this.label1 = new System.Windows.Forms.Label();
             this.dataSet11 = new CapaPresentacion.DataSet1();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.tabHistorial.SuspendLayout();
             this.tabAntPat.SuspendLayout();
@@ -109,7 +111,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -121,7 +124,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.btnCancelar.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -207,7 +210,7 @@
             this.tabHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.tabHistorial.Name = "tabHistorial";
             this.tabHistorial.SelectedIndex = 0;
-            this.tabHistorial.Size = new System.Drawing.Size(775, 635);
+            this.tabHistorial.Size = new System.Drawing.Size(741, 635);
             this.tabHistorial.TabIndex = 97;
             this.tabHistorial.SelectedIndexChanged += new System.EventHandler(this.tabHistorial_SelectedIndexChanged);
             // 
@@ -237,7 +240,7 @@
             this.tabAntPat.Margin = new System.Windows.Forms.Padding(2);
             this.tabAntPat.Name = "tabAntPat";
             this.tabAntPat.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAntPat.Size = new System.Drawing.Size(767, 609);
+            this.tabAntPat.Size = new System.Drawing.Size(733, 609);
             this.tabAntPat.TabIndex = 0;
             this.tabAntPat.Text = "Antecedentes Patológicos";
             this.tabAntPat.UseVisualStyleBackColor = true;
@@ -506,6 +509,8 @@
             this.BtnGuPat.BorderRadius = 17;
             this.BtnGuPat.BorderSize = 0;
             this.BtnGuPat.FlatAppearance.BorderSize = 0;
+            this.BtnGuPat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuPat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.BtnGuPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuPat.ForeColor = System.Drawing.Color.White;
@@ -526,6 +531,8 @@
             this.BtnEdPat.BorderRadius = 17;
             this.BtnEdPat.BorderSize = 0;
             this.BtnEdPat.FlatAppearance.BorderSize = 0;
+            this.BtnEdPat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEdPat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.BtnEdPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEdPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEdPat.ForeColor = System.Drawing.Color.White;
@@ -564,7 +571,7 @@
             this.tabNoPat.Margin = new System.Windows.Forms.Padding(2);
             this.tabNoPat.Name = "tabNoPat";
             this.tabNoPat.Padding = new System.Windows.Forms.Padding(2);
-            this.tabNoPat.Size = new System.Drawing.Size(767, 609);
+            this.tabNoPat.Size = new System.Drawing.Size(733, 609);
             this.tabNoPat.TabIndex = 1;
             this.tabNoPat.Text = "Antecedentes no Patológicos";
             this.tabNoPat.UseVisualStyleBackColor = true;
@@ -708,6 +715,8 @@
             this.btnGuNoPat.BorderRadius = 17;
             this.btnGuNoPat.BorderSize = 0;
             this.btnGuNoPat.FlatAppearance.BorderSize = 0;
+            this.btnGuNoPat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGuNoPat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnGuNoPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuNoPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuNoPat.ForeColor = System.Drawing.Color.White;
@@ -772,6 +781,8 @@
             this.BtnEdNoPat.BorderRadius = 17;
             this.BtnEdNoPat.BorderSize = 0;
             this.BtnEdNoPat.FlatAppearance.BorderSize = 0;
+            this.BtnEdNoPat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEdNoPat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.BtnEdNoPat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEdNoPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEdNoPat.ForeColor = System.Drawing.Color.White;
@@ -874,12 +885,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnAyuda);
             this.tabPage1.Controls.Add(this.dgDiagnosticos);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(767, 609);
+            this.tabPage1.Size = new System.Drawing.Size(733, 609);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Otros antecedentes";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -942,7 +954,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(775, 269);
+            this.groupBox1.Size = new System.Drawing.Size(741, 269);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del paciente";
@@ -1128,6 +1140,36 @@
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(697, 0);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 24;
+            this.iconButton1.Location = new System.Drawing.Point(859, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(31, 31);
+            this.iconButton1.TabIndex = 102;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // HistorialClinicoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1146,8 +1188,8 @@
             this.Name = "HistorialClinicoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historial Clinico";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.HistorialClinicoForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.HistorialClinicoForm_Paint);
             this.panel1.ResumeLayout(false);
             this.tabHistorial.ResumeLayout(false);
             this.tabAntPat.ResumeLayout(false);
@@ -1232,5 +1274,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

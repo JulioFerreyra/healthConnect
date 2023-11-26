@@ -48,6 +48,7 @@
             this.btnAgregarProfesionsitas = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgProfesionistas = new System.Windows.Forms.DataGridView();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProfesionistas)).BeginInit();
             this.SuspendLayout();
@@ -267,12 +268,28 @@
             this.dgProfesionistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellClick);
             this.dgProfesionistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProfesionistas_CellContentClick);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1153, 43);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // UsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 834);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnAgregarProfesionsitas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgProfesionistas);
@@ -306,5 +323,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sucursalCol;
         private System.Windows.Forms.DataGridViewImageColumn EliminarCol;
         private System.Windows.Forms.DataGridViewImageColumn VerContraseñaCol;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

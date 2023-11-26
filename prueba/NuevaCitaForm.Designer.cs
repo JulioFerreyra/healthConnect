@@ -50,6 +50,7 @@
             this.cmbxTipoCita = new CustomControls.RJControls.pComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbSucursal = new CustomControls.RJControls.pComboBox();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgPodologos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,7 +167,8 @@
             this.btnAñadir.BorderSize = 0;
             this.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAñadir.FlatAppearance.BorderSize = 0;
-            this.btnAñadir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnAñadir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.ForeColor = System.Drawing.Color.White;
@@ -182,10 +184,10 @@
             // tbxSintomas
             // 
             this.tbxSintomas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.tbxSintomas.BorderColor = System.Drawing.Color.Transparent;
-            this.tbxSintomas.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.tbxSintomas.BorderColor = System.Drawing.Color.Silver;
+            this.tbxSintomas.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.tbxSintomas.BorderRadius = 8;
-            this.tbxSintomas.BorderSize = 0;
+            this.tbxSintomas.BorderSize = 2;
             this.tbxSintomas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSintomas.ForeColor = System.Drawing.Color.DimGray;
@@ -417,6 +419,21 @@
             this.cmbSucursal.Texts = "Sucursal";
             this.cmbSucursal.OnSelectedIndexChanged += new System.EventHandler(this.cmbSucursal_OnSelectedIndexChanged);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1301, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // NuevaCitaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,6 +442,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1344, 779);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.cmbSucursal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -444,7 +462,7 @@
             this.Controls.Add(this.cmbxPodologo);
             this.Controls.Add(this.cmbxHora);
             this.Controls.Add(this.cmbxTipoCita);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevaCitaForm";
@@ -478,5 +496,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.pComboBox cmbSucursal;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

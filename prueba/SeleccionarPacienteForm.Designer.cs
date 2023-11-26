@@ -37,6 +37,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnNuevoPaciente = new System.Windows.Forms.Button();
             this.txtBuscar = new prueba.TextBoxD();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.dgPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -72,14 +73,13 @@
             this.dgPacientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgPacientes.EnableHeadersVisualStyles = false;
             this.dgPacientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.dgPacientes.Location = new System.Drawing.Point(85, 226);
-            this.dgPacientes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgPacientes.Location = new System.Drawing.Point(64, 184);
             this.dgPacientes.Name = "dgPacientes";
             this.dgPacientes.ReadOnly = true;
             this.dgPacientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -87,7 +87,7 @@
             this.dgPacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgPacientes.RowHeadersVisible = false;
             this.dgPacientes.RowHeadersWidth = 51;
-            this.dgPacientes.Size = new System.Drawing.Size(1511, 740);
+            this.dgPacientes.Size = new System.Drawing.Size(1133, 601);
             this.dgPacientes.TabIndex = 0;
             this.dgPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPacientes_CellClick);
             this.dgPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPacientes_CellContentClick);
@@ -100,10 +100,9 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1143, 143);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(857, 116);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 55);
+            this.button1.Size = new System.Drawing.Size(48, 45);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -113,10 +112,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.label7.Location = new System.Drawing.Point(731, 49);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(548, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(205, 46);
+            this.label7.Size = new System.Drawing.Size(165, 37);
             this.label7.TabIndex = 40;
             this.label7.Text = "Pacientes";
             this.label7.Visible = false;
@@ -131,10 +129,9 @@
             this.btnNuevoPaciente.FlatAppearance.BorderSize = 0;
             this.btnNuevoPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoPaciente.Image")));
-            this.btnNuevoPaciente.Location = new System.Drawing.Point(1441, 143);
-            this.btnNuevoPaciente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevoPaciente.Location = new System.Drawing.Point(1081, 116);
             this.btnNuevoPaciente.Name = "btnNuevoPaciente";
-            this.btnNuevoPaciente.Size = new System.Drawing.Size(57, 55);
+            this.btnNuevoPaciente.Size = new System.Drawing.Size(43, 45);
             this.btnNuevoPaciente.TabIndex = 10;
             this.btnNuevoPaciente.UseVisualStyleBackColor = false;
             this.btnNuevoPaciente.Click += new System.EventHandler(this.btnNuevoPaciente_Click);
@@ -149,33 +146,48 @@
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(544, 143);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5);
+            this.txtBuscar.Location = new System.Drawing.Point(408, 116);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.MaxLength = 10;
             this.txtBuscar.Multiline = false;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
+            this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtBuscar.PasswordChar = false;
             this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtBuscar.PlaceholderText = "Buscar";
-            this.txtBuscar.Size = new System.Drawing.Size(592, 58);
+            this.txtBuscar.Size = new System.Drawing.Size(444, 46);
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.Texts = "";
             this.txtBuscar.UnderlineStyle = false;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1227, 1);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // SeleccionarPacienteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1679, 1060);
+            this.ClientSize = new System.Drawing.Size(1259, 861);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnNuevoPaciente);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SeleccionarPacienteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeleccionarPacienteForm";
@@ -193,5 +205,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnNuevoPaciente;
         public System.Windows.Forms.DataGridView dgPacientes;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

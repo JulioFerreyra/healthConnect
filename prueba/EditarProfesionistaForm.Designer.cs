@@ -43,6 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbSucursal = new CustomControls.RJControls.pComboBox();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,11 +132,10 @@
             this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnGuardar.BorderRadius = 15;
             this.btnGuardar.BorderSize = 5;
-            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
             this.btnGuardar.FlatAppearance.BorderSize = 4;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
@@ -220,7 +220,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -231,7 +232,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -263,7 +264,7 @@
             this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cmbSucursal.Enabled = false;
             this.cmbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbSucursal.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbSucursal.ForeColor = System.Drawing.Color.White;
             this.cmbSucursal.IconColor = System.Drawing.Color.Blue;
             this.cmbSucursal.Items.AddRange(new object[] {
             "El Grullo",
@@ -277,6 +278,21 @@
             this.cmbSucursal.Size = new System.Drawing.Size(266, 35);
             this.cmbSucursal.TabIndex = 94;
             this.cmbSucursal.Texts = "";
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(271, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // EditarProfesionistaForm
             // 
@@ -305,6 +321,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Profesionista";
             this.Load += new System.EventHandler(this.EditarProfesionsitaForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.EditarProfesionistaForm_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -327,5 +344,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.pComboBox cmbSucursal;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

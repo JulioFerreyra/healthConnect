@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarPacienteForm));
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,6 +41,7 @@
             this.lbDirec = new System.Windows.Forms.Label();
             this.lbFechNac = new System.Windows.Forms.Label();
             this.lbSex = new System.Windows.Forms.Label();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.txtDireccion = new prueba.TextBoxD();
             this.txtTelefono = new prueba.TextBoxD();
             this.txtApellMat = new prueba.TextBoxD();
@@ -48,6 +50,7 @@
             this.cmbxSexo = new CustomControls.RJControls.pComboBox();
             this.dtpFechaNac = new CustomControls.RJControls.pDatePicker();
             this.btnAceptar = new CustomControls.RJControls.RJButton();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +67,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,14 +80,14 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.btnCancelar.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(287, 0);
+            this.btnCancelar.Location = new System.Drawing.Point(284, 0);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(40, 34);
             this.btnCancelar.TabIndex = 40;
@@ -190,7 +194,7 @@
             this.txtDireccion.BorderRadius = 0;
             this.txtDireccion.BorderSize = 2;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.ForeColor = System.Drawing.Color.White;
+            this.txtDireccion.ForeColor = System.Drawing.Color.Black;
             this.txtDireccion.Location = new System.Drawing.Point(50, 362);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.MaxLength = 10;
@@ -214,7 +218,7 @@
             this.txtTelefono.BorderRadius = 0;
             this.txtTelefono.BorderSize = 2;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.ForeColor = System.Drawing.Color.White;
+            this.txtTelefono.ForeColor = System.Drawing.Color.Black;
             this.txtTelefono.Location = new System.Drawing.Point(50, 299);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.MaxLength = 10;
@@ -238,7 +242,7 @@
             this.txtApellMat.BorderRadius = 0;
             this.txtApellMat.BorderSize = 2;
             this.txtApellMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellMat.ForeColor = System.Drawing.Color.White;
+            this.txtApellMat.ForeColor = System.Drawing.Color.Black;
             this.txtApellMat.Location = new System.Drawing.Point(50, 236);
             this.txtApellMat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellMat.MaxLength = 10;
@@ -262,7 +266,7 @@
             this.txtApellPat.BorderRadius = 0;
             this.txtApellPat.BorderSize = 2;
             this.txtApellPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellPat.ForeColor = System.Drawing.Color.White;
+            this.txtApellPat.ForeColor = System.Drawing.Color.Black;
             this.txtApellPat.Location = new System.Drawing.Point(50, 172);
             this.txtApellPat.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellPat.MaxLength = 10;
@@ -286,7 +290,7 @@
             this.txtNombre.BorderRadius = 0;
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.White;
+            this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(50, 109);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 10;
@@ -344,11 +348,11 @@
             this.btnAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnAceptar.BorderRadius = 15;
             this.btnAceptar.BorderSize = 5;
-            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAceptar.FlatAppearance.BorderSize = 4;
             this.btnAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
@@ -360,6 +364,21 @@
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(255, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // EditarPacienteForm
             // 
@@ -391,6 +410,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarPacienteForm";
             this.Load += new System.EventHandler(this.EditarPacienteForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.EditarPacienteForm_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -418,5 +438,7 @@
         private System.Windows.Forms.Label lbDirec;
         private System.Windows.Forms.Label lbFechNac;
         private System.Windows.Forms.Label lbSex;
+        private System.Windows.Forms.ToolTip ttAyuda;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

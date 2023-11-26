@@ -44,6 +44,7 @@
             this.txtConfirmarContraseña = new prueba.TextBoxD();
             this.txtContraseña = new prueba.TextBoxD();
             this.txtUsuario = new prueba.TextBoxD();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(64, 55);
+            this.label1.Location = new System.Drawing.Point(53, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 20);
             this.label1.TabIndex = 78;
@@ -60,7 +61,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -71,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -121,7 +123,7 @@
             // 
             this.lblRegresar.AutoSize = true;
             this.lblRegresar.LinkColor = System.Drawing.Color.Gray;
-            this.lblRegresar.Location = new System.Drawing.Point(98, 399);
+            this.lblRegresar.Location = new System.Drawing.Point(85, 406);
             this.lblRegresar.Name = "lblRegresar";
             this.lblRegresar.Size = new System.Drawing.Size(137, 13);
             this.lblRegresar.TabIndex = 83;
@@ -162,15 +164,14 @@
             this.btnAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnAceptar.BorderRadius = 15;
             this.btnAceptar.BorderSize = 5;
-            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
             this.btnAceptar.FlatAppearance.BorderSize = 4;
             this.btnAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(86, 336);
+            this.btnAceptar.Location = new System.Drawing.Point(73, 343);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(160, 50);
             this.btnAceptar.TabIndex = 4;
@@ -250,6 +251,21 @@
             this.txtUsuario.Texts = "";
             this.txtUsuario.UnderlineStyle = true;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(241, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // OlvideContraseñaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +289,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OlvideContraseña";
             this.Load += new System.EventHandler(this.OlvideContraseñaForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.OlvideContraseñaForm_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,5 +312,6 @@
         private System.Windows.Forms.ToolTip ttAyuda;
         private System.Windows.Forms.Button btnMostrarContraseña;
         private System.Windows.Forms.Button btnMostrarConfirmacion;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

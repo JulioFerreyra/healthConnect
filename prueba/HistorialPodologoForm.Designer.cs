@@ -37,6 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.txbCorreoLogin = new prueba.TextBoxD();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +102,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -112,7 +114,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.button2.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -124,6 +126,7 @@
             this.button2.Size = new System.Drawing.Size(48, 40);
             this.button2.TabIndex = 57;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txbCorreoLogin
             // 
@@ -135,7 +138,7 @@
             this.txbCorreoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCorreoLogin.ForeColor = System.Drawing.Color.White;
             this.txbCorreoLogin.Location = new System.Drawing.Point(263, 117);
-            this.txbCorreoLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbCorreoLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txbCorreoLogin.MaxLength = 10;
             this.txbCorreoLogin.Multiline = false;
             this.txbCorreoLogin.Name = "txbCorreoLogin";
@@ -147,6 +150,21 @@
             this.txbCorreoLogin.TabIndex = 9;
             this.txbCorreoLogin.Texts = "";
             this.txbCorreoLogin.UnderlineStyle = false;
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(907, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // HistorialPodologoForm
             // 
@@ -165,6 +183,7 @@
             this.Name = "HistorialPodologoForm";
             this.Text = "HistorialPodologoForm";
             this.Load += new System.EventHandler(this.HistorialPodologoForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.HistorialPodologoForm_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -180,5 +199,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

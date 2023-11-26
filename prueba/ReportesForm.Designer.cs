@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlOpciones = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rvReportes = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbPodologos = new CustomControls.RJControls.pComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.dtFinal = new CustomControls.RJControls.pDatePicker();
             this.cmbTiposCita = new CustomControls.RJControls.pComboBox();
             this.cmbFiltro = new CustomControls.RJControls.pComboBox();
             this.dtInicio = new CustomControls.RJControls.pDatePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rvReportes = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSetReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.pnlOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetReportesBindingSource)).BeginInit();
@@ -49,6 +50,7 @@
             // pnlOpciones
             // 
             this.pnlOpciones.BackColor = System.Drawing.Color.White;
+            this.pnlOpciones.Controls.Add(this.btnAyuda);
             this.pnlOpciones.Controls.Add(this.cmbPodologos);
             this.pnlOpciones.Controls.Add(this.btnBuscar);
             this.pnlOpciones.Controls.Add(this.dtFinal);
@@ -62,46 +64,6 @@
             this.pnlOpciones.Size = new System.Drawing.Size(1118, 81);
             this.pnlOpciones.TabIndex = 1;
             this.pnlOpciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOpciones_Paint);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo;
-            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.BuscarUsuario;
-            this.btnBuscar.Location = new System.Drawing.Point(1044, 22);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(51, 45);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.rvReportes);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 81);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 658);
-            this.panel1.TabIndex = 2;
-            // 
-            // rvReportes
-            // 
-            this.rvReportes.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.rvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rvReportes.LocalReport.ReportEmbeddedResource = "CapaPresentacion.InformeReporte.rdlc";
-            this.rvReportes.Location = new System.Drawing.Point(0, 0);
-            this.rvReportes.Margin = new System.Windows.Forms.Padding(2);
-            this.rvReportes.Name = "rvReportes";
-            this.rvReportes.ServerReport.BearerToken = null;
-            this.rvReportes.Size = new System.Drawing.Size(1118, 658);
-            this.rvReportes.TabIndex = 1;
-            this.rvReportes.Load += new System.EventHandler(this.rvReportes_Load);
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
             // 
             // cmbPodologos
             // 
@@ -124,6 +86,18 @@
             this.cmbPodologos.TabIndex = 5;
             this.cmbPodologos.Texts = "Profesionistas";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo;
+            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.BuscarUsuario;
+            this.btnBuscar.Location = new System.Drawing.Point(1018, 22);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(51, 45);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // dtFinal
             // 
             this.dtFinal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
@@ -134,20 +108,20 @@
             this.dtFinal.Margin = new System.Windows.Forms.Padding(2);
             this.dtFinal.MinimumSize = new System.Drawing.Size(4, 35);
             this.dtFinal.Name = "dtFinal";
-            this.dtFinal.Size = new System.Drawing.Size(209, 35);
+            this.dtFinal.Size = new System.Drawing.Size(251, 35);
             this.dtFinal.SkinColor = System.Drawing.Color.White;
             this.dtFinal.TabIndex = 3;
             this.dtFinal.TextColor = System.Drawing.Color.Black;
             // 
             // cmbTiposCita
             // 
-            this.cmbTiposCita.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cmbTiposCita.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTiposCita.BackColor = System.Drawing.Color.White;
+            this.cmbTiposCita.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbTiposCita.BorderSize = 1;
             this.cmbTiposCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbTiposCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cmbTiposCita.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbTiposCita.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTiposCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTiposCita.ForeColor = System.Drawing.Color.Black;
+            this.cmbTiposCita.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbTiposCita.Items.AddRange(new object[] {
             "Todas"});
             this.cmbTiposCita.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
@@ -201,6 +175,49 @@
             this.dtInicio.TabIndex = 2;
             this.dtInicio.TextColor = System.Drawing.Color.Black;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.rvReportes);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 81);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1118, 658);
+            this.panel1.TabIndex = 2;
+            // 
+            // rvReportes
+            // 
+            this.rvReportes.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.rvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rvReportes.LocalReport.ReportEmbeddedResource = "CapaPresentacion.InformeReporte.rdlc";
+            this.rvReportes.Location = new System.Drawing.Point(0, 0);
+            this.rvReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.rvReportes.Name = "rvReportes";
+            this.rvReportes.ServerReport.BearerToken = null;
+            this.rvReportes.Size = new System.Drawing.Size(1118, 658);
+            this.rvReportes.TabIndex = 1;
+            this.rvReportes.Load += new System.EventHandler(this.rvReportes_Load);
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1084, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // ReportesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,5 +250,6 @@
         private CustomControls.RJControls.pDatePicker dtInicio;
         private System.Windows.Forms.Button btnBuscar;
         private CustomControls.RJControls.pComboBox cmbPodologos;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

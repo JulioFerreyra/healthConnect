@@ -35,9 +35,8 @@
             this.dgCitas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.pctAyuda = new System.Windows.Forms.PictureBox();
+            this.pctAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgCitas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctAyuda)).BeginInit();
             this.SuspendLayout();
             // 
             // dgCitas
@@ -96,14 +95,18 @@
             // 
             // pctAyuda
             // 
-            this.pctAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctAyuda.Image = global::CapaPresentacion.Properties.Resources.editar;
-            this.pctAyuda.Location = new System.Drawing.Point(1082, 16);
+            this.pctAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pctAyuda.FlatAppearance.BorderSize = 0;
+            this.pctAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pctAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.pctAyuda.IconColor = System.Drawing.Color.Black;
+            this.pctAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pctAyuda.IconSize = 24;
+            this.pctAyuda.Location = new System.Drawing.Point(1084, 12);
             this.pctAyuda.Name = "pctAyuda";
-            this.pctAyuda.Size = new System.Drawing.Size(33, 31);
-            this.pctAyuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctAyuda.TabIndex = 2;
-            this.pctAyuda.TabStop = false;
+            this.pctAyuda.Size = new System.Drawing.Size(31, 31);
+            this.pctAyuda.TabIndex = 102;
+            this.pctAyuda.UseVisualStyleBackColor = true;
             // 
             // ConfirmarCitasForm
             // 
@@ -120,7 +123,6 @@
             this.Text = "ConfirmarCitasForm";
             this.Load += new System.EventHandler(this.ConfirmarCitasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCitas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctAyuda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +133,6 @@
         private System.Windows.Forms.DataGridView dgCitas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip ttAyuda;
-        private System.Windows.Forms.PictureBox pctAyuda;
+        private FontAwesome.Sharp.IconButton pctAyuda;
     }
 }

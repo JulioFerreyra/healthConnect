@@ -110,6 +110,9 @@ namespace CapaPresentacion
 
         }
 
-       
+        private void ConfiguracionForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

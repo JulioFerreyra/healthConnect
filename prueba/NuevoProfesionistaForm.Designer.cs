@@ -42,6 +42,7 @@
             this.btnGuardar = new CustomControls.RJControls.RJButton();
             this.txtMat = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(41, 339);
+            this.label4.Location = new System.Drawing.Point(35, 339);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 81;
@@ -61,7 +62,7 @@
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblPuesto.ForeColor = System.Drawing.Color.Black;
-            this.lblPuesto.Location = new System.Drawing.Point(41, 180);
+            this.lblPuesto.Location = new System.Drawing.Point(35, 180);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(124, 17);
             this.lblPuesto.TabIndex = 79;
@@ -72,7 +73,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(41, 259);
+            this.label3.Location = new System.Drawing.Point(35, 259);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 17);
             this.label3.TabIndex = 80;
@@ -83,7 +84,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(41, 100);
+            this.label2.Location = new System.Drawing.Point(35, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 78;
@@ -94,7 +95,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(34, 49);
+            this.label1.Location = new System.Drawing.Point(19, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(296, 31);
             this.label1.TabIndex = 76;
@@ -102,7 +103,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -113,7 +115,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -131,7 +133,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(41, 421);
+            this.label5.Location = new System.Drawing.Point(35, 421);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 17);
             this.label5.TabIndex = 83;
@@ -151,7 +153,7 @@
             "Ciudad Guzman"});
             this.cmbSucursal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbSucursal.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbSucursal.Location = new System.Drawing.Point(40, 441);
+            this.cmbSucursal.Location = new System.Drawing.Point(34, 441);
             this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbSucursal.Name = "cmbSucursal";
             this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
@@ -168,7 +170,7 @@
             this.txtTelefono.BorderSize = 2;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefono.Location = new System.Drawing.Point(41, 372);
+            this.txtTelefono.Location = new System.Drawing.Point(35, 372);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Multiline = false;
@@ -193,7 +195,7 @@
             this.txtPat.BorderSize = 2;
             this.txtPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPat.ForeColor = System.Drawing.Color.Black;
-            this.txtPat.Location = new System.Drawing.Point(41, 213);
+            this.txtPat.Location = new System.Drawing.Point(35, 213);
             this.txtPat.Margin = new System.Windows.Forms.Padding(4);
             this.txtPat.MaxLength = 45;
             this.txtPat.Multiline = false;
@@ -214,15 +216,14 @@
             this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.btnGuardar.BorderRadius = 15;
             this.btnGuardar.BorderSize = 5;
-            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
             this.btnGuardar.FlatAppearance.BorderSize = 4;
             this.btnGuardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(82, 497);
+            this.btnGuardar.Location = new System.Drawing.Point(76, 497);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(160, 50);
             this.btnGuardar.TabIndex = 5;
@@ -240,7 +241,7 @@
             this.txtMat.BorderSize = 2;
             this.txtMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMat.ForeColor = System.Drawing.Color.Black;
-            this.txtMat.Location = new System.Drawing.Point(41, 292);
+            this.txtMat.Location = new System.Drawing.Point(35, 292);
             this.txtMat.Margin = new System.Windows.Forms.Padding(4);
             this.txtMat.MaxLength = 45;
             this.txtMat.Multiline = false;
@@ -263,7 +264,7 @@
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(41, 133);
+            this.txtNombre.Location = new System.Drawing.Point(35, 133);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 45;
             this.txtNombre.Multiline = false;
@@ -276,6 +277,21 @@
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlineStyle = true;
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(262, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // NuevoProfesionistaForm
             // 
@@ -301,6 +317,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Profesionista";
             this.Load += new System.EventHandler(this.NuevoProfesionistaForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.NuevoProfesionistaForm_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,5 +339,6 @@
         private prueba.TextBoxD txtTelefono;
         private CustomControls.RJControls.pComboBox cmbSucursal;
         private System.Windows.Forms.Label label5;
+        private FontAwesome.Sharp.IconButton btnAyuda;
     }
 }

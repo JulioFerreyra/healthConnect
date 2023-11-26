@@ -43,14 +43,16 @@
             this.pctTiposCita = new System.Windows.Forms.PictureBox();
             this.dgHorario = new System.Windows.Forms.DataGridView();
             this.dgTiposCita = new System.Windows.Forms.DataGridView();
+            this.btnAplicar = new CustomControls.RJControls.RJButton();
+            this.btnEditar = new CustomControls.RJControls.RJButton();
             this.lblHoras = new System.Windows.Forms.Label();
             this.lblTiposCita = new System.Windows.Forms.Label();
             this.tabLogs = new System.Windows.Forms.TabPage();
             this.lblLogs = new System.Windows.Forms.Label();
             this.dgLogs = new System.Windows.Forms.DataGridView();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.btnAplicar = new CustomControls.RJControls.RJButton();
-            this.btnEditar = new CustomControls.RJControls.RJButton();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.tagControl.SuspendLayout();
             this.TabPersonalizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spConfiguración)).BeginInit();
@@ -99,6 +101,7 @@
             // spConfiguración.Panel1
             // 
             this.spConfiguración.Panel1.AutoScroll = true;
+            this.spConfiguración.Panel1.Controls.Add(this.btnAyuda);
             this.spConfiguración.Panel1.Controls.Add(this.pctHorario);
             this.spConfiguración.Panel1.Controls.Add(this.pctTiposCita);
             this.spConfiguración.Panel1.Controls.Add(this.dgHorario);
@@ -204,6 +207,44 @@
             this.dgTiposCita.Size = new System.Drawing.Size(149, 196);
             this.dgTiposCita.TabIndex = 6;
             // 
+            // btnAplicar
+            // 
+            this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAplicar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAplicar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnAplicar.BorderRadius = 15;
+            this.btnAplicar.BorderSize = 5;
+            this.btnAplicar.FlatAppearance.BorderSize = 0;
+            this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAplicar.ForeColor = System.Drawing.Color.White;
+            this.btnAplicar.Location = new System.Drawing.Point(195, 464);
+            this.btnAplicar.Name = "btnAplicar";
+            this.btnAplicar.Size = new System.Drawing.Size(150, 37);
+            this.btnAplicar.TabIndex = 5;
+            this.btnAplicar.Text = "Aplicar Cambios";
+            this.btnAplicar.TextColor = System.Drawing.Color.White;
+            this.btnAplicar.UseVisualStyleBackColor = false;
+            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnEditar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnEditar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnEditar.BorderRadius = 15;
+            this.btnEditar.BorderSize = 5;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(195, 218);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(150, 37);
+            this.btnEditar.TabIndex = 4;
+            this.btnEditar.Text = "Aplicar Cambios";
+            this.btnEditar.TextColor = System.Drawing.Color.White;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // lblHoras
             // 
             this.lblHoras.AutoSize = true;
@@ -226,6 +267,7 @@
             // 
             // tabLogs
             // 
+            this.tabLogs.Controls.Add(this.iconButton1);
             this.tabLogs.Controls.Add(this.lblLogs);
             this.tabLogs.Controls.Add(this.dgLogs);
             this.tabLogs.Location = new System.Drawing.Point(4, 26);
@@ -279,43 +321,35 @@
             this.dgLogs.Size = new System.Drawing.Size(917, 550);
             this.dgLogs.TabIndex = 7;
             // 
-            // btnAplicar
+            // btnAyuda
             // 
-            this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnAplicar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnAplicar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnAplicar.BorderRadius = 15;
-            this.btnAplicar.BorderSize = 5;
-            this.btnAplicar.FlatAppearance.BorderSize = 0;
-            this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAplicar.ForeColor = System.Drawing.Color.White;
-            this.btnAplicar.Location = new System.Drawing.Point(195, 464);
-            this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Size = new System.Drawing.Size(150, 37);
-            this.btnAplicar.TabIndex = 5;
-            this.btnAplicar.Text = "Aplicar Cambios";
-            this.btnAplicar.TextColor = System.Drawing.Color.White;
-            this.btnAplicar.UseVisualStyleBackColor = false;
-            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1036, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
-            // btnEditar
+            // iconButton1
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnEditar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnEditar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.btnEditar.BorderRadius = 15;
-            this.btnEditar.BorderSize = 5;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(195, 218);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(150, 37);
-            this.btnEditar.TabIndex = 4;
-            this.btnEditar.Text = "Aplicar Cambios";
-            this.btnEditar.TextColor = System.Drawing.Color.White;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 24;
+            this.iconButton1.Location = new System.Drawing.Point(1041, 6);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(31, 31);
+            this.iconButton1.TabIndex = 102;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // ConfiguracionForm
             // 
@@ -328,6 +362,7 @@
             this.Name = "ConfiguracionForm";
             this.Text = "ConfiguracionForm";
             this.Load += new System.EventHandler(this.ConfiguracionForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ConfiguracionForm_Paint);
             this.tagControl.ResumeLayout(false);
             this.TabPersonalizar.ResumeLayout(false);
             this.spConfiguración.Panel1.ResumeLayout(false);
@@ -362,5 +397,7 @@
         private System.Windows.Forms.PictureBox pctHorario;
         private System.Windows.Forms.PictureBox pctTiposCita;
         private System.Windows.Forms.ToolTip ttAyuda;
+        private FontAwesome.Sharp.IconButton btnAyuda;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

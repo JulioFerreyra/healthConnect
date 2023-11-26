@@ -40,6 +40,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.txtAceptar = new CustomControls.RJControls.RJButton();
             this.tbxTelefono = new prueba.TextBoxD();
             this.tbxSintomas = new prueba.TextBoxD();
@@ -52,7 +53,6 @@
             this.cmbxHora = new CustomControls.RJControls.pComboBox();
             this.cmbxTipoCita = new CustomControls.RJControls.pComboBox();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,8 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1124, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 45);
@@ -150,22 +152,23 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.button2.BackgroundImage = global::CapaPresentacion.Properties.Resources.cerrar__1_;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1145, 0);
+            this.button2.Location = new System.Drawing.Point(1155, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 40);
+            this.button2.Size = new System.Drawing.Size(38, 34);
             this.button2.TabIndex = 39;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -174,6 +177,21 @@
             this.panel1.Size = new System.Drawing.Size(1196, 37);
             this.panel1.TabIndex = 56;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1108, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 101;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // txtAceptar
             // 
             this.txtAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
@@ -181,11 +199,12 @@
             this.txtAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.txtAceptar.BorderRadius = 13;
             this.txtAceptar.BorderSize = 5;
-            this.txtAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.txtAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.txtAceptar.FlatAppearance.BorderSize = 4;
-            this.txtAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.txtAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.txtAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.txtAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.txtAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAceptar.ForeColor = System.Drawing.Color.White;
@@ -230,6 +249,7 @@
             this.tbxSintomas.BorderFocusColor = System.Drawing.Color.White;
             this.tbxSintomas.BorderRadius = 8;
             this.tbxSintomas.BorderSize = 2;
+            this.tbxSintomas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxSintomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSintomas.ForeColor = System.Drawing.Color.Black;
             this.tbxSintomas.Location = new System.Drawing.Point(40, 297);
@@ -325,11 +345,12 @@
             this.btnFinalizar.BorderColor = System.Drawing.Color.White;
             this.btnFinalizar.BorderRadius = 15;
             this.btnFinalizar.BorderSize = 5;
-            this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(184)))), ((int)(((byte)(63)))));
+            this.btnFinalizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnFinalizar.FlatAppearance.BorderSize = 4;
-            this.btnFinalizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnFinalizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnFinalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MidnightBlue;
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar.ForeColor = System.Drawing.Color.White;
@@ -348,6 +369,7 @@
             this.dtFecha.BorderSize = 2;
             this.dtFecha.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dtFecha.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dtFecha.Location = new System.Drawing.Point(305, 200);
             this.dtFecha.MinimumSize = new System.Drawing.Size(4, 35);
@@ -363,6 +385,7 @@
             this.CmbxPodologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.CmbxPodologo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.CmbxPodologo.BorderSize = 1;
+            this.CmbxPodologo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CmbxPodologo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbxPodologo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbxPodologo.ForeColor = System.Drawing.Color.White;
@@ -383,6 +406,7 @@
             this.cmbxHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbxHora.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.cmbxHora.BorderSize = 1;
+            this.cmbxHora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxHora.ForeColor = System.Drawing.Color.White;
@@ -412,6 +436,7 @@
             this.cmbxTipoCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
             this.cmbxTipoCita.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.cmbxTipoCita.BorderSize = 1;
+            this.cmbxTipoCita.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbxTipoCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxTipoCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxTipoCita.ForeColor = System.Drawing.Color.White;
@@ -426,25 +451,11 @@
             this.cmbxTipoCita.TabIndex = 5;
             this.cmbxTipoCita.Texts = "Tipo de cita";
             // 
-            // btnAyuda
-            // 
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(1108, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 101;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            // 
             // EditarCitaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(1196, 609);
             this.Controls.Add(this.panel1);
@@ -473,6 +484,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarCitaForm";
             this.Load += new System.EventHandler(this.EditarCitaForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.EditarCitaForm_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
