@@ -16,6 +16,13 @@ namespace CapaPresentacion
         public ConfiguracionForm()
         {
             InitializeComponent();
+            ttAyuda.SetToolTip(pctTiposCita, "Ingrese o Modifique los Tipos de Cita: \n Para eliminar: Seleccione el Tipo de Cita y presione la tecla suprimir (Puede encontrase también como 'DEL' o 'SUPR'). \n Para agregar: Desplácese hastas el final y escriba El Tipo de Cita deseada en el espacio en blanco");
+            ttAyuda.SetToolTip(pctHorario, "Ingrese o Modifique su horario: \n Para eliminar: Seleccione el horario y presione la tecla suprimir (Puede encontrase también como 'DEL' o 'SUPR'). \n Para agregar: Desplácese hastas el final y escriba la hora deseada en el espacio en blanco");
+            ttAyuda.SetToolTip(dgTiposCita, "Ingrese o Modifique los Tipos de Cita: \n Para eliminar: Seleccione el Tipo de Cita y presione la tecla suprimir (Puede encontrase también como 'DEL' o 'SUPR'). \n Para agregar: Desplácese hastas el final y escriba El Tipo de Cita deseada en el espacio en blanco");
+            ttAyuda.SetToolTip(dgHorario, "Ingrese o Modifique su horario: \n Para eliminar: Seleccione el horario y presione la tecla suprimir (Puede encontrase también como 'DEL' o 'SUPR'). \n Para agregar: Desplácese hastas el final y escriba la hora deseada en el espacio en blanco");
+            ttAyuda.SetToolTip(btnAplicar, "Aplicar y guardar los cambios hechos en el Horario");
+            ttAyuda.SetToolTip(btnEditar, "Aplicar y guardar los cambios hechos en los Tipos de Cita");
+
         }
 
 
@@ -33,8 +40,7 @@ namespace CapaPresentacion
         private void btnEditar_Click(object sender, EventArgs e)
         {
             CrearHoras();
-            btnAplicar.Visible = true;
-            btnEditar.Visible = false;
+          
 
         }
 
@@ -46,8 +52,7 @@ namespace CapaPresentacion
         private void btnAplicar_Click(object sender, EventArgs e)
         {
             CrearTiposCita();
-            btnEditar.Visible=true;
-            btnAplicar.Visible=false;   
+            
             
 
         }

@@ -34,6 +34,8 @@
             this.dgXochitl = new System.Windows.Forms.DataGridView();
             this.CalendarioCitas = new System.Windows.Forms.MonthCalendar();
             this.lblCitas = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgXochitl)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +73,7 @@
             this.dgXochitl.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgXochitl.EnableHeadersVisualStyles = false;
             this.dgXochitl.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.dgXochitl.Location = new System.Drawing.Point(40, 262);
+            this.dgXochitl.Location = new System.Drawing.Point(40, 259);
             this.dgXochitl.MultiSelect = false;
             this.dgXochitl.Name = "dgXochitl";
             this.dgXochitl.ReadOnly = true;
@@ -86,7 +88,7 @@
             this.dgXochitl.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgXochitl.RowHeadersVisible = false;
             this.dgXochitl.RowHeadersWidth = 51;
-            this.dgXochitl.Size = new System.Drawing.Size(1082, 532);
+            this.dgXochitl.Size = new System.Drawing.Size(1082, 535);
             this.dgXochitl.TabIndex = 10;
             this.dgXochitl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgXochitl_CellClick);
             this.dgXochitl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgXochitl_CellContentClick);
@@ -108,12 +110,37 @@
             // lblCitas
             // 
             this.lblCitas.AutoSize = true;
-            this.lblCitas.Location = new System.Drawing.Point(37, 246);
+            this.lblCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCitas.Location = new System.Drawing.Point(35, 231);
             this.lblCitas.Name = "lblCitas";
-            this.lblCitas.Size = new System.Drawing.Size(35, 13);
+            this.lblCitas.Size = new System.Drawing.Size(70, 25);
             this.lblCitas.TabIndex = 12;
             this.lblCitas.Text = "label1";
             this.lblCitas.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 130);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 25);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Profesionista";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(445, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(262, 37);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Citas Agendadas";
+            this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbxPodologo
             // 
@@ -142,6 +169,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1167, 848);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCitas);
             this.Controls.Add(this.cmbxPodologo);
             this.Controls.Add(this.CalendarioCitas);
@@ -163,5 +192,7 @@
         private System.Windows.Forms.MonthCalendar CalendarioCitas;
         private CustomControls.RJControls.pComboBox cmbxPodologo;
         private System.Windows.Forms.Label lblCitas;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
