@@ -159,6 +159,12 @@ namespace prueba
 
         }
 
-       
+        private void mostrarContraseña_Click(object sender, EventArgs e)
+        {
+            if (txbPasswordLogin.Texts.Length != 0)
+            {
+                txbPasswordLogin.PasswordChar = !txbPasswordLogin.PasswordChar;
+            }
+        }
     }
 }
