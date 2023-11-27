@@ -107,6 +107,7 @@
             this.pctAyuda.Size = new System.Drawing.Size(31, 31);
             this.pctAyuda.TabIndex = 102;
             this.pctAyuda.UseVisualStyleBackColor = true;
+            this.pctAyuda.Click += new System.EventHandler(this.pctAyuda_Click);
             // 
             // ConfirmarCitasForm
             // 

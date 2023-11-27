@@ -99,5 +99,10 @@ namespace CapaPresentacion
         {
             Close();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

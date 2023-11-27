@@ -17,7 +17,7 @@ namespace CapaPresentacion
         public ConfirmarCitasForm()
         {
             InitializeComponent();
-            ttAyuda.SetToolTip(pctAyuda,"Cada cita pendiente de confirmación tiene columnas adicionales para las siguientes acciones: \n Aceptar: Al presionar sobre la columna de 'Aceptar Cita' la cita que corresponda a la fila y a la columna será aceptada. \n Editar: Al presionar sobre la columna de 'Editar Cita' se abrirá otra ventana donde podrá modificar los datos de la cita. \n Rechazar: Al presionar sobre 'Rechazar Cita' la cita será rechazada.");
+            ttAyuda.SetToolTip(pctAyuda,"Ayuda");
         }
 
         private void ConfirmarCitasForm_Load(object sender, EventArgs e)
@@ -126,6 +126,12 @@ namespace CapaPresentacion
         }
         private void dgCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void pctAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Cada cita pendiente de confirmación tiene columnas adicionales para las siguientes acciones: \n Aceptar: Al presionar sobre la columna de 'Aceptar Cita' la cita que corresponda a la fila y a la columna será aceptada. \n Editar: Al presionar sobre la columna de 'Editar Cita' se abrirá otra ventana donde podrá modificar los datos de la cita. \n Rechazar: Al presionar sobre 'Rechazar Cita' la cita será rechazada.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

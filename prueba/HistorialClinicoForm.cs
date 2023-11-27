@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,9 +36,9 @@ namespace CapaPresentacion
             ttAyuda.SetToolTip(txtEdad, "Edad del Paciente");
             ttAyuda.SetToolTip(txtTelf, "Número de teléfono del Paciente");
             ttAyuda.SetToolTip(lblFicha, "Número de ficha");
-            ttAyuda.SetToolTip(iconButton1, "Historial Clínico del paciente. \nSe clasifican los antecedentes patológicos, no patológicos y el historial de diagnósticos");
-            ttAyuda.SetToolTip(ayudaPat, "Antecentes patológicos del paciente. \n Para Editar los datos de clic sobre el botón de 'Editar', modifique los datos necesarios. Finalmente de clic en el botón de 'Guardar'");
-            ttAyuda.SetToolTip(ayudaNoPat, "Antecentes no patológicos del paciente. \n Para Editar los datos de clic sobre el botón de 'Editar', modifique los datos necesarios. Finalmente de clic en el botón de 'Guardar'");
+            ttAyuda.SetToolTip(iconButton1, "Ayuda");
+            ttAyuda.SetToolTip(ayudaPat, "Ayuda");
+            ttAyuda.SetToolTip(ayudaNoPat, "Ayuda");
             ttAyuda.SetToolTip(iconButton4, "Diagnósticos del paciente");
 
 
@@ -295,6 +296,23 @@ namespace CapaPresentacion
         private void HistorialClinicoForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Historial Clínico del paciente. \nSe clasifican los antecedentes patológicos, no patológicos y el historial de diagnósticos", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void ayudaPat_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Antecentes patológicos del paciente. \n Para Editar los datos de clic sobre el botón de 'Editar', modifique los datos necesarios.Finalmente de clic en el botón de 'Guardar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ayudaNoPat_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Antecentes no patológicos del paciente. \n Para Editar los datos de clic sobre el botón de 'Editar', modifique los datos necesarios. Finalmente de clic en el botón de 'Guardar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

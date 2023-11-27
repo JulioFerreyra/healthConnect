@@ -27,7 +27,8 @@ namespace CapaPresentacion
             ttAyuda.SetToolTip(txtTelefono, "Número de teléfono del Paciente");
             ttAyuda.SetToolTip(cmbxSexo, "Sexo del Paciente");
             ttAyuda.SetToolTip(dtpFechaNac, "Fecha de naciminento del Paciente");
-            ttAyuda.SetToolTip(btnAceptar, "Actualizar Datos1|");
+            ttAyuda.SetToolTip(btnAceptar, "Actualizar Datos");
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
         }
 
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
@@ -262,6 +263,12 @@ namespace CapaPresentacion
         private void EditarPacienteForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Editar Paciente: Modifique los campos requeridos y presione en 'Guardar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

@@ -98,5 +98,11 @@ namespace CapaPresentacion
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
 
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Ingrese la contraseña de Adminstrador para confirmar la acción", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }

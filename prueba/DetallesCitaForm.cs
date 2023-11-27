@@ -136,6 +136,11 @@ namespace CapaPresentacion
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

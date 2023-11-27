@@ -36,6 +36,7 @@ namespace CapaPresentacion
             ttAyuda.SetToolTip(tbxSintomas, "Seleccionar profesionista");
             ttAyuda.SetToolTip(txtAceptar, "Aceptar y Guardar");
             ttAyuda.SetToolTip(btnFinalizar, "Finalizar cita y Agregar Resultado");
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
             this.condicionEditarCita = condicionEditarCita;
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
@@ -249,6 +250,12 @@ namespace CapaPresentacion
         private void EditarCitaForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Editar Cita: Modifique los campos requeridos y presione en 'Guardar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 

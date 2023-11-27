@@ -33,6 +33,7 @@ namespace CapaPresentacion
             ttAyuda.SetToolTip(txtDetalles, "Detalles o motivo de la cita");
             ttAyuda.SetToolTip(txtRes, "Ingrese el diágnostico o resultado de la cita \n Este apartado no puede estar vacio");
             ttAyuda.SetToolTip(rjButton1, "Finalizar cita y agregar diagnóstico");
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
 
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
@@ -168,6 +169,12 @@ namespace CapaPresentacion
         private void AnadirResultadoForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Finalizar cita: Ingrese el diágnostico o resultado de la cita y de clic sobre el botón 'Agregar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

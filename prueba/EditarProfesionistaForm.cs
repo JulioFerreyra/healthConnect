@@ -175,5 +175,11 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Editar Profesionista: Modifique los campos requeridos y presione en 'Guardar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }
