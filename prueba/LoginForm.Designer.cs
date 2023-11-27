@@ -33,15 +33,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.txbPasswordLogin = new prueba.TextBoxD();
             this.txtCorreoLogin = new prueba.TextBoxD();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.mostrarContraseña = new System.Windows.Forms.Button();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.mostrarContraseña = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,21 @@
             this.panel1.Size = new System.Drawing.Size(401, 37);
             this.panel1.TabIndex = 57;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(333, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -196,36 +211,26 @@
             this.pctLogo.TabIndex = 58;
             this.pctLogo.TabStop = false;
             // 
-            // mostrarContraseña
-            // 
-            this.mostrarContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.mostrarContraseña.BackgroundImage = global::CapaPresentacion.Properties.Resources.detalles;
-            this.mostrarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mostrarContraseña.Location = new System.Drawing.Point(299, 370);
-            this.mostrarContraseña.Name = "mostrarContraseña";
-            this.mostrarContraseña.Size = new System.Drawing.Size(32, 23);
-            this.mostrarContraseña.TabIndex = 60;
-            this.mostrarContraseña.UseVisualStyleBackColor = false;
-            this.mostrarContraseña.Click += new System.EventHandler(this.mostrarContraseña_Click);
-            // 
             // ttAyuda
             // 
             this.ttAyuda.Popup += new System.Windows.Forms.PopupEventHandler(this.ttAyuda_Popup);
             // 
-            // btnAyuda
+            // mostrarContraseña
             // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(333, 2);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.mostrarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.mostrarContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mostrarContraseña.FlatAppearance.BorderSize = 0;
+            this.mostrarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mostrarContraseña.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.mostrarContraseña.IconColor = System.Drawing.Color.Black;
+            this.mostrarContraseña.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.mostrarContraseña.IconSize = 24;
+            this.mostrarContraseña.Location = new System.Drawing.Point(315, 366);
+            this.mostrarContraseña.Name = "mostrarContraseña";
+            this.mostrarContraseña.Size = new System.Drawing.Size(31, 31);
+            this.mostrarContraseña.TabIndex = 103;
+            this.mostrarContraseña.UseVisualStyleBackColor = false;
+            this.mostrarContraseña.Click += new System.EventHandler(this.mostrarContraseña_Click);
             // 
             // LoginForm
             // 
@@ -245,6 +250,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(20)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "8";
@@ -270,9 +276,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.Button mostrarContraseña;
         private System.Windows.Forms.ToolTip ttAyuda;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private FontAwesome.Sharp.IconButton mostrarContraseña;
     }
 }
 

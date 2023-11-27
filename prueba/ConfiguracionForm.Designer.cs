@@ -39,8 +39,7 @@
             this.tagControl = new System.Windows.Forms.TabControl();
             this.TabPersonalizar = new System.Windows.Forms.TabPage();
             this.spConfiguración = new System.Windows.Forms.SplitContainer();
-            this.pctHorario = new System.Windows.Forms.PictureBox();
-            this.pctTiposCita = new System.Windows.Forms.PictureBox();
+            this.pctTiposCita = new FontAwesome.Sharp.IconButton();
             this.dgHorario = new System.Windows.Forms.DataGridView();
             this.dgTiposCita = new System.Windows.Forms.DataGridView();
             this.btnAplicar = new CustomControls.RJControls.RJButton();
@@ -48,18 +47,16 @@
             this.lblHoras = new System.Windows.Forms.Label();
             this.lblTiposCita = new System.Windows.Forms.Label();
             this.tabLogs = new System.Windows.Forms.TabPage();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.lblLogs = new System.Windows.Forms.Label();
             this.dgLogs = new System.Windows.Forms.DataGridView();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.pctHorario = new FontAwesome.Sharp.IconButton();
             this.tagControl.SuspendLayout();
             this.TabPersonalizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spConfiguración)).BeginInit();
             this.spConfiguración.Panel1.SuspendLayout();
             this.spConfiguración.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctHorario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctTiposCita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTiposCita)).BeginInit();
             this.tabLogs.SuspendLayout();
@@ -101,7 +98,6 @@
             // spConfiguración.Panel1
             // 
             this.spConfiguración.Panel1.AutoScroll = true;
-            this.spConfiguración.Panel1.Controls.Add(this.btnAyuda);
             this.spConfiguración.Panel1.Controls.Add(this.pctHorario);
             this.spConfiguración.Panel1.Controls.Add(this.pctTiposCita);
             this.spConfiguración.Panel1.Controls.Add(this.dgHorario);
@@ -116,25 +112,20 @@
             this.spConfiguración.SplitterDistance = 520;
             this.spConfiguración.TabIndex = 0;
             // 
-            // pctHorario
-            // 
-            this.pctHorario.Image = global::CapaPresentacion.Properties.Resources.editar;
-            this.pctHorario.Location = new System.Drawing.Point(195, 321);
-            this.pctHorario.Name = "pctHorario";
-            this.pctHorario.Size = new System.Drawing.Size(33, 32);
-            this.pctHorario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctHorario.TabIndex = 8;
-            this.pctHorario.TabStop = false;
-            // 
             // pctTiposCita
             // 
-            this.pctTiposCita.Image = global::CapaPresentacion.Properties.Resources.editar;
-            this.pctTiposCita.Location = new System.Drawing.Point(195, 59);
+            this.pctTiposCita.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pctTiposCita.FlatAppearance.BorderSize = 0;
+            this.pctTiposCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pctTiposCita.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.pctTiposCita.IconColor = System.Drawing.Color.Black;
+            this.pctTiposCita.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pctTiposCita.IconSize = 24;
+            this.pctTiposCita.Location = new System.Drawing.Point(232, 59);
             this.pctTiposCita.Name = "pctTiposCita";
-            this.pctTiposCita.Size = new System.Drawing.Size(33, 27);
-            this.pctTiposCita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctTiposCita.TabIndex = 8;
-            this.pctTiposCita.TabStop = false;
+            this.pctTiposCita.Size = new System.Drawing.Size(31, 31);
+            this.pctTiposCita.TabIndex = 102;
+            this.pctTiposCita.UseVisualStyleBackColor = true;
             // 
             // dgHorario
             // 
@@ -168,7 +159,7 @@
             this.dgHorario.Name = "dgHorario";
             this.dgHorario.RowHeadersVisible = false;
             this.dgHorario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dgHorario.Size = new System.Drawing.Size(149, 180);
+            this.dgHorario.Size = new System.Drawing.Size(188, 180);
             this.dgHorario.TabIndex = 7;
             // 
             // dgTiposCita
@@ -204,7 +195,7 @@
             this.dgTiposCita.RowHeadersVisible = false;
             this.dgTiposCita.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgTiposCita.RowTemplate.Height = 24;
-            this.dgTiposCita.Size = new System.Drawing.Size(149, 196);
+            this.dgTiposCita.Size = new System.Drawing.Size(188, 196);
             this.dgTiposCita.TabIndex = 6;
             // 
             // btnAplicar
@@ -217,7 +208,7 @@
             this.btnAplicar.FlatAppearance.BorderSize = 0;
             this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAplicar.ForeColor = System.Drawing.Color.White;
-            this.btnAplicar.Location = new System.Drawing.Point(195, 464);
+            this.btnAplicar.Location = new System.Drawing.Point(232, 464);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(150, 37);
             this.btnAplicar.TabIndex = 5;
@@ -236,7 +227,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(195, 218);
+            this.btnEditar.Location = new System.Drawing.Point(232, 218);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(150, 37);
             this.btnEditar.TabIndex = 4;
@@ -277,6 +268,21 @@
             this.tabLogs.TabIndex = 1;
             this.tabLogs.Text = "Logs";
             this.tabLogs.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 24;
+            this.iconButton1.Location = new System.Drawing.Point(1041, 6);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(31, 31);
+            this.iconButton1.TabIndex = 102;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // lblLogs
             // 
@@ -321,35 +327,20 @@
             this.dgLogs.Size = new System.Drawing.Size(917, 550);
             this.dgLogs.TabIndex = 7;
             // 
-            // btnAyuda
+            // pctHorario
             // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(1036, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 24;
-            this.iconButton1.Location = new System.Drawing.Point(1041, 6);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(31, 31);
-            this.iconButton1.TabIndex = 102;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.pctHorario.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pctHorario.FlatAppearance.BorderSize = 0;
+            this.pctHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pctHorario.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.pctHorario.IconColor = System.Drawing.Color.Black;
+            this.pctHorario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pctHorario.IconSize = 24;
+            this.pctHorario.Location = new System.Drawing.Point(232, 321);
+            this.pctHorario.Name = "pctHorario";
+            this.pctHorario.Size = new System.Drawing.Size(31, 31);
+            this.pctHorario.TabIndex = 103;
+            this.pctHorario.UseVisualStyleBackColor = true;
             // 
             // ConfiguracionForm
             // 
@@ -369,8 +360,6 @@
             this.spConfiguración.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spConfiguración)).EndInit();
             this.spConfiguración.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctHorario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctTiposCita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgTiposCita)).EndInit();
             this.tabLogs.ResumeLayout(false);
@@ -394,10 +383,9 @@
         private System.Windows.Forms.Label lblLogs;
         private System.Windows.Forms.DataGridView dgHorario;
         private System.Windows.Forms.DataGridView dgTiposCita;
-        private System.Windows.Forms.PictureBox pctHorario;
-        private System.Windows.Forms.PictureBox pctTiposCita;
         private System.Windows.Forms.ToolTip ttAyuda;
-        private FontAwesome.Sharp.IconButton btnAyuda;
+        private FontAwesome.Sharp.IconButton pctTiposCita;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton pctHorario;
     }
 }

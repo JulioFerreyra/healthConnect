@@ -29,22 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OlvideContraseñaForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblRegresar = new System.Windows.Forms.LinkLabel();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.btnMostrarContraseña = new System.Windows.Forms.Button();
-            this.btnMostrarConfirmacion = new System.Windows.Forms.Button();
             this.btnAceptar = new CustomControls.RJControls.RJButton();
             this.txtConfirmarContraseña = new prueba.TextBoxD();
             this.txtContraseña = new prueba.TextBoxD();
             this.txtUsuario = new prueba.TextBoxD();
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.btnMostrarContraseña = new FontAwesome.Sharp.IconButton();
+            this.btnMostrarConfirmacion = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +69,21 @@
             this.panel1.Size = new System.Drawing.Size(317, 37);
             this.panel1.TabIndex = 79;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(241, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -130,32 +144,6 @@
             this.lblRegresar.TabStop = true;
             this.lblRegresar.Text = "Regresar a Inicio de Sesión";
             this.lblRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRegresar_LinkClicked);
-            // 
-            // btnMostrarContraseña
-            // 
-            this.btnMostrarContraseña.BackColor = System.Drawing.Color.LightGray;
-            this.btnMostrarContraseña.FlatAppearance.BorderSize = 0;
-            this.btnMostrarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarContraseña.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrarContraseña.Image")));
-            this.btnMostrarContraseña.Location = new System.Drawing.Point(256, 214);
-            this.btnMostrarContraseña.Name = "btnMostrarContraseña";
-            this.btnMostrarContraseña.Size = new System.Drawing.Size(30, 23);
-            this.btnMostrarContraseña.TabIndex = 84;
-            this.btnMostrarContraseña.UseVisualStyleBackColor = false;
-            this.btnMostrarContraseña.Click += new System.EventHandler(this.btnMostrarContraseña_Click);
-            // 
-            // btnMostrarConfirmacion
-            // 
-            this.btnMostrarConfirmacion.BackColor = System.Drawing.Color.LightGray;
-            this.btnMostrarConfirmacion.FlatAppearance.BorderSize = 0;
-            this.btnMostrarConfirmacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarConfirmacion.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrarConfirmacion.Image")));
-            this.btnMostrarConfirmacion.Location = new System.Drawing.Point(255, 293);
-            this.btnMostrarConfirmacion.Name = "btnMostrarConfirmacion";
-            this.btnMostrarConfirmacion.Size = new System.Drawing.Size(30, 23);
-            this.btnMostrarConfirmacion.TabIndex = 84;
-            this.btnMostrarConfirmacion.UseVisualStyleBackColor = false;
-            this.btnMostrarConfirmacion.Click += new System.EventHandler(this.btnMostrarConfirmacion_Click);
             // 
             // btnAceptar
             // 
@@ -251,20 +239,39 @@
             this.txtUsuario.Texts = "";
             this.txtUsuario.UnderlineStyle = true;
             // 
-            // btnAyuda
+            // btnMostrarContraseña
             // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(241, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnMostrarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnMostrarContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnMostrarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarContraseña.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnMostrarContraseña.IconColor = System.Drawing.Color.Black;
+            this.btnMostrarContraseña.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMostrarContraseña.IconSize = 24;
+            this.btnMostrarContraseña.Location = new System.Drawing.Point(260, 210);
+            this.btnMostrarContraseña.Name = "btnMostrarContraseña";
+            this.btnMostrarContraseña.Size = new System.Drawing.Size(31, 31);
+            this.btnMostrarContraseña.TabIndex = 103;
+            this.btnMostrarContraseña.UseVisualStyleBackColor = false;
+            this.btnMostrarContraseña.Click += new System.EventHandler(this.btnMostrarContraseña_Click);
+            // 
+            // btnMostrarConfirmacion
+            // 
+            this.btnMostrarConfirmacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnMostrarConfirmacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarConfirmacion.FlatAppearance.BorderSize = 0;
+            this.btnMostrarConfirmacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarConfirmacion.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnMostrarConfirmacion.IconColor = System.Drawing.Color.Black;
+            this.btnMostrarConfirmacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMostrarConfirmacion.IconSize = 24;
+            this.btnMostrarConfirmacion.Location = new System.Drawing.Point(260, 288);
+            this.btnMostrarConfirmacion.Name = "btnMostrarConfirmacion";
+            this.btnMostrarConfirmacion.Size = new System.Drawing.Size(31, 31);
+            this.btnMostrarConfirmacion.TabIndex = 104;
+            this.btnMostrarConfirmacion.UseVisualStyleBackColor = false;
+            this.btnMostrarConfirmacion.Click += new System.EventHandler(this.btnMostrarConfirmacion_Click);
             // 
             // OlvideContraseñaForm
             // 
@@ -310,8 +317,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel lblRegresar;
         private System.Windows.Forms.ToolTip ttAyuda;
-        private System.Windows.Forms.Button btnMostrarContraseña;
-        private System.Windows.Forms.Button btnMostrarConfirmacion;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private FontAwesome.Sharp.IconButton btnMostrarContraseña;
+        private FontAwesome.Sharp.IconButton btnMostrarConfirmacion;
     }
 }

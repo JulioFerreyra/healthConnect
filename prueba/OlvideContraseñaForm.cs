@@ -116,15 +116,15 @@ namespace CapaPresentacion {
 
         private void btnMostrarConfirmacion_Click(object sender, EventArgs e)
         {
-            txtConfirmarContraseña.PasswordChar = !txtConfirmarContraseña.PasswordChar;
+
         }
 
         private void btnMostrarContraseña_Click(object sender, EventArgs e)
         {
-            txtContraseña.PasswordChar = !txtContraseña.PasswordChar;
+
         }
-      
-      
+
+
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (txtContraseña.Texts.Length > 8)

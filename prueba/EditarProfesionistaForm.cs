@@ -47,6 +47,12 @@ namespace CapaPresentacion
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.White;
             this.sucursal = sucursal;
+
+            ttAyuda.SetToolTip(txtNombre, "Nombre del Profesionista");
+            ttAyuda.SetToolTip(txtPat, "Apellido Paterno del Profesionista");
+            ttAyuda.SetToolTip(txtMat, "Apellido Materno del Profesionista");
+            ttAyuda.SetToolTip(txtTel, "Número de Teléfono del Profesionista");
+            ttAyuda.SetToolTip(cmbSucursal, "Sucural de Trabajo del Profesionista");
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
         {
@@ -163,6 +169,11 @@ namespace CapaPresentacion
         private void EditarProfesionistaForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void ttAyuda_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarProfesionistaForm));
             this.txtPat = new prueba.TextBoxD();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,10 +41,11 @@
             this.txtMat = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbSucursal = new CustomControls.RJControls.pComboBox();
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,44 +77,44 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(41, 318);
+            this.label4.Location = new System.Drawing.Point(42, 329);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 92;
-            this.label4.Text = "Teléfono";
+            this.label4.Text = "Teléfono*";
             // 
             // lblPuesto
             // 
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblPuesto.ForeColor = System.Drawing.Color.Black;
-            this.lblPuesto.Location = new System.Drawing.Point(41, 161);
+            this.lblPuesto.Location = new System.Drawing.Point(41, 173);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(124, 17);
+            this.lblPuesto.Size = new System.Drawing.Size(134, 17);
             this.lblPuesto.TabIndex = 90;
-            this.lblPuesto.Text = "Apellito Paterno";
+            this.lblPuesto.Text = "Apellido Paterno*";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(41, 239);
+            this.label3.Location = new System.Drawing.Point(41, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 17);
+            this.label3.Size = new System.Drawing.Size(136, 17);
             this.label3.TabIndex = 91;
-            this.label3.Text = "Apellido Materno";
+            this.label3.Text = "Apellido Materno*";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(41, 82);
+            this.label2.Location = new System.Drawing.Point(42, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 89;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Nombre*";
             // 
             // label1
             // 
@@ -230,6 +232,22 @@
             this.panel1.TabIndex = 88;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.Enabled = false;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(271, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
@@ -252,9 +270,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(42, 400);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.Size = new System.Drawing.Size(77, 17);
             this.label5.TabIndex = 95;
-            this.label5.Text = "Sucursal";
+            this.label5.Text = "Sucursal*";
             // 
             // cmbSucursal
             // 
@@ -279,20 +297,9 @@
             this.cmbSucursal.TabIndex = 94;
             this.cmbSucursal.Texts = "";
             // 
-            // btnAyuda
+            // ttAyuda
             // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(271, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.ttAyuda.Popup += new System.Windows.Forms.PopupEventHandler(this.ttAyuda_Popup);
             // 
             // EditarProfesionistaForm
             // 
@@ -345,5 +352,6 @@
         private System.Windows.Forms.Label label5;
         private CustomControls.RJControls.pComboBox cmbSucursal;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }

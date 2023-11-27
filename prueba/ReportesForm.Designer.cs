@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportesForm));
             this.pnlOpciones = new System.Windows.Forms.Panel();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.cmbPodologos = new CustomControls.RJControls.pComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dtFinal = new CustomControls.RJControls.pDatePicker();
@@ -40,7 +42,6 @@
             this.rvReportes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataSetReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.pnlOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetReportesBindingSource)).BeginInit();
@@ -65,6 +66,21 @@
             this.pnlOpciones.TabIndex = 1;
             this.pnlOpciones.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlOpciones_Paint);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1084, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // cmbPodologos
             // 
             this.cmbPodologos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
@@ -88,12 +104,14 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo;
-            this.btnBuscar.Image = global::CapaPresentacion.Properties.Resources.BuscarUsuario;
-            this.btnBuscar.Location = new System.Drawing.Point(1018, 22);
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(1025, 29);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(51, 45);
+            this.btnBuscar.Size = new System.Drawing.Size(44, 38);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -202,21 +220,6 @@
             // DataTable1BindingSource
             // 
             this.DataTable1BindingSource.DataMember = "DataTable1";
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(1084, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // ReportesForm
             // 

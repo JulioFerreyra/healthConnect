@@ -166,10 +166,8 @@ namespace prueba
 
         private void mostrarContraseña_Click(object sender, EventArgs e)
         {
-            if (txbPasswordLogin.Texts.Length != 0)
-            {
-                txbPasswordLogin.PasswordChar = !txbPasswordLogin.PasswordChar;
-            }
+            txbPasswordLogin.PasswordChar = !txbPasswordLogin.PasswordChar;
+            mostrarContraseña.IconChar = txbPasswordLogin.PasswordChar ? FontAwesome.Sharp.IconChar.Eye : FontAwesome.Sharp.IconChar.EyeSlash;
         }
 
         private void ttAyuda_Popup(object sender, PopupEventArgs e)

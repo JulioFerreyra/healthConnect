@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialClinicoForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApePat = new System.Windows.Forms.Label();
@@ -83,6 +84,7 @@
             this.cmbTabaco = new CustomControls.RJControls.pComboBox();
             this.cmbParto = new CustomControls.RJControls.pComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.dgDiagnosticos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblFicha = new System.Windows.Forms.Label();
@@ -94,8 +96,6 @@
             this.txtNombre = new prueba.TextBoxD();
             this.label1 = new System.Windows.Forms.Label();
             this.dataSet11 = new CapaPresentacion.DataSet1();
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.tabHistorial.SuspendLayout();
             this.tabAntPat.SuspendLayout();
@@ -120,6 +120,21 @@
             this.panel1.Size = new System.Drawing.Size(937, 37);
             this.panel1.TabIndex = 74;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 24;
+            this.iconButton1.Location = new System.Drawing.Point(859, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(31, 31);
+            this.iconButton1.TabIndex = 102;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -210,7 +225,7 @@
             this.tabHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.tabHistorial.Name = "tabHistorial";
             this.tabHistorial.SelectedIndex = 0;
-            this.tabHistorial.Size = new System.Drawing.Size(741, 635);
+            this.tabHistorial.Size = new System.Drawing.Size(724, 635);
             this.tabHistorial.TabIndex = 97;
             this.tabHistorial.SelectedIndexChanged += new System.EventHandler(this.tabHistorial_SelectedIndexChanged);
             // 
@@ -240,7 +255,7 @@
             this.tabAntPat.Margin = new System.Windows.Forms.Padding(2);
             this.tabAntPat.Name = "tabAntPat";
             this.tabAntPat.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAntPat.Size = new System.Drawing.Size(733, 609);
+            this.tabAntPat.Size = new System.Drawing.Size(716, 609);
             this.tabAntPat.TabIndex = 0;
             this.tabAntPat.Text = "Antecedentes Patológicos";
             this.tabAntPat.UseVisualStyleBackColor = true;
@@ -897,6 +912,21 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(697, 0);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // dgDiagnosticos
             // 
             this.dgDiagnosticos.BackgroundColor = System.Drawing.Color.White;
@@ -954,7 +984,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(741, 269);
+            this.groupBox1.Size = new System.Drawing.Size(724, 269);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del paciente";
@@ -1139,36 +1169,6 @@
             // 
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(697, 0);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 24;
-            this.iconButton1.Location = new System.Drawing.Point(859, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(31, 31);
-            this.iconButton1.TabIndex = 102;
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // HistorialClinicoForm
             // 

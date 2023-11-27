@@ -120,27 +120,4 @@
   <metadata name="ttAyuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMostrarContraseña.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEJSURBVDhPndMx
-        TgJBGIbhTdCEkg5KLLDQGK9AwQHo6OwMnEBFGxM7Iwego9AzCMHExJqCG5AADSRARa3v5864M8vuKn7J
-        kxlmd39m/mQCksMtJvjMsMUTdnKHDT4wRi3FBVToBF70z28Y4l0LGVGBajiNosURVCBxi070znk4jWKr
-        FlB2xHOAkhm92AL3Zm7ZqMltrKF1jdfQ+ndsgaQd5DHAAk2coWV+96HnPwXq6DmUF8xQwSEezHiMOfT8
-        XwWOMMUzfj2CtmqPcIpLrPAK7whZTVTT9JHWNV7hT010ow+KZvRiC8R74LqB0oUa6GWfAvZdL0t0kHSB
-        XKmXqQEV0cMsus6PcBIEXzzrZPUdL9C9AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnMostrarConfirmacion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEJSURBVDhPndMx
-        TgJBGIbhTdCEkg5KLLDQGK9AwQHo6OwMnEBFGxM7Iwego9AzCMHExJqCG5AADSRARa3v5864M8vuKn7J
-        kxlmd39m/mQCksMtJvjMsMUTdnKHDT4wRi3FBVToBF70z28Y4l0LGVGBajiNosURVCBxi070znk4jWKr
-        FlB2xHOAkhm92AL3Zm7ZqMltrKF1jdfQ+ndsgaQd5DHAAk2coWV+96HnPwXq6DmUF8xQwSEezHiMOfT8
-        XwWOMMUzfj2CtmqPcIpLrPAK7whZTVTT9JHWNV7hT010ow+KZvRiC8R74LqB0oUa6GWfAvZdL0t0kHSB
-        XKmXqQEV0cMsus6PcBIEXzzrZPUdL9C9AAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
