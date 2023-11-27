@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPanelPodologo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnConfig = new FontAwesome.Sharp.IconButton();
@@ -46,6 +47,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -346,6 +348,10 @@
             this.panel2.Size = new System.Drawing.Size(1216, 783);
             this.panel2.TabIndex = 12;
             // 
+            // ttAyuda
+            // 
+            this.ttAyuda.ToolTipTitle = "Ayuda";
+            // 
             // FormPanelPodologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,5 +398,6 @@
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
         private FontAwesome.Sharp.IconButton btnAyuda;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }

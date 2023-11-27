@@ -24,6 +24,13 @@ namespace CapaPresentacion
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 80);
             panel1.Controls.Add(leftBorderBtn);
+            ttAyuda.SetToolTip(btnConfig, "Configurar Horarios y Tipos de Citas disponibles");
+            ttAyuda.SetToolTip(btnPacientes, "Administrar Pacientes");
+            ttAyuda.SetToolTip(btnUsuarios, "Administrar Usuarios");
+            ttAyuda.SetToolTip(btnReporte, "Generar Reportes");
+            ttAyuda.SetToolTip(pictureBox1, "Logo");
+            ttAyuda.SetToolTip(btnInicioUsuario, "Ayuda y Cerrar sesión");
+
         }
 
 
@@ -45,7 +52,7 @@ namespace CapaPresentacion
             public static Color colorBoton = Color.FromArgb(146, 171, 255);
             public static Color Blanco = Color.White;
             public static Color ColorIzquierda = Color.FromArgb(230, 210, 240);
-            
+
         }
         //Methods
         private void ActivateButton(object senderBtn, Color color)
@@ -55,7 +62,7 @@ namespace CapaPresentacion
                 DisableButton();
                 //Button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(255,255,255);
+                currentBtn.BackColor = Color.FromArgb(255, 255, 255);
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -112,8 +119,8 @@ namespace CapaPresentacion
             {
                 formulario.BringToFront();
             }
-        } 
-     
+        }
+
         /// <summary>
         /// botones
         /// </summary>
@@ -121,7 +128,7 @@ namespace CapaPresentacion
         /// <param name="e"></param>
         //private void rjButton1_Click(object sender, EventArgs e)
         //{
-            
+
         //}
 
         //private void rjButton4_Click(object sender, EventArgs e)
@@ -144,8 +151,8 @@ namespace CapaPresentacion
             ActivateButton(sender, RGBColors.colorBoton);
             lblTitulo.Text = "Reportes";
             AbrirFormulario<ReportesForm>();
-           //ReportesForm reportes = new ReportesForm();
-           // reportes .Show();
+            //ReportesForm reportes = new ReportesForm();
+            // reportes .Show();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -301,7 +308,7 @@ namespace CapaPresentacion
             lblTitulo.Text = "Seleccionar paciente";
             AbrirFormulario<SeleccionarPacienteForm>();
 
-           
+
             try
             {
                 Form CerrarNuevoPaciente = Application.OpenForms["SecretariaPrincipalForm"];
@@ -336,7 +343,7 @@ namespace CapaPresentacion
 
         private void btnInicioUsuario_MouseUp(object sender, MouseEventArgs e)
         {
-            
+
         }
 
         private void btnInicioUsuario_MouseDown(object sender, MouseEventArgs e)
@@ -367,6 +374,7 @@ namespace CapaPresentacion
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Presiona sobre los botones ubicados en el costado izquierdo de la pantalla, cada uno mostrará diferentes interfaces: \n" + "Tips: \n Todas las pantallas tienen un icono de ayuda en forma de un signo de interrogación, para saber más sobre qué se puede hacer en esa pantalla coloca el puntero del ratón sobre la este", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }
