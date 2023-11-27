@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialSecretariaForm));
@@ -37,6 +38,7 @@
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.button2 = new System.Windows.Forms.Button();
             this.lblPaciente = new System.Windows.Forms.Label();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgHistorial)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -174,5 +176,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblPaciente;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }

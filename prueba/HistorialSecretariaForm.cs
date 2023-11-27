@@ -29,6 +29,8 @@ namespace prueba
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.White;
+            ttAyuda.SetToolTip(btnAyuda, "Citas Proximas");
+            ttAyuda.SetToolTip(lblPaciente, "Paciente");
         }
         /// <summary>
         /// Load

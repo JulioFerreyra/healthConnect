@@ -26,6 +26,13 @@ namespace CapaPresentacion
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.White;
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
+            ttAyuda.SetToolTip(txtNombre, "Ingrese el nombre del profesionista");
+            ttAyuda.SetToolTip(txtPat, "Ingrese el apellido paterno del profesionista");
+            ttAyuda.SetToolTip(txtMat, "Ingrese el apellido materno del profesionista");
+            ttAyuda.SetToolTip(txtTelefono, "Ingrese el número de teléfono del profesionista");
+            
+
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
         {
@@ -158,6 +165,17 @@ namespace CapaPresentacion
         private void NuevoProfesionistaForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Ingresar nuevo profesionista: \n1: Ingrese nombre, apellido paterno y apellido materno del profesionista \n2: Ingrese el número de teléfono (10 carácteres) \n3: Seleccione la sucursal de ingreso del profesionista \n4: De clic en 'Guardar'","Ayuda",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
         }
     }
 }

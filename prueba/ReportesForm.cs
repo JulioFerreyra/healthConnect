@@ -17,6 +17,8 @@ namespace CapaPresentacion
         public ReportesForm()
         {
             InitializeComponent();
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
+            ttAyuda.SetToolTip(btnBuscar, "Buscar");
         }
 
         private void ReportesForm_Load(object sender, EventArgs e)
@@ -177,6 +179,12 @@ namespace CapaPresentacion
 
         private void cmbTiposCita_OnSelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Generar reportes: \n1: En filtro, seleccione 'Tipos de cita' o 'Rangos de Fecha'\n2:Seleccione el tipo de cita o la fecha de inicio y final del rango de fechas según se haya elegido en el apartado de 'Filtro' \n3: Seleccione al profesionista \n4: De clic en 'Aceptar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

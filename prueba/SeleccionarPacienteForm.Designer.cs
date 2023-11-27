@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,8 +37,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnNuevoPaciente = new System.Windows.Forms.Button();
-            this.txtBuscar = new prueba.TextBoxD();
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.txtBuscar = new prueba.TextBoxD();
             ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,32 +138,9 @@
             this.btnNuevoPaciente.UseVisualStyleBackColor = false;
             this.btnNuevoPaciente.Click += new System.EventHandler(this.btnNuevoPaciente_Click);
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
-            this.txtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.txtBuscar.BorderRadius = 10;
-            this.txtBuscar.BorderSize = 2;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(408, 116);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtBuscar.MaxLength = 10;
-            this.txtBuscar.Multiline = false;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBuscar.PasswordChar = false;
-            this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtBuscar.PlaceholderText = "Buscar";
-            this.txtBuscar.Size = new System.Drawing.Size(444, 46);
-            this.txtBuscar.TabIndex = 9;
-            this.txtBuscar.Texts = "";
-            this.txtBuscar.UnderlineStyle = false;
-            // 
             // btnAyuda
             // 
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
             this.btnAyuda.FlatAppearance.BorderSize = 0;
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,6 +153,31 @@
             this.btnAyuda.Size = new System.Drawing.Size(31, 31);
             this.btnAyuda.TabIndex = 102;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
+            this.txtBuscar.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.txtBuscar.BorderRadius = 10;
+            this.txtBuscar.BorderSize = 2;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtBuscar.Location = new System.Drawing.Point(408, 116);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.MaxLength = 10;
+            this.txtBuscar.Multiline = false;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBuscar.PasswordChar = false;
+            this.txtBuscar.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtBuscar.PlaceholderText = "Buscar";
+            this.txtBuscar.Size = new System.Drawing.Size(444, 46);
+            this.txtBuscar.TabIndex = 9;
+            this.txtBuscar.Texts = "";
+            this.txtBuscar.UnderlineStyle = false;
             // 
             // SeleccionarPacienteForm
             // 
@@ -206,5 +210,6 @@
         private System.Windows.Forms.Button btnNuevoPaciente;
         public System.Windows.Forms.DataGridView dgPacientes;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }

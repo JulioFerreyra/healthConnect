@@ -34,6 +34,9 @@ namespace CapaPresentacion {
             ttAyuda.SetToolTip(txtConfirmarContraseña, "Confirme su nueva contraseña \n Ambas contraseñas deben coincidir" );
             ttAyuda.SetToolTip(btnAceptar, "Restablecer su contraseña");
             ttAyuda.SetToolTip(lblRegresar, "Regresar a Inicio de Sesión");
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
+            ttAyuda.SetToolTip(btnMostrarConfirmacion, "Mostrar u ocultar contraseña");
+            ttAyuda.SetToolTip(btnMostrarContraseña, "Mostrar u ocultar contraseña");
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
         {
@@ -116,12 +119,19 @@ namespace CapaPresentacion {
 
         private void btnMostrarConfirmacion_Click(object sender, EventArgs e)
         {
-
+            if (txtConfirmarContraseña.Texts.Length != 0)
+            {
+                txtConfirmarContraseña.PasswordChar = !txtConfirmarContraseña.PasswordChar;
+                btnMostrarConfirmacion.IconChar = txtConfirmarContraseña.PasswordChar ? FontAwesome.Sharp.IconChar.Eye : FontAwesome.Sharp.IconChar.EyeSlash;
+            }
         }
 
         private void btnMostrarContraseña_Click(object sender, EventArgs e)
         {
-
+            if (txtContraseña.Texts.Length != 0) { 
+                txtContraseña.PasswordChar = !txtContraseña.PasswordChar;
+            btnMostrarContraseña.IconChar = txtContraseña.PasswordChar ? FontAwesome.Sharp.IconChar.Eye : FontAwesome.Sharp.IconChar.EyeSlash;
+        }
         }
 
 
@@ -159,6 +169,12 @@ namespace CapaPresentacion {
         private void OlvideContraseñaForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Restablecer contraseña: \n1: Ingrese el usuario \n2: Ingrese la nueva contraseña (8 carácteres) \n3: Confirme la contraseña \n4: De clic en 'Guardar'", "Ayuda",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
         }
     }
 }

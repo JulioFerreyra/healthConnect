@@ -33,6 +33,8 @@ namespace prueba
             RestablecerComboBoxHora();
             RellenarTiposCita();
             cmbxHora.Enabled = false;
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
+            ttAyuda.SetToolTip(button1, "Seleccionar paciente");
 
         }
 
@@ -220,6 +222,8 @@ namespace prueba
 
         private void cmbSucursal_OnSelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbxPodologo.SelectedIndex = -1;
+            cmbxPodologo.Texts = "Profesionista";
             if (cmbSucursal.SelectedIndex == 0)
             {
                 RellenarGrid();
@@ -310,5 +314,9 @@ namespace prueba
 
         }
 
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Crear una nueva cita: \n 1: Seleccione al paciente dando clic sobre el icono de lupa. \n2: Seleccione al profesionista, esto habilitará el selector de 'Horas'\n3: Seleccione la fecha y hora de la cita \n4: Seleccione el tipo de cita \n5: Ingrese los sintomas o motivo de la cita. \n6: Seleccione la sucursal \n(Es posible que varios campos regresen a su valor predeterminado)","Ayuda",MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

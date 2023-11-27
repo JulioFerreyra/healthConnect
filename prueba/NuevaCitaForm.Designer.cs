@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaCitaForm));
@@ -38,6 +39,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.cmbSucursal = new CustomControls.RJControls.pComboBox();
             this.btnAñadir = new CustomControls.RJControls.RJButton();
             this.tbxSintomas = new prueba.TextBoxD();
             this.tbxTelefono = new prueba.TextBoxD();
@@ -48,9 +53,6 @@
             this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
             this.cmbxHora = new CustomControls.RJControls.pComboBox();
             this.cmbxTipoCita = new CustomControls.RJControls.pComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cmbSucursal = new CustomControls.RJControls.pComboBox();
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgPodologos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,9 +156,63 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.label6.Location = new System.Drawing.Point(70, 293);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 20);
+            this.label6.Size = new System.Drawing.Size(91, 20);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Sintomas";
+            this.label6.Text = "Sintomas*";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.lupa;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1225, 134);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1301, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // cmbSucursal
+            // 
+            this.cmbSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbSucursal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.cmbSucursal.BorderSize = 1;
+            this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.cmbSucursal.ForeColor = System.Drawing.Color.White;
+            this.cmbSucursal.IconColor = System.Drawing.Color.Black;
+            this.cmbSucursal.Items.AddRange(new object[] {
+            "El Grullo",
+            "Ciudad Guzman"});
+            this.cmbSucursal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cmbSucursal.ListTextColor = System.Drawing.Color.Black;
+            this.cmbSucursal.Location = new System.Drawing.Point(930, 317);
+            this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbSucursal.Name = "cmbSucursal";
+            this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
+            this.cmbSucursal.Size = new System.Drawing.Size(249, 38);
+            this.cmbSucursal.TabIndex = 7;
+            this.cmbSucursal.Texts = "Sucursal";
+            this.cmbSucursal.OnSelectedIndexChanged += new System.EventHandler(this.cmbSucursal_OnSelectedIndexChanged);
             // 
             // btnAñadir
             // 
@@ -338,7 +394,7 @@
             this.cmbxPodologo.Padding = new System.Windows.Forms.Padding(1);
             this.cmbxPodologo.Size = new System.Drawing.Size(250, 38);
             this.cmbxPodologo.TabIndex = 2;
-            this.cmbxPodologo.Texts = "Podólogo";
+            this.cmbxPodologo.Texts = "Profesionista";
             this.cmbxPodologo.OnSelectedIndexChanged += new System.EventHandler(this.cmbxPodologo_OnSelectedIndexChanged);
             // 
             // cmbxHora
@@ -380,59 +436,6 @@
             this.cmbxTipoCita.Size = new System.Drawing.Size(250, 38);
             this.cmbxTipoCita.TabIndex = 5;
             this.cmbxTipoCita.Texts = "Tipo de cita";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::CapaPresentacion.Properties.Resources.lupa;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1225, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 45);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cmbSucursal
-            // 
-            this.cmbSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbSucursal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
-            this.cmbSucursal.BorderSize = 1;
-            this.cmbSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.cmbSucursal.ForeColor = System.Drawing.Color.White;
-            this.cmbSucursal.IconColor = System.Drawing.Color.Black;
-            this.cmbSucursal.Items.AddRange(new object[] {
-            "El Grullo",
-            "Ciudad Guzman"});
-            this.cmbSucursal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cmbSucursal.ListTextColor = System.Drawing.Color.Black;
-            this.cmbSucursal.Location = new System.Drawing.Point(930, 317);
-            this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbSucursal.Name = "cmbSucursal";
-            this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
-            this.cmbSucursal.Size = new System.Drawing.Size(249, 38);
-            this.cmbSucursal.TabIndex = 7;
-            this.cmbSucursal.Texts = "Sucursal";
-            this.cmbSucursal.OnSelectedIndexChanged += new System.EventHandler(this.cmbSucursal_OnSelectedIndexChanged);
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(1301, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // NuevaCitaForm
             // 
@@ -497,5 +500,6 @@
         private System.Windows.Forms.Label label6;
         private CustomControls.RJControls.pComboBox cmbSucursal;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }

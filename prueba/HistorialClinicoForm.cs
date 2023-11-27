@@ -29,6 +29,19 @@ namespace CapaPresentacion
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.White;
+            ttAyuda.SetToolTip(txtNombre, "Nombre del Paciente");
+            ttAyuda.SetToolTip(txtApePat, "Apellido Paterno del Paciente");
+            ttAyuda.SetToolTip(txtApeMat, "Apellido Materno del Paciente");
+            ttAyuda.SetToolTip(txtEdad, "Edad del Paciente");
+            ttAyuda.SetToolTip(txtTelf, "Número de teléfono del Paciente");
+            ttAyuda.SetToolTip(lblFicha, "Número de ficha");
+            ttAyuda.SetToolTip(iconButton1, "Historial Clínico del paciente. \nSe clasifican los antecedentes patológicos, no patológicos y el historial de diagnósticos");
+            ttAyuda.SetToolTip(ayudaPat, "Antecentes patológicos del paciente. \n Para Editar los datos de clic sobre el botón de 'Editar', modifique los datos necesarios. Finalmente de clic en el botón de 'Guardar'");
+            ttAyuda.SetToolTip(ayudaNoPat, "Antecentes no patológicos del paciente. \n Para Editar los datos de clic sobre el botón de 'Editar', modifique los datos necesarios. Finalmente de clic en el botón de 'Guardar'");
+            ttAyuda.SetToolTip(iconButton4, "Diagnósticos del paciente");
+
+
+
         }
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -78,7 +91,7 @@ namespace CapaPresentacion
         {
             RellenarCamposPacientes();
             RellenarAntecedentesPaciente();
-           
+            
             CambiarEstadoCamposNoPat(false);
             CambiarEstadoCamposPat(false);
 

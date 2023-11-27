@@ -36,9 +36,10 @@
             this.lblCitas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
+            this.btnAyudaGrid = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgXochitl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,6 +148,36 @@
             this.label2.Text = "Citas Agendadas";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(210, 25);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Citas programadas";
+            this.label3.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(1091, 4);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // cmbxPodologo
             // 
             this.cmbxPodologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
@@ -168,33 +199,22 @@
             this.cmbxPodologo.Texts = "Podólogo";
             this.cmbxPodologo.OnSelectedIndexChanged += new System.EventHandler(this.cmbxPodologo_OnSelectedIndexChanged);
             // 
-            // label3
+            // btnAyudaGrid
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 25);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Citas programadas";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(1133, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyudaGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAyudaGrid.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyudaGrid.FlatAppearance.BorderSize = 0;
+            this.btnAyudaGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyudaGrid.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyudaGrid.IconColor = System.Drawing.Color.Black;
+            this.btnAyudaGrid.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyudaGrid.IconSize = 24;
+            this.btnAyudaGrid.Location = new System.Drawing.Point(1091, 225);
+            this.btnAyudaGrid.Name = "btnAyudaGrid";
+            this.btnAyudaGrid.Size = new System.Drawing.Size(31, 31);
+            this.btnAyudaGrid.TabIndex = 103;
+            this.btnAyudaGrid.UseVisualStyleBackColor = true;
+            this.btnAyudaGrid.Click += new System.EventHandler(this.btnAyudaGrid_Click);
             // 
             // SecretariaPrincipalForm
             // 
@@ -202,6 +222,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1167, 848);
+            this.Controls.Add(this.btnAyudaGrid);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -231,5 +252,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private FontAwesome.Sharp.IconButton btnAyudaGrid;
     }
 }

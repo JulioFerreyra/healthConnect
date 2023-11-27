@@ -27,6 +27,10 @@ namespace CapaPresentacion
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.White;
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
+            ttAyuda.SetToolTip(txtNombre, "Ingrese el Usuario");
+            ttAyuda.SetToolTip(txtContra, "Ingrese la contraseña (8 carácteres)");
+            ttAyuda.SetToolTip(txtConfirmar,"Confirme la contraseña");
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
         {
@@ -162,6 +166,12 @@ namespace CapaPresentacion
         private void NuevoUsuarioForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Ingresar nuevo usuario: \n1: Ingrese el usuario \n2: Seleccione el puesto del usuario \n3: Ingrese la contraseña (8 carácteres) \n4: Confirme la contraseña \n5: Selecciones la sucursal \n6: De clic en 'Guardar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

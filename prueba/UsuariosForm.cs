@@ -303,5 +303,16 @@ namespace CapaPresentacion
             }
         }
 
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Administrar usuarios: Permite crear, visualizar, editar y eliminar datos de usuarios", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void btnAyudaProf_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Administrar profesionistas: Permite crear, visualizar, editar y eliminar datos de profesionistas", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }

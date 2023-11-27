@@ -24,6 +24,9 @@ namespace CapaPresentacion
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.White;
+            ttAyuda.SetToolTip(button1, "Buscar");
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
+            
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
         {
@@ -64,7 +67,11 @@ namespace CapaPresentacion
         private void PacientesForm_Load(object sender, EventArgs e)
         {
             RellenarGrid(string.Empty);
+            if (dgPacientes.Columns.Count !=0)
+            {
+
             dgPacientes.Columns["ID"].Visible = false;
+            }
 
         }
 
@@ -125,6 +132,12 @@ namespace CapaPresentacion
         private void PacientesForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("De doble clic sobre el paciente para seleccionarlo","Ayuda",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
         }
     }
 }

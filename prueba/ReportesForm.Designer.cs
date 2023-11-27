@@ -42,6 +42,7 @@
             this.rvReportes = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataSetReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.pnlOpciones.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetReportesBindingSource)).BeginInit();
@@ -80,6 +81,7 @@
             this.btnAyuda.Size = new System.Drawing.Size(31, 31);
             this.btnAyuda.TabIndex = 102;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // cmbPodologos
             // 
@@ -254,5 +256,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private CustomControls.RJControls.pComboBox cmbPodologos;
         private FontAwesome.Sharp.IconButton btnAyuda;
+        private System.Windows.Forms.ToolTip ttAyuda;
     }
 }

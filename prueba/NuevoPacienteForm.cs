@@ -10,7 +10,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
+
 using System.Windows.Forms;
 
 namespace prueba
@@ -26,6 +26,15 @@ namespace prueba
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.White;
+            ttAyuda.SetToolTip(txtNombre, "Ingrese el nombre del paciente");
+            ttAyuda.SetToolTip(txtApellMat, "Ingrese el apellido Materno del paciente");
+            ttAyuda.SetToolTip(txtApellPat, "Ingrese el apellido paterno del paciente");
+            ttAyuda.SetToolTip(txtDireccion, "Ingrese la dirección o domicilio del paciente");
+            ttAyuda.SetToolTip(txtTelefono, "Ingrese el número de teléfono del paciente");
+            ttAyuda.SetToolTip(dtpFechaNac, "Selecciona la fecha de nacimiento del paciente");
+            ttAyuda.SetToolTip(cmbxSexo, "Selecciona el sexo del paciente");
+
+
         }
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
         {
@@ -203,6 +212,11 @@ namespace prueba
         private void NuevoPacienteForm_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+           MessageBox.Show("Ingresar nuevo paciente: \n1: Ingrese nombre, apellido paterno y apellido materno del paciente \n2: Ingrese el número de teléfono (10 carácteres) \n3: Seleccione la fecha de nacimiento del paciente \n4: Selecciones el sexo del paciente \n5: De clic en 'Guardar'","Ayuda",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }

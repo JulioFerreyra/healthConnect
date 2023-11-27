@@ -39,6 +39,7 @@ namespace prueba
             ttAyuda.SetToolTip(txbPasswordLogin, "Ingrese su Contraseña");
             ttAyuda.SetToolTip(rjButton1, "Iniciar sesión");
             ttAyuda.SetToolTip(linkLabel1,"¿Olvido su contraseña? \n De clic aquí para recuperarla");
+            ttAyuda.SetToolTip(btnAyuda, "Ingrese su usuario y contraseña para iniciar sesión");
 
         }
 
@@ -168,12 +169,21 @@ namespace prueba
 
         private void mostrarContraseña_Click(object sender, EventArgs e)
         {
-            txbPasswordLogin.PasswordChar = !txbPasswordLogin.PasswordChar;
-            mostrarContraseña.IconChar = txbPasswordLogin.PasswordChar ? FontAwesome.Sharp.IconChar.Eye : FontAwesome.Sharp.IconChar.EyeSlash;
-        }
+            if (txbPasswordLogin.Texts.Length != 0) { 
+                 txbPasswordLogin.PasswordChar = !txbPasswordLogin.PasswordChar;
+                mostrarContraseña.IconChar = txbPasswordLogin.PasswordChar ? FontAwesome.Sharp.IconChar.Eye : FontAwesome.Sharp.IconChar.EyeSlash;
 
+            }
+        }
+            
         private void ttAyuda_Popup(object sender, PopupEventArgs e)
         {
+
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Inciar sesión: \n1: Ingrese el usuario \n2: Ingrese la contraseña (8 carácteres) \n3: De clic en 'Aceptar'", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

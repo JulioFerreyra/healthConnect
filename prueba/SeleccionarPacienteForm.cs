@@ -18,6 +18,9 @@ namespace prueba
         public SeleccionarPacienteForm()
         {
             InitializeComponent();
+            ttAyuda.SetToolTip(btnNuevoPaciente, "Crear nuevo paciente");
+            ttAyuda.SetToolTip(btnAyuda, "Ayuda");
+            ttAyuda.SetToolTip(button1, "Buscar");
         }
 
         /// <summary>
@@ -178,6 +181,10 @@ namespace prueba
 
         }
 
-      
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Administrar pacientes: Permite crear, visualizar, editar y eliminar datos de pacientes, así como visualizar las citas proximas registradas por paciente y, su historial clínico (este último solo disponible para administradores)", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }

@@ -52,7 +52,10 @@ namespace prueba
                 return;
             }
             cmbxPodologo.SelectedIndex = 0;
-
+            if (dgXochitl.Columns.Count > 4)
+            {
+                dgXochitl.Columns["ID"].Visible = false;
+            }
 
 
         }
@@ -267,6 +270,19 @@ namespace prueba
         }
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Seleccione un profesionista, esto actualizará la tabla con las citas agendadas para este. \nSeleccione un día del calendario en la parte superior derecha, esto actualizará la tabla con las cita agendadas para el día y profesionista seleccionado (Por defecto se selecciona el día de hoy)", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+
+        private void btnAyudaGrid_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Se muestran un resumen de las citas programadas, además de botones de interacción que permiten:\nVer detalles: Se abrirá una interfaz emergente con los datos completos de la cita.\nEditar Cita: Abrirá una ventana emergente con los datos de la cita disponibles para ser modificados\nEliminar Cita: Eliminará la cita.\nFinalizar Cita: Abrira una ventana emergente que solicitará que se ingrese el diagnóstico para finalizar la cita.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }
