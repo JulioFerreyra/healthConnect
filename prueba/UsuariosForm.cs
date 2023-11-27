@@ -25,6 +25,10 @@ namespace CapaPresentacion
             
             RellenarDataGridUsuarios();
             AgregarColumnasDataGrid();
+            if (dgProfesionistas.Columns.Count > 2)
+            {
+                dgProfesionistas.Columns["ID"].Visible = false;
+            }
             
         }
 
@@ -221,13 +225,15 @@ namespace CapaPresentacion
 
         private void AgregarColumnasDataGrid()
         {
-            DataGridViewButtonColumn editarCol = new DataGridViewButtonColumn();
+            DataGridViewImageColumn editarCol = new DataGridViewImageColumn();
             editarCol.HeaderText = "Editar";
             editarCol.Name = "EditarCol";
-
-            DataGridViewButtonColumn eliminarCol = new DataGridViewButtonColumn();
+            editarCol.Image = Properties.Resources.editar;
+            DataGridViewImageColumn eliminarCol = new DataGridViewImageColumn();
             eliminarCol.HeaderText = "Eliminar";
             eliminarCol.Name = "EliminarCol";
+            eliminarCol.Image = Properties.Resources.eliminar;
+
 
             dgProfesionistas.Columns.Add(editarCol);
             dgProfesionistas.Columns.Add(eliminarCol);
@@ -312,6 +318,11 @@ namespace CapaPresentacion
         private void btnAyudaProf_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("Administrar profesionistas: Permite crear, visualizar, editar y eliminar datos de profesionistas", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void dgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

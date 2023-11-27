@@ -212,7 +212,6 @@
             // 
             this.Panelformularios.AutoSize = true;
             this.Panelformularios.BackColor = System.Drawing.Color.White;
-            this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panelformularios.Location = new System.Drawing.Point(0, 0);
             this.Panelformularios.Name = "Panelformularios";
             this.Panelformularios.Size = new System.Drawing.Size(1132, 783);
@@ -225,7 +224,6 @@
             this.panel3.Controls.Add(this.btnInicioUsuario);
             this.panel3.Controls.Add(this.lblTitulo);
             this.panel3.Controls.Add(this.iconCurrentChildForm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(311, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1132, 74);
@@ -233,9 +231,9 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnAyuda);
-            this.pnlMenu.Location = new System.Drawing.Point(1114, 24);
+            this.pnlMenu.Controls.Add(this.btnCerrarSesion);
+            this.pnlMenu.Location = new System.Drawing.Point(1021, 26);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(100, 48);
@@ -254,7 +252,7 @@
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 20;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 24);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(2, 26);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(102, 24);
@@ -276,7 +274,7 @@
             this.btnAyuda.IconColor = System.Drawing.Color.Black;
             this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAyuda.IconSize = 20;
-            this.btnAyuda.Location = new System.Drawing.Point(0, 0);
+            this.btnAyuda.Location = new System.Drawing.Point(2, 0);
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(102, 24);
@@ -341,8 +339,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.Controls.Add(this.Panelformularios);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(311, 74);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1132, 783);

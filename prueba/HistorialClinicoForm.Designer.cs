@@ -231,7 +231,7 @@
             this.tabHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.tabHistorial.Name = "tabHistorial";
             this.tabHistorial.SelectedIndex = 0;
-            this.tabHistorial.Size = new System.Drawing.Size(733, 635);
+            this.tabHistorial.Size = new System.Drawing.Size(716, 635);
             this.tabHistorial.TabIndex = 97;
             this.tabHistorial.SelectedIndexChanged += new System.EventHandler(this.tabHistorial_SelectedIndexChanged);
             // 
@@ -262,7 +262,7 @@
             this.tabAntPat.Margin = new System.Windows.Forms.Padding(2);
             this.tabAntPat.Name = "tabAntPat";
             this.tabAntPat.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAntPat.Size = new System.Drawing.Size(725, 609);
+            this.tabAntPat.Size = new System.Drawing.Size(708, 609);
             this.tabAntPat.TabIndex = 0;
             this.tabAntPat.Text = "Antecedentes Patológicos";
             this.tabAntPat.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
             this.ayudaPat.IconColor = System.Drawing.Color.Black;
             this.ayudaPat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ayudaPat.IconSize = 24;
-            this.ayudaPat.Location = new System.Drawing.Point(691, 5);
+            this.ayudaPat.Location = new System.Drawing.Point(674, 5);
             this.ayudaPat.Name = "ayudaPat";
             this.ayudaPat.Size = new System.Drawing.Size(31, 31);
             this.ayudaPat.TabIndex = 103;
@@ -611,7 +611,7 @@
             this.tabNoPat.Margin = new System.Windows.Forms.Padding(2);
             this.tabNoPat.Name = "tabNoPat";
             this.tabNoPat.Padding = new System.Windows.Forms.Padding(2);
-            this.tabNoPat.Size = new System.Drawing.Size(742, 609);
+            this.tabNoPat.Size = new System.Drawing.Size(725, 609);
             this.tabNoPat.TabIndex = 1;
             this.tabNoPat.Text = "Antecedentes no Patológicos";
             this.tabNoPat.UseVisualStyleBackColor = true;
@@ -949,7 +949,7 @@
             this.tabCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tabCitas.Name = "tabCitas";
             this.tabCitas.Padding = new System.Windows.Forms.Padding(2);
-            this.tabCitas.Size = new System.Drawing.Size(725, 609);
+            this.tabCitas.Size = new System.Drawing.Size(708, 609);
             this.tabCitas.TabIndex = 2;
             this.tabCitas.Text = "Historial de Citas";
             this.tabCitas.UseVisualStyleBackColor = true;
@@ -965,7 +965,7 @@
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 24;
-            this.iconButton4.Location = new System.Drawing.Point(737, 11);
+            this.iconButton4.Location = new System.Drawing.Point(720, 11);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(31, 31);
             this.iconButton4.TabIndex = 104;
@@ -1043,7 +1043,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(733, 269);
+            this.groupBox1.Size = new System.Drawing.Size(716, 269);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del paciente";

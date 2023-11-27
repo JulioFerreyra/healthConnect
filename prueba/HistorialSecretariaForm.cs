@@ -98,6 +98,10 @@ namespace prueba
             Paciente paciente = new Paciente(ElementosGlobales.idPacienteGlobal);
             RellenarDataGrid(paciente);
             AgregarBotonGrid();
+            if (dgHistorial.Columns.Count != 1)
+            {
+                dgHistorial.Columns["ID"].Visible = false;
+            }
 
         }
 

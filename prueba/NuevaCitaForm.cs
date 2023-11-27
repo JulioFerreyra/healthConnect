@@ -35,6 +35,10 @@ namespace prueba
             cmbxHora.Enabled = false;
             ttAyuda.SetToolTip(btnAyuda, "Ayuda");
             ttAyuda.SetToolTip(button1, "Seleccionar paciente");
+            if (dgPodologos.Columns.Count != 0)
+            {
+                dgPodologos.Columns["ID"].Visible = false;
+            }
 
         }
 
