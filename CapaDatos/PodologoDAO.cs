@@ -1014,6 +1014,52 @@ namespace CapaDatos
             }
         }
 
+        public void ActualizarDatosNoPatologicosPacienteRemoto(AntecedentesNoPatologicos antecedentes)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexionRemota());
+            string sentenciaUpdate = "UPDATE ant_nopat SET parto = " + antecedentes.GetParto() + ", hiperlaxitud = " + antecedentes.GetHiperlaxitud() + ", tabaco = " + antecedentes.GetTabaco() + ", frec_tab = " + antecedentes.GetFrecuenciaTabaco() + ", alcohol = " + antecedentes.GetAlcohol() + ", frec_alc = " + antecedentes.GetFrecueciaAlcohol() + ", act_fisica = " + antecedentes.GetActividadFisica() + ", frec_actF= " + antecedentes.GetFrecuenciaActividad() + ", drogas = " + antecedentes.GetDrogas() + " WHERE id_paciente =" + antecedentes.GetIdPaciente();
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaUpdate, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Antecedentes actualizados correctamente", "Actualización exitosa");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        }
+
+       public void ActualizarAntecedentesPatologicosPacienteRemoto(AntecedentesPatologicos antecedentes)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            string sentenciaUpdate = "UPDATE ant_pat SET diabetes = \"" + antecedentes.GetDiabetes() + "\", presion_arterial = \"" + antecedentes.GetPresionArterial() + "\", tiroides = \"" + antecedentes.GetTiroides() + "\", hepatitis = \"" + antecedentes.GetHepatitis() + "\",cardiopatias = " + antecedentes.GetCardiopatias() + ",intervenciones = \"" + antecedentes.GetIntervenciones() + "\",neoplasia = " + antecedentes.GetNeoplasia() + ",medicacion =\"" + antecedentes.GetMedicacion() + "\" " + ", alergias = '" + antecedentes.GetAlergias() + "' WHERE id_paciente = " + antecedentes.GetIdPaciente();
+            MySqlConnection conexion_a_SQL = new MySqlConnection(CadenaConexionRemota());
+            try
+            {
+                conexion_a_SQL.Open();
+                MySqlCommand commando = new MySqlCommand(sentenciaUpdate, conexion_a_SQL);
+                commando.ExecuteNonQuery();
+                MessageBox.Show("Antecedentes actualizados correctamente", "Actualización exitosa");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible establecer una conexión con la base de datos: \n" + ex.Message, "Error de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                conexion_a_SQL.Close();
+            }
+        }
+
 
     }
 }

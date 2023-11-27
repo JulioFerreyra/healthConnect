@@ -93,20 +93,28 @@ namespace CapaPresentacion
 
         private void AgregarColumnas()
         {
-            DataGridViewButtonColumn aceptarCol = new DataGridViewButtonColumn
+            DataGridViewImageColumn aceptarCol = new DataGridViewImageColumn
             {
                 Name = "AceptarCol",
-                HeaderText = "Aceptar Cita"
-            };
-            DataGridViewButtonColumn rechazarCol = new DataGridViewButtonColumn
+                HeaderText = "Aceptar Cita",
+                Image = Properties.Resources.AgregarIcon,
+                ImageLayout = DataGridViewImageCellLayout.Normal
+
+        };
+            DataGridViewImageColumn rechazarCol = new DataGridViewImageColumn
             {
                 Name = "RechazarCol",
-                HeaderText = "Rechazar Cita"
+                HeaderText = "Rechazar Cita",
+                Image = Properties.Resources.cancelar,
+                ImageLayout = DataGridViewImageCellLayout.Normal
+
             };
-            DataGridViewButtonColumn editarCol = new DataGridViewButtonColumn
+            DataGridViewImageColumn editarCol = new DataGridViewImageColumn
             {
                 Name = "EditarCol",
-                HeaderText = "Editar Cita"
+                HeaderText = "Editar Cita",
+                Image = Properties.Resources.editar,
+                ImageLayout = DataGridViewImageCellLayout.Normal
             };
             dgCitas.Columns.Add(aceptarCol);
             dgCitas.Columns.Add(editarCol);

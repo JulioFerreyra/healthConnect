@@ -40,7 +40,9 @@
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.cmbxPodologo = new CustomControls.RJControls.pComboBox();
             this.btnAyudaGrid = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgXochitl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgXochitl
@@ -216,12 +218,21 @@
             this.btnAyudaGrid.UseVisualStyleBackColor = true;
             this.btnAyudaGrid.Click += new System.EventHandler(this.btnAyudaGrid_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // SecretariaPrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1167, 848);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAyudaGrid);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.label2);
@@ -238,6 +249,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SecretariaPrincipalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgXochitl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +265,6 @@
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton btnAyuda;
         private FontAwesome.Sharp.IconButton btnAyudaGrid;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

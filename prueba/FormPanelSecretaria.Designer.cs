@@ -70,19 +70,20 @@
             // btnCitasConfirmar
             // 
             this.btnCitasConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnCitasConfirmar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCitasConfirmar.FlatAppearance.BorderSize = 0;
             this.btnCitasConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCitasConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnCitasConfirmar.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnCitasConfirmar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
             this.btnCitasConfirmar.IconColor = System.Drawing.Color.White;
             this.btnCitasConfirmar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCitasConfirmar.IconSize = 55;
             this.btnCitasConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCitasConfirmar.Location = new System.Drawing.Point(0, 464);
+            this.btnCitasConfirmar.Location = new System.Drawing.Point(0, 483);
             this.btnCitasConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCitasConfirmar.Name = "btnCitasConfirmar";
-            this.btnCitasConfirmar.Size = new System.Drawing.Size(311, 65);
+            this.btnCitasConfirmar.Size = new System.Drawing.Size(311, 80);
             this.btnCitasConfirmar.TabIndex = 17;
             this.btnCitasConfirmar.Text = "Citas por confirmar";
             this.btnCitasConfirmar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,19 +94,20 @@
             // btnPacientes
             // 
             this.btnPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnPacientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPacientes.FlatAppearance.BorderSize = 0;
             this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPacientes.ForeColor = System.Drawing.Color.White;
-            this.btnPacientes.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnPacientes.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.btnPacientes.IconColor = System.Drawing.Color.White;
             this.btnPacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPacientes.IconSize = 55;
             this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPacientes.Location = new System.Drawing.Point(0, 396);
+            this.btnPacientes.Location = new System.Drawing.Point(0, 403);
             this.btnPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(311, 65);
+            this.btnPacientes.Size = new System.Drawing.Size(311, 80);
             this.btnPacientes.TabIndex = 16;
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,19 +118,20 @@
             // btnNuevaCita
             // 
             this.btnNuevaCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnNuevaCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNuevaCita.FlatAppearance.BorderSize = 0;
             this.btnNuevaCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaCita.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaCita.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnNuevaCita.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnNuevaCita.IconColor = System.Drawing.Color.White;
             this.btnNuevaCita.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevaCita.IconSize = 55;
             this.btnNuevaCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevaCita.Location = new System.Drawing.Point(0, 327);
+            this.btnNuevaCita.Location = new System.Drawing.Point(0, 323);
             this.btnNuevaCita.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevaCita.Name = "btnNuevaCita";
-            this.btnNuevaCita.Size = new System.Drawing.Size(311, 65);
+            this.btnNuevaCita.Size = new System.Drawing.Size(311, 80);
             this.btnNuevaCita.TabIndex = 15;
             this.btnNuevaCita.Text = "Nueva Cita";
             this.btnNuevaCita.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,6 +142,7 @@
             // btnPrincipal
             // 
             this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
+            this.btnPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrincipal.FlatAppearance.BorderSize = 0;
             this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,10 +152,10 @@
             this.btnPrincipal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPrincipal.IconSize = 55;
             this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrincipal.Location = new System.Drawing.Point(0, 259);
+            this.btnPrincipal.Location = new System.Drawing.Point(0, 243);
             this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(311, 65);
+            this.btnPrincipal.Size = new System.Drawing.Size(311, 80);
             this.btnPrincipal.TabIndex = 14;
             this.btnPrincipal.Text = "Pantalla Principal";
             this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,10 +165,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.hcLOGO1;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(311, 243);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;

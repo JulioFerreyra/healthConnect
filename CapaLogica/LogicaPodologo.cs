@@ -148,11 +148,13 @@ namespace CapaLogica
         {
             PodologoDAO podologoDAO = new PodologoDAO();
             podologoDAO.ActualizarDatosNoPatologicosPaciente(antecedentes);
+            podologoDAO.ActualizarDatosNoPatologicosPacienteRemoto(antecedentes);
         }
         public void ActualizarAntecedentesPatologicosPaciente(AntecedentesPatologicos antecedentes)
         {
             PodologoDAO podologoDAO = new PodologoDAO();
             podologoDAO.ActualizarAntecedentesPatologicosPaciente(antecedentes);
+            podologoDAO.ActualizarAntecedentesPatologicosPacienteRemoto(antecedentes);
         }
         public bool ActualizarDatosProfesionista(Profesionista profesionista)
         {

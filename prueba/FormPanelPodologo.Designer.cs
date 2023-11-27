@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 857);
+            this.panel1.Size = new System.Drawing.Size(311, 857);
             this.panel1.TabIndex = 0;
             // 
             // btnConfig
@@ -87,7 +87,7 @@
             this.btnConfig.Location = new System.Drawing.Point(0, 487);
             this.btnConfig.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(227, 65);
+            this.btnConfig.Size = new System.Drawing.Size(311, 65);
             this.btnConfig.TabIndex = 17;
             this.btnConfig.Text = "Configuración";
             this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,7 +110,7 @@
             this.btnUsuarios.Location = new System.Drawing.Point(0, 422);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(227, 65);
+            this.btnUsuarios.Size = new System.Drawing.Size(311, 65);
             this.btnUsuarios.TabIndex = 16;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +133,7 @@
             this.btnReporte.Location = new System.Drawing.Point(0, 357);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(227, 65);
+            this.btnReporte.Size = new System.Drawing.Size(311, 65);
             this.btnReporte.TabIndex = 15;
             this.btnReporte.Text = "Reportes";
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,7 +156,7 @@
             this.btnPacientes.Location = new System.Drawing.Point(0, 292);
             this.btnPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(227, 65);
+            this.btnPacientes.Size = new System.Drawing.Size(311, 65);
             this.btnPacientes.TabIndex = 14;
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,7 +179,7 @@
             this.btnPrincipal.Location = new System.Drawing.Point(0, 227);
             this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(227, 65);
+            this.btnPrincipal.Size = new System.Drawing.Size(311, 65);
             this.btnPrincipal.TabIndex = 13;
             this.btnPrincipal.Text = "Pantalla Principal";
             this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -194,16 +194,16 @@
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(227, 227);
+            this.pnlLogo.Size = new System.Drawing.Size(311, 227);
             this.pnlLogo.TabIndex = 12;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.hcLOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 185);
+            this.pictureBox1.Size = new System.Drawing.Size(304, 221);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -215,7 +215,7 @@
             this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panelformularios.Location = new System.Drawing.Point(0, 0);
             this.Panelformularios.Name = "Panelformularios";
-            this.Panelformularios.Size = new System.Drawing.Size(1216, 783);
+            this.Panelformularios.Size = new System.Drawing.Size(1132, 783);
             this.Panelformularios.TabIndex = 1;
             // 
             // panel3
@@ -226,9 +226,9 @@
             this.panel3.Controls.Add(this.lblTitulo);
             this.panel3.Controls.Add(this.iconCurrentChildForm);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(227, 0);
+            this.panel3.Location = new System.Drawing.Point(311, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1216, 74);
+            this.panel3.Size = new System.Drawing.Size(1132, 74);
             this.panel3.TabIndex = 11;
             // 
             // pnlMenu
@@ -300,7 +300,7 @@
             this.btnInicioUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInicioUsuario.IconSize = 30;
             this.btnInicioUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnInicioUsuario.Location = new System.Drawing.Point(1026, 0);
+            this.btnInicioUsuario.Location = new System.Drawing.Point(942, 0);
             this.btnInicioUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicioUsuario.Name = "btnInicioUsuario";
             this.btnInicioUsuario.Size = new System.Drawing.Size(190, 24);
@@ -343,9 +343,9 @@
             // 
             this.panel2.Controls.Add(this.Panelformularios);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(227, 74);
+            this.panel2.Location = new System.Drawing.Point(311, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1216, 783);
+            this.panel2.Size = new System.Drawing.Size(1132, 783);
             this.panel2.TabIndex = 12;
             // 
             // ttAyuda

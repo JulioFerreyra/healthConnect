@@ -208,7 +208,6 @@
             // 
             // rvReportes
             // 
-            this.rvReportes.BackColor = System.Drawing.Color.LightSteelBlue;
             this.rvReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rvReportes.LocalReport.ReportEmbeddedResource = "CapaPresentacion.InformeReporte.rdlc";
             this.rvReportes.Location = new System.Drawing.Point(0, 0);
