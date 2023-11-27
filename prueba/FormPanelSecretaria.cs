@@ -16,13 +16,19 @@ namespace CapaPresentacion
 {
     public partial class FormPanelSecretaria : Form
     {
-        
+        public static string usuarioIniciado;
         public FormPanelSecretaria()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 80);
             panel1.Controls.Add(leftBorderBtn);
+            ttAyuda.SetToolTip(btnPacientes, "Ver pacientes registrados");
+            ttAyuda.SetToolTip(btnPrincipal, "Ver citas programadas");
+            ttAyuda.SetToolTip(btnNuevaCita, "Agendar nueva cita");
+            ttAyuda.SetToolTip(btnCitasConfirmar, "Ver citas pendientes de confirmación");
+            ttAyuda.SetToolTip(pictureBox1, "Logo");
+            ttAyuda.SetToolTip(btnInicioUsuario, "Ayuda y Cerrar sesión");
         }
 
         /// <summary>
@@ -35,6 +41,8 @@ namespace CapaPresentacion
             ActivateButton(btnPrincipal, RGBColors.colorBoton);
             BotonInicial();
             AbrirFormulario<SecretariaPrincipalForm>();
+            btnInicioUsuario.Text = usuarioIniciado;
+            
         }
 
 
@@ -320,6 +328,11 @@ namespace CapaPresentacion
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Presiona sobre los botones ubicados en el costado izquierdo de la pantalla, cada uno mostrará diferentes interfaces: \n" + "Tips: \n Todas las pantallas tienen un icono de ayuda en forma de un signo de interrogación, para saber más sobre qué se puede hacer en esa pantalla coloca el puntero del ratón sobre la este", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

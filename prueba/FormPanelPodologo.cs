@@ -17,6 +17,7 @@ namespace CapaPresentacion
 {
     public partial class FormPanelPodologo : Form
     {
+        public static string usuarioIniciado = "Usuario";
         public FormPanelPodologo()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace CapaPresentacion
             ActivateButton(btnPrincipal, RGBColors.colorBoton);
             BotonInicial();
             AbrirFormulario<SecretariaPrincipalForm>();
+            btnInicioUsuario.Text = usuarioIniciado;
         }
         private IconButton currentBtn;
         private Panel leftBorderBtn;
@@ -361,6 +363,11 @@ namespace CapaPresentacion
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

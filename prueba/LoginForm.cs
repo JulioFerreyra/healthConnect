@@ -158,6 +158,8 @@ namespace prueba
             LogicaSecretaria logicaSecretaria = new LogicaSecretaria();
             logicaSecretaria.SetPassword(usuario.GetContraseña());
             logicaSecretaria.SetUsser(usuario.GetUsuario());
+            FormPanelSecretaria.usuarioIniciado = txtCorreoLogin.Texts;
+            FormPanelPodologo.usuarioIniciado = txtCorreoLogin.Texts;
         }
         private void txbPasswordLogin__TextChanged(object sender, EventArgs e)
         {

@@ -35,13 +35,13 @@
             this.txtContraseña = new prueba.TextBoxD();
             this.txtNombre = new prueba.TextBoxD();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cmbPuesto = new CustomControls.RJControls.pComboBox();
             this.lblNom = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnAyuda = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +160,21 @@
             this.panel1.TabIndex = 73;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 24;
+            this.btnAyuda.Location = new System.Drawing.Point(304, 3);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 102;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(171)))), ((int)(((byte)(255)))));
@@ -220,7 +235,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 219);
+            this.label3.Location = new System.Drawing.Point(56, 223);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 17);
@@ -237,21 +252,6 @@
             this.label4.Size = new System.Drawing.Size(164, 17);
             this.label4.TabIndex = 80;
             this.label4.Text = "Confirmar contraseña";
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Cursor = System.Windows.Forms.Cursors.Help;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 24;
-            this.btnAyuda.Location = new System.Drawing.Point(304, 3);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
-            this.btnAyuda.TabIndex = 102;
-            this.btnAyuda.UseVisualStyleBackColor = true;
             // 
             // EditarUsuariosForm
             // 
