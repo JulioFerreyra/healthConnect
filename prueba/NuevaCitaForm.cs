@@ -204,7 +204,8 @@ namespace prueba
                 tbxSintomas.Texts = string.Empty;
                 RestablecerComboBoxHora();
                 cmbxHora.Enabled = false;
-                cmbxPodologo.Texts = "Podólogo";
+                cmbxPodologo.SelectedIndex = -1;
+                cmbxPodologo.Texts = "Profesionista";
                 cmbxTipoCita.Texts = "Tipo de cita";
             }
             
@@ -295,7 +296,7 @@ namespace prueba
                 dgPodologos.DataSource = logicaSecretaria.VerCitasPodologoRemotas(dtFechaCita.Value, 0);
                 return;
             }
-            dgPodologos.DataSource = logicaSecretaria.VerCitasPodologoRemotas(dtFechaCita.Value, ElementosGlobales.idPodologos[cmbxPodologo.SelectedIndex]);
+            dgPodologos.DataSource = logicaSecretaria.VerCitasPodologoRemotas(dtFechaCita.Value, profesionistasRomotos[cmbxPodologo.SelectedIndex]);
         }
 
         private void InsertarCitaRemota(Cita cita)

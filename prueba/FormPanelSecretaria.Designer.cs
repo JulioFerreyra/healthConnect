@@ -224,6 +224,7 @@
             // 
             // pnlMenu
             // 
+            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnAyuda);
             this.pnlMenu.Location = new System.Drawing.Point(971, 32);

@@ -227,11 +227,11 @@
             this.tabHistorial.Controls.Add(this.tabNoPat);
             this.tabHistorial.Controls.Add(this.tabCitas);
             this.tabHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabHistorial.Location = new System.Drawing.Point(77, 481);
+            this.tabHistorial.Location = new System.Drawing.Point(78, 359);
             this.tabHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.tabHistorial.Name = "tabHistorial";
             this.tabHistorial.SelectedIndex = 0;
-            this.tabHistorial.Size = new System.Drawing.Size(716, 635);
+            this.tabHistorial.Size = new System.Drawing.Size(682, 635);
             this.tabHistorial.TabIndex = 97;
             this.tabHistorial.SelectedIndexChanged += new System.EventHandler(this.tabHistorial_SelectedIndexChanged);
             // 
@@ -262,7 +262,7 @@
             this.tabAntPat.Margin = new System.Windows.Forms.Padding(2);
             this.tabAntPat.Name = "tabAntPat";
             this.tabAntPat.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAntPat.Size = new System.Drawing.Size(708, 609);
+            this.tabAntPat.Size = new System.Drawing.Size(674, 609);
             this.tabAntPat.TabIndex = 0;
             this.tabAntPat.Text = "Antecedentes Patológicos";
             this.tabAntPat.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
             this.ayudaPat.IconColor = System.Drawing.Color.Black;
             this.ayudaPat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ayudaPat.IconSize = 24;
-            this.ayudaPat.Location = new System.Drawing.Point(674, 5);
+            this.ayudaPat.Location = new System.Drawing.Point(640, 5);
             this.ayudaPat.Name = "ayudaPat";
             this.ayudaPat.Size = new System.Drawing.Size(31, 31);
             this.ayudaPat.TabIndex = 103;
@@ -611,7 +611,7 @@
             this.tabNoPat.Margin = new System.Windows.Forms.Padding(2);
             this.tabNoPat.Name = "tabNoPat";
             this.tabNoPat.Padding = new System.Windows.Forms.Padding(2);
-            this.tabNoPat.Size = new System.Drawing.Size(725, 609);
+            this.tabNoPat.Size = new System.Drawing.Size(691, 609);
             this.tabNoPat.TabIndex = 1;
             this.tabNoPat.Text = "Antecedentes no Patológicos";
             this.tabNoPat.UseVisualStyleBackColor = true;
@@ -626,7 +626,7 @@
             this.ayudaNoPat.IconColor = System.Drawing.Color.Black;
             this.ayudaNoPat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ayudaNoPat.IconSize = 24;
-            this.ayudaNoPat.Location = new System.Drawing.Point(706, 5);
+            this.ayudaNoPat.Location = new System.Drawing.Point(689, 5);
             this.ayudaNoPat.Name = "ayudaNoPat";
             this.ayudaNoPat.Size = new System.Drawing.Size(31, 31);
             this.ayudaNoPat.TabIndex = 116;
@@ -829,6 +829,7 @@
             this.cmbActFis.Size = new System.Drawing.Size(241, 39);
             this.cmbActFis.TabIndex = 102;
             this.cmbActFis.Texts = "ACTIVIDAD FISICA";
+            this.cmbActFis.OnSelectedIndexChanged += new System.EventHandler(this.cmbActFis_OnSelectedIndexChanged);
             // 
             // BtnEdNoPat
             // 
@@ -873,6 +874,7 @@
             this.cmbAlc.Size = new System.Drawing.Size(241, 39);
             this.cmbAlc.TabIndex = 100;
             this.cmbAlc.Texts = "ALCOHOL";
+            this.cmbAlc.OnSelectedIndexChanged += new System.EventHandler(this.cmbAlc_OnSelectedIndexChanged);
             // 
             // cmbHiperlax
             // 
@@ -917,6 +919,7 @@
             this.cmbTabaco.Size = new System.Drawing.Size(241, 39);
             this.cmbTabaco.TabIndex = 98;
             this.cmbTabaco.Texts = "TABACO";
+            this.cmbTabaco.OnSelectedIndexChanged += new System.EventHandler(this.cmbTabaco_OnSelectedIndexChanged);
             // 
             // cmbParto
             // 
@@ -949,7 +952,7 @@
             this.tabCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tabCitas.Name = "tabCitas";
             this.tabCitas.Padding = new System.Windows.Forms.Padding(2);
-            this.tabCitas.Size = new System.Drawing.Size(708, 609);
+            this.tabCitas.Size = new System.Drawing.Size(691, 609);
             this.tabCitas.TabIndex = 2;
             this.tabCitas.Text = "Historial de Citas";
             this.tabCitas.UseVisualStyleBackColor = true;
@@ -1039,11 +1042,11 @@
             this.groupBox1.Controls.Add(this.lblTelefono);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(77, 166);
+            this.groupBox1.Location = new System.Drawing.Point(78, 42);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(716, 269);
+            this.groupBox1.Size = new System.Drawing.Size(682, 269);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del paciente";
@@ -1218,7 +1221,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(74, 444);
+            this.label1.Location = new System.Drawing.Point(74, 322);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 24);
             this.label1.TabIndex = 98;

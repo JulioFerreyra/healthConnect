@@ -31,7 +31,7 @@ namespace CapaLogica
             }
             if (cita.GetHoraCita() == "Hora")
             {
-                MessageBox.Show("Seleccione una Hora para continuar","Hora Invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione una hora para continuar","Hora Invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return false;
             }

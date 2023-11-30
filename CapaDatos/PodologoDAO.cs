@@ -31,7 +31,7 @@ namespace CapaDatos
                 conexion_a_MySQL.Open();
                 MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre()," ",profesionista.GetApellidoPaterno()," ",profesionista.GetApellidoMaterno())+" registrado correctamente","Registro Exitoso",MessageBoxButtons.OK);
+                MessageBox.Show("El profesionista " + string.Concat(profesionista.GetNombre()," ",profesionista.GetApellidoPaterno()," ",profesionista.GetApellidoMaterno())+" registrado correctamente","Registro Exitoso",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -100,7 +100,7 @@ namespace CapaDatos
                 conexion_a_MySQL.Open();
                 MySqlCommand comando = new MySqlCommand(consultaInsert, conexion_a_MySQL);
                comando.ExecuteNonQuery();
-                MessageBox.Show("Usuario " +usuario.GetUsuario()+ " registrado correctamente", "Registro exitoso");
+                MessageBox.Show("Usuario " +usuario.GetUsuario()+ " registrado correctamente", "Registro exitoso",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -440,7 +440,7 @@ namespace CapaDatos
         public DataTable GetDiagnosticosCitasPaciente(int idPaciente)
         {
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexion());
-            string SentenciaSelect = "select fecha_cita Fecha,tipo_cita 'Tipo Cita',motivo_cita as 'Motivo Cita',diagnostico Diagnóstico, 'El Grullo' from citas where id_paciente =" + idPaciente + " and estado_cita = 'finalizada'";
+            string SentenciaSelect = "select fecha_cita Fecha,tipo_cita 'Tipo Cita',motivo_cita as 'Motivo Cita',diagnostico Diagnóstico, 'El Grullo' Sucursal from citas where id_paciente =" + idPaciente + " and estado_cita = 'finalizada'";
             DataTable antecendetesNoPat = new DataTable();
             try
             {
@@ -902,7 +902,7 @@ namespace CapaDatos
         public DataTable GetDiagnosticosCitasPacienteRemoto(int idPaciente)
         {
             MySqlConnection conexion_a_MySQL = new MySqlConnection(CadenaConexionRemota());
-            string SentenciaSelect = "select fecha_cita Fecha,tipo_cita 'Tipo Cita',motivo_cita as 'Motivo Cita',diagnostico Diagnóstico, 'El Grullo' from citas where id_paciente =" + idPaciente + " and estado_cita = 'finalizada'";
+            string SentenciaSelect = "select fecha_cita Fecha,tipo_cita 'Tipo Cita',motivo_cita as 'Motivo Cita',diagnostico Diagnóstico, 'El Grullo' Sucursal from citas where id_paciente =" + idPaciente + " and estado_cita = 'finalizada'";
             DataTable antecendetesNoPat = new DataTable();
             try
             {

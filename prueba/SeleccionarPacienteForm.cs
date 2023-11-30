@@ -57,7 +57,8 @@ namespace prueba
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
         {
             NuevoPacienteForm nuevoPacienteForm = new NuevoPacienteForm();
-            nuevoPacienteForm.Show();
+            nuevoPacienteForm.ShowDialog();
+            RellenarGrid("");
         }
 
         /// <summary>

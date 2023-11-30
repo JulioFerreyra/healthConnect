@@ -22,7 +22,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(10, 80);
+            leftBorderBtn.Size = new Size(10, 70);
             panel1.Controls.Add(leftBorderBtn);
             ttAyuda.SetToolTip(btnConfig, "Configurar Horarios y Tipos de Citas disponibles");
             ttAyuda.SetToolTip(btnPacientes, "Administrar Pacientes");

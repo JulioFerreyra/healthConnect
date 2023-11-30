@@ -95,6 +95,7 @@
             // 
             // pctAyuda
             // 
+            this.pctAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pctAyuda.Cursor = System.Windows.Forms.Cursors.Help;
             this.pctAyuda.FlatAppearance.BorderSize = 0;
             this.pctAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

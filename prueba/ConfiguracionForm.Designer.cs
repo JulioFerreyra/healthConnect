@@ -39,6 +39,7 @@
             this.tagControl = new System.Windows.Forms.TabControl();
             this.TabPersonalizar = new System.Windows.Forms.TabPage();
             this.spConfiguración = new System.Windows.Forms.SplitContainer();
+            this.pctHorario = new FontAwesome.Sharp.IconButton();
             this.pctTiposCita = new FontAwesome.Sharp.IconButton();
             this.dgHorario = new System.Windows.Forms.DataGridView();
             this.dgTiposCita = new System.Windows.Forms.DataGridView();
@@ -51,7 +52,6 @@
             this.lblLogs = new System.Windows.Forms.Label();
             this.dgLogs = new System.Windows.Forms.DataGridView();
             this.ttAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.pctHorario = new FontAwesome.Sharp.IconButton();
             this.tagControl.SuspendLayout();
             this.TabPersonalizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spConfiguración)).BeginInit();
@@ -111,6 +111,21 @@
             this.spConfiguración.Size = new System.Drawing.Size(1072, 810);
             this.spConfiguración.SplitterDistance = 520;
             this.spConfiguración.TabIndex = 0;
+            // 
+            // pctHorario
+            // 
+            this.pctHorario.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pctHorario.FlatAppearance.BorderSize = 0;
+            this.pctHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pctHorario.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.pctHorario.IconColor = System.Drawing.Color.Black;
+            this.pctHorario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pctHorario.IconSize = 24;
+            this.pctHorario.Location = new System.Drawing.Point(232, 321);
+            this.pctHorario.Name = "pctHorario";
+            this.pctHorario.Size = new System.Drawing.Size(31, 31);
+            this.pctHorario.TabIndex = 103;
+            this.pctHorario.UseVisualStyleBackColor = true;
             // 
             // pctTiposCita
             // 
@@ -208,7 +223,7 @@
             this.btnAplicar.FlatAppearance.BorderSize = 0;
             this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAplicar.ForeColor = System.Drawing.Color.White;
-            this.btnAplicar.Location = new System.Drawing.Point(232, 464);
+            this.btnAplicar.Location = new System.Drawing.Point(247, 218);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(150, 37);
             this.btnAplicar.TabIndex = 5;
@@ -227,7 +242,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(232, 218);
+            this.btnEditar.Location = new System.Drawing.Point(247, 464);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(150, 37);
             this.btnEditar.TabIndex = 4;
@@ -326,21 +341,6 @@
             this.dgLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgLogs.Size = new System.Drawing.Size(917, 550);
             this.dgLogs.TabIndex = 7;
-            // 
-            // pctHorario
-            // 
-            this.pctHorario.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pctHorario.FlatAppearance.BorderSize = 0;
-            this.pctHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pctHorario.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.pctHorario.IconColor = System.Drawing.Color.Black;
-            this.pctHorario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pctHorario.IconSize = 24;
-            this.pctHorario.Location = new System.Drawing.Point(232, 321);
-            this.pctHorario.Name = "pctHorario";
-            this.pctHorario.Size = new System.Drawing.Size(31, 31);
-            this.pctHorario.TabIndex = 103;
-            this.pctHorario.UseVisualStyleBackColor = true;
             // 
             // ConfiguracionForm
             // 

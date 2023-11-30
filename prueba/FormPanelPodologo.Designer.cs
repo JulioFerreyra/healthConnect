@@ -41,8 +41,8 @@
             this.Panelformularios = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnAyuda = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnInicioUsuario = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
@@ -87,7 +87,7 @@
             this.btnConfig.Location = new System.Drawing.Point(0, 487);
             this.btnConfig.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(311, 65);
+            this.btnConfig.Size = new System.Drawing.Size(311, 70);
             this.btnConfig.TabIndex = 17;
             this.btnConfig.Text = "Configuración";
             this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,7 +110,7 @@
             this.btnUsuarios.Location = new System.Drawing.Point(0, 422);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(311, 65);
+            this.btnUsuarios.Size = new System.Drawing.Size(311, 70);
             this.btnUsuarios.TabIndex = 16;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +133,7 @@
             this.btnReporte.Location = new System.Drawing.Point(0, 357);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(311, 65);
+            this.btnReporte.Size = new System.Drawing.Size(311, 70);
             this.btnReporte.TabIndex = 15;
             this.btnReporte.Text = "Reportes";
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,7 +156,7 @@
             this.btnPacientes.Location = new System.Drawing.Point(0, 292);
             this.btnPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(311, 65);
+            this.btnPacientes.Size = new System.Drawing.Size(311, 70);
             this.btnPacientes.TabIndex = 14;
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,7 +179,7 @@
             this.btnPrincipal.Location = new System.Drawing.Point(0, 227);
             this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(311, 65);
+            this.btnPrincipal.Size = new System.Drawing.Size(311, 70);
             this.btnPrincipal.TabIndex = 13;
             this.btnPrincipal.Text = "Pantalla Principal";
             this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,6 +212,7 @@
             // 
             this.Panelformularios.AutoSize = true;
             this.Panelformularios.BackColor = System.Drawing.Color.White;
+            this.Panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panelformularios.Location = new System.Drawing.Point(0, 0);
             this.Panelformularios.Name = "Panelformularios";
             this.Panelformularios.Size = new System.Drawing.Size(1132, 783);
@@ -224,6 +225,7 @@
             this.panel3.Controls.Add(this.btnInicioUsuario);
             this.panel3.Controls.Add(this.lblTitulo);
             this.panel3.Controls.Add(this.iconCurrentChildForm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(311, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1132, 74);
@@ -231,6 +233,7 @@
             // 
             // pnlMenu
             // 
+            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenu.Controls.Add(this.btnAyuda);
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Location = new System.Drawing.Point(1021, 26);
@@ -239,6 +242,28 @@
             this.pnlMenu.Size = new System.Drawing.Size(100, 48);
             this.pnlMenu.TabIndex = 3;
             this.pnlMenu.Visible = false;
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnAyuda.IconColor = System.Drawing.Color.Black;
+            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAyuda.IconSize = 20;
+            this.btnAyuda.Location = new System.Drawing.Point(2, 0);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(102, 24);
+            this.btnAyuda.TabIndex = 4;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnCerrarSesion
             // 
@@ -262,28 +287,6 @@
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAyuda.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnAyuda.IconColor = System.Drawing.Color.Black;
-            this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAyuda.IconSize = 20;
-            this.btnAyuda.Location = new System.Drawing.Point(2, 0);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(102, 24);
-            this.btnAyuda.TabIndex = 4;
-            this.btnAyuda.Text = "Ayuda";
-            this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAyuda.UseVisualStyleBackColor = false;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnInicioUsuario
             // 

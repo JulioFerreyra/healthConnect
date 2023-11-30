@@ -108,7 +108,7 @@ namespace prueba
                 return;
             }
             
-            MessageBox.Show("Credenciales incorrectas","Usuario no valido");
+            MessageBox.Show("Credenciales incorrectas","Usuario no valido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
         }

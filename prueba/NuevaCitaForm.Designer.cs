@@ -205,7 +205,7 @@
             "Ciudad Guzman"});
             this.cmbSucursal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbSucursal.ListTextColor = System.Drawing.Color.Black;
-            this.cmbSucursal.Location = new System.Drawing.Point(930, 317);
+            this.cmbSucursal.Location = new System.Drawing.Point(949, 317);
             this.cmbSucursal.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbSucursal.Name = "cmbSucursal";
             this.cmbSucursal.Padding = new System.Windows.Forms.Padding(1);
@@ -228,7 +228,7 @@
             this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.ForeColor = System.Drawing.Color.White;
-            this.btnAñadir.Location = new System.Drawing.Point(989, 440);
+            this.btnAñadir.Location = new System.Drawing.Point(1008, 440);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(190, 41);
             this.btnAñadir.TabIndex = 8;
@@ -272,7 +272,7 @@
             this.tbxTelefono.Enabled = false;
             this.tbxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTelefono.ForeColor = System.Drawing.Color.Gainsboro;
-            this.tbxTelefono.Location = new System.Drawing.Point(930, 141);
+            this.tbxTelefono.Location = new System.Drawing.Point(939, 139);
             this.tbxTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.tbxTelefono.MaxLength = 10;
             this.tbxTelefono.Multiline = false;
@@ -429,7 +429,7 @@
             this.cmbxTipoCita.IconColor = System.Drawing.Color.Black;
             this.cmbxTipoCita.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbxTipoCita.ListTextColor = System.Drawing.Color.Black;
-            this.cmbxTipoCita.Location = new System.Drawing.Point(930, 220);
+            this.cmbxTipoCita.Location = new System.Drawing.Point(948, 220);
             this.cmbxTipoCita.MinimumSize = new System.Drawing.Size(200, 30);
             this.cmbxTipoCita.Name = "cmbxTipoCita";
             this.cmbxTipoCita.Padding = new System.Windows.Forms.Padding(1);

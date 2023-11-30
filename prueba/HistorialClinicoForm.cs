@@ -287,7 +287,7 @@ namespace CapaPresentacion
                 RellenarGridDiagnosticos();
                 if (dgDiagnosticos.Columns.Count != 0)
                 {
-                    dgDiagnosticos.Columns["ID"].Visible = false;
+                    dgDiagnosticos.Columns["Sucursal"].Visible = false;
                 }
             }
         }
